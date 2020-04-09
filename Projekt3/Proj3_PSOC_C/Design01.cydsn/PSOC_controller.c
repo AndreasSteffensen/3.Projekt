@@ -51,9 +51,10 @@ void dispensPiller(const PSOC_controller *this,uint8_t a,uint8_t b,uint8_t c)
 //    FiveSecDelay(this->testerPtr);
     
 }
-void PSOC_controller_Init(PSOC_controller *this, Tester *testPtr)
+void PSOC_controller_Init(PSOC_controller *this, Tester *testPtr, DispenserIF *dispenserPtr)
 {
     this->testerPtr=testPtr;
+    this->dispenserPtr=dispenserPtr;
 }
 
 

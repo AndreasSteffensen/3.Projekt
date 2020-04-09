@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Proj3_PSOC_C\Design01\Source Files\RaspberryIF.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Proj3_PSOC_C\Design01\Header Files\Tester.h">
 <ExpandedNodeIds>
 <v>Proj3_PSOC_C</v>
 <v>Proj3_PSOC_C\Design01</v>
@@ -30,10 +30,12 @@
 <v>Proj3_PSOC_C\Design01\Design01.cydwr\EEPROM</v>
 <v>Proj3_PSOC_C\Design01\Header Files</v>
 <v>Proj3_PSOC_C\Design01\Header Files\cyapicallbacks.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\DispenserIF.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\PSOC_controller.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\RaspberryIF.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\Tester.h</v>
 <v>Proj3_PSOC_C\Design01\Source Files</v>
+<v>Proj3_PSOC_C\Design01\Source Files\DispenserIF.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\main.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\PSOC_controller.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\RaspberryIF.c</v>
@@ -43,11 +45,17 @@
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Directives</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Flash Security</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\EEPROM</v>
+<v>Proj3_PSOC_C\Design01\Header Files</v>
 <v>Proj3_PSOC_C\Design01\Header Files\cyapicallbacks.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\DispenserIF.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\PSOC_controller.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\RaspberryIF.h</v>
 <v>Proj3_PSOC_C\Design01\Header Files\Tester.h</v>
 <v>Proj3_PSOC_C\Design01\Source Files</v>
+<v>Proj3_PSOC_C\Design01\Source Files\DispenserIF.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\main.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\PSOC_controller.c</v>
 <v>Proj3_PSOC_C\Design01\Source Files\RaspberryIF.c</v>
@@ -73,12 +81,6 @@
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevice.h</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -225,6 +227,8 @@
 <name v=".\Design01.cydsn\Design01.cydwr" />
 <name v=".\Design01.cydsn\Tester.h" />
 <name v=".\Design01.cydsn\Tester.c" />
+<name v=".\Design01.cydsn\DispenserIF.c" />
+<name v=".\Design01.cydsn\DispenserIF.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -232,7 +236,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1277, 507" SelectedTabbedMdiWindow="a76e19bc-c489-4442-bae4-a3ebfe93783a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="238e62f1-c86e-4451-a71b-9eb380364fa0" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\RaspberryIF.h" Guid="d70f4d6d-3c95-49aa-96c7-f48021782603" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\RaspberryIF.c" Guid="9b3d3f9c-5e3a-464d-89b7-4f29fcc5c8c5" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\main.c" Guid="289cd2dc-18a2-40f4-9b9b-d5bd45016576" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\PSOC_controller.h" Guid="89cba13c-9235-4e25-871b-dac1cbfd2a5f" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\PSOC_controller.c" Guid="a76e19bc-c489-4442-bae4-a3ebfe93783a" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="ed2274a4-fa0b-4ebb-8737-2cc7596dde54" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Design01.cydwr" Guid="2e726d72-a3e6-44ff-b9bd-5e868f93c1dc" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Tester.h" Guid="42be4cfd-3698-4513-b124-9ef0c573862c" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Tester.c" Guid="3ac4109d-f41b-4e22-a163-1f14bf9c92c1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1277, 507" SelectedTabbedMdiWindow="289cd2dc-18a2-40f4-9b9b-d5bd45016576"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="238e62f1-c86e-4451-a71b-9eb380364fa0" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\RaspberryIF.h" Guid="d70f4d6d-3c95-49aa-96c7-f48021782603" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\RaspberryIF.c" Guid="9b3d3f9c-5e3a-464d-89b7-4f29fcc5c8c5" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\main.c" Guid="289cd2dc-18a2-40f4-9b9b-d5bd45016576" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\PSOC_controller.h" Guid="89cba13c-9235-4e25-871b-dac1cbfd2a5f" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\PSOC_controller.c" Guid="a76e19bc-c489-4442-bae4-a3ebfe93783a" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="ed2274a4-fa0b-4ebb-8737-2cc7596dde54" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Design01.cydwr" Guid="2e726d72-a3e6-44ff-b9bd-5e868f93c1dc" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Tester.h" Guid="42be4cfd-3698-4513-b124-9ef0c573862c" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Tester.c" Guid="3ac4109d-f41b-4e22-a163-1f14bf9c92c1" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\DispenserIF.c" Guid="083c9f8f-29c4-4123-ad18-ad906dbd663d" /><DocumentWindow Key="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\DispenserIF.h" Guid="125d53ed-c72f-4715-a6e2-c2d2f18e8488" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -48,5 +48,25 @@ static void pushPill(DispenserIF *this)
     //få stempel til at køre frem og tilbage igen
 }
 
+static int vejefunktion(DispenserIF *this)
+{
+    float tmpweight = getweight();
+    if (this->weight == tmpweight)
+    {
+        // pille vægten er uændret, hysterese...
+    }else
+    {
+        // pille er dispenseret
+    }
+    // opdateret this->weight
+    
+    //return status
+}
+
+static int detekterPillebeholdning()
+{
+    //Check refleksbrikdetektor
+    //returner 1 hvis der er piller, returner 0 hvis der ikke er
+}
 
 /* [] END OF FILE */

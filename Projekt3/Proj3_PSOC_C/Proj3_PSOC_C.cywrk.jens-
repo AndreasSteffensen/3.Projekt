@@ -45,6 +45,16 @@
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\TopDesign</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Pins</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Analog</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Clocks</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Interrupts</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\DMA</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\System</v>
 <v>Proj3_PSOC_C\Design01\Design01.cydwr\Directives</v>
 <v>Proj3_PSOC_C\Design01\Design01.cydwr\Flash Security</v>
 <v>Proj3_PSOC_C\Design01\Design01.cydwr\EEPROM</v>
@@ -71,16 +81,6 @@
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1\I2C_1_INT.c</v>
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1\I2C_1_MASTER.c</v>
 <v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1\I2C_1_PM.c</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1\I2C_1_PVT.h</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1\I2C_1_SLAVE.c</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\LED</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\scl</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\sda</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\UART_tester</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\UART_tester_IntClock</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">

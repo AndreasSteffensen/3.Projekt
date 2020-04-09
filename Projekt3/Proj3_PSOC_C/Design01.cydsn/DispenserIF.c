@@ -35,6 +35,18 @@ int dispense(DispenserIF *this,enum PilleType type)
     
     //returner succes eller fejlmelding
 }
+static int rotatePlatform(DispenserIF *this,enum PilleType type)
+{
+    //roter platform i korrekt position baseret på pilletyppe
+    
+    //evt. fejlcheck og fejlbesked som returværdi
+    return 0;
+}
+static void pushPill(DispenserIF *this)
+{
+    
+    //få stempel til at køre frem og tilbage igen
+}
 
 
 /* [] END OF FILE */

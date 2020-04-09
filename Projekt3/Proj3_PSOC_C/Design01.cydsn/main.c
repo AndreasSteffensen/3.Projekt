@@ -13,11 +13,15 @@
 #include "PSOC_controller.h"
 #include "RaspberryIF.h"
 #include "Tester.h"
+#include "DispenserIF.h"
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-    RaspberryIF RaspberryIFObj;
+    
+    
     Tester TesterObj;
+    RaspberryIF RaspberryIFObj;
+    DispenserIF DispenserIFObj;
     PSOC_controller ControllerObj;
     Tester_Init(&TesterObj);
     RaspberryIF_init(&RaspberryIFObj);

@@ -34,7 +34,8 @@ int dispense(DispenserIF *this,enum PilleType type);
 void DispenserIF_Init(DispenserIF *this);
 
 //private:
-static int rotatePlatform(enum PilleType type);
+static int rotatePlatform(DispenserIF *this,enum PilleType type);
+static void pushPill(DispenserIF *this);
 //end Class <Boundary> Dispenser IF
 /* [] END OF FILE */
 #endif

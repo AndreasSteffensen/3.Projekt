@@ -254,7 +254,7 @@ extern uint8 I2C_1_initVar;
 ***************************************/
 
 #define I2C_1_DATA_RATE          (100u)
-#define I2C_1_DEFAULT_ADDR       (8u)
+#define I2C_1_DEFAULT_ADDR       (66u)
 #define I2C_1_I2C_PAIR_SELECTED  (0u)
 
 /* I2C pair enum */

@@ -10,30 +10,40 @@
  * ========================================
 */
 
-#include "RaspberryIF.h"
-#include "PSOC_controller.h"
 //C includes
-#ifdef cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
     // PSoC include, this has to be wrapped
     #include "project.h"
+    
 
-#ifdef cplusplus
+#ifdef __cplusplus
 }
 #endif
 
+#include "RaspberryIF.h"
+#include "PSOC_controller.h"
+#include "Tester.h"
 
 int main(void)
 {
-CyGlobalIntEnable; /* Enable global interrupts. */
-RaspberryIF RaspberryIFObj();
+UART_tester_Start();
 
+CyGlobalIntEnable; /* Enable global interrupts. */
+//RaspberryIF RaspberryIFObj;
+Tester TesterObj;
+
+
+UART_tester_PutString("Hello from main \r\n");
+
+//PSOC_controller ControllerObj(&TesterObj);
 
 
     for(;;)
     {
+        
         
     }
 

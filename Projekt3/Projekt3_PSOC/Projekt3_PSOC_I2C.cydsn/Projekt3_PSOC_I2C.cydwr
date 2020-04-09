@@ -251,9 +251,11 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
-      <Data key="264be2d3-9481-494b-8d9c-c1905a45e9cc" value="Pin_1" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_2" />
-      <Data key="f0b13201-d24b-48a5-be45-4977843ff5b0" value="Pin_2" />
+      <Data key="264be2d3-9481-494b-8d9c-c1905a45e9cc" value="sda" />
+      <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="Rx_1" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_1" />
+      <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="Tx_1" />
+      <Data key="f0b13201-d24b-48a5-be45-4977843ff5b0" value="scl" />
     </Group>
   </Group>
   <Group key="EEPROM">
@@ -3345,9 +3347,19 @@
         <Data key="Port Format" value="0,3" />
       </Group>
     </Group>
+    <Group key="1425177d-0d0e-4468-8bcc-e638e5509a9b">
+      <Group key="0">
+        <Data key="Port Format" value="12,6" />
+      </Group>
+    </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="0,2" />
+        <Data key="Port Format" value="2,1" />
+      </Group>
+    </Group>
+    <Group key="ed092b9b-d398-4703-be89-cebf998501f6">
+      <Group key="0">
+        <Data key="Port Format" value="12,7" />
       </Group>
     </Group>
     <Group key="f0b13201-d24b-48a5-be45-4977843ff5b0">
@@ -3378,7 +3390,7 @@
     <Data key="CYDEV_VDDA" value="5.0" />
     <Data key="CYDEV_VDDD" value="5.0" />
     <Data key="CYDEV_VDDIO0" value="5.0" />
-    <Data key="CYDEV_VDDIO1" value="5.0" />
+    <Data key="CYDEV_VDDIO1" value="3.3" />
     <Data key="CYDEV_VDDIO2" value="5.0" />
     <Data key="CYDEV_VDDIO3" value="5.0" />
     <Data key="CYDEV_WO_NVL_ENABLED" value="False" />

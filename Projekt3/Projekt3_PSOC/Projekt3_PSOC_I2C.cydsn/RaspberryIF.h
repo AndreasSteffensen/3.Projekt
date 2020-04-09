@@ -11,10 +11,10 @@
 */
 #ifndef RASPBERRYIF_H
 #define RASPBERRYIF_H
-
 #include "PSOC_controller.h"
+
 #include <stdint.h>
-class PSOC_controller;
+
     
 class RaspberryIF
 {
@@ -26,14 +26,15 @@ class RaspberryIF
         void dispenseDone();
         void setControllerPtr(PSOC_controller* ptr);
         PSOC_controller* getControllerPtr();
-        void I2C_1_ISR_ExitCallback();
+       static void I2C_1_ISR_ExitCallback();
+       void I2C_DosisReceived();
     
     private:
         //read og write buffer.
         uint8_t readBuf[8];
         uint8_t writeBuf[8];
         PSOC_controller* PSOC_controller_Ptr;
-        
+        static RaspberryIF* RaspberryPtr;
         
     
 };

@@ -11,8 +11,8 @@
 */
 #ifndef PSOC_CONTROLLER_H
 #define PSOC_CONTROLLER_H
-#include "RaspberryIF.h"
 #include <stdint.h>
+#include "Tester.h"
 /* [] END OF FILE */
 
 
@@ -20,9 +20,10 @@
 class PSOC_controller
 {
     public:
-        PSOC_controller();
+        PSOC_controller(Tester* tester);
         void dispensPiller(uint8_t a,uint8_t b, uint8_t c);
     private:
+        Tester* tester_;
         
        
 };

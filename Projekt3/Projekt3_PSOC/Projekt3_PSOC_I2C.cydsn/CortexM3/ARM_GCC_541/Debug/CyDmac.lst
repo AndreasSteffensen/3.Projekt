@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
   29:Generated_Source\PSoC5/CyDmac.c **** #include "CyDmac.h"
   30:Generated_Source\PSoC5/CyDmac.c **** 
   31:Generated_Source\PSoC5/CyDmac.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 2
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 2
 
 
   32:Generated_Source\PSoC5/CyDmac.c **** /*******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
   48              		.loc 1 64 9 is_stmt 1 discriminator 3 view .LVU9
   49              		.loc 1 64 32 is_stmt 0 discriminator 3 view .LVU10
   50 000c DA00     		lsls	r2, r3, #3
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 3
 
 
   51 000e 02F18042 		add	r2, r2, #1073741824
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
   74:Generated_Source\PSoC5/CyDmac.c **** ****************************************************************************//**
   75:Generated_Source\PSoC5/CyDmac.c **** *
   76:Generated_Source\PSoC5/CyDmac.c **** *  Returns errors of the last failed DMA transaction.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 4
 
 
   77:Generated_Source\PSoC5/CyDmac.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  101:Generated_Source\PSoC5/CyDmac.c **** 
  102:Generated_Source\PSoC5/CyDmac.c **** /*******************************************************************************
  103:Generated_Source\PSoC5/CyDmac.c **** * Function Name: CyDmacClearError
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 5
 
 
  104:Generated_Source\PSoC5/CyDmac.c **** ****************************************************************************//**
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  151              		.fpu softvfp
  152              		.type	CyDmacErrorAddress, %function
  153              	CyDmacErrorAddress:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 6
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 6
 
 
  154              	.LFB3:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  156:Generated_Source\PSoC5/CyDmac.c **** *  Allocates a channel from the DMAC to be used in all functions that require a
  157:Generated_Source\PSoC5/CyDmac.c **** *  channel handle.
  158:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 7
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 7
 
 
  159:Generated_Source\PSoC5/CyDmac.c **** * \return The allocated channel number. Zero is a valid channel number.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  178:Generated_Source\PSoC5/CyDmac.c ****             /* Mark channel as used. */
  179:Generated_Source\PSoC5/CyDmac.c ****             CyDmaChannels |= channel;
  180:Generated_Source\PSoC5/CyDmac.c ****             break;
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 8
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 8
 
 
  181:Generated_Source\PSoC5/CyDmac.c ****         }
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  249              		.loc 1 194 5 view .LVU61
  195:Generated_Source\PSoC5/CyDmac.c **** }
  250              		.loc 1 195 1 is_stmt 0 view .LVU62
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 9
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 9
 
 
  251 002c 2046     		mov	r0, r4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  215:Generated_Source\PSoC5/CyDmac.c **** 
  216:Generated_Source\PSoC5/CyDmac.c ****     if(chHandle < CY_DMA_NUMBEROF_CHANNELS)
  284              		.loc 1 216 5 view .LVU68
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 10
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 10
 
 
  285              		.loc 1 216 7 is_stmt 0 view .LVU69
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  317              	.LVL21:
  226:Generated_Source\PSoC5/CyDmac.c ****     }
  318              		.loc 1 226 9 view .LVU80
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 11
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 11
 
 
  226:Generated_Source\PSoC5/CyDmac.c ****     }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  262:Generated_Source\PSoC5/CyDmac.c **** *  Take extra precautions when using the hardware request (DRQ) option when the
  263:Generated_Source\PSoC5/CyDmac.c **** *  preserveTds is set to 0, as you might be requesting the wrong data.
  264:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 12
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 12
 
 
  265:Generated_Source\PSoC5/CyDmac.c **** * \return CYRET_SUCCESS if successful.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  370 0016 835C     		ldrb	r3, [r0, r2]	@ zero_extendqisi2
  371 0018 43F00103 		orr	r3, r3, #1
  372 001c 8354     		strb	r3, [r0, r2]
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 13
 
 
  290:Generated_Source\PSoC5/CyDmac.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  297:Generated_Source\PSoC5/CyDmac.c **** 
  298:Generated_Source\PSoC5/CyDmac.c **** /*******************************************************************************
  299:Generated_Source\PSoC5/CyDmac.c **** * Function Name: CyDmaChDisable
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 14
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 14
 
 
  300:Generated_Source\PSoC5/CyDmac.c **** ****************************************************************************//**
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  438 0012 02F0DF02 		and	r2, r2, #223
  439 0016 C254     		strb	r2, [r0, r3]
  332:Generated_Source\PSoC5/CyDmac.c ****         status = CYRET_SUCCESS;
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 15
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 15
 
 
  440              		.loc 1 332 9 is_stmt 1 view .LVU112
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  473              		@ args = 0, pretend = 0, frame = 0
  474              		@ frame_needed = 0, uses_anonymous_args = 0
  475              		@ link register save eliminated.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 16
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 16
 
 
  353:Generated_Source\PSoC5/CyDmac.c ****     cystatus status = CYRET_BAD_PARAM;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  518              		.global	CyDmaChPriority
  519              		.syntax unified
  520              		.thumb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 17
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 17
 
 
  521              		.thumb_func
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  548              	.LVL42:
  391:Generated_Source\PSoC5/CyDmac.c **** 
  392:Generated_Source\PSoC5/CyDmac.c ****         CY_DMA_CH_STRUCT_PTR[chHandle].basic_cfg[0u] = value | ((uint8) ((priority & 0x7u) << 0x01u
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 18
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 18
 
 
  549              		.loc 1 392 9 is_stmt 1 view .LVU141
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  405:Generated_Source\PSoC5/CyDmac.c **** *  Sets the high 16 bits of the source and destination addresses for the DMA
  406:Generated_Source\PSoC5/CyDmac.c **** *  channel (valid for all TDs in the chain).
  407:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 19
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 19
 
 
  408:Generated_Source\PSoC5/CyDmac.c **** *  \param chHandle A handle previously returned by \ref CyDmaChAlloc() or \ref
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  441:Generated_Source\PSoC5/CyDmac.c ****     if(chHandle < CY_DMA_NUMBEROF_CHANNELS)
  611              		.loc 1 441 5 is_stmt 1 view .LVU158
  612              		.loc 1 441 7 is_stmt 0 view .LVU159
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 20
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 20
 
 
  613 0010 1728     		cmp	r0, #23
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  653 0032 0120     		movs	r0, #1
  654              	.LVL60:
  451:Generated_Source\PSoC5/CyDmac.c ****     }
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 21
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 21
 
 
  452:Generated_Source\PSoC5/CyDmac.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  479:Generated_Source\PSoC5/CyDmac.c ****     {
  480:Generated_Source\PSoC5/CyDmac.c ****         CY_DMA_CH_STRUCT_PTR[chHandle].basic_status[1u] = startTd;
  682              		.loc 1 480 9 is_stmt 1 view .LVU180
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 22
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 22
 
 
  683              		.loc 1 480 29 is_stmt 0 view .LVU181
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  497:Generated_Source\PSoC5/CyDmac.c **** *
  498:Generated_Source\PSoC5/CyDmac.c **** *  \param request One of the following constants. Each of the constants is a
  499:Generated_Source\PSoC5/CyDmac.c **** *  three-bit value.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 23
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 23
 
 
  500:Generated_Source\PSoC5/CyDmac.c **** *   CPU_REQ         - Create a direct request to start the DMA channel
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  519:Generated_Source\PSoC5/CyDmac.c **** }
  754              		.loc 1 519 1 is_stmt 0 view .LVU201
  755 001a 7047     		bx	lr
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 24
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 24
 
 
  756              	.L78:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  785              		.loc 1 544 58 is_stmt 0 view .LVU207
  786 0004 044B     		ldr	r3, .L82
  787 0006 03EB0010 		add	r0, r3, r0, lsl #4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 25
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 25
 
 
  788              	.LVL73:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  564:Generated_Source\PSoC5/CyDmac.c **** *  \param state The address to store the state of the channel. Can be NULL if the
  565:Generated_Source\PSoC5/CyDmac.c **** *  value is not needed.
  566:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 26
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 26
 
 
  567:Generated_Source\PSoC5/CyDmac.c **** *   STATUS_TD_ACTIVE
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  848 0014 42B1     		cbz	r2, .L88
  595:Generated_Source\PSoC5/CyDmac.c ****         {
  596:Generated_Source\PSoC5/CyDmac.c ****             *state= CY_DMA_CH_STRUCT_PTR[chHandle].basic_status[0];
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 27
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 27
 
 
  849              		.loc 1 596 13 is_stmt 1 view .LVU227
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  604:Generated_Source\PSoC5/CyDmac.c **** 
  605:Generated_Source\PSoC5/CyDmac.c **** 
  606:Generated_Source\PSoC5/CyDmac.c **** /*******************************************************************************
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 28
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 28
 
 
  607:Generated_Source\PSoC5/CyDmac.c **** * Function Name: CyDmaChSetConfiguration
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  902 0000 1728     		cmp	r0, #23
  903 0002 1CD8     		bhi	.L93
  649:Generated_Source\PSoC5/CyDmac.c ****     cystatus status = CYRET_BAD_PARAM;
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 29
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 29
 
 
  904              		.loc 1 649 1 view .LVU241
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  660:Generated_Source\PSoC5/CyDmac.c ****     }
  661:Generated_Source\PSoC5/CyDmac.c **** 
  662:Generated_Source\PSoC5/CyDmac.c ****     return (status);
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 30
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 30
 
 
  663:Generated_Source\PSoC5/CyDmac.c **** }
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  985              		.cfi_offset 4, -8
  986              		.cfi_offset 14, -4
  681:Generated_Source\PSoC5/CyDmac.c ****     uint8 interruptState;
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 31
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 31
 
 
  987              		.loc 1 681 5 view .LVU267
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1022 0024 FFF7FEFF 		bl	CyExitCriticalSection
  1023              	.LVL96:
  701:Generated_Source\PSoC5/CyDmac.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 32
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 32
 
 
  702:Generated_Source\PSoC5/CyDmac.c ****     return(element);
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1060              	.L110:
  717:Generated_Source\PSoC5/CyDmac.c ****     if(tdHandle < CY_DMA_NUMBEROF_TDS)
  1061              		.loc 1 717 1 view .LVU289
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 33
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 33
 
 
  1062 0008 10B5     		push	{r4, lr}
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1099 0030 00000000 		.word	.LANCHOR0
  1100              		.cfi_endproc
  1101              	.LFE17:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 34
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 34
 
 
  1102              		.size	CyDmaTdFree, .-CyDmaTdFree
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1140              		.type	CyDmaTdSetConfiguration, %function
  1141              	CyDmaTdSetConfiguration:
  1142              	.LVL101:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 35
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 35
 
 
  1143              	.LFB19:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  805:Generated_Source\PSoC5/CyDmac.c **** *
  806:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
  807:Generated_Source\PSoC5/CyDmac.c **** cystatus CyDmaTdSetConfiguration(uint8 tdHandle, uint16 transferCount, uint8 nextTd, uint8 configur
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 36
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 36
 
 
  808:Generated_Source\PSoC5/CyDmac.c ****     
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1181              	.LVL106:
  1182              	.L118:
  1183              		.loc 1 824 16 view .LVU322
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 37
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 37
 
 
  1184              	.LBE3:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  848:Generated_Source\PSoC5/CyDmac.c **** *   The address to store the index of the next TD in the TD chain.
  849:Generated_Source\PSoC5/CyDmac.c **** *
  850:Generated_Source\PSoC5/CyDmac.c **** *  \param uint8 * configuration:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 38
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 38
 
 
  851:Generated_Source\PSoC5/CyDmac.c **** *   The address to store the Bit field of configuration bits.
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1238 0014 2488     		ldrh	r4, [r4]
  1239              	.LVL112:
  1240              		.loc 1 877 38 view .LVU339
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 39
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 39
 
 
  1241 0016 C4F30B04 		ubfx	r4, r4, #0, #12
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1278              		.loc 1 894 16 view .LVU356
  1279 003c 0020     		movs	r0, #0
  1280              	.LVL117:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 40
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 40
 
 
  1281              	.L120:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  908:Generated_Source\PSoC5/CyDmac.c **** *  \param uint8 tdHandle:
  909:Generated_Source\PSoC5/CyDmac.c **** *   A handle previously returned by CyDmaTdAlloc().
  910:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 41
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 41
 
 
  911:Generated_Source\PSoC5/CyDmac.c **** *  \param uint16 source:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1345              		.loc 1 937 16 is_stmt 0 view .LVU375
  1346 0014 0020     		movs	r0, #0
  1347              	.LVL127:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 42
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 42
 
 
  1348              		.loc 1 937 16 view .LVU376
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  967:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
  968:Generated_Source\PSoC5/CyDmac.c **** cystatus CyDmaTdGetAddress(uint8 tdHandle, uint16 * source, uint16 * destination) 
  969:Generated_Source\PSoC5/CyDmac.c **** {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 43
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 43
 
 
  1372              		.loc 1 969 1 is_stmt 1 view -0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1408 001a 00F18040 		add	r0, r0, #1073741824
  1409 001e 00F5F040 		add	r0, r0, #30720
  1410              	.LVL135:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 44
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 44
 
 
  988:Generated_Source\PSoC5/CyDmac.c ****             *destination = CY_GET_REG16(convert);
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
 1001:Generated_Source\PSoC5/CyDmac.c **** *
 1002:Generated_Source\PSoC5/CyDmac.c **** * Either enables or disables the Round-Robin scheduling enforcement algorithm.
 1003:Generated_Source\PSoC5/CyDmac.c **** * Within a priority level a Round-Robin fairness algorithm is enforced.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 45
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 45
 
 
 1004:Generated_Source\PSoC5/CyDmac.c **** *
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1475              	.LVL143:
  1476              	.L140:
 1029:Generated_Source\PSoC5/CyDmac.c ****         }
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 46
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 46
 
 
  1477              		.loc 1 1029 13 is_stmt 1 view .LVU417
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1524              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1525              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1526              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 47
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 47
 
 
  1527              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -2774,58 +2774,58 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1537 0006 00000000 		.4byte	.Ldebug_abbrev0
  1538 000a 04       		.byte	0x4
  1539 000b 01       		.uleb128 0x1
- 1540 000c 3F040000 		.4byte	.LASF205
+ 1540 000c 32040000 		.4byte	.LASF205
  1541 0010 0C       		.byte	0xc
- 1542 0011 F7030000 		.4byte	.LASF206
- 1543 0015 6A000000 		.4byte	.LASF207
+ 1542 0011 EA030000 		.4byte	.LASF206
+ 1543 0015 19000000 		.4byte	.LASF207
  1544 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1545 001d 00000000 		.4byte	0
  1546 0021 00000000 		.4byte	.Ldebug_line0
  1547 0025 02       		.uleb128 0x2
  1548 0026 01       		.byte	0x1
  1549 0027 06       		.byte	0x6
- 1550 0028 9B010000 		.4byte	.LASF0
+ 1550 0028 88010000 		.4byte	.LASF0
  1551 002c 02       		.uleb128 0x2
  1552 002d 01       		.byte	0x1
  1553 002e 08       		.byte	0x8
- 1554 002f 6A060000 		.4byte	.LASF1
+ 1554 002f 5D060000 		.4byte	.LASF1
  1555 0033 02       		.uleb128 0x2
  1556 0034 02       		.byte	0x2
  1557 0035 05       		.byte	0x5
- 1558 0036 AB060000 		.4byte	.LASF2
+ 1558 0036 9E060000 		.4byte	.LASF2
  1559 003a 02       		.uleb128 0x2
  1560 003b 02       		.byte	0x2
  1561 003c 07       		.byte	0x7
- 1562 003d 9A030000 		.4byte	.LASF3
+ 1562 003d 8D030000 		.4byte	.LASF3
  1563 0041 02       		.uleb128 0x2
  1564 0042 04       		.byte	0x4
  1565 0043 05       		.byte	0x5
- 1566 0044 16020000 		.4byte	.LASF4
+ 1566 0044 03020000 		.4byte	.LASF4
  1567 0048 02       		.uleb128 0x2
  1568 0049 04       		.byte	0x4
  1569 004a 07       		.byte	0x7
- 1570 004b 23030000 		.4byte	.LASF5
+ 1570 004b 16030000 		.4byte	.LASF5
  1571 004f 02       		.uleb128 0x2
  1572 0050 08       		.byte	0x8
  1573 0051 05       		.byte	0x5
- 1574 0052 8D010000 		.4byte	.LASF6
+ 1574 0052 7A010000 		.4byte	.LASF6
  1575 0056 02       		.uleb128 0x2
  1576 0057 08       		.byte	0x8
  1577 0058 07       		.byte	0x7
- 1578 0059 04010000 		.4byte	.LASF7
+ 1578 0059 F1000000 		.4byte	.LASF7
  1579 005d 03       		.uleb128 0x3
  1580 005e 04       		.byte	0x4
  1581 005f 05       		.byte	0x5
  1582 0060 696E7400 		.ascii	"int\000"
  1583 0064 02       		.uleb128 0x2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 48
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 48
 
 
  1584 0065 04       		.byte	0x4
  1585 0066 07       		.byte	0x7
- 1586 0067 FF020000 		.4byte	.LASF8
+ 1586 0067 F2020000 		.4byte	.LASF8
  1587 006b 04       		.uleb128 0x4
- 1588 006c 54020000 		.4byte	.LASF9
+ 1588 006c 41020000 		.4byte	.LASF9
  1589 0070 02       		.byte	0x2
  1590 0071 E401     		.2byte	0x1e4
  1591 0073 19       		.byte	0x19
@@ -2841,7 +2841,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1601 008a 05       		.uleb128 0x5
  1602 008b 7D000000 		.4byte	0x7d
  1603 008f 04       		.uleb128 0x4
- 1604 0090 90020000 		.4byte	.LASF11
+ 1604 0090 7D020000 		.4byte	.LASF11
  1605 0094 02       		.byte	0x2
  1606 0095 E601     		.2byte	0x1e6
  1607 0097 19       		.byte	0x19
@@ -2851,34 +2851,34 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1611 00a1 02       		.uleb128 0x2
  1612 00a2 04       		.byte	0x4
  1613 00a3 04       		.byte	0x4
- 1614 00a4 B8050000 		.4byte	.LASF12
+ 1614 00a4 AB050000 		.4byte	.LASF12
  1615 00a8 02       		.uleb128 0x2
  1616 00a9 08       		.byte	0x8
  1617 00aa 04       		.byte	0x4
- 1618 00ab 5A020000 		.4byte	.LASF13
+ 1618 00ab 47020000 		.4byte	.LASF13
  1619 00af 02       		.uleb128 0x2
  1620 00b0 01       		.byte	0x1
  1621 00b1 08       		.byte	0x8
- 1622 00b2 D9070000 		.4byte	.LASF14
+ 1622 00b2 CC070000 		.4byte	.LASF14
  1623 00b6 06       		.uleb128 0x6
  1624 00b7 AF000000 		.4byte	0xaf
  1625 00bb 04       		.uleb128 0x4
- 1626 00bc 52090000 		.4byte	.LASF15
+ 1626 00bc 45090000 		.4byte	.LASF15
  1627 00c0 02       		.byte	0x2
  1628 00c1 8602     		.2byte	0x286
  1629 00c3 1B       		.byte	0x1b
  1630 00c4 48000000 		.4byte	0x48
  1631 00c8 04       		.uleb128 0x4
- 1632 00c9 45020000 		.4byte	.LASF16
+ 1632 00c9 32020000 		.4byte	.LASF16
  1633 00cd 02       		.byte	0x2
  1634 00ce 8F02     		.2byte	0x28f
  1635 00d0 21       		.byte	0x21
  1636 00d1 8A000000 		.4byte	0x8a
  1637 00d5 04       		.uleb128 0x4
- 1638 00d6 E8040000 		.4byte	.LASF17
+ 1638 00d6 DB040000 		.4byte	.LASF17
  1639 00da 02       		.byte	0x2
  1640 00db 9002     		.2byte	0x290
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 49
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 49
 
 
  1641 00dd 21       		.byte	0x21
@@ -2890,9 +2890,9 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1647 00e9 02       		.uleb128 0x2
  1648 00ea 08       		.byte	0x8
  1649 00eb 04       		.byte	0x4
- 1650 00ec 1D050000 		.4byte	.LASF18
+ 1650 00ec 10050000 		.4byte	.LASF18
  1651 00f0 09       		.uleb128 0x9
- 1652 00f1 37040000 		.4byte	.LASF19
+ 1652 00f1 2A040000 		.4byte	.LASF19
  1653 00f5 03       		.byte	0x3
  1654 00f6 22       		.byte	0x22
  1655 00f7 19       		.byte	0x19
@@ -2901,21 +2901,21 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1658 00fd 04       		.byte	0x4
  1659 00fe 02010000 		.4byte	0x102
  1660 0102 0A       		.uleb128 0xa
- 1661 0103 9F070000 		.4byte	.LASF125
+ 1661 0103 92070000 		.4byte	.LASF125
  1662 0107 09       		.uleb128 0x9
- 1663 0108 97050000 		.4byte	.LASF20
+ 1663 0108 8A050000 		.4byte	.LASF20
  1664 010c 04       		.byte	0x4
  1665 010d 2C       		.byte	0x2c
  1666 010e 0E       		.byte	0xe
  1667 010f 41000000 		.4byte	0x41
  1668 0113 09       		.uleb128 0x9
- 1669 0114 CA070000 		.4byte	.LASF21
+ 1669 0114 BD070000 		.4byte	.LASF21
  1670 0118 04       		.byte	0x4
  1671 0119 72       		.byte	0x72
  1672 011a 0E       		.byte	0xe
  1673 011b 41000000 		.4byte	0x41
  1674 011f 04       		.uleb128 0x4
- 1675 0120 22040000 		.4byte	.LASF22
+ 1675 0120 15040000 		.4byte	.LASF22
  1676 0124 05       		.byte	0x5
  1677 0125 5E01     		.2byte	0x15e
  1678 0127 17       		.byte	0x17
@@ -2927,18 +2927,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1684 0130 03       		.byte	0x3
  1685 0131 4E010000 		.4byte	0x14e
  1686 0135 0C       		.uleb128 0xc
- 1687 0136 F1030000 		.4byte	.LASF23
+ 1687 0136 E4030000 		.4byte	.LASF23
  1688 013a 04       		.byte	0x4
  1689 013b A8       		.byte	0xa8
  1690 013c 0C       		.byte	0xc
  1691 013d 1F010000 		.4byte	0x11f
  1692 0141 0C       		.uleb128 0xc
- 1693 0142 0C030000 		.4byte	.LASF24
+ 1693 0142 FF020000 		.4byte	.LASF24
  1694 0146 04       		.byte	0x4
  1695 0147 A9       		.byte	0xa9
  1696 0148 13       		.byte	0x13
  1697 0149 4E010000 		.4byte	0x14e
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 50
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 50
 
 
  1698 014d 00       		.byte	0
@@ -2956,14 +2956,14 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1710 0162 09       		.byte	0x9
  1711 0163 82010000 		.4byte	0x182
  1712 0167 10       		.uleb128 0x10
- 1713 0168 97070000 		.4byte	.LASF25
+ 1713 0168 8A070000 		.4byte	.LASF25
  1714 016c 04       		.byte	0x4
  1715 016d A5       		.byte	0xa5
  1716 016e 07       		.byte	0x7
  1717 016f 5D000000 		.4byte	0x5d
  1718 0173 00       		.byte	0
  1719 0174 10       		.uleb128 0x10
- 1720 0175 A6070000 		.4byte	.LASF26
+ 1720 0175 99070000 		.4byte	.LASF26
  1721 0179 04       		.byte	0x4
  1722 017a AA       		.byte	0xaa
  1723 017b 05       		.byte	0x5
@@ -2971,13 +2971,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1725 0180 04       		.byte	0x4
  1726 0181 00       		.byte	0
  1727 0182 09       		.uleb128 0x9
- 1728 0183 D3060000 		.4byte	.LASF27
+ 1728 0183 C6060000 		.4byte	.LASF27
  1729 0187 04       		.byte	0x4
  1730 0188 AB       		.byte	0xab
  1731 0189 03       		.byte	0x3
  1732 018a 5E010000 		.4byte	0x15e
  1733 018e 09       		.uleb128 0x9
- 1734 018f B6020000 		.4byte	.LASF28
+ 1734 018f A9020000 		.4byte	.LASF28
  1735 0193 04       		.byte	0x4
  1736 0194 AF       		.byte	0xaf
  1737 0195 1B       		.byte	0x1b
@@ -2988,23 +2988,23 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1742 019d 04       		.byte	0x4
  1743 019e AF000000 		.4byte	0xaf
  1744 01a2 09       		.uleb128 0x9
- 1745 01a3 77080000 		.4byte	.LASF29
+ 1745 01a3 6A080000 		.4byte	.LASF29
  1746 01a7 06       		.byte	0x6
  1747 01a8 16       		.byte	0x16
  1748 01a9 19       		.byte	0x19
  1749 01aa 48000000 		.4byte	0x48
  1750 01ae 12       		.uleb128 0x12
- 1751 01af C7020000 		.4byte	.LASF34
+ 1751 01af BA020000 		.4byte	.LASF34
  1752 01b3 18       		.byte	0x18
  1753 01b4 06       		.byte	0x6
  1754 01b5 2F       		.byte	0x2f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 51
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 51
 
 
  1755 01b6 08       		.byte	0x8
  1756 01b7 08020000 		.4byte	0x208
  1757 01bb 10       		.uleb128 0x10
- 1758 01bc 43080000 		.4byte	.LASF30
+ 1758 01bc 36080000 		.4byte	.LASF30
  1759 01c0 06       		.byte	0x6
  1760 01c1 31       		.byte	0x31
  1761 01c2 13       		.byte	0x13
@@ -3018,21 +3018,21 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1769 01cf 5D000000 		.4byte	0x5d
  1770 01d3 04       		.byte	0x4
  1771 01d4 10       		.uleb128 0x10
- 1772 01d5 73070000 		.4byte	.LASF31
+ 1772 01d5 66070000 		.4byte	.LASF31
  1773 01d9 06       		.byte	0x6
  1774 01da 32       		.byte	0x32
  1775 01db 0B       		.byte	0xb
  1776 01dc 5D000000 		.4byte	0x5d
  1777 01e0 08       		.byte	0x8
  1778 01e1 10       		.uleb128 0x10
- 1779 01e2 B0020000 		.4byte	.LASF32
+ 1779 01e2 A3020000 		.4byte	.LASF32
  1780 01e6 06       		.byte	0x6
  1781 01e7 32       		.byte	0x32
  1782 01e8 14       		.byte	0x14
  1783 01e9 5D000000 		.4byte	0x5d
  1784 01ed 0C       		.byte	0xc
  1785 01ee 10       		.uleb128 0x10
- 1786 01ef E5080000 		.4byte	.LASF33
+ 1786 01ef D8080000 		.4byte	.LASF33
  1787 01f3 06       		.byte	0x6
  1788 01f4 32       		.byte	0x32
  1789 01f5 1B       		.byte	0x1b
@@ -3057,8 +3057,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1808 021c 00       		.byte	0
  1809 021d 00       		.byte	0
  1810 021e 12       		.uleb128 0x12
- 1811 021f FA020000 		.4byte	.LASF35
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 52
+ 1811 021f ED020000 		.4byte	.LASF35
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 52
 
 
  1812 0223 24       		.byte	0x24
@@ -3067,58 +3067,58 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1815 0226 08       		.byte	0x8
  1816 0227 A1020000 		.4byte	0x2a1
  1817 022b 10       		.uleb128 0x10
- 1818 022c 84010000 		.4byte	.LASF36
+ 1818 022c 71010000 		.4byte	.LASF36
  1819 0230 06       		.byte	0x6
  1820 0231 39       		.byte	0x39
  1821 0232 09       		.byte	0x9
  1822 0233 5D000000 		.4byte	0x5d
  1823 0237 00       		.byte	0
  1824 0238 10       		.uleb128 0x10
- 1825 0239 E7070000 		.4byte	.LASF37
+ 1825 0239 DA070000 		.4byte	.LASF37
  1826 023d 06       		.byte	0x6
  1827 023e 3A       		.byte	0x3a
  1828 023f 09       		.byte	0x9
  1829 0240 5D000000 		.4byte	0x5d
  1830 0244 04       		.byte	0x4
  1831 0245 10       		.uleb128 0x10
- 1832 0246 BC010000 		.4byte	.LASF38
+ 1832 0246 A9010000 		.4byte	.LASF38
  1833 024a 06       		.byte	0x6
  1834 024b 3B       		.byte	0x3b
  1835 024c 09       		.byte	0x9
  1836 024d 5D000000 		.4byte	0x5d
  1837 0251 08       		.byte	0x8
  1838 0252 10       		.uleb128 0x10
- 1839 0253 B4090000 		.4byte	.LASF39
+ 1839 0253 A7090000 		.4byte	.LASF39
  1840 0257 06       		.byte	0x6
  1841 0258 3C       		.byte	0x3c
  1842 0259 09       		.byte	0x9
  1843 025a 5D000000 		.4byte	0x5d
  1844 025e 0C       		.byte	0xc
  1845 025f 10       		.uleb128 0x10
- 1846 0260 6D050000 		.4byte	.LASF40
+ 1846 0260 60050000 		.4byte	.LASF40
  1847 0264 06       		.byte	0x6
  1848 0265 3D       		.byte	0x3d
  1849 0266 09       		.byte	0x9
  1850 0267 5D000000 		.4byte	0x5d
  1851 026b 10       		.byte	0x10
  1852 026c 10       		.uleb128 0x10
- 1853 026d EE040000 		.4byte	.LASF41
+ 1853 026d E1040000 		.4byte	.LASF41
  1854 0271 06       		.byte	0x6
  1855 0272 3E       		.byte	0x3e
  1856 0273 09       		.byte	0x9
  1857 0274 5D000000 		.4byte	0x5d
  1858 0278 14       		.byte	0x14
  1859 0279 10       		.uleb128 0x10
- 1860 027a EA080000 		.4byte	.LASF42
+ 1860 027a DD080000 		.4byte	.LASF42
  1861 027e 06       		.byte	0x6
  1862 027f 3F       		.byte	0x3f
  1863 0280 09       		.byte	0x9
  1864 0281 5D000000 		.4byte	0x5d
  1865 0285 18       		.byte	0x18
  1866 0286 10       		.uleb128 0x10
- 1867 0287 B5060000 		.4byte	.LASF43
+ 1867 0287 A8060000 		.4byte	.LASF43
  1868 028b 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 53
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 53
 
 
  1869 028c 40       		.byte	0x40
@@ -3126,7 +3126,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1871 028e 5D000000 		.4byte	0x5d
  1872 0292 1C       		.byte	0x1c
  1873 0293 10       		.uleb128 0x10
- 1874 0294 5B090000 		.4byte	.LASF44
+ 1874 0294 4E090000 		.4byte	.LASF44
  1875 0298 06       		.byte	0x6
  1876 0299 41       		.byte	0x41
  1877 029a 09       		.byte	0x9
@@ -3134,14 +3134,14 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1879 029f 20       		.byte	0x20
  1880 02a0 00       		.byte	0
  1881 02a1 14       		.uleb128 0x14
- 1882 02a2 DD010000 		.4byte	.LASF45
+ 1882 02a2 CA010000 		.4byte	.LASF45
  1883 02a6 0801     		.2byte	0x108
  1884 02a8 06       		.byte	0x6
  1885 02a9 4A       		.byte	0x4a
  1886 02aa 08       		.byte	0x8
  1887 02ab E6020000 		.4byte	0x2e6
  1888 02af 10       		.uleb128 0x10
- 1889 02b0 1F000000 		.4byte	.LASF46
+ 1889 02b0 61000000 		.4byte	.LASF46
  1890 02b4 06       		.byte	0x6
  1891 02b5 4B       		.byte	0x4b
  1892 02b6 0A       		.byte	0xa
@@ -3155,14 +3155,14 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1900 02c4 E6020000 		.4byte	0x2e6
  1901 02c8 80       		.byte	0x80
  1902 02c9 15       		.uleb128 0x15
- 1903 02ca 5E080000 		.4byte	.LASF48
+ 1903 02ca 51080000 		.4byte	.LASF48
  1904 02ce 06       		.byte	0x6
  1905 02cf 4E       		.byte	0x4e
  1906 02d0 0A       		.byte	0xa
  1907 02d1 A2010000 		.4byte	0x1a2
  1908 02d5 0001     		.2byte	0x100
  1909 02d7 15       		.uleb128 0x15
- 1910 02d8 26020000 		.4byte	.LASF49
+ 1910 02d8 13020000 		.4byte	.LASF49
  1911 02dc 06       		.byte	0x6
  1912 02dd 51       		.byte	0x51
  1913 02de 0A       		.byte	0xa
@@ -3177,8 +3177,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1922 02f4 1F       		.byte	0x1f
  1923 02f5 00       		.byte	0
  1924 02f6 14       		.uleb128 0x14
- 1925 02f7 84050000 		.4byte	.LASF50
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 54
+ 1925 02f7 77050000 		.4byte	.LASF50
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 54
 
 
  1926 02fb 9001     		.2byte	0x190
@@ -3187,28 +3187,28 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1929 02ff 08       		.byte	0x8
  1930 0300 39030000 		.4byte	0x339
  1931 0304 10       		.uleb128 0x10
- 1932 0305 43080000 		.4byte	.LASF30
+ 1932 0305 36080000 		.4byte	.LASF30
  1933 0309 06       		.byte	0x6
  1934 030a 5E       		.byte	0x5e
  1935 030b 12       		.byte	0x12
  1936 030c 39030000 		.4byte	0x339
  1937 0310 00       		.byte	0
  1938 0311 10       		.uleb128 0x10
- 1939 0312 12070000 		.4byte	.LASF51
+ 1939 0312 05070000 		.4byte	.LASF51
  1940 0316 06       		.byte	0x6
  1941 0317 5F       		.byte	0x5f
  1942 0318 06       		.byte	0x6
  1943 0319 5D000000 		.4byte	0x5d
  1944 031d 04       		.byte	0x4
  1945 031e 10       		.uleb128 0x10
- 1946 031f 97020000 		.4byte	.LASF52
+ 1946 031f 8A020000 		.4byte	.LASF52
  1947 0323 06       		.byte	0x6
  1948 0324 61       		.byte	0x61
  1949 0325 09       		.byte	0x9
  1950 0326 3F030000 		.4byte	0x33f
  1951 032a 08       		.byte	0x8
  1952 032b 10       		.uleb128 0x10
- 1953 032c DD010000 		.4byte	.LASF45
+ 1953 032c CA010000 		.4byte	.LASF45
  1954 0330 06       		.byte	0x6
  1955 0331 62       		.byte	0x62
  1956 0332 1E       		.byte	0x1e
@@ -3226,24 +3226,24 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1968 034d 1F       		.byte	0x1f
  1969 034e 00       		.byte	0
  1970 034f 12       		.uleb128 0x12
- 1971 0350 BF060000 		.4byte	.LASF53
+ 1971 0350 B2060000 		.4byte	.LASF53
  1972 0354 08       		.byte	0x8
  1973 0355 06       		.byte	0x6
  1974 0356 75       		.byte	0x75
  1975 0357 08       		.byte	0x8
  1976 0358 77030000 		.4byte	0x377
  1977 035c 10       		.uleb128 0x10
- 1978 035d AD010000 		.4byte	.LASF54
+ 1978 035d 9A010000 		.4byte	.LASF54
  1979 0361 06       		.byte	0x6
  1980 0362 76       		.byte	0x76
  1981 0363 11       		.byte	0x11
  1982 0364 77030000 		.4byte	0x377
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 55
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 55
 
 
  1983 0368 00       		.byte	0
  1984 0369 10       		.uleb128 0x10
- 1985 036a 19000000 		.4byte	.LASF55
+ 1985 036a 84020000 		.4byte	.LASF55
  1986 036e 06       		.byte	0x6
  1987 036f 77       		.byte	0x77
  1988 0370 06       		.byte	0x6
@@ -3254,7 +3254,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  1993 0378 04       		.byte	0x4
  1994 0379 2C000000 		.4byte	0x2c
  1995 037d 12       		.uleb128 0x12
- 1996 037e DE060000 		.4byte	.LASF56
+ 1996 037e D1060000 		.4byte	.LASF56
  1997 0382 68       		.byte	0x68
  1998 0383 06       		.byte	0x6
  1999 0384 B5       		.byte	0xb5
@@ -3282,14 +3282,14 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2021 03a9 5D000000 		.4byte	0x5d
  2022 03ad 08       		.byte	0x8
  2023 03ae 10       		.uleb128 0x10
- 2024 03af 1F020000 		.4byte	.LASF57
+ 2024 03af 0C020000 		.4byte	.LASF57
  2025 03b3 06       		.byte	0x6
  2026 03b4 B9       		.byte	0xb9
  2027 03b5 09       		.byte	0x9
  2028 03b6 33000000 		.4byte	0x33
  2029 03ba 0C       		.byte	0xc
  2030 03bb 10       		.uleb128 0x10
- 2031 03bc 35030000 		.4byte	.LASF58
+ 2031 03bc 28030000 		.4byte	.LASF58
  2032 03c0 06       		.byte	0x6
  2033 03c1 BA       		.byte	0xba
  2034 03c2 09       		.byte	0x9
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2037 03c8 13       		.uleb128 0x13
  2038 03c9 5F626600 		.ascii	"_bf\000"
  2039 03cd 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 56
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 56
 
 
  2040 03ce BB       		.byte	0xbb
@@ -3306,42 +3306,42 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2042 03d0 4F030000 		.4byte	0x34f
  2043 03d4 10       		.byte	0x10
  2044 03d5 10       		.uleb128 0x10
- 2045 03d6 1B010000 		.4byte	.LASF59
+ 2045 03d6 08010000 		.4byte	.LASF59
  2046 03da 06       		.byte	0x6
  2047 03db BC       		.byte	0xbc
  2048 03dc 07       		.byte	0x7
  2049 03dd 5D000000 		.4byte	0x5d
  2050 03e1 18       		.byte	0x18
  2051 03e2 10       		.uleb128 0x10
- 2052 03e3 EB010000 		.4byte	.LASF60
+ 2052 03e3 D8010000 		.4byte	.LASF60
  2053 03e7 06       		.byte	0x6
  2054 03e8 C3       		.byte	0xc3
  2055 03e9 0A       		.byte	0xa
  2056 03ea 9A010000 		.4byte	0x19a
  2057 03ee 1C       		.byte	0x1c
  2058 03ef 10       		.uleb128 0x10
- 2059 03f0 DE020000 		.4byte	.LASF61
+ 2059 03f0 D1020000 		.4byte	.LASF61
  2060 03f4 06       		.byte	0x6
  2061 03f5 C5       		.byte	0xc5
  2062 03f6 1D       		.byte	0x1d
  2063 03f7 32060000 		.4byte	0x632
  2064 03fb 20       		.byte	0x20
  2065 03fc 10       		.uleb128 0x10
- 2066 03fd 23060000 		.4byte	.LASF62
+ 2066 03fd 16060000 		.4byte	.LASF62
  2067 0401 06       		.byte	0x6
  2068 0402 C7       		.byte	0xc7
  2069 0403 1D       		.byte	0x1d
  2070 0404 5C060000 		.4byte	0x65c
  2071 0408 24       		.byte	0x24
  2072 0409 10       		.uleb128 0x10
- 2073 040a B8070000 		.4byte	.LASF63
+ 2073 040a AB070000 		.4byte	.LASF63
  2074 040e 06       		.byte	0x6
  2075 040f CA       		.byte	0xca
  2076 0410 0D       		.byte	0xd
  2077 0411 80060000 		.4byte	0x680
  2078 0415 28       		.byte	0x28
  2079 0416 10       		.uleb128 0x10
- 2080 0417 75090000 		.4byte	.LASF64
+ 2080 0417 68090000 		.4byte	.LASF64
  2081 041b 06       		.byte	0x6
  2082 041c CB       		.byte	0xcb
  2083 041d 09       		.byte	0x9
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2094 0431 5F757000 		.ascii	"_up\000"
  2095 0435 06       		.byte	0x6
  2096 0436 CF       		.byte	0xcf
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 57
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 57
 
 
  2097 0437 12       		.byte	0x12
@@ -3372,14 +3372,14 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2105 0445 5D000000 		.4byte	0x5d
  2106 0449 3C       		.byte	0x3c
  2107 044a 10       		.uleb128 0x10
- 2108 044b A7010000 		.4byte	.LASF65
+ 2108 044b 94010000 		.4byte	.LASF65
  2109 044f 06       		.byte	0x6
  2110 0450 D3       		.byte	0xd3
  2111 0451 11       		.byte	0x11
  2112 0452 A0060000 		.4byte	0x6a0
  2113 0456 40       		.byte	0x40
  2114 0457 10       		.uleb128 0x10
- 2115 0458 4C090000 		.4byte	.LASF66
+ 2115 0458 3F090000 		.4byte	.LASF66
  2116 045c 06       		.byte	0x6
  2117 045d D4       		.byte	0xd4
  2118 045e 11       		.byte	0x11
@@ -3393,45 +3393,45 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2126 046c 4F030000 		.4byte	0x34f
  2127 0470 44       		.byte	0x44
  2128 0471 10       		.uleb128 0x10
- 2129 0472 4B020000 		.4byte	.LASF67
+ 2129 0472 38020000 		.4byte	.LASF67
  2130 0476 06       		.byte	0x6
  2131 0477 DA       		.byte	0xda
  2132 0478 07       		.byte	0x7
  2133 0479 5D000000 		.4byte	0x5d
  2134 047d 4C       		.byte	0x4c
  2135 047e 10       		.uleb128 0x10
- 2136 047f 69020000 		.4byte	.LASF68
+ 2136 047f 56020000 		.4byte	.LASF68
  2137 0483 06       		.byte	0x6
  2138 0484 DB       		.byte	0xdb
  2139 0485 0A       		.byte	0xa
  2140 0486 07010000 		.4byte	0x107
  2141 048a 50       		.byte	0x50
  2142 048b 10       		.uleb128 0x10
- 2143 048c BF000000 		.4byte	.LASF69
+ 2143 048c AC000000 		.4byte	.LASF69
  2144 0490 06       		.byte	0x6
  2145 0491 DE       		.byte	0xde
  2146 0492 12       		.byte	0x12
  2147 0493 DE040000 		.4byte	0x4de
  2148 0497 54       		.byte	0x54
  2149 0498 10       		.uleb128 0x10
- 2150 0499 29040000 		.4byte	.LASF70
+ 2150 0499 1C040000 		.4byte	.LASF70
  2151 049d 06       		.byte	0x6
  2152 049e E2       		.byte	0xe2
  2153 049f 0C       		.byte	0xc
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 58
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 58
 
 
  2154 04a0 8E010000 		.4byte	0x18e
  2155 04a4 58       		.byte	0x58
  2156 04a5 10       		.uleb128 0x10
- 2157 04a6 E6060000 		.4byte	.LASF71
+ 2157 04a6 D9060000 		.4byte	.LASF71
  2158 04aa 06       		.byte	0x6
  2159 04ab E4       		.byte	0xe4
  2160 04ac 0E       		.byte	0xe
  2161 04ad 82010000 		.4byte	0x182
  2162 04b1 5C       		.byte	0x5c
  2163 04b2 10       		.uleb128 0x10
- 2164 04b3 2F040000 		.4byte	.LASF72
+ 2164 04b3 22040000 		.4byte	.LASF72
  2165 04b7 06       		.byte	0x6
  2166 04b8 E5       		.byte	0xe5
  2167 04b9 09       		.byte	0x9
@@ -3456,29 +3456,29 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2186 04e4 06       		.uleb128 0x6
  2187 04e5 DE040000 		.4byte	0x4de
  2188 04e9 18       		.uleb128 0x18
- 2189 04ea 7B070000 		.4byte	.LASF73
+ 2189 04ea 6E070000 		.4byte	.LASF73
  2190 04ee 2804     		.2byte	0x428
  2191 04f0 06       		.byte	0x6
  2192 04f1 6002     		.2byte	0x260
  2193 04f3 08       		.byte	0x8
  2194 04f4 32060000 		.4byte	0x632
  2195 04f8 19       		.uleb128 0x19
- 2196 04f9 D2070000 		.4byte	.LASF74
+ 2196 04f9 C5070000 		.4byte	.LASF74
  2197 04fd 06       		.byte	0x6
  2198 04fe 6202     		.2byte	0x262
  2199 0500 07       		.byte	0x7
  2200 0501 5D000000 		.4byte	0x5d
  2201 0505 00       		.byte	0
  2202 0506 19       		.uleb128 0x19
- 2203 0507 2E020000 		.4byte	.LASF75
+ 2203 0507 1B020000 		.4byte	.LASF75
  2204 050b 06       		.byte	0x6
  2205 050c 6702     		.2byte	0x267
  2206 050e 0B       		.byte	0xb
  2207 050f 0C070000 		.4byte	0x70c
  2208 0513 04       		.byte	0x4
  2209 0514 19       		.uleb128 0x19
- 2210 0515 13030000 		.4byte	.LASF76
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 59
+ 2210 0515 06030000 		.4byte	.LASF76
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 59
 
 
  2211 0519 06       		.byte	0x6
@@ -3487,58 +3487,58 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2214 051d 0C070000 		.4byte	0x70c
  2215 0521 08       		.byte	0x8
  2216 0522 19       		.uleb128 0x19
- 2217 0523 BF020000 		.4byte	.LASF77
+ 2217 0523 B2020000 		.4byte	.LASF77
  2218 0527 06       		.byte	0x6
  2219 0528 6702     		.2byte	0x267
  2220 052a 1E       		.byte	0x1e
  2221 052b 0C070000 		.4byte	0x70c
  2222 052f 0C       		.byte	0xc
  2223 0530 19       		.uleb128 0x19
- 2224 0531 0D070000 		.4byte	.LASF78
+ 2224 0531 00070000 		.4byte	.LASF78
  2225 0535 06       		.byte	0x6
  2226 0536 6902     		.2byte	0x269
  2227 0538 08       		.byte	0x8
  2228 0539 5D000000 		.4byte	0x5d
  2229 053d 10       		.byte	0x10
  2230 053e 19       		.uleb128 0x19
- 2231 053f 43000000 		.4byte	.LASF79
+ 2231 053f 85000000 		.4byte	.LASF79
  2232 0543 06       		.byte	0x6
  2233 0544 6A02     		.2byte	0x26a
  2234 0546 08       		.byte	0x8
  2235 0547 0C090000 		.4byte	0x90c
  2236 054b 14       		.byte	0x14
  2237 054c 19       		.uleb128 0x19
- 2238 054d 4C070000 		.4byte	.LASF80
+ 2238 054d 3F070000 		.4byte	.LASF80
  2239 0551 06       		.byte	0x6
  2240 0552 6D02     		.2byte	0x26d
  2241 0554 07       		.byte	0x7
  2242 0555 5D000000 		.4byte	0x5d
  2243 0559 30       		.byte	0x30
  2244 055a 19       		.uleb128 0x19
- 2245 055b 3A070000 		.4byte	.LASF81
+ 2245 055b 2D070000 		.4byte	.LASF81
  2246 055f 06       		.byte	0x6
  2247 0560 6E02     		.2byte	0x26e
  2248 0562 16       		.byte	0x16
  2249 0563 21090000 		.4byte	0x921
  2250 0567 34       		.byte	0x34
  2251 0568 19       		.uleb128 0x19
- 2252 0569 8C050000 		.4byte	.LASF82
+ 2252 0569 7F050000 		.4byte	.LASF82
  2253 056d 06       		.byte	0x6
  2254 056e 7002     		.2byte	0x270
  2255 0570 07       		.byte	0x7
  2256 0571 5D000000 		.4byte	0x5d
  2257 0575 38       		.byte	0x38
  2258 0576 19       		.uleb128 0x19
- 2259 0577 42070000 		.4byte	.LASF83
+ 2259 0577 35070000 		.4byte	.LASF83
  2260 057b 06       		.byte	0x6
  2261 057c 7202     		.2byte	0x272
  2262 057e 0A       		.byte	0xa
  2263 057f 32090000 		.4byte	0x932
  2264 0583 3C       		.byte	0x3c
  2265 0584 19       		.uleb128 0x19
- 2266 0585 E9030000 		.4byte	.LASF84
+ 2266 0585 DC030000 		.4byte	.LASF84
  2267 0589 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 60
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 60
 
 
  2268 058a 7502     		.2byte	0x275
@@ -3546,80 +3546,80 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2270 058d 08020000 		.4byte	0x208
  2271 0591 40       		.byte	0x40
  2272 0592 19       		.uleb128 0x19
- 2273 0593 E4020000 		.4byte	.LASF85
+ 2273 0593 D7020000 		.4byte	.LASF85
  2274 0597 06       		.byte	0x6
  2275 0598 7602     		.2byte	0x276
  2276 059a 07       		.byte	0x7
  2277 059b 5D000000 		.4byte	0x5d
  2278 059f 44       		.byte	0x44
  2279 05a0 19       		.uleb128 0x19
- 2280 05a1 A7090000 		.4byte	.LASF86
+ 2280 05a1 9A090000 		.4byte	.LASF86
  2281 05a5 06       		.byte	0x6
  2282 05a6 7702     		.2byte	0x277
  2283 05a8 13       		.byte	0x13
  2284 05a9 08020000 		.4byte	0x208
  2285 05ad 48       		.byte	0x48
  2286 05ae 19       		.uleb128 0x19
- 2287 05af D4050000 		.4byte	.LASF87
+ 2287 05af C7050000 		.4byte	.LASF87
  2288 05b3 06       		.byte	0x6
  2289 05b4 7802     		.2byte	0x278
  2290 05b6 14       		.byte	0x14
  2291 05b7 38090000 		.4byte	0x938
  2292 05bb 4C       		.byte	0x4c
  2293 05bc 19       		.uleb128 0x19
- 2294 05bd 1B030000 		.4byte	.LASF88
+ 2294 05bd 0E030000 		.4byte	.LASF88
  2295 05c1 06       		.byte	0x6
  2296 05c2 7B02     		.2byte	0x27b
  2297 05c4 07       		.byte	0x7
  2298 05c5 5D000000 		.4byte	0x5d
  2299 05c9 50       		.byte	0x50
  2300 05ca 19       		.uleb128 0x19
- 2301 05cb 61020000 		.4byte	.LASF89
+ 2301 05cb 4E020000 		.4byte	.LASF89
  2302 05cf 06       		.byte	0x6
  2303 05d0 7C02     		.2byte	0x27c
  2304 05d2 09       		.byte	0x9
  2305 05d3 9C010000 		.4byte	0x19c
  2306 05d7 54       		.byte	0x54
  2307 05d8 19       		.uleb128 0x19
- 2308 05d9 78060000 		.4byte	.LASF90
+ 2308 05d9 6B060000 		.4byte	.LASF90
  2309 05dd 06       		.byte	0x6
  2310 05de 9F02     		.2byte	0x29f
  2311 05e0 07       		.byte	0x7
  2312 05e1 E7080000 		.4byte	0x8e7
  2313 05e5 58       		.byte	0x58
  2314 05e6 1A       		.uleb128 0x1a
- 2315 05e7 84050000 		.4byte	.LASF50
+ 2315 05e7 77050000 		.4byte	.LASF50
  2316 05eb 06       		.byte	0x6
  2317 05ec A302     		.2byte	0x2a3
  2318 05ee 13       		.byte	0x13
  2319 05ef 39030000 		.4byte	0x339
  2320 05f3 4801     		.2byte	0x148
  2321 05f5 1A       		.uleb128 0x1a
- 2322 05f6 AD030000 		.4byte	.LASF91
+ 2322 05f6 A0030000 		.4byte	.LASF91
  2323 05fa 06       		.byte	0x6
  2324 05fb A402     		.2byte	0x2a4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 61
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 61
 
 
  2325 05fd 12       		.byte	0x12
  2326 05fe F6020000 		.4byte	0x2f6
  2327 0602 4C01     		.2byte	0x14c
  2328 0604 1A       		.uleb128 0x1a
- 2329 0605 2E090000 		.4byte	.LASF92
+ 2329 0605 21090000 		.4byte	.LASF92
  2330 0609 06       		.byte	0x6
  2331 060a A802     		.2byte	0x2a8
  2332 060c 0C       		.byte	0xc
  2333 060d 49090000 		.4byte	0x949
  2334 0611 DC02     		.2byte	0x2dc
  2335 0613 1A       		.uleb128 0x1a
- 2336 0614 F3010000 		.4byte	.LASF93
+ 2336 0614 E0010000 		.4byte	.LASF93
  2337 0618 06       		.byte	0x6
  2338 0619 AD02     		.2byte	0x2ad
  2339 061b 10       		.byte	0x10
  2340 061c CD060000 		.4byte	0x6cd
  2341 0620 E002     		.2byte	0x2e0
  2342 0622 1A       		.uleb128 0x1a
- 2343 0623 D8010000 		.4byte	.LASF94
+ 2343 0623 C5010000 		.4byte	.LASF94
  2344 0627 06       		.byte	0x6
  2345 0628 AF02     		.2byte	0x2af
  2346 062a 0A       		.byte	0xa
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2379 0676 13010000 		.4byte	0x113
  2380 067a 17       		.uleb128 0x17
  2381 067b 5D000000 		.4byte	0x5d
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 62
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 62
 
 
  2382 067f 00       		.byte	0
@@ -3691,37 +3691,37 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2409 06be 00       		.byte	0
  2410 06bf 00       		.byte	0
  2411 06c0 04       		.uleb128 0x4
- 2412 06c1 CC060000 		.4byte	.LASF95
+ 2412 06c1 BF060000 		.4byte	.LASF95
  2413 06c5 06       		.byte	0x6
  2414 06c6 1F01     		.2byte	0x11f
  2415 06c8 1A       		.byte	0x1a
  2416 06c9 7D030000 		.4byte	0x37d
  2417 06cd 1B       		.uleb128 0x1b
- 2418 06ce F4080000 		.4byte	.LASF96
+ 2418 06ce E7080000 		.4byte	.LASF96
  2419 06d2 0C       		.byte	0xc
  2420 06d3 06       		.byte	0x6
  2421 06d4 2301     		.2byte	0x123
  2422 06d6 08       		.byte	0x8
  2423 06d7 06070000 		.4byte	0x706
  2424 06db 19       		.uleb128 0x19
- 2425 06dc 43080000 		.4byte	.LASF30
+ 2425 06dc 36080000 		.4byte	.LASF30
  2426 06e0 06       		.byte	0x6
  2427 06e1 2501     		.2byte	0x125
  2428 06e3 11       		.byte	0x11
  2429 06e4 06070000 		.4byte	0x706
  2430 06e8 00       		.byte	0
  2431 06e9 19       		.uleb128 0x19
- 2432 06ea 74030000 		.4byte	.LASF97
+ 2432 06ea 67030000 		.4byte	.LASF97
  2433 06ee 06       		.byte	0x6
  2434 06ef 2601     		.2byte	0x126
  2435 06f1 07       		.byte	0x7
  2436 06f2 5D000000 		.4byte	0x5d
  2437 06f6 04       		.byte	0x4
  2438 06f7 19       		.uleb128 0x19
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 63
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 63
 
 
- 2439 06f8 C6060000 		.4byte	.LASF98
+ 2439 06f8 B9060000 		.4byte	.LASF98
  2440 06fc 06       		.byte	0x6
  2441 06fd 2701     		.2byte	0x127
  2442 06ff 0B       		.byte	0xb
@@ -3735,28 +3735,28 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2450 070d 04       		.byte	0x4
  2451 070e C0060000 		.4byte	0x6c0
  2452 0712 1B       		.uleb128 0x1b
- 2453 0713 33000000 		.4byte	.LASF99
+ 2453 0713 75000000 		.4byte	.LASF99
  2454 0717 0E       		.byte	0xe
  2455 0718 06       		.byte	0x6
  2456 0719 3F01     		.2byte	0x13f
  2457 071b 08       		.byte	0x8
  2458 071c 4B070000 		.4byte	0x74b
  2459 0720 19       		.uleb128 0x19
- 2460 0721 82070000 		.4byte	.LASF100
+ 2460 0721 75070000 		.4byte	.LASF100
  2461 0725 06       		.byte	0x6
  2462 0726 4001     		.2byte	0x140
  2463 0728 12       		.byte	0x12
  2464 0729 4B070000 		.4byte	0x74b
  2465 072d 00       		.byte	0
  2466 072e 19       		.uleb128 0x19
- 2467 072f 3D080000 		.4byte	.LASF101
+ 2467 072f 30080000 		.4byte	.LASF101
  2468 0733 06       		.byte	0x6
  2469 0734 4101     		.2byte	0x141
  2470 0736 12       		.byte	0x12
  2471 0737 4B070000 		.4byte	0x74b
  2472 073b 06       		.byte	0x6
  2473 073c 19       		.uleb128 0x19
- 2474 073d 72080000 		.4byte	.LASF102
+ 2474 073d 65080000 		.4byte	.LASF102
  2475 0741 06       		.byte	0x6
  2476 0742 4201     		.2byte	0x142
  2477 0744 12       		.byte	0x12
@@ -3777,8 +3777,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2492 0760 07       		.byte	0x7
  2493 0761 70080000 		.4byte	0x870
  2494 0765 19       		.uleb128 0x19
- 2495 0766 C7080000 		.4byte	.LASF103
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 64
+ 2495 0766 BA080000 		.4byte	.LASF103
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 64
 
 
  2496 076a 06       		.byte	0x6
@@ -3787,58 +3787,58 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2499 076e 64000000 		.4byte	0x64
  2500 0772 00       		.byte	0
  2501 0773 19       		.uleb128 0x19
- 2502 0774 49080000 		.4byte	.LASF104
+ 2502 0774 3C080000 		.4byte	.LASF104
  2503 0778 06       		.byte	0x6
  2504 0779 8302     		.2byte	0x283
  2505 077b 12       		.byte	0x12
  2506 077c 9C010000 		.4byte	0x19c
  2507 0780 04       		.byte	0x4
  2508 0781 19       		.uleb128 0x19
- 2509 0782 D0030000 		.4byte	.LASF105
+ 2509 0782 C3030000 		.4byte	.LASF105
  2510 0786 06       		.byte	0x6
  2511 0787 8402     		.2byte	0x284
  2512 0789 10       		.byte	0x10
  2513 078a 70080000 		.4byte	0x870
  2514 078e 08       		.byte	0x8
  2515 078f 19       		.uleb128 0x19
- 2516 0790 66090000 		.4byte	.LASF106
+ 2516 0790 59090000 		.4byte	.LASF106
  2517 0794 06       		.byte	0x6
  2518 0795 8502     		.2byte	0x285
  2519 0797 17       		.byte	0x17
  2520 0798 1E020000 		.4byte	0x21e
  2521 079c 24       		.byte	0x24
  2522 079d 19       		.uleb128 0x19
- 2523 079e CF020000 		.4byte	.LASF107
+ 2523 079e C2020000 		.4byte	.LASF107
  2524 07a2 06       		.byte	0x6
  2525 07a3 8602     		.2byte	0x286
  2526 07a5 0F       		.byte	0xf
  2527 07a6 5D000000 		.4byte	0x5d
  2528 07aa 48       		.byte	0x48
  2529 07ab 19       		.uleb128 0x19
- 2530 07ac EF060000 		.4byte	.LASF108
+ 2530 07ac E2060000 		.4byte	.LASF108
  2531 07b0 06       		.byte	0x6
  2532 07b1 8702     		.2byte	0x287
  2533 07b3 2C       		.byte	0x2c
  2534 07b4 56000000 		.4byte	0x56
  2535 07b8 50       		.byte	0x50
  2536 07b9 19       		.uleb128 0x19
- 2537 07ba 7C090000 		.4byte	.LASF109
+ 2537 07ba 6F090000 		.4byte	.LASF109
  2538 07be 06       		.byte	0x6
  2539 07bf 8802     		.2byte	0x288
  2540 07c1 1A       		.byte	0x1a
  2541 07c2 12070000 		.4byte	0x712
  2542 07c6 58       		.byte	0x58
  2543 07c7 19       		.uleb128 0x19
- 2544 07c8 00070000 		.4byte	.LASF110
+ 2544 07c8 F3060000 		.4byte	.LASF110
  2545 07cc 06       		.byte	0x6
  2546 07cd 8902     		.2byte	0x289
  2547 07cf 16       		.byte	0x16
  2548 07d0 82010000 		.4byte	0x182
  2549 07d4 68       		.byte	0x68
  2550 07d5 19       		.uleb128 0x19
- 2551 07d6 99090000 		.4byte	.LASF111
+ 2551 07d6 8C090000 		.4byte	.LASF111
  2552 07da 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 65
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 65
 
 
  2553 07db 8A02     		.2byte	0x28a
@@ -3846,73 +3846,73 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2555 07de 82010000 		.4byte	0x182
  2556 07e2 70       		.byte	0x70
  2557 07e3 19       		.uleb128 0x19
- 2558 07e4 05060000 		.4byte	.LASF112
+ 2558 07e4 F8050000 		.4byte	.LASF112
  2559 07e8 06       		.byte	0x6
  2560 07e9 8B02     		.2byte	0x28b
  2561 07eb 16       		.byte	0x16
  2562 07ec 82010000 		.4byte	0x182
  2563 07f0 78       		.byte	0x78
  2564 07f1 19       		.uleb128 0x19
- 2565 07f2 15090000 		.4byte	.LASF113
+ 2565 07f2 08090000 		.4byte	.LASF113
  2566 07f6 06       		.byte	0x6
  2567 07f7 8C02     		.2byte	0x28c
  2568 07f9 10       		.byte	0x10
  2569 07fa 80080000 		.4byte	0x880
  2570 07fe 80       		.byte	0x80
  2571 07ff 19       		.uleb128 0x19
- 2572 0800 C4030000 		.4byte	.LASF114
+ 2572 0800 B7030000 		.4byte	.LASF114
  2573 0804 06       		.byte	0x6
  2574 0805 8D02     		.2byte	0x28d
  2575 0807 10       		.byte	0x10
  2576 0808 90080000 		.4byte	0x890
  2577 080c 88       		.byte	0x88
  2578 080d 19       		.uleb128 0x19
- 2579 080e 88080000 		.4byte	.LASF115
+ 2579 080e 7B080000 		.4byte	.LASF115
  2580 0812 06       		.byte	0x6
  2581 0813 8E02     		.2byte	0x28e
  2582 0815 0F       		.byte	0xf
  2583 0816 5D000000 		.4byte	0x5d
  2584 081a A0       		.byte	0xa0
  2585 081b 19       		.uleb128 0x19
- 2586 081c 82020000 		.4byte	.LASF116
+ 2586 081c 6F020000 		.4byte	.LASF116
  2587 0820 06       		.byte	0x6
  2588 0821 8F02     		.2byte	0x28f
  2589 0823 16       		.byte	0x16
  2590 0824 82010000 		.4byte	0x182
  2591 0828 A4       		.byte	0xa4
  2592 0829 19       		.uleb128 0x19
- 2593 082a 58010000 		.4byte	.LASF117
+ 2593 082a 45010000 		.4byte	.LASF117
  2594 082e 06       		.byte	0x6
  2595 082f 9002     		.2byte	0x290
  2596 0831 16       		.byte	0x16
  2597 0832 82010000 		.4byte	0x182
  2598 0836 AC       		.byte	0xac
  2599 0837 19       		.uleb128 0x19
- 2600 0838 71020000 		.4byte	.LASF118
+ 2600 0838 5E020000 		.4byte	.LASF118
  2601 083c 06       		.byte	0x6
  2602 083d 9102     		.2byte	0x291
  2603 083f 16       		.byte	0x16
  2604 0840 82010000 		.4byte	0x182
  2605 0844 B4       		.byte	0xb4
  2606 0845 19       		.uleb128 0x19
- 2607 0846 D3000000 		.4byte	.LASF119
+ 2607 0846 C0000000 		.4byte	.LASF119
  2608 084a 06       		.byte	0x6
  2609 084b 9202     		.2byte	0x292
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 66
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 66
 
 
  2610 084d 16       		.byte	0x16
  2611 084e 82010000 		.4byte	0x182
  2612 0852 BC       		.byte	0xbc
  2613 0853 19       		.uleb128 0x19
- 2614 0854 F3000000 		.4byte	.LASF120
+ 2614 0854 E0000000 		.4byte	.LASF120
  2615 0858 06       		.byte	0x6
  2616 0859 9302     		.2byte	0x293
  2617 085b 16       		.byte	0x16
  2618 085c 82010000 		.4byte	0x182
  2619 0860 C4       		.byte	0xc4
  2620 0861 19       		.uleb128 0x19
- 2621 0862 A2060000 		.4byte	.LASF121
+ 2621 0862 95060000 		.4byte	.LASF121
  2622 0866 06       		.byte	0x6
  2623 0867 9402     		.2byte	0x294
  2624 0869 08       		.byte	0x8
@@ -3947,18 +3947,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2653 08a5 07       		.byte	0x7
  2654 08a6 C7080000 		.4byte	0x8c7
  2655 08aa 19       		.uleb128 0x19
- 2656 08ab 56050000 		.4byte	.LASF122
+ 2656 08ab 49050000 		.4byte	.LASF122
  2657 08af 06       		.byte	0x6
  2658 08b0 9C02     		.2byte	0x29c
  2659 08b2 1B       		.byte	0x1b
  2660 08b3 C7080000 		.4byte	0x8c7
  2661 08b7 00       		.byte	0
  2662 08b8 19       		.uleb128 0x19
- 2663 08b9 0C090000 		.4byte	.LASF123
+ 2663 08b9 FF080000 		.4byte	.LASF123
  2664 08bd 06       		.byte	0x6
  2665 08be 9D02     		.2byte	0x29d
  2666 08c0 18       		.byte	0x18
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 67
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 67
 
 
  2667 08c1 D7080000 		.4byte	0x8d7
@@ -3985,13 +3985,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2688 08ec 03       		.byte	0x3
  2689 08ed 0C090000 		.4byte	0x90c
  2690 08f1 1E       		.uleb128 0x1e
- 2691 08f2 7B070000 		.4byte	.LASF73
+ 2691 08f2 6E070000 		.4byte	.LASF73
  2692 08f6 06       		.byte	0x6
  2693 08f7 9502     		.2byte	0x295
  2694 08f9 0B       		.byte	0xb
  2695 08fa 5B070000 		.4byte	0x75b
  2696 08fe 1E       		.uleb128 0x1e
- 2697 08ff 41010000 		.4byte	.LASF124
+ 2697 08ff 2E010000 		.4byte	.LASF124
  2698 0903 06       		.byte	0x6
  2699 0904 9E02     		.2byte	0x29e
  2700 0906 0B       		.byte	0xb
@@ -4005,7 +4005,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2708 091a 18       		.byte	0x18
  2709 091b 00       		.byte	0
  2710 091c 0A       		.uleb128 0xa
- 2711 091d 36010000 		.4byte	.LASF126
+ 2711 091d 23010000 		.4byte	.LASF126
  2712 0921 07       		.uleb128 0x7
  2713 0922 04       		.byte	0x4
  2714 0923 1C090000 		.4byte	0x91c
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2721 0933 04       		.byte	0x4
  2722 0934 27090000 		.4byte	0x927
  2723 0938 07       		.uleb128 0x7
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 68
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 68
 
 
  2724 0939 04       		.byte	0x4
@@ -4042,13 +4042,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2742 0963 02       		.byte	0x2
  2743 0964 00       		.byte	0
  2744 0965 20       		.uleb128 0x20
- 2745 0966 BE070000 		.4byte	.LASF127
+ 2745 0966 B1070000 		.4byte	.LASF127
  2746 096a 06       		.byte	0x6
  2747 096b 2E03     		.2byte	0x32e
  2748 096d 17       		.byte	0x17
  2749 096e DE040000 		.4byte	0x4de
  2750 0972 20       		.uleb128 0x20
- 2751 0973 95080000 		.4byte	.LASF128
+ 2751 0973 88080000 		.4byte	.LASF128
  2752 0977 06       		.byte	0x6
  2753 0978 2F03     		.2byte	0x32f
  2754 097a 1D       		.byte	0x1d
@@ -4061,13 +4061,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2761 098a 06       		.uleb128 0x6
  2762 098b 7F090000 		.4byte	0x97f
  2763 098f 22       		.uleb128 0x22
- 2764 0990 1D080000 		.4byte	.LASF129
+ 2764 0990 10080000 		.4byte	.LASF129
  2765 0994 07       		.byte	0x7
  2766 0995 AE       		.byte	0xae
  2767 0996 1C       		.byte	0x1c
  2768 0997 8A090000 		.4byte	0x98a
  2769 099b 22       		.uleb128 0x22
- 2770 099c 95060000 		.4byte	.LASF130
+ 2770 099c 88060000 		.4byte	.LASF130
  2771 09a0 08       		.byte	0x8
  2772 09a1 1C       		.byte	0x1c
  2773 09a2 0E       		.byte	0xe
@@ -4078,79 +4078,79 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2778 09b0 0E       		.uleb128 0xe
  2779 09b1 64000000 		.4byte	0x64
  2780 09b5 01       		.byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 69
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 69
 
 
  2781 09b6 00       		.byte	0
  2782 09b7 22       		.uleb128 0x22
- 2783 09b8 49010000 		.4byte	.LASF131
+ 2783 09b8 36010000 		.4byte	.LASF131
  2784 09bc 09       		.byte	0x9
  2785 09bd 1C       		.byte	0x1c
  2786 09be 0E       		.byte	0xe
  2787 09bf A7090000 		.4byte	0x9a7
  2788 09c3 22       		.uleb128 0x22
- 2789 09c4 76050000 		.4byte	.LASF132
+ 2789 09c4 69050000 		.4byte	.LASF132
  2790 09c8 0A       		.byte	0xa
  2791 09c9 2C       		.byte	0x2c
  2792 09ca 16       		.byte	0x16
  2793 09cb 6B000000 		.4byte	0x6b
  2794 09cf 22       		.uleb128 0x22
- 2795 09d0 13060000 		.4byte	.LASF133
+ 2795 09d0 06060000 		.4byte	.LASF133
  2796 09d4 0A       		.byte	0xa
  2797 09d5 38       		.byte	0x38
  2798 09d6 0F       		.byte	0xf
  2799 09d7 8F000000 		.4byte	0x8f
  2800 09db 22       		.uleb128 0x22
- 2801 09dc F8040000 		.4byte	.LASF134
+ 2801 09dc EB040000 		.4byte	.LASF134
  2802 09e0 0A       		.byte	0xa
  2803 09e1 39       		.byte	0x39
  2804 09e2 0F       		.byte	0xf
  2805 09e3 8F000000 		.4byte	0x8f
  2806 09e7 22       		.uleb128 0x22
- 2807 09e8 67010000 		.4byte	.LASF135
+ 2807 09e8 54010000 		.4byte	.LASF135
  2808 09ec 0A       		.byte	0xa
  2809 09ed 3A       		.byte	0x3a
  2810 09ee 0F       		.byte	0xf
  2811 09ef 6B000000 		.4byte	0x6b
  2812 09f3 22       		.uleb128 0x22
- 2813 09f4 88070000 		.4byte	.LASF136
+ 2813 09f4 7B070000 		.4byte	.LASF136
  2814 09f8 0A       		.byte	0xa
  2815 09f9 3B       		.byte	0x3b
  2816 09fa 0F       		.byte	0xf
  2817 09fb 8F000000 		.4byte	0x8f
  2818 09ff 12       		.uleb128 0x12
- 2819 0a00 5B060000 		.4byte	.LASF137
+ 2819 0a00 4E060000 		.4byte	.LASF137
  2820 0a04 10       		.byte	0x10
  2821 0a05 0B       		.byte	0xb
  2822 0a06 47       		.byte	0x47
  2823 0a07 10       		.byte	0x10
  2824 0a08 410A0000 		.4byte	0xa41
  2825 0a0c 10       		.uleb128 0x10
- 2826 0a0d 90030000 		.4byte	.LASF138
+ 2826 0a0d 83030000 		.4byte	.LASF138
  2827 0a11 0B       		.byte	0xb
  2828 0a12 49       		.byte	0x49
  2829 0a13 14       		.byte	0x14
  2830 0a14 510A0000 		.4byte	0xa51
  2831 0a18 00       		.byte	0
  2832 0a19 10       		.uleb128 0x10
- 2833 0a1a A9020000 		.4byte	.LASF139
+ 2833 0a1a 9C020000 		.4byte	.LASF139
  2834 0a1e 0B       		.byte	0xb
  2835 0a1f 4A       		.byte	0x4a
  2836 0a20 14       		.byte	0x14
  2837 0a21 510A0000 		.4byte	0xa51
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 70
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 70
 
 
  2838 0a25 04       		.byte	0x4
  2839 0a26 10       		.uleb128 0x10
- 2840 0a27 10050000 		.4byte	.LASF140
+ 2840 0a27 03050000 		.4byte	.LASF140
  2841 0a2b 0B       		.byte	0xb
  2842 0a2c 4B       		.byte	0x4b
  2843 0a2d 14       		.byte	0x14
  2844 0a2e 510A0000 		.4byte	0xa51
  2845 0a32 08       		.byte	0x8
  2846 0a33 10       		.uleb128 0x10
- 2847 0a34 7F080000 		.4byte	.LASF141
+ 2847 0a34 72080000 		.4byte	.LASF141
  2848 0a38 0B       		.byte	0xb
  2849 0a39 4C       		.byte	0x4c
  2850 0a3a 14       		.byte	0x14
@@ -4167,27 +4167,27 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2861 0a51 05       		.uleb128 0x5
  2862 0a52 410A0000 		.4byte	0xa41
  2863 0a56 09       		.uleb128 0x9
- 2864 0a57 25080000 		.4byte	.LASF142
+ 2864 0a57 18080000 		.4byte	.LASF142
  2865 0a5b 0B       		.byte	0xb
  2866 0a5c 4E       		.byte	0x4e
  2867 0a5d 03       		.byte	0x3
  2868 0a5e FF090000 		.4byte	0x9ff
  2869 0a62 12       		.uleb128 0x12
- 2870 0a63 4A030000 		.4byte	.LASF143
+ 2870 0a63 3D030000 		.4byte	.LASF143
  2871 0a67 08       		.byte	0x8
  2872 0a68 0B       		.byte	0xb
  2873 0a69 51       		.byte	0x51
  2874 0a6a 10       		.byte	0x10
  2875 0a6b 8A0A0000 		.4byte	0xa8a
  2876 0a6f 10       		.uleb128 0x10
- 2877 0a70 D4080000 		.4byte	.LASF144
+ 2877 0a70 C7080000 		.4byte	.LASF144
  2878 0a74 0B       		.byte	0xb
  2879 0a75 53       		.byte	0x53
  2880 0a76 14       		.byte	0x14
  2881 0a77 510A0000 		.4byte	0xa51
  2882 0a7b 00       		.byte	0
  2883 0a7c 10       		.uleb128 0x10
- 2884 0a7d D9080000 		.4byte	.LASF145
+ 2884 0a7d CC080000 		.4byte	.LASF145
  2885 0a81 0B       		.byte	0xb
  2886 0a82 54       		.byte	0x54
  2887 0a83 14       		.byte	0x14
@@ -4195,16 +4195,16 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2889 0a88 04       		.byte	0x4
  2890 0a89 00       		.byte	0
  2891 0a8a 09       		.uleb128 0x9
- 2892 0a8b 27000000 		.4byte	.LASF146
+ 2892 0a8b 69000000 		.4byte	.LASF146
  2893 0a8f 0B       		.byte	0xb
  2894 0a90 56       		.byte	0x56
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 71
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 71
 
 
  2895 0a91 03       		.byte	0x3
  2896 0a92 620A0000 		.4byte	0xa62
  2897 0a96 12       		.uleb128 0x12
- 2898 0a97 C6010000 		.4byte	.LASF147
+ 2898 0a97 B3010000 		.4byte	.LASF147
  2899 0a9b 08       		.byte	0x8
  2900 0a9c 0B       		.byte	0xb
  2901 0a9d 59       		.byte	0x59
@@ -4226,13 +4226,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2917 0abc 04       		.byte	0x4
  2918 0abd 00       		.byte	0
  2919 0abe 09       		.uleb128 0x9
- 2920 0abf 67080000 		.4byte	.LASF148
+ 2920 0abf 5A080000 		.4byte	.LASF148
  2921 0ac3 0B       		.byte	0xb
  2922 0ac4 5E       		.byte	0x5e
  2923 0ac5 03       		.byte	0x3
  2924 0ac6 960A0000 		.4byte	0xa96
  2925 0aca 23       		.uleb128 0x23
- 2926 0acb 7B030000 		.4byte	.LASF149
+ 2926 0acb 6E030000 		.4byte	.LASF149
  2927 0acf 01       		.byte	0x1
  2928 0ad0 27       		.byte	0x27
  2929 0ad1 0F       		.byte	0xf
@@ -4241,7 +4241,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2932 0ad7 03       		.byte	0x3
  2933 0ad8 01000000 		.4byte	CyDmaTdCurrentNumber
  2934 0adc 23       		.uleb128 0x23
- 2935 0add A8080000 		.4byte	.LASF150
+ 2935 0add 9B080000 		.4byte	.LASF150
  2936 0ae1 01       		.byte	0x1
  2937 0ae2 28       		.byte	0x28
  2938 0ae3 0F       		.byte	0xf
@@ -4250,7 +4250,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2941 0ae9 03       		.byte	0x3
  2942 0aea 00000000 		.4byte	CyDmaTdFreeIndex
  2943 0aee 23       		.uleb128 0x23
- 2944 0aef E7050000 		.4byte	.LASF151
+ 2944 0aef DA050000 		.4byte	.LASF151
  2945 0af3 01       		.byte	0x1
  2946 0af4 29       		.byte	0x29
  2947 0af5 0F       		.byte	0xf
@@ -4258,11 +4258,11 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2949 0afa 05       		.uleb128 0x5
  2950 0afb 03       		.byte	0x3
  2951 0afc 00000000 		.4byte	CyDmaChannels
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 72
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 72
 
 
  2952 0b00 24       		.uleb128 0x24
- 2953 0b01 24010000 		.4byte	.LASF153
+ 2953 0b01 11010000 		.4byte	.LASF153
  2954 0b05 01       		.byte	0x1
  2955 0b06 F903     		.2byte	0x3f9
  2956 0b08 0A       		.byte	0xa
@@ -4273,7 +4273,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2961 0b16 9C       		.byte	0x9c
  2962 0b17 4E0B0000 		.4byte	0xb4e
  2963 0b1b 25       		.uleb128 0x25
- 2964 0b1c 31070000 		.4byte	.LASF155
+ 2964 0b1c 24070000 		.4byte	.LASF155
  2965 0b20 01       		.byte	0x1
  2966 0b21 F903     		.2byte	0x3f9
  2967 0b23 22       		.byte	0x22
@@ -4281,7 +4281,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2969 0b28 0C000000 		.4byte	.LLST58
  2970 0b2c 00000000 		.4byte	.LVUS58
  2971 0b30 26       		.uleb128 0x26
- 2972 0b31 B3010000 		.4byte	.LASF157
+ 2972 0b31 A0010000 		.4byte	.LASF157
  2973 0b35 01       		.byte	0x1
  2974 0b36 F903     		.2byte	0x3f9
  2975 0b38 32       		.byte	0x32
@@ -4289,7 +4289,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2977 0b3d 01       		.uleb128 0x1
  2978 0b3e 51       		.byte	0x51
  2979 0b3f 27       		.uleb128 0x27
- 2980 0b40 DE080000 		.4byte	.LASF152
+ 2980 0b40 D1080000 		.4byte	.LASF152
  2981 0b44 01       		.byte	0x1
  2982 0b45 FB03     		.2byte	0x3fb
  2983 0b47 0E       		.byte	0xe
@@ -4297,7 +4297,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2985 0b4c 01       		.byte	0x1
  2986 0b4d 00       		.byte	0
  2987 0b4e 24       		.uleb128 0x24
- 2988 0b4f 0B080000 		.4byte	.LASF154
+ 2988 0b4f FE070000 		.4byte	.LASF154
  2989 0b53 01       		.byte	0x1
  2990 0b54 C803     		.2byte	0x3c8
  2991 0b56 0A       		.byte	0xa
@@ -4308,7 +4308,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  2996 0b64 9C       		.byte	0x9c
  2997 0b65 C70B0000 		.4byte	0xbc7
  2998 0b69 25       		.uleb128 0x25
- 2999 0b6a DE050000 		.4byte	.LASF156
+ 2999 0b6a D1050000 		.4byte	.LASF156
  3000 0b6e 01       		.byte	0x1
  3001 0b6f C803     		.2byte	0x3c8
  3002 0b71 22       		.byte	0x22
@@ -4316,9 +4316,9 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3004 0b76 6B000000 		.4byte	.LLST55
  3005 0b7a 5F000000 		.4byte	.LVUS55
  3006 0b7e 26       		.uleb128 0x26
- 3007 0b7f 09050000 		.4byte	.LASF158
+ 3007 0b7f FC040000 		.4byte	.LASF158
  3008 0b83 01       		.byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 73
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 73
 
 
  3009 0b84 C803     		.2byte	0x3c8
@@ -4327,7 +4327,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3012 0b8b 01       		.uleb128 0x1
  3013 0b8c 51       		.byte	0x51
  3014 0b8d 26       		.uleb128 0x26
- 3015 0b8e EE020000 		.4byte	.LASF159
+ 3015 0b8e E1020000 		.4byte	.LASF159
  3016 0b92 01       		.byte	0x1
  3017 0b93 C803     		.2byte	0x3c8
  3018 0b95 46       		.byte	0x46
@@ -4335,7 +4335,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3020 0b9a 01       		.uleb128 0x1
  3021 0b9b 52       		.byte	0x52
  3022 0b9c 28       		.uleb128 0x28
- 3023 0b9d DE080000 		.4byte	.LASF152
+ 3023 0b9d D1080000 		.4byte	.LASF152
  3024 0ba1 01       		.byte	0x1
  3025 0ba2 CA03     		.2byte	0x3ca
  3026 0ba4 0E       		.byte	0xe
@@ -4343,7 +4343,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3028 0ba9 C2000000 		.4byte	.LLST56
  3029 0bad BE000000 		.4byte	.LVUS56
  3030 0bb1 28       		.uleb128 0x28
- 3031 0bb2 56080000 		.4byte	.LASF160
+ 3031 0bb2 49080000 		.4byte	.LASF160
  3032 0bb6 01       		.byte	0x1
  3033 0bb7 CB03     		.2byte	0x3cb
  3034 0bb9 0C       		.byte	0xc
@@ -4358,7 +4358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3043 0bce 04       		.byte	0x4
  3044 0bcf C8000000 		.4byte	0xc8
  3045 0bd3 24       		.uleb128 0x24
- 3046 0bd4 3C050000 		.4byte	.LASF161
+ 3046 0bd4 2F050000 		.4byte	.LASF161
  3047 0bd8 01       		.byte	0x1
  3048 0bd9 9A03     		.2byte	0x39a
  3049 0bdb 0A       		.byte	0xa
@@ -4369,7 +4369,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3054 0be9 9C       		.byte	0x9c
  3055 0bea 4C0C0000 		.4byte	0xc4c
  3056 0bee 25       		.uleb128 0x25
- 3057 0bef DE050000 		.4byte	.LASF156
+ 3057 0bef D1050000 		.4byte	.LASF156
  3058 0bf3 01       		.byte	0x1
  3059 0bf4 9A03     		.2byte	0x39a
  3060 0bf6 22       		.byte	0x22
@@ -4377,8 +4377,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3062 0bfb 27010000 		.4byte	.LLST52
  3063 0bff 1F010000 		.4byte	.LVUS52
  3064 0c03 26       		.uleb128 0x26
- 3065 0c04 09050000 		.4byte	.LASF158
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 74
+ 3065 0c04 FC040000 		.4byte	.LASF158
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 74
 
 
  3066 0c08 01       		.byte	0x1
@@ -4388,7 +4388,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3070 0c10 01       		.uleb128 0x1
  3071 0c11 51       		.byte	0x51
  3072 0c12 26       		.uleb128 0x26
- 3073 0c13 EE020000 		.4byte	.LASF159
+ 3073 0c13 E1020000 		.4byte	.LASF159
  3074 0c17 01       		.byte	0x1
  3075 0c18 9A03     		.2byte	0x39a
  3076 0c1a 42       		.byte	0x42
@@ -4396,7 +4396,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3078 0c1f 01       		.uleb128 0x1
  3079 0c20 52       		.byte	0x52
  3080 0c21 28       		.uleb128 0x28
- 3081 0c22 DE080000 		.4byte	.LASF152
+ 3081 0c22 D1080000 		.4byte	.LASF152
  3082 0c26 01       		.byte	0x1
  3083 0c27 9C03     		.2byte	0x39c
  3084 0c29 0E       		.byte	0xe
@@ -4404,7 +4404,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3086 0c2e 67010000 		.4byte	.LLST53
  3087 0c32 61010000 		.4byte	.LVUS53
  3088 0c36 28       		.uleb128 0x28
- 3089 0c37 56080000 		.4byte	.LASF160
+ 3089 0c37 49080000 		.4byte	.LASF160
  3090 0c3b 01       		.byte	0x1
  3091 0c3c 9D03     		.2byte	0x39d
  3092 0c3e 0C       		.byte	0xc
@@ -4413,7 +4413,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3095 0c47 93010000 		.4byte	.LVUS54
  3096 0c4b 00       		.byte	0
  3097 0c4c 24       		.uleb128 0x24
- 3098 0c4d 2A060000 		.4byte	.LASF162
+ 3098 0c4d 1D060000 		.4byte	.LASF162
  3099 0c51 01       		.byte	0x1
  3100 0c52 6103     		.2byte	0x361
  3101 0c54 0A       		.byte	0xa
@@ -4424,7 +4424,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3106 0c62 9C       		.byte	0x9c
  3107 0c63 EA0C0000 		.4byte	0xcea
  3108 0c67 25       		.uleb128 0x25
- 3109 0c68 DE050000 		.4byte	.LASF156
+ 3109 0c68 D1050000 		.4byte	.LASF156
  3110 0c6c 01       		.byte	0x1
  3111 0c6d 6103     		.2byte	0x361
  3112 0c6f 28       		.byte	0x28
@@ -4432,18 +4432,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3114 0c74 C5010000 		.4byte	.LLST47
  3115 0c78 B9010000 		.4byte	.LVUS47
  3116 0c7c 25       		.uleb128 0x25
- 3117 0c7d B9080000 		.4byte	.LASF163
+ 3117 0c7d AC080000 		.4byte	.LASF163
  3118 0c81 01       		.byte	0x1
  3119 0c82 6103     		.2byte	0x361
  3120 0c84 3B       		.byte	0x3b
  3121 0c85 C70B0000 		.4byte	0xbc7
  3122 0c89 20020000 		.4byte	.LLST48
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 75
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 75
 
 
  3123 0c8d 18020000 		.4byte	.LVUS48
  3124 0c91 25       		.uleb128 0x25
- 3125 0c92 42060000 		.4byte	.LASF164
+ 3125 0c92 35060000 		.4byte	.LASF164
  3126 0c96 01       		.byte	0x1
  3127 0c97 6103     		.2byte	0x361
  3128 0c99 52       		.byte	0x52
@@ -4451,7 +4451,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3130 0c9e 60020000 		.4byte	.LLST49
  3131 0ca2 5A020000 		.4byte	.LVUS49
  3132 0ca6 26       		.uleb128 0x26
- 3133 0ca7 B6030000 		.4byte	.LASF165
+ 3133 0ca7 A9030000 		.4byte	.LASF165
  3134 0cab 01       		.byte	0x1
  3135 0cac 6103     		.2byte	0x361
  3136 0cae 62       		.byte	0x62
@@ -4459,7 +4459,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3138 0cb3 01       		.uleb128 0x1
  3139 0cb4 53       		.byte	0x53
  3140 0cb5 28       		.uleb128 0x28
- 3141 0cb6 DE080000 		.4byte	.LASF152
+ 3141 0cb6 D1080000 		.4byte	.LASF152
  3142 0cba 01       		.byte	0x1
  3143 0cbb 6403     		.2byte	0x364
  3144 0cbd 0E       		.byte	0xe
@@ -4470,7 +4470,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3149 0ccb 0A000000 		.4byte	.LBB4
  3150 0ccf 12000000 		.4byte	.LBE4-.LBB4
  3151 0cd3 28       		.uleb128 0x28
- 3152 0cd4 56080000 		.4byte	.LASF160
+ 3152 0cd4 49080000 		.4byte	.LASF160
  3153 0cd8 01       		.byte	0x1
  3154 0cd9 6C03     		.2byte	0x36c
  3155 0cdb 14       		.byte	0x14
@@ -4483,7 +4483,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3162 0ceb 04       		.byte	0x4
  3163 0cec 6B000000 		.4byte	0x6b
  3164 0cf0 24       		.uleb128 0x24
- 3165 0cf1 7D060000 		.4byte	.LASF166
+ 3165 0cf1 70060000 		.4byte	.LASF166
  3166 0cf5 01       		.byte	0x1
  3167 0cf6 2703     		.2byte	0x327
  3168 0cf8 0A       		.byte	0xa
@@ -4494,18 +4494,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3173 0d06 9C       		.byte	0x9c
  3174 0d07 820D0000 		.4byte	0xd82
  3175 0d0b 25       		.uleb128 0x25
- 3176 0d0c DE050000 		.4byte	.LASF156
+ 3176 0d0c D1050000 		.4byte	.LASF156
  3177 0d10 01       		.byte	0x1
  3178 0d11 2703     		.2byte	0x327
  3179 0d13 28       		.byte	0x28
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 76
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 76
 
 
  3180 0d14 6B000000 		.4byte	0x6b
  3181 0d18 F6020000 		.4byte	.LLST44
  3182 0d1c EA020000 		.4byte	.LVUS44
  3183 0d20 26       		.uleb128 0x26
- 3184 0d21 B9080000 		.4byte	.LASF163
+ 3184 0d21 AC080000 		.4byte	.LASF163
  3185 0d25 01       		.byte	0x1
  3186 0d26 2703     		.2byte	0x327
  3187 0d28 39       		.byte	0x39
@@ -4513,7 +4513,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3189 0d2d 01       		.uleb128 0x1
  3190 0d2e 51       		.byte	0x51
  3191 0d2f 26       		.uleb128 0x26
- 3192 0d30 42060000 		.4byte	.LASF164
+ 3192 0d30 35060000 		.4byte	.LASF164
  3193 0d34 01       		.byte	0x1
  3194 0d35 2703     		.2byte	0x327
  3195 0d37 4E       		.byte	0x4e
@@ -4521,7 +4521,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3197 0d3c 01       		.uleb128 0x1
  3198 0d3d 52       		.byte	0x52
  3199 0d3e 26       		.uleb128 0x26
- 3200 0d3f B6030000 		.4byte	.LASF165
+ 3200 0d3f A9030000 		.4byte	.LASF165
  3201 0d43 01       		.byte	0x1
  3202 0d44 2703     		.2byte	0x327
  3203 0d46 5C       		.byte	0x5c
@@ -4529,7 +4529,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3205 0d4b 01       		.uleb128 0x1
  3206 0d4c 53       		.byte	0x53
  3207 0d4d 28       		.uleb128 0x28
- 3208 0d4e DE080000 		.4byte	.LASF152
+ 3208 0d4e D1080000 		.4byte	.LASF152
  3209 0d52 01       		.byte	0x1
  3210 0d53 2A03     		.2byte	0x32a
  3211 0d55 0E       		.byte	0xe
@@ -4540,7 +4540,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3216 0d63 0C000000 		.4byte	.LBB3
  3217 0d67 14000000 		.4byte	.LBE3-.LBB3
  3218 0d6b 28       		.uleb128 0x28
- 3219 0d6c 56080000 		.4byte	.LASF160
+ 3219 0d6c 49080000 		.4byte	.LASF160
  3220 0d70 01       		.byte	0x1
  3221 0d71 2F03     		.2byte	0x32f
  3222 0d73 10       		.byte	0x10
@@ -4550,7 +4550,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3226 0d80 00       		.byte	0
  3227 0d81 00       		.byte	0
  3228 0d82 2A       		.uleb128 0x2a
- 3229 0d83 E2000000 		.4byte	.LASF196
+ 3229 0d83 CF000000 		.4byte	.LASF196
  3230 0d87 01       		.byte	0x1
  3231 0d88 EC02     		.2byte	0x2ec
  3232 0d8a 07       		.byte	0x7
@@ -4558,12 +4558,12 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3234 0d8f 00000000 		.4byte	.LFB18
  3235 0d93 10000000 		.4byte	.LFE18-.LFB18
  3236 0d97 01       		.uleb128 0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 77
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 77
 
 
  3237 0d98 9C       		.byte	0x9c
  3238 0d99 2B       		.uleb128 0x2b
- 3239 0d9a 5E000000 		.4byte	.LASF198
+ 3239 0d9a A0000000 		.4byte	.LASF198
  3240 0d9e 01       		.byte	0x1
  3241 0d9f CC02     		.2byte	0x2cc
  3242 0da1 06       		.byte	0x6
@@ -4573,7 +4573,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3246 0dab 9C       		.byte	0x9c
  3247 0dac F70D0000 		.4byte	0xdf7
  3248 0db0 25       		.uleb128 0x25
- 3249 0db1 DE050000 		.4byte	.LASF156
+ 3249 0db1 D1050000 		.4byte	.LASF156
  3250 0db5 01       		.byte	0x1
  3251 0db6 CC02     		.2byte	0x2cc
  3252 0db8 18       		.byte	0x18
@@ -4584,7 +4584,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3257 0dc6 0C000000 		.4byte	.LBB2
  3258 0dca 20000000 		.4byte	.LBE2-.LBB2
  3259 0dce 28       		.uleb128 0x28
- 3260 0dcf 3B030000 		.4byte	.LASF167
+ 3260 0dcf 2E030000 		.4byte	.LASF167
  3261 0dd3 01       		.byte	0x1
  3262 0dd4 D102     		.2byte	0x2d1
  3263 0dd6 0F       		.byte	0xf
@@ -4600,7 +4600,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3273 0df5 00       		.byte	0
  3274 0df6 00       		.byte	0
  3275 0df7 24       		.uleb128 0x24
- 3276 0df8 4E000000 		.4byte	.LASF168
+ 3276 0df8 90000000 		.4byte	.LASF168
  3277 0dfc 01       		.byte	0x1
  3278 0dfd A702     		.2byte	0x2a7
  3279 0dff 07       		.byte	0x7
@@ -4611,18 +4611,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3284 0e0d 9C       		.byte	0x9c
  3285 0e0e 4F0E0000 		.4byte	0xe4f
  3286 0e12 28       		.uleb128 0x28
- 3287 0e13 3B030000 		.4byte	.LASF167
+ 3287 0e13 2E030000 		.4byte	.LASF167
  3288 0e17 01       		.byte	0x1
  3289 0e18 A902     		.2byte	0x2a9
  3290 0e1a 0B       		.byte	0xb
  3291 0e1b 6B000000 		.4byte	0x6b
  3292 0e1f CE030000 		.4byte	.LLST40
  3293 0e23 CA030000 		.4byte	.LVUS40
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 78
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 78
 
 
  3294 0e27 28       		.uleb128 0x28
- 3295 0e28 AC090000 		.4byte	.LASF169
+ 3295 0e28 9F090000 		.4byte	.LASF169
  3296 0e2c 01       		.byte	0x1
  3297 0e2d AA02     		.2byte	0x2aa
  3298 0e2f 0B       		.byte	0xb
@@ -4637,7 +4637,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3307 0e4a 94130000 		.4byte	0x1394
  3308 0e4e 00       		.byte	0
  3309 0e4f 24       		.uleb128 0x24
- 3310 0e50 81090000 		.4byte	.LASF170
+ 3310 0e50 74090000 		.4byte	.LASF170
  3311 0e54 01       		.byte	0x1
  3312 0e55 8702     		.2byte	0x287
  3313 0e57 0A       		.byte	0xa
@@ -4648,7 +4648,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3318 0e65 9C       		.byte	0x9c
  3319 0e66 FE0E0000 		.4byte	0xefe
  3320 0e6a 25       		.uleb128 0x25
- 3321 0e6b 31070000 		.4byte	.LASF155
+ 3321 0e6b 24070000 		.4byte	.LASF155
  3322 0e6f 01       		.byte	0x1
  3323 0e70 8702     		.2byte	0x287
  3324 0e72 28       		.byte	0x28
@@ -4656,7 +4656,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3326 0e77 27040000 		.4byte	.LLST33
  3327 0e7b 1F040000 		.4byte	.LVUS33
  3328 0e7f 25       		.uleb128 0x25
- 3329 0e80 17040000 		.4byte	.LASF171
+ 3329 0e80 0A040000 		.4byte	.LASF171
  3330 0e84 01       		.byte	0x1
  3331 0e85 8702     		.2byte	0x287
  3332 0e87 38       		.byte	0x38
@@ -4664,7 +4664,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3334 0e8c 67040000 		.4byte	.LLST34
  3335 0e90 61040000 		.4byte	.LVUS34
  3336 0e94 25       		.uleb128 0x25
- 3337 0e95 2D080000 		.4byte	.LASF172
+ 3337 0e95 20080000 		.4byte	.LASF172
  3338 0e99 01       		.byte	0x1
  3339 0e9a 8702     		.2byte	0x287
  3340 0e9c 4A       		.byte	0x4a
@@ -4672,18 +4672,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3342 0ea1 99040000 		.4byte	.LLST35
  3343 0ea5 93040000 		.4byte	.LVUS35
  3344 0ea9 25       		.uleb128 0x25
- 3345 0eaa 35020000 		.4byte	.LASF173
+ 3345 0eaa 22020000 		.4byte	.LASF173
  3346 0eae 01       		.byte	0x1
  3347 0eaf 8802     		.2byte	0x288
  3348 0eb1 28       		.byte	0x28
  3349 0eb2 6B000000 		.4byte	0x6b
  3350 0eb6 CB040000 		.4byte	.LLST36
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 79
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 79
 
 
  3351 0eba C5040000 		.4byte	.LVUS36
  3352 0ebe 25       		.uleb128 0x25
- 3353 0ebf 3D020000 		.4byte	.LASF174
+ 3353 0ebf 2A020000 		.4byte	.LASF174
  3354 0ec3 01       		.byte	0x1
  3355 0ec4 8802     		.2byte	0x288
  3356 0ec6 37       		.byte	0x37
@@ -4691,7 +4691,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3358 0ecb FD040000 		.4byte	.LLST37
  3359 0ecf F7040000 		.4byte	.LVUS37
  3360 0ed3 25       		.uleb128 0x25
- 3361 0ed4 1F090000 		.4byte	.LASF175
+ 3361 0ed4 12090000 		.4byte	.LASF175
  3362 0ed8 01       		.byte	0x1
  3363 0ed9 8802     		.2byte	0x288
  3364 0edb 46       		.byte	0x46
@@ -4699,7 +4699,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3366 0ee0 2F050000 		.4byte	.LLST38
  3367 0ee4 29050000 		.4byte	.LVUS38
  3368 0ee8 28       		.uleb128 0x28
- 3369 0ee9 DE080000 		.4byte	.LASF152
+ 3369 0ee9 D1080000 		.4byte	.LASF152
  3370 0eed 01       		.byte	0x1
  3371 0eee 8A02     		.2byte	0x28a
  3372 0ef0 0E       		.byte	0xe
@@ -4708,7 +4708,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3375 0ef9 5B050000 		.4byte	.LVUS39
  3376 0efd 00       		.byte	0
  3377 0efe 24       		.uleb128 0x24
- 3378 0eff 65070000 		.4byte	.LASF176
+ 3378 0eff 58070000 		.4byte	.LASF176
  3379 0f03 01       		.byte	0x1
  3380 0f04 4702     		.2byte	0x247
  3381 0f06 0A       		.byte	0xa
@@ -4719,7 +4719,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3386 0f14 9C       		.byte	0x9c
  3387 0f15 620F0000 		.4byte	0xf62
  3388 0f19 25       		.uleb128 0x25
- 3389 0f1a 31070000 		.4byte	.LASF155
+ 3389 0f1a 24070000 		.4byte	.LASF155
  3390 0f1e 01       		.byte	0x1
  3391 0f1f 4702     		.2byte	0x247
  3392 0f21 1E       		.byte	0x1e
@@ -4727,7 +4727,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3394 0f26 99050000 		.4byte	.LLST31
  3395 0f2a 8D050000 		.4byte	.LVUS31
  3396 0f2e 26       		.uleb128 0x26
- 3397 0f2f AE070000 		.4byte	.LASF177
+ 3397 0f2f A1070000 		.4byte	.LASF177
  3398 0f33 01       		.byte	0x1
  3399 0f34 4702     		.2byte	0x247
  3400 0f36 30       		.byte	0x30
@@ -4735,10 +4735,10 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3402 0f3b 01       		.uleb128 0x1
  3403 0f3c 51       		.byte	0x51
  3404 0f3d 26       		.uleb128 0x26
- 3405 0f3e FB010000 		.4byte	.LASF178
+ 3405 0f3e E8010000 		.4byte	.LASF178
  3406 0f42 01       		.byte	0x1
  3407 0f43 4702     		.2byte	0x247
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 80
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 80
 
 
  3408 0f45 43       		.byte	0x43
@@ -4746,7 +4746,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3410 0f4a 01       		.uleb128 0x1
  3411 0f4b 52       		.byte	0x52
  3412 0f4c 28       		.uleb128 0x28
- 3413 0f4d DE080000 		.4byte	.LASF152
+ 3413 0f4d D1080000 		.4byte	.LASF152
  3414 0f51 01       		.byte	0x1
  3415 0f52 4902     		.2byte	0x249
  3416 0f54 0E       		.byte	0xe
@@ -4755,7 +4755,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3419 0f5d EC050000 		.4byte	.LVUS32
  3420 0f61 00       		.byte	0
  3421 0f62 24       		.uleb128 0x24
- 3422 0f63 FA080000 		.4byte	.LASF179
+ 3422 0f63 ED080000 		.4byte	.LASF179
  3423 0f67 01       		.byte	0x1
  3424 0f68 1A02     		.2byte	0x21a
  3425 0f6a 0A       		.byte	0xa
@@ -4766,7 +4766,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3430 0f78 9C       		.byte	0x9c
  3431 0f79 A80F0000 		.4byte	0xfa8
  3432 0f7d 25       		.uleb128 0x25
- 3433 0f7e 31070000 		.4byte	.LASF155
+ 3433 0f7e 24070000 		.4byte	.LASF155
  3434 0f82 01       		.byte	0x1
  3435 0f83 1A02     		.2byte	0x21a
  3436 0f85 22       		.byte	0x22
@@ -4774,7 +4774,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3438 0f8a 18060000 		.4byte	.LLST29
  3439 0f8e 10060000 		.4byte	.LVUS29
  3440 0f92 28       		.uleb128 0x28
- 3441 0f93 DE080000 		.4byte	.LASF152
+ 3441 0f93 D1080000 		.4byte	.LASF152
  3442 0f97 01       		.byte	0x1
  3443 0f98 1C02     		.2byte	0x21c
  3444 0f9a 0E       		.byte	0xe
@@ -4783,7 +4783,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3447 0fa3 52060000 		.4byte	.LVUS30
  3448 0fa7 00       		.byte	0
  3449 0fa8 24       		.uleb128 0x24
- 3450 0fa9 49060000 		.4byte	.LASF180
+ 3450 0fa9 3C060000 		.4byte	.LASF180
  3451 0fad 01       		.byte	0x1
  3452 0fae FC01     		.2byte	0x1fc
  3453 0fb0 0A       		.byte	0xa
@@ -4794,18 +4794,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3458 0fbe 9C       		.byte	0x9c
  3459 0fbf 03100000 		.4byte	0x1003
  3460 0fc3 25       		.uleb128 0x25
- 3461 0fc4 31070000 		.4byte	.LASF155
+ 3461 0fc4 24070000 		.4byte	.LASF155
  3462 0fc8 01       		.byte	0x1
  3463 0fc9 FC01     		.2byte	0x1fc
  3464 0fcb 22       		.byte	0x22
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 81
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 81
 
 
  3465 0fcc 6B000000 		.4byte	0x6b
  3466 0fd0 8D060000 		.4byte	.LLST26
  3467 0fd4 85060000 		.4byte	.LVUS26
  3468 0fd8 25       		.uleb128 0x25
- 3469 0fd9 4E050000 		.4byte	.LASF181
+ 3469 0fd9 41050000 		.4byte	.LASF181
  3470 0fdd 01       		.byte	0x1
  3471 0fde FC01     		.2byte	0x1fc
  3472 0fe0 32       		.byte	0x32
@@ -4813,7 +4813,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3474 0fe5 CD060000 		.4byte	.LLST27
  3475 0fe9 C7060000 		.4byte	.LVUS27
  3476 0fed 28       		.uleb128 0x28
- 3477 0fee DE080000 		.4byte	.LASF152
+ 3477 0fee D1080000 		.4byte	.LASF152
  3478 0ff2 01       		.byte	0x1
  3479 0ff3 FE01     		.2byte	0x1fe
  3480 0ff5 0E       		.byte	0xe
@@ -4822,7 +4822,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3483 0ffe F9060000 		.4byte	.LVUS28
  3484 1002 00       		.byte	0
  3485 1003 24       		.uleb128 0x24
- 3486 1004 38090000 		.4byte	.LASF182
+ 3486 1004 2B090000 		.4byte	.LASF182
  3487 1008 01       		.byte	0x1
  3488 1009 DA01     		.2byte	0x1da
  3489 100b 0A       		.byte	0xa
@@ -4833,7 +4833,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3494 1019 9C       		.byte	0x9c
  3495 101a 58100000 		.4byte	0x1058
  3496 101e 25       		.uleb128 0x25
- 3497 101f 31070000 		.4byte	.LASF155
+ 3497 101f 24070000 		.4byte	.LASF155
  3498 1023 01       		.byte	0x1
  3499 1024 DA01     		.2byte	0x1da
  3500 1026 24       		.byte	0x24
@@ -4841,7 +4841,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3502 102b 33070000 		.4byte	.LLST24
  3503 102f 2B070000 		.4byte	.LVUS24
  3504 1033 26       		.uleb128 0x26
- 3505 1034 3B000000 		.4byte	.LASF183
+ 3505 1034 7D000000 		.4byte	.LASF183
  3506 1038 01       		.byte	0x1
  3507 1039 DA01     		.2byte	0x1da
  3508 103b 34       		.byte	0x34
@@ -4849,7 +4849,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3510 1040 01       		.uleb128 0x1
  3511 1041 51       		.byte	0x51
  3512 1042 28       		.uleb128 0x28
- 3513 1043 DE080000 		.4byte	.LASF152
+ 3513 1043 D1080000 		.4byte	.LASF152
  3514 1047 01       		.byte	0x1
  3515 1048 DC01     		.2byte	0x1dc
  3516 104a 0E       		.byte	0xe
@@ -4858,10 +4858,10 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3519 1053 6D070000 		.4byte	.LVUS25
  3520 1057 00       		.byte	0
  3521 1058 24       		.uleb128 0x24
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 82
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 82
 
 
- 3522 1059 17070000 		.4byte	.LASF184
+ 3522 1059 0A070000 		.4byte	.LASF184
  3523 105d 01       		.byte	0x1
  3524 105e A301     		.2byte	0x1a3
  3525 1060 0A       		.byte	0xa
@@ -4872,7 +4872,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3530 106e 9C       		.byte	0x9c
  3531 106f DD100000 		.4byte	0x10dd
  3532 1073 25       		.uleb128 0x25
- 3533 1074 31070000 		.4byte	.LASF155
+ 3533 1074 24070000 		.4byte	.LASF155
  3534 1078 01       		.byte	0x1
  3535 1079 A301     		.2byte	0x1a3
  3536 107b 2A       		.byte	0x2a
@@ -4880,7 +4880,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3538 1080 A7070000 		.4byte	.LLST19
  3539 1084 9F070000 		.4byte	.LVUS19
  3540 1088 25       		.uleb128 0x25
- 3541 1089 09050000 		.4byte	.LASF158
+ 3541 1089 FC040000 		.4byte	.LASF158
  3542 108d 01       		.byte	0x1
  3543 108e A301     		.2byte	0x1a3
  3544 1090 3B       		.byte	0x3b
@@ -4888,7 +4888,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3546 1095 E9070000 		.4byte	.LLST20
  3547 1099 E1070000 		.4byte	.LVUS20
  3548 109d 25       		.uleb128 0x25
- 3549 109e EE020000 		.4byte	.LASF159
+ 3549 109e E1020000 		.4byte	.LASF159
  3550 10a2 01       		.byte	0x1
  3551 10a3 A301     		.2byte	0x1a3
  3552 10a5 4A       		.byte	0x4a
@@ -4896,7 +4896,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3554 10aa 28080000 		.4byte	.LLST21
  3555 10ae 20080000 		.4byte	.LVUS21
  3556 10b2 28       		.uleb128 0x28
- 3557 10b3 DE080000 		.4byte	.LASF152
+ 3557 10b3 D1080000 		.4byte	.LASF152
  3558 10b7 01       		.byte	0x1
  3559 10b8 A601     		.2byte	0x1a6
  3560 10ba 0E       		.byte	0xe
@@ -4904,7 +4904,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3562 10bf 65080000 		.4byte	.LLST22
  3563 10c3 5F080000 		.4byte	.LVUS22
  3564 10c7 28       		.uleb128 0x28
- 3565 10c8 56080000 		.4byte	.LASF160
+ 3565 10c8 49080000 		.4byte	.LASF160
  3566 10cc 01       		.byte	0x1
  3567 10cd A701     		.2byte	0x1a7
  3568 10cf 0C       		.byte	0xc
@@ -4913,12 +4913,12 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3571 10d8 91080000 		.4byte	.LVUS23
  3572 10dc 00       		.byte	0
  3573 10dd 24       		.uleb128 0x24
- 3574 10de F5050000 		.4byte	.LASF185
+ 3574 10de E8050000 		.4byte	.LASF185
  3575 10e2 01       		.byte	0x1
  3576 10e3 7F01     		.2byte	0x17f
  3577 10e5 0A       		.byte	0xa
  3578 10e6 BB000000 		.4byte	0xbb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 83
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 83
 
 
  3579 10ea 00000000 		.4byte	.LFB9
@@ -4927,7 +4927,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3582 10f3 9C       		.byte	0x9c
  3583 10f4 4D110000 		.4byte	0x114d
  3584 10f8 25       		.uleb128 0x25
- 3585 10f9 31070000 		.4byte	.LASF155
+ 3585 10f9 24070000 		.4byte	.LASF155
  3586 10fd 01       		.byte	0x1
  3587 10fe 7F01     		.2byte	0x17f
  3588 1100 20       		.byte	0x20
@@ -4935,7 +4935,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3590 1105 BF080000 		.4byte	.LLST15
  3591 1109 B7080000 		.4byte	.LVUS15
  3592 110d 25       		.uleb128 0x25
- 3593 110e DE070000 		.4byte	.LASF186
+ 3593 110e D1070000 		.4byte	.LASF186
  3594 1112 01       		.byte	0x1
  3595 1113 7F01     		.2byte	0x17f
  3596 1115 30       		.byte	0x30
@@ -4951,7 +4951,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3606 112f 2D090000 		.4byte	.LLST17
  3607 1133 2B090000 		.4byte	.LVUS17
  3608 1137 28       		.uleb128 0x28
- 3609 1138 DE080000 		.4byte	.LASF152
+ 3609 1138 D1080000 		.4byte	.LASF152
  3610 113c 01       		.byte	0x1
  3611 113d 8201     		.2byte	0x182
  3612 113f 0E       		.byte	0xe
@@ -4960,7 +4960,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3615 1148 40090000 		.4byte	.LVUS18
  3616 114c 00       		.byte	0
  3617 114d 24       		.uleb128 0x24
- 3618 114e 01020000 		.4byte	.LASF188
+ 3618 114e EE010000 		.4byte	.LASF188
  3619 1152 01       		.byte	0x1
  3620 1153 5F01     		.2byte	0x15f
  3621 1155 0A       		.byte	0xa
@@ -4971,18 +4971,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3626 1163 9C       		.byte	0x9c
  3627 1164 93110000 		.4byte	0x1193
  3628 1168 25       		.uleb128 0x25
- 3629 1169 31070000 		.4byte	.LASF155
+ 3629 1169 24070000 		.4byte	.LASF155
  3630 116d 01       		.byte	0x1
  3631 116e 5F01     		.2byte	0x15f
  3632 1170 25       		.byte	0x25
  3633 1171 6B000000 		.4byte	0x6b
  3634 1175 7A090000 		.4byte	.LLST13
  3635 1179 72090000 		.4byte	.LVUS13
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 84
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 84
 
 
  3636 117d 28       		.uleb128 0x28
- 3637 117e DE080000 		.4byte	.LASF152
+ 3637 117e D1080000 		.4byte	.LASF152
  3638 1182 01       		.byte	0x1
  3639 1183 6101     		.2byte	0x161
  3640 1185 0E       		.byte	0xe
@@ -4991,7 +4991,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3643 118e B4090000 		.4byte	.LVUS14
  3644 1192 00       		.byte	0
  3645 1193 24       		.uleb128 0x24
- 3646 1194 FC070000 		.4byte	.LASF189
+ 3646 1194 EF070000 		.4byte	.LASF189
  3647 1198 01       		.byte	0x1
  3648 1199 3C01     		.2byte	0x13c
  3649 119b 0A       		.byte	0xa
@@ -5002,7 +5002,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3654 11a9 9C       		.byte	0x9c
  3655 11aa D9110000 		.4byte	0x11d9
  3656 11ae 25       		.uleb128 0x25
- 3657 11af 31070000 		.4byte	.LASF155
+ 3657 11af 24070000 		.4byte	.LASF155
  3658 11b3 01       		.byte	0x1
  3659 11b4 3C01     		.2byte	0x13c
  3660 11b6 1F       		.byte	0x1f
@@ -5010,7 +5010,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3662 11bb EE090000 		.4byte	.LLST11
  3663 11bf E6090000 		.4byte	.LVUS11
  3664 11c3 28       		.uleb128 0x28
- 3665 11c4 DE080000 		.4byte	.LASF152
+ 3665 11c4 D1080000 		.4byte	.LASF152
  3666 11c8 01       		.byte	0x1
  3667 11c9 3E01     		.2byte	0x13e
  3668 11cb 0E       		.byte	0xe
@@ -5019,7 +5019,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3671 11d4 280A0000 		.4byte	.LVUS12
  3672 11d8 00       		.byte	0
  3673 11d9 24       		.uleb128 0x24
- 3674 11da C5000000 		.4byte	.LASF190
+ 3674 11da B2000000 		.4byte	.LASF190
  3675 11de 01       		.byte	0x1
  3676 11df 0D01     		.2byte	0x10d
  3677 11e1 0A       		.byte	0xa
@@ -5030,7 +5030,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3682 11ef 9C       		.byte	0x9c
  3683 11f0 34120000 		.4byte	0x1234
  3684 11f4 25       		.uleb128 0x25
- 3685 11f5 31070000 		.4byte	.LASF155
+ 3685 11f5 24070000 		.4byte	.LASF155
  3686 11f9 01       		.byte	0x1
  3687 11fa 0D01     		.2byte	0x10d
  3688 11fc 1E       		.byte	0x1e
@@ -5038,10 +5038,10 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3690 1201 620A0000 		.4byte	.LLST8
  3691 1205 5A0A0000 		.4byte	.LVUS8
  3692 1209 25       		.uleb128 0x25
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 85
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 85
 
 
- 3693 120a 78010000 		.4byte	.LASF191
+ 3693 120a 65010000 		.4byte	.LASF191
  3694 120e 01       		.byte	0x1
  3695 120f 0D01     		.2byte	0x10d
  3696 1211 2E       		.byte	0x2e
@@ -5049,7 +5049,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3698 1216 A60A0000 		.4byte	.LLST9
  3699 121a 9C0A0000 		.4byte	.LVUS9
  3700 121e 28       		.uleb128 0x28
- 3701 121f DE080000 		.4byte	.LASF152
+ 3701 121f D1080000 		.4byte	.LASF152
  3702 1223 01       		.byte	0x1
  3703 1224 0F01     		.2byte	0x10f
  3704 1226 0E       		.byte	0xe
@@ -5058,7 +5058,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3707 122f EB0A0000 		.4byte	.LVUS10
  3708 1233 00       		.byte	0
  3709 1234 2D       		.uleb128 0x2d
- 3710 1235 F0070000 		.4byte	.LASF192
+ 3710 1235 E3070000 		.4byte	.LASF192
  3711 1239 01       		.byte	0x1
  3712 123a D3       		.byte	0xd3
  3713 123b 0A       		.byte	0xa
@@ -5069,7 +5069,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3718 1249 9C       		.byte	0x9c
  3719 124a 9D120000 		.4byte	0x129d
  3720 124e 2E       		.uleb128 0x2e
- 3721 124f 31070000 		.4byte	.LASF155
+ 3721 124f 24070000 		.4byte	.LASF155
  3722 1253 01       		.byte	0x1
  3723 1254 D3       		.byte	0xd3
  3724 1255 1C       		.byte	0x1c
@@ -5077,7 +5077,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3726 125a 250B0000 		.4byte	.LLST5
  3727 125e 1D0B0000 		.4byte	.LVUS5
  3728 1262 2F       		.uleb128 0x2f
- 3729 1263 DE080000 		.4byte	.LASF152
+ 3729 1263 D1080000 		.4byte	.LASF152
  3730 1267 01       		.byte	0x1
  3731 1268 D5       		.byte	0xd5
  3732 1269 0E       		.byte	0xe
@@ -5085,7 +5085,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3734 126e 630B0000 		.4byte	.LLST6
  3735 1272 5F0B0000 		.4byte	.LVUS6
  3736 1276 2F       		.uleb128 0x2f
- 3737 1277 3B030000 		.4byte	.LASF167
+ 3737 1277 2E030000 		.4byte	.LASF167
  3738 127b 01       		.byte	0x1
  3739 127c D6       		.byte	0xd6
  3740 127d 0B       		.byte	0xb
@@ -5098,12 +5098,12 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3747 1293 2C       		.uleb128 0x2c
  3748 1294 24000000 		.4byte	.LVL21
  3749 1298 94130000 		.4byte	0x1394
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 86
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 86
 
 
  3750 129c 00       		.byte	0
  3751 129d 2D       		.uleb128 0x2d
- 3752 129e 9C020000 		.4byte	.LASF193
+ 3752 129e 8F020000 		.4byte	.LASF193
  3753 12a2 01       		.byte	0x1
  3754 12a3 A3       		.byte	0xa3
  3755 12a4 07       		.byte	0x7
@@ -5114,7 +5114,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3760 12b2 9C       		.byte	0x9c
  3761 12b3 06130000 		.4byte	0x1306
  3762 12b7 2F       		.uleb128 0x2f
- 3763 12b8 3B030000 		.4byte	.LASF167
+ 3763 12b8 2E030000 		.4byte	.LASF167
  3764 12bc 01       		.byte	0x1
  3765 12bd A5       		.byte	0xa5
  3766 12be 0B       		.byte	0xb
@@ -5122,7 +5122,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3768 12c3 9C0B0000 		.4byte	.LLST2
  3769 12c7 980B0000 		.4byte	.LVUS2
  3770 12cb 2F       		.uleb128 0x2f
- 3771 12cc 9E050000 		.4byte	.LASF194
+ 3771 12cc 91050000 		.4byte	.LASF194
  3772 12d0 01       		.byte	0x1
  3773 12d1 A6       		.byte	0xa6
  3774 12d2 0B       		.byte	0xb
@@ -5130,7 +5130,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3776 12d7 C00B0000 		.4byte	.LLST3
  3777 12db BA0B0000 		.4byte	.LVUS3
  3778 12df 2F       		.uleb128 0x2f
- 3779 12e0 26090000 		.4byte	.LASF195
+ 3779 12e0 19090000 		.4byte	.LASF195
  3780 12e4 01       		.byte	0x1
  3781 12e5 A7       		.byte	0xa7
  3782 12e6 0C       		.byte	0xc
@@ -5145,7 +5145,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3791 1301 94130000 		.4byte	0x1394
  3792 1305 00       		.byte	0
  3793 1306 30       		.uleb128 0x30
- 3794 1307 29050000 		.4byte	.LASF197
+ 3794 1307 1C050000 		.4byte	.LASF197
  3795 130b 01       		.byte	0x1
  3796 130c 92       		.byte	0x92
  3797 130d 08       		.byte	0x8
@@ -5155,10 +5155,10 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3801 131a 01       		.uleb128 0x1
  3802 131b 9C       		.byte	0x9c
  3803 131c 31       		.uleb128 0x31
- 3804 131d A7050000 		.4byte	.LASF199
+ 3804 131d 9A050000 		.4byte	.LASF199
  3805 1321 01       		.byte	0x1
  3806 1322 7F       		.byte	0x7f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 87
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 87
 
 
  3807 1323 06       		.byte	0x6
@@ -5168,7 +5168,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3811 132d 9C       		.byte	0x9c
  3812 132e 47130000 		.4byte	0x1347
  3813 1332 2E       		.uleb128 0x2e
- 3814 1333 FA060000 		.4byte	.LASF200
+ 3814 1333 ED060000 		.4byte	.LASF200
  3815 1337 01       		.byte	0x1
  3816 1338 7F       		.byte	0x7f
  3817 1339 1D       		.byte	0x1d
@@ -5177,7 +5177,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3820 1342 0D0C0000 		.4byte	.LVUS1
  3821 1346 00       		.byte	0
  3822 1347 30       		.uleb128 0x30
- 3823 1348 DD030000 		.4byte	.LASF201
+ 3823 1348 D0030000 		.4byte	.LASF201
  3824 134c 01       		.byte	0x1
  3825 134d 60       		.byte	0x60
  3826 134e 07       		.byte	0x7
@@ -5187,7 +5187,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3830 135b 01       		.uleb128 0x1
  3831 135c 9C       		.byte	0x9c
  3832 135d 31       		.uleb128 0x31
- 3833 135e 5D050000 		.4byte	.LASF202
+ 3833 135e 50050000 		.4byte	.LASF202
  3834 1362 01       		.byte	0x1
  3835 1363 35       		.byte	0x35
  3836 1364 06       		.byte	0x6
@@ -5197,7 +5197,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3840 136e 9C       		.byte	0x9c
  3841 136f 88130000 		.4byte	0x1388
  3842 1373 2F       		.uleb128 0x2f
- 3843 1374 9E050000 		.4byte	.LASF194
+ 3843 1374 91050000 		.4byte	.LASF194
  3844 1378 01       		.byte	0x1
  3845 1379 37       		.byte	0x37
  3846 137a 0B       		.byte	0xb
@@ -5206,19 +5206,19 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3849 1383 320C0000 		.4byte	.LVUS0
  3850 1387 00       		.byte	0
  3851 1388 32       		.uleb128 0x32
- 3852 1389 5D030000 		.4byte	.LASF203
- 3853 138d 5D030000 		.4byte	.LASF203
+ 3852 1389 50030000 		.4byte	.LASF203
+ 3853 138d 50030000 		.4byte	.LASF203
  3854 1391 0A       		.byte	0xa
  3855 1392 7D       		.byte	0x7d
  3856 1393 07       		.byte	0x7
  3857 1394 32       		.uleb128 0x32
- 3858 1395 BE050000 		.4byte	.LASF204
- 3859 1399 BE050000 		.4byte	.LASF204
+ 3858 1395 B1050000 		.4byte	.LASF204
+ 3859 1399 B1050000 		.4byte	.LASF204
  3860 139d 0A       		.byte	0xa
  3861 139e 7E       		.byte	0x7e
  3862 139f 06       		.byte	0x6
  3863 13a0 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 88
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 88
 
 
  3864              		.section	.debug_abbrev,"",%progbits
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3918 0034 49       		.uleb128 0x49
  3919 0035 13       		.uleb128 0x13
  3920 0036 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 89
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 89
 
 
  3921 0037 00       		.byte	0
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  3975 006d 00       		.byte	0
  3976 006e 0B       		.uleb128 0xb
  3977 006f 17       		.uleb128 0x17
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 90
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 90
 
 
  3978 0070 01       		.byte	0x1
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4032 00a6 0B       		.uleb128 0xb
  4033 00a7 39       		.uleb128 0x39
  4034 00a8 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 91
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 91
 
 
  4035 00a9 01       		.uleb128 0x1
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4089 00df 39       		.uleb128 0x39
  4090 00e0 0B       		.uleb128 0xb
  4091 00e1 49       		.uleb128 0x49
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 92
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 92
 
 
  4092 00e2 13       		.uleb128 0x13
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4146 0118 13       		.uleb128 0x13
  4147 0119 00       		.byte	0
  4148 011a 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 93
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 93
 
 
  4149 011b 18       		.uleb128 0x18
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4203 0151 03       		.uleb128 0x3
  4204 0152 0E       		.uleb128 0xe
  4205 0153 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 94
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 94
 
 
  4206 0154 0B       		.uleb128 0xb
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4260 018a 00       		.byte	0
  4261 018b 00       		.byte	0
  4262 018c 1F       		.uleb128 0x1f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 95
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 95
 
 
  4263 018d 15       		.uleb128 0x15
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4317 01c3 03       		.uleb128 0x3
  4318 01c4 0E       		.uleb128 0xe
  4319 01c5 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 96
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 96
 
 
  4320 01c6 0B       		.uleb128 0xb
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4374 01fd 17       		.uleb128 0x17
  4375 01fe B742     		.uleb128 0x2137
  4376 0200 17       		.uleb128 0x17
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 97
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 97
 
 
  4377 0201 00       		.byte	0
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4431 0238 00       		.byte	0
  4432 0239 29       		.uleb128 0x29
  4433 023a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 98
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 98
 
 
  4434 023b 01       		.byte	0x1
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4488 0272 18       		.uleb128 0x18
  4489 0273 9742     		.uleb128 0x2117
  4490 0275 19       		.uleb128 0x19
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 99
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 99
 
 
  4491 0276 01       		.uleb128 0x1
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4545 02af 13       		.uleb128 0x13
  4546 02b0 02       		.uleb128 0x2
  4547 02b1 17       		.uleb128 0x17
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 100
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 100
 
 
  4548 02b2 B742     		.uleb128 0x2137
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4602 02eb 19       		.uleb128 0x19
  4603 02ec 03       		.uleb128 0x3
  4604 02ed 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 101
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 101
 
 
  4605 02ee 3A       		.uleb128 0x3a
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4659 000b 00       		.uleb128 0
  4660              	.LLST58:
  4661 000c 00000000 		.4byte	.LVL141
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 102
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 102
 
 
  4662 0010 08000000 		.4byte	.LVL142
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4716 007e 0400     		.2byte	0x4
  4717 0080 F3       		.byte	0xf3
  4718 0081 01       		.uleb128 0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 103
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 103
 
 
  4719 0082 50       		.byte	0x50
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4773 00f0 0300     		.2byte	0x3
  4774 00f2 73       		.byte	0x73
  4775 00f3 04       		.sleb128 4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 104
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 104
 
 
  4776 00f4 9F       		.byte	0x9f
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4829              	.LVUS53:
  4830 0161 02       		.uleb128 .LVU365
  4831 0162 01       		.uleb128 .LVU375
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 105
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 105
 
 
  4832 0163 01       		.uleb128 .LVU375
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4886 01c4 00       		.uleb128 0
  4887              	.LLST47:
  4888 01c5 00000000 		.4byte	.LVL110
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 106
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 106
 
 
  4889 01c9 30000000 		.4byte	.LVL115
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  4943 0238 9F       		.byte	0x9f
  4944 0239 42000000 		.4byte	.LVL118
  4945 023d 46000000 		.4byte	.LVL120
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 107
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 107
 
 
  4946 0241 0100     		.2byte	0x1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5000 02aa 48000000 		.4byte	.LVL121
  5001 02ae 4A000000 		.4byte	.LFE20
  5002 02b2 0200     		.2byte	0x2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 108
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 108
 
 
  5003 02b4 30       		.byte	0x30
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5056 0317 0100     		.2byte	0x1
  5057 0319 50       		.byte	0x50
  5058 031a 22000000 		.4byte	.LVL107
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 109
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 109
 
 
  5059 031e 24000000 		.4byte	.LVL108
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5113              	.LVUS42:
  5114 0390 00       		.uleb128 0
  5115 0391 00       		.uleb128 .LVU292
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 110
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 110
 
 
  5116 0392 00       		.uleb128 .LVU292
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5170 03fd FF       		.byte	0xff
  5171 03fe 9F       		.byte	0x9f
  5172 03ff 12000000 		.4byte	.LVL94
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 111
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 111
 
 
  5173 0403 2C000000 		.4byte	.LVL97
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5227 046b 0A000000 		.4byte	.LVL84
  5228 046f 0100     		.2byte	0x1
  5229 0471 51       		.byte	0x51
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 112
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 112
 
 
  5230 0472 0A000000 		.4byte	.LVL84
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5284 04e1 01       		.uleb128 0x1
  5285 04e2 53       		.byte	0x53
  5286 04e3 9F       		.byte	0x9f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 113
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 113
 
 
  5287 04e4 3E000000 		.4byte	.LVL90
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5341 0553 00000000 		.4byte	0
  5342 0557 00000000 		.4byte	0
  5343              	.LVUS39:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 114
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 114
 
 
  5344 055b 02       		.uleb128 .LVU239
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5398 05c1 28000000 		.4byte	.LVL81
  5399 05c5 0400     		.2byte	0x4
  5400 05c7 F3       		.byte	0xf3
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 115
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 115
 
 
  5401 05c8 01       		.uleb128 0x1
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5455 0630 9F       		.byte	0x9f
  5456 0631 12000000 		.4byte	.LVL75
  5457 0635 14000000 		.4byte	.LVL76
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 116
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 116
 
 
  5458 0639 0100     		.2byte	0x1
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5512 06a2 F3       		.byte	0xf3
  5513 06a3 01       		.uleb128 0x1
  5514 06a4 50       		.byte	0x50
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 117
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 117
 
 
  5515 06a5 9F       		.byte	0x9f
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5569 0713 0200     		.2byte	0x2
  5570 0715 30       		.byte	0x30
  5571 0716 9F       		.byte	0x9f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 118
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 118
 
 
  5572 0717 18000000 		.4byte	.LVL70
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5626 077f 0C000000 		.4byte	.LVL63
  5627 0783 10000000 		.4byte	.LVL64
  5628 0787 0200     		.2byte	0x2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 119
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 119
 
 
  5629 0789 30       		.byte	0x30
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5683 07ed 08000000 		.4byte	.LVL48
  5684 07f1 0100     		.2byte	0x1
  5685 07f3 51       		.byte	0x51
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 120
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 120
 
 
  5686 07f4 08000000 		.4byte	.LVL48
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5740 0864 00       		.uleb128 0
  5741              	.LLST22:
  5742 0865 00000000 		.4byte	.LVL47
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 121
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 121
 
 
  5743 0869 22000000 		.4byte	.LVL53
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5797 08d5 01       		.uleb128 0x1
  5798 08d6 50       		.byte	0x50
  5799 08d7 9F       		.byte	0x9f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 122
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 122
 
 
  5800 08d8 1C000000 		.4byte	.LVL45
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5854 0945 00       		.uleb128 0
  5855              	.LLST18:
  5856 0946 00000000 		.4byte	.LVL40
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 123
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 123
 
 
  5857 094a 18000000 		.4byte	.LVL44
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5911 09b7 00       		.uleb128 .LVU128
  5912 09b8 00       		.uleb128 .LVU128
  5913 09b9 00       		.uleb128 0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 124
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 124
 
 
  5914              	.LLST14:
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  5968 0a29 01       		.uleb128 .LVU113
  5969 0a2a 01       		.uleb128 .LVU113
  5970 0a2b 00       		.uleb128 .LVU114
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 125
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 125
 
 
  5971 0a2c 00       		.uleb128 .LVU114
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6025              	.LVUS9:
  6026 0a9c 00       		.uleb128 0
  6027 0a9d 00       		.uleb128 .LVU91
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 126
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 126
 
 
  6028 0a9e 00       		.uleb128 .LVU91
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6082 0b08 9F       		.byte	0x9f
  6083 0b09 22000000 		.4byte	.LVL26
  6084 0b0d 38000000 		.4byte	.LFE6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 127
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 127
 
 
  6085 0b11 0200     		.2byte	0x2
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6139 0b7a 9F       		.byte	0x9f
  6140 0b7b 00000000 		.4byte	0
  6141 0b7f 00000000 		.4byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 128
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 128
 
 
  6142              	.LVUS7:
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6196              	.LLST4:
  6197 0bee 02000000 		.4byte	.LVL6
  6198 0bf2 0A000000 		.4byte	.LVL8
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 129
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 129
 
 
  6199 0bf6 0200     		.2byte	0x2
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6253 0018 00000000 		.4byte	.LFB1
  6254 001c 10000000 		.4byte	.LFE1-.LFB1
  6255 0020 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 130
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 130
 
 
  6256 0024 10000000 		.4byte	.LFE2-.LFB2
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6310 001c 0C000000 		.4byte	.LFE3
  6311 0020 00000000 		.4byte	.LFB4
  6312 0024 38000000 		.4byte	.LFE4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 131
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 131
 
 
  6313 0028 00000000 		.4byte	.LFB5
@@ -7858,727 +7858,727 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6360              	.LASF187:
  6361 0013 76616C75 		.ascii	"value\000"
  6361      6500
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 132
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 132
 
 
- 6362              	.LASF55:
- 6363 0019 5F73697A 		.ascii	"_size\000"
- 6363      6500
- 6364              	.LASF46:
- 6365 001f 5F666E61 		.ascii	"_fnargs\000"
- 6365      72677300 
- 6366              	.LASF146:
- 6367 0027 646D6163 		.ascii	"dmac_cfgmem\000"
- 6367      5F636667 
- 6367      6D656D00 
- 6368              	.LASF99:
- 6369 0033 5F72616E 		.ascii	"_rand48\000"
- 6369      64343800 
- 6370              	.LASF183:
- 6371 003b 73746172 		.ascii	"startTd\000"
- 6371      74546400 
- 6372              	.LASF79:
- 6373 0043 5F656D65 		.ascii	"_emergency\000"
- 6373      7267656E 
- 6373      637900
- 6374              	.LASF168:
- 6375 004e 4379446D 		.ascii	"CyDmaTdAllocate\000"
- 6375      61546441 
- 6375      6C6C6F63 
- 6375      61746500 
- 6376              	.LASF198:
- 6377 005e 4379446D 		.ascii	"CyDmaTdFree\000"
- 6377      61546446 
- 6377      72656500 
- 6378              	.LASF207:
- 6379 006a 433A5C55 		.ascii	"C:\\Users\\jens-\\Documents\\PSoC Creator\\Projekt3"
- 6379      73657273 
- 6379      5C6A656E 
- 6379      732D5C44 
- 6379      6F63756D 
- 6380 0098 5C50726F 		.ascii	"\\Projekt3_PSOC\\Projekt3_PSOC_I2C.cydsn\000"
- 6380      6A656B74 
- 6380      335F5053 
- 6380      4F435C50 
- 6380      726F6A65 
- 6381              	.LASF69:
- 6382 00bf 5F646174 		.ascii	"_data\000"
- 6382      6100
- 6383              	.LASF190:
- 6384 00c5 4379446D 		.ascii	"CyDmaChEnable\000"
- 6384      61436845 
- 6384      6E61626C 
- 6384      6500
- 6385              	.LASF119:
- 6386 00d3 5F776372 		.ascii	"_wcrtomb_state\000"
- 6386      746F6D62 
- 6386      5F737461 
- 6386      746500
- 6387              	.LASF196:
- 6388 00e2 4379446D 		.ascii	"CyDmaTdFreeCount\000"
- 6388      61546446 
- 6388      72656543 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 133
+ 6362              	.LASF207:
+ 6363 0019 433A5C55 		.ascii	"C:\\Users\\jens-\\3.Projekt\\Projekt3\\Projekt3_PSO"
+ 6363      73657273 
+ 6363      5C6A656E 
+ 6363      732D5C33 
+ 6363      2E50726F 
+ 6364 0047 435C5072 		.ascii	"C\\Projekt3_PSOC_I2C.cydsn\000"
+ 6364      6F6A656B 
+ 6364      74335F50 
+ 6364      534F435F 
+ 6364      4932432E 
+ 6365              	.LASF46:
+ 6366 0061 5F666E61 		.ascii	"_fnargs\000"
+ 6366      72677300 
+ 6367              	.LASF146:
+ 6368 0069 646D6163 		.ascii	"dmac_cfgmem\000"
+ 6368      5F636667 
+ 6368      6D656D00 
+ 6369              	.LASF99:
+ 6370 0075 5F72616E 		.ascii	"_rand48\000"
+ 6370      64343800 
+ 6371              	.LASF183:
+ 6372 007d 73746172 		.ascii	"startTd\000"
+ 6372      74546400 
+ 6373              	.LASF79:
+ 6374 0085 5F656D65 		.ascii	"_emergency\000"
+ 6374      7267656E 
+ 6374      637900
+ 6375              	.LASF168:
+ 6376 0090 4379446D 		.ascii	"CyDmaTdAllocate\000"
+ 6376      61546441 
+ 6376      6C6C6F63 
+ 6376      61746500 
+ 6377              	.LASF198:
+ 6378 00a0 4379446D 		.ascii	"CyDmaTdFree\000"
+ 6378      61546446 
+ 6378      72656500 
+ 6379              	.LASF69:
+ 6380 00ac 5F646174 		.ascii	"_data\000"
+ 6380      6100
+ 6381              	.LASF190:
+ 6382 00b2 4379446D 		.ascii	"CyDmaChEnable\000"
+ 6382      61436845 
+ 6382      6E61626C 
+ 6382      6500
+ 6383              	.LASF119:
+ 6384 00c0 5F776372 		.ascii	"_wcrtomb_state\000"
+ 6384      746F6D62 
+ 6384      5F737461 
+ 6384      746500
+ 6385              	.LASF196:
+ 6386 00cf 4379446D 		.ascii	"CyDmaTdFreeCount\000"
+ 6386      61546446 
+ 6386      72656543 
+ 6386      6F756E74 
+ 6386      00
+ 6387              	.LASF120:
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 133
 
 
- 6388      6F756E74 
+ 6388 00e0 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 6388      72746F6D 
+ 6388      62735F73 
+ 6388      74617465 
  6388      00
- 6389              	.LASF120:
- 6390 00f3 5F776373 		.ascii	"_wcsrtombs_state\000"
- 6390      72746F6D 
- 6390      62735F73 
- 6390      74617465 
- 6390      00
- 6391              	.LASF7:
- 6392 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
- 6392      206C6F6E 
- 6392      6720756E 
- 6392      7369676E 
- 6392      65642069 
- 6393              	.LASF59:
- 6394 011b 5F6C6266 		.ascii	"_lbfsize\000"
- 6394      73697A65 
- 6394      00
- 6395              	.LASF153:
- 6396 0124 4379446D 		.ascii	"CyDmaChRoundRobin\000"
- 6396      61436852 
- 6396      6F756E64 
- 6396      526F6269 
- 6396      6E00
- 6397              	.LASF126:
- 6398 0136 5F5F6C6F 		.ascii	"__locale_t\000"
- 6398      63616C65 
- 6398      5F7400
- 6399              	.LASF124:
- 6400 0141 5F756E75 		.ascii	"_unused\000"
- 6400      73656400 
- 6401              	.LASF131:
- 6402 0149 64696554 		.ascii	"dieTemperature\000"
- 6402      656D7065 
- 6402      72617475 
- 6402      726500
- 6403              	.LASF117:
- 6404 0158 5F6D6272 		.ascii	"_mbrtowc_state\000"
- 6404      746F7763 
- 6404      5F737461 
- 6404      746500
- 6405              	.LASF135:
- 6406 0167 63796465 		.ascii	"cydelay_freq_mhz\000"
- 6406      6C61795F 
- 6406      66726571 
- 6406      5F6D687A 
- 6406      00
- 6407              	.LASF191:
- 6408 0178 70726573 		.ascii	"preserveTds\000"
- 6408      65727665 
- 6408      54647300 
- 6409              	.LASF36:
- 6410 0184 5F5F746D 		.ascii	"__tm_sec\000"
- 6410      5F736563 
- 6410      00
- 6411              	.LASF6:
- 6412 018d 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 134
+ 6389              	.LASF7:
+ 6390 00f1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 6390      206C6F6E 
+ 6390      6720756E 
+ 6390      7369676E 
+ 6390      65642069 
+ 6391              	.LASF59:
+ 6392 0108 5F6C6266 		.ascii	"_lbfsize\000"
+ 6392      73697A65 
+ 6392      00
+ 6393              	.LASF153:
+ 6394 0111 4379446D 		.ascii	"CyDmaChRoundRobin\000"
+ 6394      61436852 
+ 6394      6F756E64 
+ 6394      526F6269 
+ 6394      6E00
+ 6395              	.LASF126:
+ 6396 0123 5F5F6C6F 		.ascii	"__locale_t\000"
+ 6396      63616C65 
+ 6396      5F7400
+ 6397              	.LASF124:
+ 6398 012e 5F756E75 		.ascii	"_unused\000"
+ 6398      73656400 
+ 6399              	.LASF131:
+ 6400 0136 64696554 		.ascii	"dieTemperature\000"
+ 6400      656D7065 
+ 6400      72617475 
+ 6400      726500
+ 6401              	.LASF117:
+ 6402 0145 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ 6402      746F7763 
+ 6402      5F737461 
+ 6402      746500
+ 6403              	.LASF135:
+ 6404 0154 63796465 		.ascii	"cydelay_freq_mhz\000"
+ 6404      6C61795F 
+ 6404      66726571 
+ 6404      5F6D687A 
+ 6404      00
+ 6405              	.LASF191:
+ 6406 0165 70726573 		.ascii	"preserveTds\000"
+ 6406      65727665 
+ 6406      54647300 
+ 6407              	.LASF36:
+ 6408 0171 5F5F746D 		.ascii	"__tm_sec\000"
+ 6408      5F736563 
+ 6408      00
+ 6409              	.LASF6:
+ 6410 017a 6C6F6E67 		.ascii	"long long int\000"
+ 6410      206C6F6E 
+ 6410      6720696E 
+ 6410      7400
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 134
 
 
- 6412      206C6F6E 
- 6412      6720696E 
- 6412      7400
- 6413              	.LASF0:
- 6414 019b 7369676E 		.ascii	"signed char\000"
- 6414      65642063 
- 6414      68617200 
- 6415              	.LASF65:
- 6416 01a7 5F756275 		.ascii	"_ubuf\000"
- 6416      6600
- 6417              	.LASF54:
- 6418 01ad 5F626173 		.ascii	"_base\000"
- 6418      6500
- 6419              	.LASF157:
- 6420 01b3 656E6162 		.ascii	"enableRR\000"
- 6420      6C655252 
- 6420      00
- 6421              	.LASF38:
- 6422 01bc 5F5F746D 		.ascii	"__tm_hour\000"
- 6422      5F686F75 
- 6422      7200
- 6423              	.LASF147:
- 6424 01c6 646D6163 		.ascii	"dmac_tdmem_struct\000"
- 6424      5F74646D 
- 6424      656D5F73 
- 6424      74727563 
- 6424      7400
- 6425              	.LASF94:
- 6426 01d8 5F5F7366 		.ascii	"__sf\000"
- 6426      00
- 6427              	.LASF45:
- 6428 01dd 5F6F6E5F 		.ascii	"_on_exit_args\000"
- 6428      65786974 
- 6428      5F617267 
- 6428      7300
- 6429              	.LASF60:
- 6430 01eb 5F636F6F 		.ascii	"_cookie\000"
- 6430      6B696500 
- 6431              	.LASF93:
- 6432 01f3 5F5F7367 		.ascii	"__sglue\000"
- 6432      6C756500 
- 6433              	.LASF178:
- 6434 01fb 73746174 		.ascii	"state\000"
- 6434      6500
- 6435              	.LASF188:
- 6436 0201 4379446D 		.ascii	"CyDmaClearPendingDrq\000"
- 6436      61436C65 
- 6436      61725065 
- 6436      6E64696E 
- 6436      67447271 
- 6437              	.LASF4:
- 6438 0216 6C6F6E67 		.ascii	"long int\000"
- 6438      20696E74 
- 6438      00
- 6439              	.LASF57:
- 6440 021f 5F666C61 		.ascii	"_flags\000"
- 6440      677300
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 135
+ 6411              	.LASF0:
+ 6412 0188 7369676E 		.ascii	"signed char\000"
+ 6412      65642063 
+ 6412      68617200 
+ 6413              	.LASF65:
+ 6414 0194 5F756275 		.ascii	"_ubuf\000"
+ 6414      6600
+ 6415              	.LASF54:
+ 6416 019a 5F626173 		.ascii	"_base\000"
+ 6416      6500
+ 6417              	.LASF157:
+ 6418 01a0 656E6162 		.ascii	"enableRR\000"
+ 6418      6C655252 
+ 6418      00
+ 6419              	.LASF38:
+ 6420 01a9 5F5F746D 		.ascii	"__tm_hour\000"
+ 6420      5F686F75 
+ 6420      7200
+ 6421              	.LASF147:
+ 6422 01b3 646D6163 		.ascii	"dmac_tdmem_struct\000"
+ 6422      5F74646D 
+ 6422      656D5F73 
+ 6422      74727563 
+ 6422      7400
+ 6423              	.LASF94:
+ 6424 01c5 5F5F7366 		.ascii	"__sf\000"
+ 6424      00
+ 6425              	.LASF45:
+ 6426 01ca 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 6426      65786974 
+ 6426      5F617267 
+ 6426      7300
+ 6427              	.LASF60:
+ 6428 01d8 5F636F6F 		.ascii	"_cookie\000"
+ 6428      6B696500 
+ 6429              	.LASF93:
+ 6430 01e0 5F5F7367 		.ascii	"__sglue\000"
+ 6430      6C756500 
+ 6431              	.LASF178:
+ 6432 01e8 73746174 		.ascii	"state\000"
+ 6432      6500
+ 6433              	.LASF188:
+ 6434 01ee 4379446D 		.ascii	"CyDmaClearPendingDrq\000"
+ 6434      61436C65 
+ 6434      61725065 
+ 6434      6E64696E 
+ 6434      67447271 
+ 6435              	.LASF4:
+ 6436 0203 6C6F6E67 		.ascii	"long int\000"
+ 6436      20696E74 
+ 6436      00
+ 6437              	.LASF57:
+ 6438 020c 5F666C61 		.ascii	"_flags\000"
+ 6438      677300
+ 6439              	.LASF49:
+ 6440 0213 5F69735F 		.ascii	"_is_cxa\000"
+ 6440      63786100 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 135
 
 
- 6441              	.LASF49:
- 6442 0226 5F69735F 		.ascii	"_is_cxa\000"
- 6442      63786100 
- 6443              	.LASF75:
- 6444 022e 5F737464 		.ascii	"_stdin\000"
- 6444      696E00
- 6445              	.LASF173:
- 6446 0235 7464446F 		.ascii	"tdDone0\000"
- 6446      6E653000 
- 6447              	.LASF174:
- 6448 023d 7464446F 		.ascii	"tdDone1\000"
- 6448      6E653100 
- 6449              	.LASF16:
- 6450 0245 72656731 		.ascii	"reg16\000"
- 6450      3600
- 6451              	.LASF67:
- 6452 024b 5F626C6B 		.ascii	"_blksize\000"
- 6452      73697A65 
- 6452      00
- 6453              	.LASF9:
- 6454 0254 75696E74 		.ascii	"uint8\000"
- 6454      3800
- 6455              	.LASF13:
- 6456 025a 646F7562 		.ascii	"double\000"
- 6456      6C6500
- 6457              	.LASF89:
- 6458 0261 5F637674 		.ascii	"_cvtbuf\000"
- 6458      62756600 
- 6459              	.LASF68:
- 6460 0269 5F6F6666 		.ascii	"_offset\000"
- 6460      73657400 
- 6461              	.LASF118:
- 6462 0271 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
- 6462      72746F77 
- 6462      63735F73 
- 6462      74617465 
- 6462      00
- 6463              	.LASF116:
- 6464 0282 5F6D6272 		.ascii	"_mbrlen_state\000"
- 6464      6C656E5F 
- 6464      73746174 
- 6464      6500
- 6465              	.LASF11:
- 6466 0290 75696E74 		.ascii	"uint32\000"
- 6466      333200
+ 6441              	.LASF75:
+ 6442 021b 5F737464 		.ascii	"_stdin\000"
+ 6442      696E00
+ 6443              	.LASF173:
+ 6444 0222 7464446F 		.ascii	"tdDone0\000"
+ 6444      6E653000 
+ 6445              	.LASF174:
+ 6446 022a 7464446F 		.ascii	"tdDone1\000"
+ 6446      6E653100 
+ 6447              	.LASF16:
+ 6448 0232 72656731 		.ascii	"reg16\000"
+ 6448      3600
+ 6449              	.LASF67:
+ 6450 0238 5F626C6B 		.ascii	"_blksize\000"
+ 6450      73697A65 
+ 6450      00
+ 6451              	.LASF9:
+ 6452 0241 75696E74 		.ascii	"uint8\000"
+ 6452      3800
+ 6453              	.LASF13:
+ 6454 0247 646F7562 		.ascii	"double\000"
+ 6454      6C6500
+ 6455              	.LASF89:
+ 6456 024e 5F637674 		.ascii	"_cvtbuf\000"
+ 6456      62756600 
+ 6457              	.LASF68:
+ 6458 0256 5F6F6666 		.ascii	"_offset\000"
+ 6458      73657400 
+ 6459              	.LASF118:
+ 6460 025e 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
+ 6460      72746F77 
+ 6460      63735F73 
+ 6460      74617465 
+ 6460      00
+ 6461              	.LASF116:
+ 6462 026f 5F6D6272 		.ascii	"_mbrlen_state\000"
+ 6462      6C656E5F 
+ 6462      73746174 
+ 6462      6500
+ 6463              	.LASF11:
+ 6464 027d 75696E74 		.ascii	"uint32\000"
+ 6464      333200
+ 6465              	.LASF55:
+ 6466 0284 5F73697A 		.ascii	"_size\000"
+ 6466      6500
  6467              	.LASF52:
- 6468 0297 5F666E73 		.ascii	"_fns\000"
+ 6468 028a 5F666E73 		.ascii	"_fns\000"
  6468      00
  6469              	.LASF193:
- 6470 029c 4379446D 		.ascii	"CyDmaChAlloc\000"
+ 6470 028f 4379446D 		.ascii	"CyDmaChAlloc\000"
  6470      61436841 
  6470      6C6C6F63 
  6470      00
  6471              	.LASF139:
- 6472 02a9 61637469 		.ascii	"action\000"
+ 6472 029c 61637469 		.ascii	"action\000"
  6472      6F6E00
  6473              	.LASF32:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 136
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 136
 
 
- 6474 02b0 5F736967 		.ascii	"_sign\000"
+ 6474 02a3 5F736967 		.ascii	"_sign\000"
  6474      6E00
  6475              	.LASF28:
- 6476 02b6 5F666C6F 		.ascii	"_flock_t\000"
+ 6476 02a9 5F666C6F 		.ascii	"_flock_t\000"
  6476      636B5F74 
  6476      00
  6477              	.LASF77:
- 6478 02bf 5F737464 		.ascii	"_stderr\000"
+ 6478 02b2 5F737464 		.ascii	"_stderr\000"
  6478      65727200 
  6479              	.LASF34:
- 6480 02c7 5F426967 		.ascii	"_Bigint\000"
+ 6480 02ba 5F426967 		.ascii	"_Bigint\000"
  6480      696E7400 
  6481              	.LASF107:
- 6482 02cf 5F67616D 		.ascii	"_gamma_signgam\000"
+ 6482 02c2 5F67616D 		.ascii	"_gamma_signgam\000"
  6482      6D615F73 
  6482      69676E67 
  6482      616D00
  6483              	.LASF61:
- 6484 02de 5F726561 		.ascii	"_read\000"
+ 6484 02d1 5F726561 		.ascii	"_read\000"
  6484      6400
  6485              	.LASF85:
- 6486 02e4 5F726573 		.ascii	"_result_k\000"
+ 6486 02d7 5F726573 		.ascii	"_result_k\000"
  6486      756C745F 
  6486      6B00
  6487              	.LASF159:
- 6488 02ee 64657374 		.ascii	"destination\000"
+ 6488 02e1 64657374 		.ascii	"destination\000"
  6488      696E6174 
  6488      696F6E00 
  6489              	.LASF35:
- 6490 02fa 5F5F746D 		.ascii	"__tm\000"
+ 6490 02ed 5F5F746D 		.ascii	"__tm\000"
  6490      00
  6491              	.LASF8:
- 6492 02ff 756E7369 		.ascii	"unsigned int\000"
+ 6492 02f2 756E7369 		.ascii	"unsigned int\000"
  6492      676E6564 
  6492      20696E74 
  6492      00
  6493              	.LASF24:
- 6494 030c 5F5F7763 		.ascii	"__wchb\000"
+ 6494 02ff 5F5F7763 		.ascii	"__wchb\000"
  6494      686200
  6495              	.LASF76:
- 6496 0313 5F737464 		.ascii	"_stdout\000"
+ 6496 0306 5F737464 		.ascii	"_stdout\000"
  6496      6F757400 
  6497              	.LASF88:
- 6498 031b 5F637674 		.ascii	"_cvtlen\000"
+ 6498 030e 5F637674 		.ascii	"_cvtlen\000"
  6498      6C656E00 
  6499              	.LASF5:
- 6500 0323 6C6F6E67 		.ascii	"long unsigned int\000"
+ 6500 0316 6C6F6E67 		.ascii	"long unsigned int\000"
  6500      20756E73 
  6500      69676E65 
  6500      6420696E 
  6500      7400
  6501              	.LASF58:
- 6502 0335 5F66696C 		.ascii	"_file\000"
+ 6502 0328 5F66696C 		.ascii	"_file\000"
  6502      6500
  6503              	.LASF167:
- 6504 033b 696E7465 		.ascii	"interruptState\000"
+ 6504 032e 696E7465 		.ascii	"interruptState\000"
  6504      72727570 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 137
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 137
 
 
  6504      74537461 
  6504      746500
  6505              	.LASF143:
- 6506 034a 646D6163 		.ascii	"dmac_cfgmem_struct\000"
+ 6506 033d 646D6163 		.ascii	"dmac_cfgmem_struct\000"
  6506      5F636667 
  6506      6D656D5F 
  6506      73747275 
  6506      637400
  6507              	.LASF203:
- 6508 035d 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 6508 0350 4379456E 		.ascii	"CyEnterCriticalSection\000"
  6508      74657243 
  6508      72697469 
  6508      63616C53 
  6508      65637469 
  6509              	.LASF97:
- 6510 0374 5F6E696F 		.ascii	"_niobs\000"
+ 6510 0367 5F6E696F 		.ascii	"_niobs\000"
  6510      627300
  6511              	.LASF149:
- 6512 037b 4379446D 		.ascii	"CyDmaTdCurrentNumber\000"
+ 6512 036e 4379446D 		.ascii	"CyDmaTdCurrentNumber\000"
  6512      61546443 
  6512      75727265 
  6512      6E744E75 
  6512      6D626572 
  6513              	.LASF138:
- 6514 0390 62617369 		.ascii	"basic_cfg\000"
+ 6514 0383 62617369 		.ascii	"basic_cfg\000"
  6514      635F6366 
  6514      6700
  6515              	.LASF3:
- 6516 039a 73686F72 		.ascii	"short unsigned int\000"
+ 6516 038d 73686F72 		.ascii	"short unsigned int\000"
  6516      7420756E 
  6516      7369676E 
  6516      65642069 
  6516      6E7400
  6517              	.LASF91:
- 6518 03ad 5F617465 		.ascii	"_atexit0\000"
+ 6518 03a0 5F617465 		.ascii	"_atexit0\000"
  6518      78697430 
  6518      00
  6519              	.LASF165:
- 6520 03b6 636F6E66 		.ascii	"configuration\000"
+ 6520 03a9 636F6E66 		.ascii	"configuration\000"
  6520      69677572 
  6520      6174696F 
  6520      6E00
  6521              	.LASF114:
- 6522 03c4 5F736967 		.ascii	"_signal_buf\000"
+ 6522 03b7 5F736967 		.ascii	"_signal_buf\000"
  6522      6E616C5F 
  6522      62756600 
  6523              	.LASF105:
- 6524 03d0 5F617363 		.ascii	"_asctime_buf\000"
+ 6524 03c3 5F617363 		.ascii	"_asctime_buf\000"
  6524      74696D65 
  6524      5F627566 
  6524      00
  6525              	.LASF201:
- 6526 03dd 4379446D 		.ascii	"CyDmacError\000"
+ 6526 03d0 4379446D 		.ascii	"CyDmacError\000"
  6526      61634572 
  6526      726F7200 
  6527              	.LASF84:
- 6528 03e9 5F726573 		.ascii	"_result\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 138
+ 6528 03dc 5F726573 		.ascii	"_result\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 138
 
 
  6528      756C7400 
  6529              	.LASF23:
- 6530 03f1 5F5F7763 		.ascii	"__wch\000"
+ 6530 03e4 5F5F7763 		.ascii	"__wch\000"
  6530      6800
  6531              	.LASF206:
- 6532 03f7 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyDmac.c\000"
+ 6532 03ea 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyDmac.c\000"
  6532      72617465 
  6532      645F536F 
  6532      75726365 
  6532      5C50536F 
  6533              	.LASF171:
- 6534 0417 62757273 		.ascii	"burstCount\000"
+ 6534 040a 62757273 		.ascii	"burstCount\000"
  6534      74436F75 
  6534      6E7400
  6535              	.LASF22:
- 6536 0422 77696E74 		.ascii	"wint_t\000"
+ 6536 0415 77696E74 		.ascii	"wint_t\000"
  6536      5F7400
  6537              	.LASF70:
- 6538 0429 5F6C6F63 		.ascii	"_lock\000"
+ 6538 041c 5F6C6F63 		.ascii	"_lock\000"
  6538      6B00
  6539              	.LASF72:
- 6540 042f 5F666C61 		.ascii	"_flags2\000"
+ 6540 0422 5F666C61 		.ascii	"_flags2\000"
  6540      67733200 
  6541              	.LASF19:
- 6542 0437 5F4C4F43 		.ascii	"_LOCK_T\000"
+ 6542 042a 5F4C4F43 		.ascii	"_LOCK_T\000"
  6542      4B5F5400 
  6543              	.LASF205:
- 6544 043f 474E5520 		.ascii	"GNU C17 9.2.1 20191025 (release) [ARM/arm-9-branch "
+ 6544 0432 474E5520 		.ascii	"GNU C17 9.2.1 20191025 (release) [ARM/arm-9-branch "
  6544      43313720 
  6544      392E322E 
  6544      31203230 
  6544      31393130 
- 6545 0472 72657669 		.ascii	"revision 277599] -mcpu=cortex-m3 -mthumb -mfloat-ab"
+ 6545 0465 72657669 		.ascii	"revision 277599] -mcpu=cortex-m3 -mthumb -mfloat-ab"
  6545      73696F6E 
  6545      20323737 
  6545      3539395D 
  6545      202D6D63 
- 6546 04a5 693D736F 		.ascii	"i=soft -march=armv7-m -g -Og -ffunction-sections -f"
+ 6546 0498 693D736F 		.ascii	"i=soft -march=armv7-m -g -Og -ffunction-sections -f"
  6546      6674202D 
  6546      6D617263 
  6546      683D6172 
  6546      6D76372D 
- 6547 04d8 6661742D 		.ascii	"fat-lto-objects\000"
+ 6547 04cb 6661742D 		.ascii	"fat-lto-objects\000"
  6547      6C746F2D 
  6547      6F626A65 
  6547      63747300 
  6548              	.LASF17:
- 6549 04e8 72656733 		.ascii	"reg32\000"
+ 6549 04db 72656733 		.ascii	"reg32\000"
  6549      3200
  6550              	.LASF41:
- 6551 04ee 5F5F746D 		.ascii	"__tm_year\000"
+ 6551 04e1 5F5F746D 		.ascii	"__tm_year\000"
  6551      5F796561 
  6551      7200
  6552              	.LASF134:
- 6553 04f8 63796465 		.ascii	"cydelay_freq_khz\000"
+ 6553 04eb 63796465 		.ascii	"cydelay_freq_khz\000"
  6553      6C61795F 
  6553      66726571 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 139
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 139
 
 
  6553      5F6B687A 
  6553      00
  6554              	.LASF158:
- 6555 0509 736F7572 		.ascii	"source\000"
+ 6555 04fc 736F7572 		.ascii	"source\000"
  6555      636500
  6556              	.LASF140:
- 6557 0510 62617369 		.ascii	"basic_status\000"
+ 6557 0503 62617369 		.ascii	"basic_status\000"
  6557      635F7374 
  6557      61747573 
  6557      00
  6558              	.LASF18:
- 6559 051d 6C6F6E67 		.ascii	"long double\000"
+ 6559 0510 6C6F6E67 		.ascii	"long double\000"
  6559      20646F75 
  6559      626C6500 
  6560              	.LASF197:
- 6561 0529 4379446D 		.ascii	"CyDmacErrorAddress\000"
+ 6561 051c 4379446D 		.ascii	"CyDmacErrorAddress\000"
  6561      61634572 
  6561      726F7241 
  6561      64647265 
  6561      737300
  6562              	.LASF161:
- 6563 053c 4379446D 		.ascii	"CyDmaTdSetAddress\000"
+ 6563 052f 4379446D 		.ascii	"CyDmaTdSetAddress\000"
  6563      61546453 
  6563      65744164 
  6563      64726573 
  6563      7300
  6564              	.LASF181:
- 6565 054e 72657175 		.ascii	"request\000"
+ 6565 0541 72657175 		.ascii	"request\000"
  6565      65737400 
  6566              	.LASF122:
- 6567 0556 5F6E6578 		.ascii	"_nextf\000"
+ 6567 0549 5F6E6578 		.ascii	"_nextf\000"
  6567      746600
  6568              	.LASF202:
- 6569 055d 4379446D 		.ascii	"CyDmacConfigure\000"
+ 6569 0550 4379446D 		.ascii	"CyDmacConfigure\000"
  6569      6163436F 
  6569      6E666967 
  6569      75726500 
  6570              	.LASF40:
- 6571 056d 5F5F746D 		.ascii	"__tm_mon\000"
+ 6571 0560 5F5F746D 		.ascii	"__tm_mon\000"
  6571      5F6D6F6E 
  6571      00
  6572              	.LASF132:
- 6573 0576 43795265 		.ascii	"CyResetStatus\000"
+ 6573 0569 43795265 		.ascii	"CyResetStatus\000"
  6573      73657453 
  6573      74617475 
  6573      7300
  6574              	.LASF50:
- 6575 0584 5F617465 		.ascii	"_atexit\000"
+ 6575 0577 5F617465 		.ascii	"_atexit\000"
  6575      78697400 
  6576              	.LASF82:
- 6577 058c 5F5F7364 		.ascii	"__sdidinit\000"
+ 6577 057f 5F5F7364 		.ascii	"__sdidinit\000"
  6577      6964696E 
  6577      697400
  6578              	.LASF20:
- 6579 0597 5F6F6666 		.ascii	"_off_t\000"
+ 6579 058a 5F6F6666 		.ascii	"_off_t\000"
  6579      5F7400
  6580              	.LASF194:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 140
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 140
 
 
- 6581 059e 646D6149 		.ascii	"dmaIndex\000"
+ 6581 0591 646D6149 		.ascii	"dmaIndex\000"
  6581      6E646578 
  6581      00
  6582              	.LASF199:
- 6583 05a7 4379446D 		.ascii	"CyDmacClearError\000"
+ 6583 059a 4379446D 		.ascii	"CyDmacClearError\000"
  6583      6163436C 
  6583      65617245 
  6583      72726F72 
  6583      00
  6584              	.LASF12:
- 6585 05b8 666C6F61 		.ascii	"float\000"
+ 6585 05ab 666C6F61 		.ascii	"float\000"
  6585      7400
  6586              	.LASF204:
- 6587 05be 43794578 		.ascii	"CyExitCriticalSection\000"
+ 6587 05b1 43794578 		.ascii	"CyExitCriticalSection\000"
  6587      69744372 
  6587      69746963 
  6587      616C5365 
  6587      6374696F 
  6588              	.LASF87:
- 6589 05d4 5F667265 		.ascii	"_freelist\000"
+ 6589 05c7 5F667265 		.ascii	"_freelist\000"
  6589      656C6973 
  6589      7400
  6590              	.LASF156:
- 6591 05de 74644861 		.ascii	"tdHandle\000"
+ 6591 05d1 74644861 		.ascii	"tdHandle\000"
  6591      6E646C65 
  6591      00
  6592              	.LASF151:
- 6593 05e7 4379446D 		.ascii	"CyDmaChannels\000"
+ 6593 05da 4379446D 		.ascii	"CyDmaChannels\000"
  6593      61436861 
  6593      6E6E656C 
  6593      7300
  6594              	.LASF185:
- 6595 05f5 4379446D 		.ascii	"CyDmaChPriority\000"
+ 6595 05e8 4379446D 		.ascii	"CyDmaChPriority\000"
  6595      61436850 
  6595      72696F72 
  6595      69747900 
  6596              	.LASF112:
- 6597 0605 5F776374 		.ascii	"_wctomb_state\000"
+ 6597 05f8 5F776374 		.ascii	"_wctomb_state\000"
  6597      6F6D625F 
  6597      73746174 
  6597      6500
  6598              	.LASF133:
- 6599 0613 63796465 		.ascii	"cydelay_freq_hz\000"
+ 6599 0606 63796465 		.ascii	"cydelay_freq_hz\000"
  6599      6C61795F 
  6599      66726571 
  6599      5F687A00 
  6600              	.LASF62:
- 6601 0623 5F777269 		.ascii	"_write\000"
+ 6601 0616 5F777269 		.ascii	"_write\000"
  6601      746500
  6602              	.LASF162:
- 6603 062a 4379446D 		.ascii	"CyDmaTdGetConfiguration\000"
+ 6603 061d 4379446D 		.ascii	"CyDmaTdGetConfiguration\000"
  6603      61546447 
  6603      6574436F 
  6603      6E666967 
  6603      75726174 
  6604              	.LASF164:
- 6605 0642 6E657874 		.ascii	"nextTd\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 141
+ 6605 0635 6E657874 		.ascii	"nextTd\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 141
 
 
  6605      546400
  6606              	.LASF180:
- 6607 0649 4379446D 		.ascii	"CyDmaChSetRequest\000"
+ 6607 063c 4379446D 		.ascii	"CyDmaChSetRequest\000"
  6607      61436853 
  6607      65745265 
  6607      71756573 
  6607      7400
  6608              	.LASF137:
- 6609 065b 646D6163 		.ascii	"dmac_ch_struct\000"
+ 6609 064e 646D6163 		.ascii	"dmac_ch_struct\000"
  6609      5F63685F 
  6609      73747275 
  6609      637400
  6610              	.LASF1:
- 6611 066a 756E7369 		.ascii	"unsigned char\000"
+ 6611 065d 756E7369 		.ascii	"unsigned char\000"
  6611      676E6564 
  6611      20636861 
  6611      7200
  6612              	.LASF90:
- 6613 0678 5F6E6577 		.ascii	"_new\000"
+ 6613 066b 5F6E6577 		.ascii	"_new\000"
  6613      00
  6614              	.LASF166:
- 6615 067d 4379446D 		.ascii	"CyDmaTdSetConfiguration\000"
+ 6615 0670 4379446D 		.ascii	"CyDmaTdSetConfiguration\000"
  6615      61546453 
  6615      6574436F 
  6615      6E666967 
  6615      75726174 
  6616              	.LASF130:
- 6617 0695 5370634C 		.ascii	"SpcLockState\000"
+ 6617 0688 5370634C 		.ascii	"SpcLockState\000"
  6617      6F636B53 
  6617      74617465 
  6617      00
  6618              	.LASF121:
- 6619 06a2 5F685F65 		.ascii	"_h_errno\000"
+ 6619 0695 5F685F65 		.ascii	"_h_errno\000"
  6619      72726E6F 
  6619      00
  6620              	.LASF2:
- 6621 06ab 73686F72 		.ascii	"short int\000"
+ 6621 069e 73686F72 		.ascii	"short int\000"
  6621      7420696E 
  6621      7400
  6622              	.LASF43:
- 6623 06b5 5F5F746D 		.ascii	"__tm_yday\000"
+ 6623 06a8 5F5F746D 		.ascii	"__tm_yday\000"
  6623      5F796461 
  6623      7900
  6624              	.LASF53:
- 6625 06bf 5F5F7362 		.ascii	"__sbuf\000"
+ 6625 06b2 5F5F7362 		.ascii	"__sbuf\000"
  6625      756600
  6626              	.LASF98:
- 6627 06c6 5F696F62 		.ascii	"_iobs\000"
+ 6627 06b9 5F696F62 		.ascii	"_iobs\000"
  6627      7300
  6628              	.LASF95:
- 6629 06cc 5F5F4649 		.ascii	"__FILE\000"
+ 6629 06bf 5F5F4649 		.ascii	"__FILE\000"
  6629      4C4500
  6630              	.LASF27:
- 6631 06d3 5F6D6273 		.ascii	"_mbstate_t\000"
+ 6631 06c6 5F6D6273 		.ascii	"_mbstate_t\000"
  6631      74617465 
  6631      5F7400
  6632              	.LASF56:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 142
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 142
 
 
- 6633 06de 5F5F7346 		.ascii	"__sFILE\000"
+ 6633 06d1 5F5F7346 		.ascii	"__sFILE\000"
  6633      494C4500 
  6634              	.LASF71:
- 6635 06e6 5F6D6273 		.ascii	"_mbstate\000"
+ 6635 06d9 5F6D6273 		.ascii	"_mbstate\000"
  6635      74617465 
  6635      00
  6636              	.LASF108:
- 6637 06ef 5F72616E 		.ascii	"_rand_next\000"
+ 6637 06e2 5F72616E 		.ascii	"_rand_next\000"
  6637      645F6E65 
  6637      787400
  6638              	.LASF200:
- 6639 06fa 6572726F 		.ascii	"error\000"
+ 6639 06ed 6572726F 		.ascii	"error\000"
  6639      7200
  6640              	.LASF110:
- 6641 0700 5F6D626C 		.ascii	"_mblen_state\000"
+ 6641 06f3 5F6D626C 		.ascii	"_mblen_state\000"
  6641      656E5F73 
  6641      74617465 
  6641      00
  6642              	.LASF78:
- 6643 070d 5F696E63 		.ascii	"_inc\000"
+ 6643 0700 5F696E63 		.ascii	"_inc\000"
  6643      00
  6644              	.LASF51:
- 6645 0712 5F696E64 		.ascii	"_ind\000"
+ 6645 0705 5F696E64 		.ascii	"_ind\000"
  6645      00
  6646              	.LASF184:
- 6647 0717 4379446D 		.ascii	"CyDmaChSetExtendedAddress\000"
+ 6647 070a 4379446D 		.ascii	"CyDmaChSetExtendedAddress\000"
  6647      61436853 
  6647      65744578 
  6647      74656E64 
  6647      65644164 
  6648              	.LASF155:
- 6649 0731 63684861 		.ascii	"chHandle\000"
+ 6649 0724 63684861 		.ascii	"chHandle\000"
  6649      6E646C65 
  6649      00
  6650              	.LASF81:
- 6651 073a 5F6C6F63 		.ascii	"_locale\000"
+ 6651 072d 5F6C6F63 		.ascii	"_locale\000"
  6651      616C6500 
  6652              	.LASF83:
- 6653 0742 5F5F636C 		.ascii	"__cleanup\000"
+ 6653 0735 5F5F636C 		.ascii	"__cleanup\000"
  6653      65616E75 
  6653      7000
  6654              	.LASF80:
- 6655 074c 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 6655 073f 5F756E73 		.ascii	"_unspecified_locale_info\000"
  6655      70656369 
  6655      66696564 
  6655      5F6C6F63 
  6655      616C655F 
  6656              	.LASF176:
- 6657 0765 4379446D 		.ascii	"CyDmaChStatus\000"
+ 6657 0758 4379446D 		.ascii	"CyDmaChStatus\000"
  6657      61436853 
  6657      74617475 
  6657      7300
  6658              	.LASF31:
- 6659 0773 5F6D6178 		.ascii	"_maxwds\000"
+ 6659 0766 5F6D6178 		.ascii	"_maxwds\000"
  6659      77647300 
  6660              	.LASF73:
- 6661 077b 5F726565 		.ascii	"_reent\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 143
+ 6661 076e 5F726565 		.ascii	"_reent\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 143
 
 
  6661      6E7400
  6662              	.LASF100:
- 6663 0782 5F736565 		.ascii	"_seed\000"
+ 6663 0775 5F736565 		.ascii	"_seed\000"
  6663      6400
  6664              	.LASF136:
- 6665 0788 63796465 		.ascii	"cydelay_32k_ms\000"
+ 6665 077b 63796465 		.ascii	"cydelay_32k_ms\000"
  6665      6C61795F 
  6665      33326B5F 
  6665      6D7300
  6666              	.LASF25:
- 6667 0797 5F5F636F 		.ascii	"__count\000"
+ 6667 078a 5F5F636F 		.ascii	"__count\000"
  6667      756E7400 
  6668              	.LASF125:
- 6669 079f 5F5F6C6F 		.ascii	"__lock\000"
+ 6669 0792 5F5F6C6F 		.ascii	"__lock\000"
  6669      636B00
  6670              	.LASF26:
- 6671 07a6 5F5F7661 		.ascii	"__value\000"
+ 6671 0799 5F5F7661 		.ascii	"__value\000"
  6671      6C756500 
  6672              	.LASF177:
- 6673 07ae 63757272 		.ascii	"currentTd\000"
+ 6673 07a1 63757272 		.ascii	"currentTd\000"
  6673      656E7454 
  6673      6400
  6674              	.LASF63:
- 6675 07b8 5F736565 		.ascii	"_seek\000"
+ 6675 07ab 5F736565 		.ascii	"_seek\000"
  6675      6B00
  6676              	.LASF127:
- 6677 07be 5F696D70 		.ascii	"_impure_ptr\000"
+ 6677 07b1 5F696D70 		.ascii	"_impure_ptr\000"
  6677      7572655F 
  6677      70747200 
  6678              	.LASF21:
- 6679 07ca 5F66706F 		.ascii	"_fpos_t\000"
+ 6679 07bd 5F66706F 		.ascii	"_fpos_t\000"
  6679      735F7400 
  6680              	.LASF74:
- 6681 07d2 5F657272 		.ascii	"_errno\000"
+ 6681 07c5 5F657272 		.ascii	"_errno\000"
  6681      6E6F00
  6682              	.LASF14:
- 6683 07d9 63686172 		.ascii	"char\000"
+ 6683 07cc 63686172 		.ascii	"char\000"
  6683      00
  6684              	.LASF186:
- 6685 07de 7072696F 		.ascii	"priority\000"
+ 6685 07d1 7072696F 		.ascii	"priority\000"
  6685      72697479 
  6685      00
  6686              	.LASF37:
- 6687 07e7 5F5F746D 		.ascii	"__tm_min\000"
+ 6687 07da 5F5F746D 		.ascii	"__tm_min\000"
  6687      5F6D696E 
  6687      00
  6688              	.LASF192:
- 6689 07f0 4379446D 		.ascii	"CyDmaChFree\000"
+ 6689 07e3 4379446D 		.ascii	"CyDmaChFree\000"
  6689      61436846 
  6689      72656500 
  6690              	.LASF189:
- 6691 07fc 4379446D 		.ascii	"CyDmaChDisable\000"
+ 6691 07ef 4379446D 		.ascii	"CyDmaChDisable\000"
  6691      61436844 
  6691      69736162 
  6691      6C6500
  6692              	.LASF154:
- 6693 080b 4379446D 		.ascii	"CyDmaTdGetAddress\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 144
+ 6693 07fe 4379446D 		.ascii	"CyDmaTdGetAddress\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 144
 
 
  6693      61546447 
@@ -8586,171 +8586,171 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 1
  6693      64726573 
  6693      7300
  6694              	.LASF129:
- 6695 081d 5F637479 		.ascii	"_ctype_\000"
+ 6695 0810 5F637479 		.ascii	"_ctype_\000"
  6695      70655F00 
  6696              	.LASF142:
- 6697 0825 646D6163 		.ascii	"dmac_ch\000"
+ 6697 0818 646D6163 		.ascii	"dmac_ch\000"
  6697      5F636800 
  6698              	.LASF172:
- 6699 082d 72657175 		.ascii	"requestPerBurst\000"
+ 6699 0820 72657175 		.ascii	"requestPerBurst\000"
  6699      65737450 
  6699      65724275 
  6699      72737400 
  6700              	.LASF101:
- 6701 083d 5F6D756C 		.ascii	"_mult\000"
+ 6701 0830 5F6D756C 		.ascii	"_mult\000"
  6701      7400
  6702              	.LASF30:
- 6703 0843 5F6E6578 		.ascii	"_next\000"
+ 6703 0836 5F6E6578 		.ascii	"_next\000"
  6703      7400
  6704              	.LASF104:
- 6705 0849 5F737472 		.ascii	"_strtok_last\000"
+ 6705 083c 5F737472 		.ascii	"_strtok_last\000"
  6705      746F6B5F 
  6705      6C617374 
  6705      00
  6706              	.LASF160:
- 6707 0856 636F6E76 		.ascii	"convert\000"
+ 6707 0849 636F6E76 		.ascii	"convert\000"
  6707      65727400 
  6708              	.LASF48:
- 6709 085e 5F666E74 		.ascii	"_fntypes\000"
+ 6709 0851 5F666E74 		.ascii	"_fntypes\000"
  6709      79706573 
  6709      00
  6710              	.LASF148:
- 6711 0867 646D6163 		.ascii	"dmac_tdmem\000"
+ 6711 085a 646D6163 		.ascii	"dmac_tdmem\000"
  6711      5F74646D 
  6711      656D00
  6712              	.LASF102:
- 6713 0872 5F616464 		.ascii	"_add\000"
+ 6713 0865 5F616464 		.ascii	"_add\000"
  6713      00
  6714              	.LASF29:
- 6715 0877 5F5F554C 		.ascii	"__ULong\000"
+ 6715 086a 5F5F554C 		.ascii	"__ULong\000"
  6715      6F6E6700 
  6716              	.LASF141:
- 6717 087f 72657365 		.ascii	"reserved\000"
+ 6717 0872 72657365 		.ascii	"reserved\000"
  6717      72766564 
  6717      00
  6718              	.LASF115:
- 6719 0888 5F676574 		.ascii	"_getdate_err\000"
+ 6719 087b 5F676574 		.ascii	"_getdate_err\000"
  6719      64617465 
  6719      5F657272 
  6719      00
  6720              	.LASF128:
- 6721 0895 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 6721 0888 5F676C6F 		.ascii	"_global_impure_ptr\000"
  6721      62616C5F 
  6721      696D7075 
  6721      72655F70 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 145
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 145
 
 
  6721      747200
  6722              	.LASF150:
- 6723 08a8 4379446D 		.ascii	"CyDmaTdFreeIndex\000"
+ 6723 089b 4379446D 		.ascii	"CyDmaTdFreeIndex\000"
  6723      61546446 
  6723      72656549 
  6723      6E646578 
  6723      00
  6724              	.LASF163:
- 6725 08b9 7472616E 		.ascii	"transferCount\000"
+ 6725 08ac 7472616E 		.ascii	"transferCount\000"
  6725      73666572 
  6725      436F756E 
  6725      7400
  6726              	.LASF103:
- 6727 08c7 5F756E75 		.ascii	"_unused_rand\000"
+ 6727 08ba 5F756E75 		.ascii	"_unused_rand\000"
  6727      7365645F 
  6727      72616E64 
  6727      00
  6728              	.LASF144:
- 6729 08d4 43464730 		.ascii	"CFG0\000"
+ 6729 08c7 43464730 		.ascii	"CFG0\000"
  6729      00
  6730              	.LASF145:
- 6731 08d9 43464731 		.ascii	"CFG1\000"
+ 6731 08cc 43464731 		.ascii	"CFG1\000"
  6731      00
  6732              	.LASF152:
- 6733 08de 73746174 		.ascii	"status\000"
+ 6733 08d1 73746174 		.ascii	"status\000"
  6733      757300
  6734              	.LASF33:
- 6735 08e5 5F776473 		.ascii	"_wds\000"
+ 6735 08d8 5F776473 		.ascii	"_wds\000"
  6735      00
  6736              	.LASF42:
- 6737 08ea 5F5F746D 		.ascii	"__tm_wday\000"
+ 6737 08dd 5F5F746D 		.ascii	"__tm_wday\000"
  6737      5F776461 
  6737      7900
  6738              	.LASF96:
- 6739 08f4 5F676C75 		.ascii	"_glue\000"
+ 6739 08e7 5F676C75 		.ascii	"_glue\000"
  6739      6500
  6740              	.LASF179:
- 6741 08fa 4379446D 		.ascii	"CyDmaChGetRequest\000"
+ 6741 08ed 4379446D 		.ascii	"CyDmaChGetRequest\000"
  6741      61436847 
  6741      65745265 
  6741      71756573 
  6741      7400
  6742              	.LASF123:
- 6743 090c 5F6E6D61 		.ascii	"_nmalloc\000"
+ 6743 08ff 5F6E6D61 		.ascii	"_nmalloc\000"
  6743      6C6C6F63 
  6743      00
  6744              	.LASF113:
- 6745 0915 5F6C3634 		.ascii	"_l64a_buf\000"
+ 6745 0908 5F6C3634 		.ascii	"_l64a_buf\000"
  6745      615F6275 
  6745      6600
  6746              	.LASF175:
- 6747 091f 74645374 		.ascii	"tdStop\000"
+ 6747 0912 74645374 		.ascii	"tdStop\000"
  6747      6F7000
  6748              	.LASF195:
- 6749 0926 6368616E 		.ascii	"channel\000"
+ 6749 0919 6368616E 		.ascii	"channel\000"
  6749      6E656C00 
  6750              	.LASF92:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccjjYmnj.s 			page 146
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccJHZ4z2.s 			page 146
 
 
- 6751 092e 5F736967 		.ascii	"_sig_func\000"
+ 6751 0921 5F736967 		.ascii	"_sig_func\000"
  6751      5F66756E 
  6751      6300
  6752              	.LASF182:
- 6753 0938 4379446D 		.ascii	"CyDmaChSetInitialTd\000"
+ 6753 092b 4379446D 		.ascii	"CyDmaChSetInitialTd\000"
  6753      61436853 
  6753      6574496E 
  6753      69746961 
  6753      6C546400 
  6754              	.LASF66:
- 6755 094c 5F6E6275 		.ascii	"_nbuf\000"
+ 6755 093f 5F6E6275 		.ascii	"_nbuf\000"
  6755      6600
  6756              	.LASF15:
- 6757 0952 63797374 		.ascii	"cystatus\000"
+ 6757 0945 63797374 		.ascii	"cystatus\000"
  6757      61747573 
  6757      00
  6758              	.LASF44:
- 6759 095b 5F5F746D 		.ascii	"__tm_isdst\000"
+ 6759 094e 5F5F746D 		.ascii	"__tm_isdst\000"
  6759      5F697364 
  6759      737400
  6760              	.LASF106:
- 6761 0966 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 6761 0959 5F6C6F63 		.ascii	"_localtime_buf\000"
  6761      616C7469 
  6761      6D655F62 
  6761      756600
  6762              	.LASF64:
- 6763 0975 5F636C6F 		.ascii	"_close\000"
+ 6763 0968 5F636C6F 		.ascii	"_close\000"
  6763      736500
  6764              	.LASF109:
- 6765 097c 5F723438 		.ascii	"_r48\000"
+ 6765 096f 5F723438 		.ascii	"_r48\000"
  6765      00
  6766              	.LASF170:
- 6767 0981 4379446D 		.ascii	"CyDmaChSetConfiguration\000"
+ 6767 0974 4379446D 		.ascii	"CyDmaChSetConfiguration\000"
  6767      61436853 
  6767      6574436F 
  6767      6E666967 
  6767      75726174 
  6768              	.LASF111:
- 6769 0999 5F6D6274 		.ascii	"_mbtowc_state\000"
+ 6769 098c 5F6D6274 		.ascii	"_mbtowc_state\000"
  6769      6F77635F 
  6769      73746174 
  6769      6500
  6770              	.LASF86:
- 6771 09a7 5F703573 		.ascii	"_p5s\000"
+ 6771 099a 5F703573 		.ascii	"_p5s\000"
  6771      00
  6772              	.LASF169:
- 6773 09ac 656C656D 		.ascii	"element\000"
+ 6773 099f 656C656D 		.ascii	"element\000"
  6773      656E7400 
  6774              	.LASF39:
- 6775 09b4 5F5F746D 		.ascii	"__tm_mday\000"
+ 6775 09a7 5F5F746D 		.ascii	"__tm_mday\000"
  6775      5F6D6461 
  6775      7900
  6776              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM

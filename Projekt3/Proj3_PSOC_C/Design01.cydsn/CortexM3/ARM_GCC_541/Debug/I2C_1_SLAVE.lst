@@ -1,0 +1,4189 @@
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"I2C_1_SLAVE.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.I2C_1_SlaveStatus,"ax",%progbits
+  16              		.align	1
+  17              		.global	I2C_1_SlaveStatus
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  23              		.type	I2C_1_SlaveStatus, %function
+  24              	I2C_1_SlaveStatus:
+  25              	.LFB0:
+  26              		.file 1 "Generated_Source\\PSoC5\\I2C_1_SLAVE.c"
+   1:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * File Name: I2C_1_SLAVE.c
+   3:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Version 3.50
+   4:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+   5:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Description:
+   6:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  This file provides the source code of APIs for the I2C component Slave mode.
+   7:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+   8:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Note:
+   9:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  10:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************
+  11:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Copyright 2012-2015, Cypress Semiconductor Corporation. All rights reserved.
+  12:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  17:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #include "I2C_1_PVT.h"
+  18:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  19:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_MODE_SLAVE_ENABLED)
+  20:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  21:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /**********************************
+  22:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *      System variables
+  23:Generated_Source\PSoC5/I2C_1_SLAVE.c **** **********************************/
+  24:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  25:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 I2C_1_slStatus;   /* Slave Status  */
+  26:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  27:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /* Transmit buffer variables */
+  28:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 * I2C_1_slRdBufPtr;   /* Pointer to Transmit buffer  */
+  29:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slRdBufSize;  /* Slave Transmit buffer size  */
+  30:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slRdBufIndex; /* Slave Transmit buffer Index */
+  31:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 2
+
+
+  32:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /* Receive buffer variables */
+  33:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8 * I2C_1_slWrBufPtr;   /* Pointer to Receive buffer  */
+  34:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slWrBufSize;  /* Slave Receive buffer size  */
+  35:Generated_Source\PSoC5/I2C_1_SLAVE.c **** volatile uint8   I2C_1_slWrBufIndex; /* Slave Receive buffer Index */
+  36:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  37:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_SW_ADRR_DECODE)
+  38:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     volatile uint8 I2C_1_slAddress;  /* Software address variable */
+  39:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #endif /* (I2C_1_SW_ADRR_DECODE) */
+  40:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  41:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  42:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+  43:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveStatus
+  44:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+  45:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  46:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+  47:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns I2C slave's communication status.
+  48:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  49:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+  50:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+  51:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  52:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+  53:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current status of I2C slave.
+  54:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  55:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+  56:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+  57:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+  58:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  59:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  60:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveStatus(void) 
+  61:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+  27              		.loc 1 61 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  62:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slStatus);
+  32              		.loc 1 62 5 view .LVU1
+  33              		.loc 1 62 12 is_stmt 0 view .LVU2
+  34 0000 014B     		ldr	r3, .L2
+  35 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  63:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+  36              		.loc 1 63 1 view .LVU3
+  37 0004 7047     		bx	lr
+  38              	.L3:
+  39 0006 00BF     		.align	2
+  40              	.L2:
+  41 0008 00000000 		.word	I2C_1_slStatus
+  42              		.cfi_endproc
+  43              	.LFE0:
+  44              		.size	I2C_1_SlaveStatus, .-I2C_1_SlaveStatus
+  45              		.section	.text.I2C_1_SlaveClearReadStatus,"ax",%progbits
+  46              		.align	1
+  47              		.global	I2C_1_SlaveClearReadStatus
+  48              		.syntax unified
+  49              		.thumb
+  50              		.thumb_func
+  51              		.fpu softvfp
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 3
+
+
+  52              		.type	I2C_1_SlaveClearReadStatus, %function
+  53              	I2C_1_SlaveClearReadStatus:
+  54              	.LFB1:
+  64:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  65:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  66:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+  67:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearReadStatus
+  68:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+  69:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  70:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+  71:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Clears the read status flags and returns they values.
+  72:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The I2C_1_SSTAT_RD_BUSY flag is not effected by clear.
+  73:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  74:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+  75:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+  76:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  77:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+  78:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current read status of I2C slave.
+  79:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  80:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+  81:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+  82:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+  83:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  84:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+  85:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+  86:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+  87:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+  88:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveClearReadStatus(void) 
+  89:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+  55              		.loc 1 89 1 is_stmt 1 view -0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  90:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     uint8 status;
+  60              		.loc 1 90 5 view .LVU5
+  91:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  92:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_DisableInt(); /* Lock from interrupt */
+  61              		.loc 1 92 5 view .LVU6
+  62 0000 4FF40041 		mov	r1, #32768
+  63 0004 064B     		ldr	r3, .L5
+  64 0006 1960     		str	r1, [r3]
+  93:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+  94:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     /* Mask of transfer complete flag and Error status */
+  95:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     status = (I2C_1_slStatus & I2C_1_SSTAT_RD_MASK);
+  65              		.loc 1 95 5 view .LVU7
+  66              		.loc 1 95 30 is_stmt 0 view .LVU8
+  67 0008 064B     		ldr	r3, .L5+4
+  68 000a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  69              	.LVL0:
+  96:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slStatus &= (uint8) ~I2C_1_SSTAT_RD_CLEAR;
+  70              		.loc 1 96 5 is_stmt 1 view .LVU9
+  71              		.loc 1 96 20 is_stmt 0 view .LVU10
+  72 000c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  73 000e 02F0F202 		and	r2, r2, #242
+  74 0012 1A70     		strb	r2, [r3]
+  97:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 4
+
+
+  98:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_EnableInt(); /* Release lock */
+  75              		.loc 1 98 5 is_stmt 1 view .LVU11
+  76 0014 044B     		ldr	r3, .L5+8
+  77 0016 1960     		str	r1, [r3]
+  99:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 100:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (status);
+  78              		.loc 1 100 5 view .LVU12
+ 101:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+  79              		.loc 1 101 1 is_stmt 0 view .LVU13
+  80 0018 00F00F00 		and	r0, r0, #15
+  81              	.LVL1:
+  82              		.loc 1 101 1 view .LVU14
+  83 001c 7047     		bx	lr
+  84              	.L6:
+  85 001e 00BF     		.align	2
+  86              	.L5:
+  87 0020 80E100E0 		.word	-536813184
+  88 0024 00000000 		.word	I2C_1_slStatus
+  89 0028 00E100E0 		.word	-536813312
+  90              		.cfi_endproc
+  91              	.LFE1:
+  92              		.size	I2C_1_SlaveClearReadStatus, .-I2C_1_SlaveClearReadStatus
+  93              		.section	.text.I2C_1_SlaveClearWriteStatus,"ax",%progbits
+  94              		.align	1
+  95              		.global	I2C_1_SlaveClearWriteStatus
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu softvfp
+ 100              		.type	I2C_1_SlaveClearWriteStatus, %function
+ 101              	I2C_1_SlaveClearWriteStatus:
+ 102              	.LFB2:
+ 102:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 103:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 104:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 105:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearWriteStatus
+ 106:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 107:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 108:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 109:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Clears the write status flags and returns they values.
+ 110:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The I2C_1_SSTAT_WR_BUSY flag is not effected by clear.
+ 111:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 112:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 113:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 114:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 115:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 116:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Current write status of I2C slave.
+ 117:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 118:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 119:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slStatus - The global variable used to store a current
+ 120:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              status of the I2C slave.
+ 121:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 122:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 123:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 124:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 125:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 126:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveClearWriteStatus(void) 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 5
+
+
+ 127:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 103              		.loc 1 127 1 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 128:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     uint8 status;
+ 108              		.loc 1 128 5 view .LVU16
+ 129:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 130:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_DisableInt(); /* Lock from interrupt */
+ 109              		.loc 1 130 5 view .LVU17
+ 110 0000 4FF40041 		mov	r1, #32768
+ 111 0004 064B     		ldr	r3, .L8
+ 112 0006 1960     		str	r1, [r3]
+ 131:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 132:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     /* Mask of transfer complete flag and Error status */
+ 133:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     status = (I2C_1_slStatus & I2C_1_SSTAT_WR_MASK);
+ 113              		.loc 1 133 5 view .LVU18
+ 114              		.loc 1 133 30 is_stmt 0 view .LVU19
+ 115 0008 064B     		ldr	r3, .L8+4
+ 116 000a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 117              	.LVL2:
+ 134:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slStatus &= (uint8) ~I2C_1_SSTAT_WR_CLEAR;
+ 118              		.loc 1 134 5 is_stmt 1 view .LVU20
+ 119              		.loc 1 134 20 is_stmt 0 view .LVU21
+ 120 000c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 121 000e 02F02F02 		and	r2, r2, #47
+ 122 0012 1A70     		strb	r2, [r3]
+ 135:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 136:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_EnableInt(); /* Release lock */
+ 123              		.loc 1 136 5 is_stmt 1 view .LVU22
+ 124 0014 044B     		ldr	r3, .L8+8
+ 125 0016 1960     		str	r1, [r3]
+ 137:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 138:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (status);
+ 126              		.loc 1 138 5 view .LVU23
+ 139:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 127              		.loc 1 139 1 is_stmt 0 view .LVU24
+ 128 0018 00F0F000 		and	r0, r0, #240
+ 129              	.LVL3:
+ 130              		.loc 1 139 1 view .LVU25
+ 131 001c 7047     		bx	lr
+ 132              	.L9:
+ 133 001e 00BF     		.align	2
+ 134              	.L8:
+ 135 0020 80E100E0 		.word	-536813184
+ 136 0024 00000000 		.word	I2C_1_slStatus
+ 137 0028 00E100E0 		.word	-536813312
+ 138              		.cfi_endproc
+ 139              	.LFE2:
+ 140              		.size	I2C_1_SlaveClearWriteStatus, .-I2C_1_SlaveClearWriteStatus
+ 141              		.section	.text.I2C_1_SlaveSetAddress,"ax",%progbits
+ 142              		.align	1
+ 143              		.global	I2C_1_SlaveSetAddress
+ 144              		.syntax unified
+ 145              		.thumb
+ 146              		.thumb_func
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 6
+
+
+ 147              		.fpu softvfp
+ 148              		.type	I2C_1_SlaveSetAddress, %function
+ 149              	I2C_1_SlaveSetAddress:
+ 150              	.LVL4:
+ 151              	.LFB3:
+ 140:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 141:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 142:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 143:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveSetAddress
+ 144:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 145:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 146:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 147:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the I2C slave address.
+ 148:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 149:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 150:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  address: I2C slave address for the primary device. This value may be any
+ 151:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  address between 0 and 127.
+ 152:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 153:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 154:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 155:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 156:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 157:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_Address  - The global variable used to store an I2C slave
+ 158:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              address for the primary device when the software
+ 159:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                              address detect feature is used.
+ 160:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 161:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 162:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 163:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 164:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 165:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveSetAddress(uint8 address) 
+ 166:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 152              		.loc 1 166 1 is_stmt 1 view -0
+ 153              		.cfi_startproc
+ 154              		@ args = 0, pretend = 0, frame = 0
+ 155              		@ frame_needed = 0, uses_anonymous_args = 0
+ 156              		@ link register save eliminated.
+ 167:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #if (I2C_1_SW_ADRR_DECODE)
+ 168:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slAddress = (address & I2C_1_SLAVE_ADDR_MASK);
+ 169:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #else
+ 170:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_ADDR_REG  = (address & I2C_1_SLAVE_ADDR_MASK);
+ 157              		.loc 1 170 5 view .LVU27
+ 158              		.loc 1 170 32 is_stmt 0 view .LVU28
+ 159 0000 00F07F00 		and	r0, r0, #127
+ 160              	.LVL5:
+ 161              		.loc 1 170 21 view .LVU29
+ 162 0004 014B     		ldr	r3, .L11
+ 163 0006 1870     		strb	r0, [r3]
+ 171:Generated_Source\PSoC5/I2C_1_SLAVE.c **** #endif /* (I2C_1_SW_ADRR_DECODE) */
+ 172:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 164              		.loc 1 172 1 view .LVU30
+ 165 0008 7047     		bx	lr
+ 166              	.L12:
+ 167 000a 00BF     		.align	2
+ 168              	.L11:
+ 169 000c CA490040 		.word	1073760714
+ 170              		.cfi_endproc
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 7
+
+
+ 171              	.LFE3:
+ 172              		.size	I2C_1_SlaveSetAddress, .-I2C_1_SlaveSetAddress
+ 173              		.section	.text.I2C_1_SlaveInitReadBuf,"ax",%progbits
+ 174              		.align	1
+ 175              		.global	I2C_1_SlaveInitReadBuf
+ 176              		.syntax unified
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.fpu softvfp
+ 180              		.type	I2C_1_SlaveInitReadBuf, %function
+ 181              	I2C_1_SlaveInitReadBuf:
+ 182              	.LVL6:
+ 183              	.LFB4:
+ 173:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 174:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 175:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 176:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveInitReadBuf
+ 177:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 178:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 179:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 180:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
+ 181:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
+ 182:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 183:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 184:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  readBuf:  Pointer to the data buffer to be read by the master.
+ 185:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  bufSize:  Size of the read buffer exposed to the I2C master.
+ 186:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 187:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 188:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 189:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 190:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 191:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufPtr   - The global variable used to store a pointer
+ 192:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  to the slave read buffer.
+ 193:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufSize  - The global variable used to store a slave
+ 194:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  read buffer size.
+ 195:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 196:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave read buffer.
+ 197:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 198:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Side Effects:
+ 199:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  If this function is called during a bus transaction, data from the previous
+ 200:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  buffer location and the beginning of the current buffer may be transmitted.
+ 201:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 202:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 203:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 204:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 205:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 206:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveInitReadBuf(uint8 * rdBuf, uint8 bufSize)
+ 207:Generated_Source\PSoC5/I2C_1_SLAVE.c ****      
+ 208:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 184              		.loc 1 208 1 is_stmt 1 view -0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188              		@ link register save eliminated.
+ 209:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     if (NULL != rdBuf)
+ 189              		.loc 1 209 5 view .LVU32
+ 190              		.loc 1 209 8 is_stmt 0 view .LVU33
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 8
+
+
+ 191 0000 0246     		mov	r2, r0
+ 192 0002 60B1     		cbz	r0, .L13
+ 210:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     {
+ 211:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_DisableInt(); /* Lock from interrupt */
+ 193              		.loc 1 211 9 is_stmt 1 view .LVU34
+ 194 0004 4FF40043 		mov	r3, #32768
+ 195 0008 0548     		ldr	r0, .L15
+ 196              	.LVL7:
+ 197              		.loc 1 211 9 is_stmt 0 view .LVU35
+ 198 000a 0360     		str	r3, [r0]
+ 212:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 213:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         /* Set buffer pointer */
+ 214:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufPtr   = (volatile uint8 *) rdBuf;
+ 199              		.loc 1 214 9 is_stmt 1 view .LVU36
+ 200              		.loc 1 214 28 is_stmt 0 view .LVU37
+ 201 000c 0548     		ldr	r0, .L15+4
+ 202 000e 0260     		str	r2, [r0]
+ 215:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufSize  = bufSize;    /* Set buffer size     */
+ 203              		.loc 1 215 9 is_stmt 1 view .LVU38
+ 204              		.loc 1 215 28 is_stmt 0 view .LVU39
+ 205 0010 054A     		ldr	r2, .L15+8
+ 206              	.LVL8:
+ 207              		.loc 1 215 28 view .LVU40
+ 208 0012 1170     		strb	r1, [r2]
+ 216:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slRdBufIndex = 0u;         /* Clears buffer index */
+ 209              		.loc 1 216 9 is_stmt 1 view .LVU41
+ 210              		.loc 1 216 28 is_stmt 0 view .LVU42
+ 211 0014 054A     		ldr	r2, .L15+12
+ 212 0016 0021     		movs	r1, #0
+ 213              	.LVL9:
+ 214              		.loc 1 216 28 view .LVU43
+ 215 0018 1170     		strb	r1, [r2]
+ 216              	.LVL10:
+ 217:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 218:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_EnableInt(); /* Release lock */
+ 217              		.loc 1 218 9 is_stmt 1 view .LVU44
+ 218 001a 054A     		ldr	r2, .L15+16
+ 219 001c 1360     		str	r3, [r2]
+ 220              	.LVL11:
+ 221              	.L13:
+ 219:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     }
+ 220:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 222              		.loc 1 220 1 is_stmt 0 view .LVU45
+ 223 001e 7047     		bx	lr
+ 224              	.L16:
+ 225              		.align	2
+ 226              	.L15:
+ 227 0020 80E100E0 		.word	-536813184
+ 228 0024 00000000 		.word	I2C_1_slRdBufPtr
+ 229 0028 00000000 		.word	I2C_1_slRdBufSize
+ 230 002c 00000000 		.word	I2C_1_slRdBufIndex
+ 231 0030 00E100E0 		.word	-536813312
+ 232              		.cfi_endproc
+ 233              	.LFE4:
+ 234              		.size	I2C_1_SlaveInitReadBuf, .-I2C_1_SlaveInitReadBuf
+ 235              		.section	.text.I2C_1_SlaveInitWriteBuf,"ax",%progbits
+ 236              		.align	1
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 9
+
+
+ 237              		.global	I2C_1_SlaveInitWriteBuf
+ 238              		.syntax unified
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.fpu softvfp
+ 242              		.type	I2C_1_SlaveInitWriteBuf, %function
+ 243              	I2C_1_SlaveInitWriteBuf:
+ 244              	.LVL12:
+ 245              	.LFB5:
+ 221:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 222:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 223:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 224:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveInitWriteBuf
+ 225:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 226:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 227:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 228:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
+ 229:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
+ 230:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 231:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 232:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  writeBuf:  Pointer to the data buffer to be read by the master.
+ 233:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  bufSize:  Size of the buffer exposed to the I2C master.
+ 234:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 235:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 236:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 237:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 238:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 239:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufPtr   - The global variable used to store a pointer
+ 240:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  to the slave write buffer.
+ 241:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufSize  - The global variable used to store a slave
+ 242:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  write buffer size.
+ 243:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ 244:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 245:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 246:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Side Effects:
+ 247:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  If this function is called during a bus transaction, data from the previous
+ 248:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  buffer location and the beginning of the current buffer may be transmitted.
+ 249:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 250:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 251:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 252:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 253:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 254:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveInitWriteBuf(uint8 * wrBuf, uint8 bufSize)
+ 255:Generated_Source\PSoC5/I2C_1_SLAVE.c ****      
+ 256:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 246              		.loc 1 256 1 is_stmt 1 view -0
+ 247              		.cfi_startproc
+ 248              		@ args = 0, pretend = 0, frame = 0
+ 249              		@ frame_needed = 0, uses_anonymous_args = 0
+ 250              		@ link register save eliminated.
+ 257:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     if (NULL != wrBuf)
+ 251              		.loc 1 257 5 view .LVU47
+ 252              		.loc 1 257 8 is_stmt 0 view .LVU48
+ 253 0000 0246     		mov	r2, r0
+ 254 0002 60B1     		cbz	r0, .L17
+ 258:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     {
+ 259:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_DisableInt(); /* Lock from interrupt */
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 10
+
+
+ 255              		.loc 1 259 9 is_stmt 1 view .LVU49
+ 256 0004 4FF40043 		mov	r3, #32768
+ 257 0008 0548     		ldr	r0, .L19
+ 258              	.LVL13:
+ 259              		.loc 1 259 9 is_stmt 0 view .LVU50
+ 260 000a 0360     		str	r3, [r0]
+ 260:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 261:Generated_Source\PSoC5/I2C_1_SLAVE.c ****          /* Set buffer pointer */
+ 262:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufPtr   = (volatile uint8 *) wrBuf;
+ 261              		.loc 1 262 9 is_stmt 1 view .LVU51
+ 262              		.loc 1 262 28 is_stmt 0 view .LVU52
+ 263 000c 0548     		ldr	r0, .L19+4
+ 264 000e 0260     		str	r2, [r0]
+ 263:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufSize  = bufSize;    /* Set buffer size     */
+ 265              		.loc 1 263 9 is_stmt 1 view .LVU53
+ 266              		.loc 1 263 28 is_stmt 0 view .LVU54
+ 267 0010 054A     		ldr	r2, .L19+8
+ 268              	.LVL14:
+ 269              		.loc 1 263 28 view .LVU55
+ 270 0012 1170     		strb	r1, [r2]
+ 264:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_slWrBufIndex = 0u;         /* Clears buffer index */
+ 271              		.loc 1 264 9 is_stmt 1 view .LVU56
+ 272              		.loc 1 264 28 is_stmt 0 view .LVU57
+ 273 0014 054A     		ldr	r2, .L19+12
+ 274 0016 0021     		movs	r1, #0
+ 275              	.LVL15:
+ 276              		.loc 1 264 28 view .LVU58
+ 277 0018 1170     		strb	r1, [r2]
+ 278              	.LVL16:
+ 265:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 266:Generated_Source\PSoC5/I2C_1_SLAVE.c ****         I2C_1_EnableInt(); /* Release lock */
+ 279              		.loc 1 266 9 is_stmt 1 view .LVU59
+ 280 001a 054A     		ldr	r2, .L19+16
+ 281 001c 1360     		str	r3, [r2]
+ 282              	.LVL17:
+ 283              	.L17:
+ 267:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     }
+ 268:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 284              		.loc 1 268 1 is_stmt 0 view .LVU60
+ 285 001e 7047     		bx	lr
+ 286              	.L20:
+ 287              		.align	2
+ 288              	.L19:
+ 289 0020 80E100E0 		.word	-536813184
+ 290 0024 00000000 		.word	I2C_1_slWrBufPtr
+ 291 0028 00000000 		.word	I2C_1_slWrBufSize
+ 292 002c 00000000 		.word	I2C_1_slWrBufIndex
+ 293 0030 00E100E0 		.word	-536813312
+ 294              		.cfi_endproc
+ 295              	.LFE5:
+ 296              		.size	I2C_1_SlaveInitWriteBuf, .-I2C_1_SlaveInitWriteBuf
+ 297              		.section	.text.I2C_1_SlaveGetReadBufSize,"ax",%progbits
+ 298              		.align	1
+ 299              		.global	I2C_1_SlaveGetReadBufSize
+ 300              		.syntax unified
+ 301              		.thumb
+ 302              		.thumb_func
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 11
+
+
+ 303              		.fpu softvfp
+ 304              		.type	I2C_1_SlaveGetReadBufSize, %function
+ 305              	I2C_1_SlaveGetReadBufSize:
+ 306              	.LFB6:
+ 269:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 270:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 271:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 272:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveGetReadBufSize
+ 273:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 274:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 275:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 276:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns the number of bytes read by the I2C master since an
+ 277:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_SlaveInitReadBuf or I2C_SlaveClearReadBuf function was executed.
+ 278:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The maximum return value will be the size of the read buffer.
+ 279:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 280:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 281:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 282:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 283:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 284:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Bytes read by master.
+ 285:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 286:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 287:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 288:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave read buffer.
+ 289:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 290:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 291:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveGetReadBufSize(void) 
+ 292:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 307              		.loc 1 292 1 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311              		@ link register save eliminated.
+ 293:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slRdBufIndex);
+ 312              		.loc 1 293 5 view .LVU62
+ 313              		.loc 1 293 12 is_stmt 0 view .LVU63
+ 314 0000 014B     		ldr	r3, .L22
+ 315 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 294:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 316              		.loc 1 294 1 view .LVU64
+ 317 0004 7047     		bx	lr
+ 318              	.L23:
+ 319 0006 00BF     		.align	2
+ 320              	.L22:
+ 321 0008 00000000 		.word	I2C_1_slRdBufIndex
+ 322              		.cfi_endproc
+ 323              	.LFE6:
+ 324              		.size	I2C_1_SlaveGetReadBufSize, .-I2C_1_SlaveGetReadBufSize
+ 325              		.section	.text.I2C_1_SlaveGetWriteBufSize,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	I2C_1_SlaveGetWriteBufSize
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.fpu softvfp
+ 332              		.type	I2C_1_SlaveGetWriteBufSize, %function
+ 333              	I2C_1_SlaveGetWriteBufSize:
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 12
+
+
+ 334              	.LFB7:
+ 295:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 296:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 297:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 298:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveGetWriteBufSize
+ 299:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 300:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 301:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 302:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Returns the number of bytes written by the I2C master since an
+ 303:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_SlaveInitWriteBuf or I2C_SlaveClearWriteBuf function was executed.
+ 304:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  The maximum return value will be the size of the write buffer.
+ 305:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 306:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 307:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 308:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 309:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 310:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Bytes written by master.
+ 311:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 312:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 313:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ 314:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 315:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 316:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 317:Generated_Source\PSoC5/I2C_1_SLAVE.c **** uint8 I2C_1_SlaveGetWriteBufSize(void) 
+ 318:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 335              		.loc 1 318 1 is_stmt 1 view -0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 0
+ 338              		@ frame_needed = 0, uses_anonymous_args = 0
+ 339              		@ link register save eliminated.
+ 319:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     return (I2C_1_slWrBufIndex);
+ 340              		.loc 1 319 5 view .LVU66
+ 341              		.loc 1 319 12 is_stmt 0 view .LVU67
+ 342 0000 014B     		ldr	r3, .L25
+ 343 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 320:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 344              		.loc 1 320 1 view .LVU68
+ 345 0004 7047     		bx	lr
+ 346              	.L26:
+ 347 0006 00BF     		.align	2
+ 348              	.L25:
+ 349 0008 00000000 		.word	I2C_1_slWrBufIndex
+ 350              		.cfi_endproc
+ 351              	.LFE7:
+ 352              		.size	I2C_1_SlaveGetWriteBufSize, .-I2C_1_SlaveGetWriteBufSize
+ 353              		.section	.text.I2C_1_SlaveClearReadBuf,"ax",%progbits
+ 354              		.align	1
+ 355              		.global	I2C_1_SlaveClearReadBuf
+ 356              		.syntax unified
+ 357              		.thumb
+ 358              		.thumb_func
+ 359              		.fpu softvfp
+ 360              		.type	I2C_1_SlaveClearReadBuf, %function
+ 361              	I2C_1_SlaveClearReadBuf:
+ 362              	.LFB8:
+ 321:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 322:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 13
+
+
+ 323:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 324:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearReadBuf
+ 325:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 326:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 327:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 328:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Resets the read pointer to the first byte in the read buffer. The next byte
+ 329:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  read by the master will be the first byte in the read buffer.
+ 330:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 331:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 332:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 333:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 334:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 335:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 336:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 337:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 338:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slRdBufIndex - The global variable used to store a current
+ 339:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index the within slave read buffer.
+ 340:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 341:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 342:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 343:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 344:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 345:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveClearReadBuf(void) 
+ 346:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 363              		.loc 1 346 1 is_stmt 1 view -0
+ 364              		.cfi_startproc
+ 365              		@ args = 0, pretend = 0, frame = 0
+ 366              		@ frame_needed = 0, uses_anonymous_args = 0
+ 367              		@ link register save eliminated.
+ 347:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slRdBufIndex = 0u;
+ 368              		.loc 1 347 5 view .LVU70
+ 369              		.loc 1 347 24 is_stmt 0 view .LVU71
+ 370 0000 014B     		ldr	r3, .L28
+ 371 0002 0022     		movs	r2, #0
+ 372 0004 1A70     		strb	r2, [r3]
+ 348:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 373              		.loc 1 348 1 view .LVU72
+ 374 0006 7047     		bx	lr
+ 375              	.L29:
+ 376              		.align	2
+ 377              	.L28:
+ 378 0008 00000000 		.word	I2C_1_slRdBufIndex
+ 379              		.cfi_endproc
+ 380              	.LFE8:
+ 381              		.size	I2C_1_SlaveClearReadBuf, .-I2C_1_SlaveClearReadBuf
+ 382              		.section	.text.I2C_1_SlaveClearWriteBuf,"ax",%progbits
+ 383              		.align	1
+ 384              		.global	I2C_1_SlaveClearWriteBuf
+ 385              		.syntax unified
+ 386              		.thumb
+ 387              		.thumb_func
+ 388              		.fpu softvfp
+ 389              		.type	I2C_1_SlaveClearWriteBuf, %function
+ 390              	I2C_1_SlaveClearWriteBuf:
+ 391              	.LFB9:
+ 349:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ 350:Generated_Source\PSoC5/I2C_1_SLAVE.c **** 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 14
+
+
+ 351:Generated_Source\PSoC5/I2C_1_SLAVE.c **** /*******************************************************************************
+ 352:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Function Name: I2C_1_SlaveClearRxBuf
+ 353:Generated_Source\PSoC5/I2C_1_SLAVE.c **** ********************************************************************************
+ 354:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 355:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Summary:
+ 356:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  Resets the write pointer to the first byte in the write buffer. The next byte
+ 357:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  written by the master will be the first byte in the write buffer.
+ 358:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 359:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Parameters:
+ 360:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 361:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 362:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Return:
+ 363:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  None.
+ 364:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 365:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Global variables:
+ 366:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  I2C_1_slWrBufIndex - The global variable used to store a current
+ 367:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *                                  index within the slave write buffer.
+ 368:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 369:Generated_Source\PSoC5/I2C_1_SLAVE.c **** * Reentrant:
+ 370:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *  No.
+ 371:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *
+ 372:Generated_Source\PSoC5/I2C_1_SLAVE.c **** *******************************************************************************/
+ 373:Generated_Source\PSoC5/I2C_1_SLAVE.c **** void I2C_1_SlaveClearWriteBuf(void) 
+ 374:Generated_Source\PSoC5/I2C_1_SLAVE.c **** {
+ 392              		.loc 1 374 1 is_stmt 1 view -0
+ 393              		.cfi_startproc
+ 394              		@ args = 0, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396              		@ link register save eliminated.
+ 375:Generated_Source\PSoC5/I2C_1_SLAVE.c ****     I2C_1_slWrBufIndex = 0u;
+ 397              		.loc 1 375 5 view .LVU74
+ 398              		.loc 1 375 24 is_stmt 0 view .LVU75
+ 399 0000 014B     		ldr	r3, .L31
+ 400 0002 0022     		movs	r2, #0
+ 401 0004 1A70     		strb	r2, [r3]
+ 376:Generated_Source\PSoC5/I2C_1_SLAVE.c **** }
+ 402              		.loc 1 376 1 view .LVU76
+ 403 0006 7047     		bx	lr
+ 404              	.L32:
+ 405              		.align	2
+ 406              	.L31:
+ 407 0008 00000000 		.word	I2C_1_slWrBufIndex
+ 408              		.cfi_endproc
+ 409              	.LFE9:
+ 410              		.size	I2C_1_SlaveClearWriteBuf, .-I2C_1_SlaveClearWriteBuf
+ 411              		.comm	I2C_1_slWrBufIndex,1,1
+ 412              		.comm	I2C_1_slWrBufSize,1,1
+ 413              		.comm	I2C_1_slWrBufPtr,4,4
+ 414              		.comm	I2C_1_slRdBufIndex,1,1
+ 415              		.comm	I2C_1_slRdBufSize,1,1
+ 416              		.comm	I2C_1_slRdBufPtr,4,4
+ 417              		.comm	I2C_1_slStatus,1,1
+ 418              		.text
+ 419              	.Letext0:
+ 420              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 421              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 422              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 15
+
+
+ 423              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 424              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 425              		.file 7 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 426              		.file 8 "Generated_Source\\PSoC5\\CySpc.h"
+ 427              		.file 9 "Generated_Source\\PSoC5\\CyFlash.h"
+ 428              		.file 10 "Generated_Source\\PSoC5\\CyLib.h"
+ 429              		.file 11 "Generated_Source\\PSoC5\\I2C_1.h"
+ 430              		.file 12 "Generated_Source\\PSoC5\\I2C_1_PVT.h"
+ 431              		.section	.debug_info,"",%progbits
+ 432              	.Ldebug_info0:
+ 433 0000 980C0000 		.4byte	0xc98
+ 434 0004 0400     		.2byte	0x4
+ 435 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 436 000a 04       		.byte	0x4
+ 437 000b 01       		.uleb128 0x1
+ 438 000c 7E030000 		.4byte	.LASF166
+ 439 0010 0C       		.byte	0xc
+ 440 0011 34060000 		.4byte	.LASF167
+ 441 0015 B1070000 		.4byte	.LASF168
+ 442 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 443 001d 00000000 		.4byte	0
+ 444 0021 00000000 		.4byte	.Ldebug_line0
+ 445 0025 02       		.uleb128 0x2
+ 446 0026 01       		.byte	0x1
+ 447 0027 06       		.byte	0x6
+ 448 0028 50010000 		.4byte	.LASF0
+ 449 002c 02       		.uleb128 0x2
+ 450 002d 01       		.byte	0x1
+ 451 002e 08       		.byte	0x8
+ 452 002f F9040000 		.4byte	.LASF1
+ 453 0033 02       		.uleb128 0x2
+ 454 0034 02       		.byte	0x2
+ 455 0035 05       		.byte	0x5
+ 456 0036 42050000 		.4byte	.LASF2
+ 457 003a 02       		.uleb128 0x2
+ 458 003b 02       		.byte	0x2
+ 459 003c 07       		.byte	0x7
+ 460 003d F0020000 		.4byte	.LASF3
+ 461 0041 02       		.uleb128 0x2
+ 462 0042 04       		.byte	0x4
+ 463 0043 05       		.byte	0x5
+ 464 0044 A8010000 		.4byte	.LASF4
+ 465 0048 02       		.uleb128 0x2
+ 466 0049 04       		.byte	0x4
+ 467 004a 07       		.byte	0x7
+ 468 004b D1020000 		.4byte	.LASF5
+ 469 004f 02       		.uleb128 0x2
+ 470 0050 08       		.byte	0x8
+ 471 0051 05       		.byte	0x5
+ 472 0052 42010000 		.4byte	.LASF6
+ 473 0056 02       		.uleb128 0x2
+ 474 0057 08       		.byte	0x8
+ 475 0058 07       		.byte	0x7
+ 476 0059 9A000000 		.4byte	.LASF7
+ 477 005d 03       		.uleb128 0x3
+ 478 005e 04       		.byte	0x4
+ 479 005f 05       		.byte	0x5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 16
+
+
+ 480 0060 696E7400 		.ascii	"int\000"
+ 481 0064 02       		.uleb128 0x2
+ 482 0065 04       		.byte	0x4
+ 483 0066 07       		.byte	0x7
+ 484 0067 A5020000 		.4byte	.LASF8
+ 485 006b 04       		.uleb128 0x4
+ 486 006c D0010000 		.4byte	.LASF9
+ 487 0070 02       		.byte	0x2
+ 488 0071 E401     		.2byte	0x1e4
+ 489 0073 19       		.byte	0x19
+ 490 0074 2C000000 		.4byte	0x2c
+ 491 0078 05       		.uleb128 0x5
+ 492 0079 6B000000 		.4byte	0x6b
+ 493 007d 04       		.uleb128 0x4
+ 494 007e 38020000 		.4byte	.LASF10
+ 495 0082 02       		.byte	0x2
+ 496 0083 E601     		.2byte	0x1e6
+ 497 0085 19       		.byte	0x19
+ 498 0086 48000000 		.4byte	0x48
+ 499 008a 05       		.uleb128 0x5
+ 500 008b 7D000000 		.4byte	0x7d
+ 501 008f 02       		.uleb128 0x2
+ 502 0090 04       		.byte	0x4
+ 503 0091 04       		.byte	0x4
+ 504 0092 A8040000 		.4byte	.LASF11
+ 505 0096 02       		.uleb128 0x2
+ 506 0097 08       		.byte	0x8
+ 507 0098 04       		.byte	0x4
+ 508 0099 D6010000 		.4byte	.LASF12
+ 509 009d 02       		.uleb128 0x2
+ 510 009e 01       		.byte	0x1
+ 511 009f 08       		.byte	0x8
+ 512 00a0 2F060000 		.4byte	.LASF13
+ 513 00a4 06       		.uleb128 0x6
+ 514 00a5 9D000000 		.4byte	0x9d
+ 515 00a9 04       		.uleb128 0x4
+ 516 00aa F4040000 		.4byte	.LASF14
+ 517 00ae 02       		.byte	0x2
+ 518 00af 8E02     		.2byte	0x28e
+ 519 00b1 21       		.byte	0x21
+ 520 00b2 78000000 		.4byte	0x78
+ 521 00b6 04       		.uleb128 0x4
+ 522 00b7 27040000 		.4byte	.LASF15
+ 523 00bb 02       		.byte	0x2
+ 524 00bc 9002     		.2byte	0x290
+ 525 00be 21       		.byte	0x21
+ 526 00bf 8A000000 		.4byte	0x8a
+ 527 00c3 07       		.uleb128 0x7
+ 528 00c4 04       		.byte	0x4
+ 529 00c5 C9000000 		.4byte	0xc9
+ 530 00c9 08       		.uleb128 0x8
+ 531 00ca 02       		.uleb128 0x2
+ 532 00cb 08       		.byte	0x8
+ 533 00cc 04       		.byte	0x4
+ 534 00cd 48040000 		.4byte	.LASF16
+ 535 00d1 09       		.uleb128 0x9
+ 536 00d2 38030000 		.4byte	.LASF17
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 17
+
+
+ 537 00d6 03       		.byte	0x3
+ 538 00d7 22       		.byte	0x22
+ 539 00d8 19       		.byte	0x19
+ 540 00d9 DD000000 		.4byte	0xdd
+ 541 00dd 07       		.uleb128 0x7
+ 542 00de 04       		.byte	0x4
+ 543 00df E3000000 		.4byte	0xe3
+ 544 00e3 0A       		.uleb128 0xa
+ 545 00e4 FF050000 		.4byte	.LASF123
+ 546 00e8 09       		.uleb128 0x9
+ 547 00e9 A1040000 		.4byte	.LASF18
+ 548 00ed 04       		.byte	0x4
+ 549 00ee 2C       		.byte	0x2c
+ 550 00ef 0E       		.byte	0xe
+ 551 00f0 41000000 		.4byte	0x41
+ 552 00f4 09       		.uleb128 0x9
+ 553 00f5 20060000 		.4byte	.LASF19
+ 554 00f9 04       		.byte	0x4
+ 555 00fa 72       		.byte	0x72
+ 556 00fb 0E       		.byte	0xe
+ 557 00fc 41000000 		.4byte	0x41
+ 558 0100 04       		.uleb128 0x4
+ 559 0101 40030000 		.4byte	.LASF20
+ 560 0105 05       		.byte	0x5
+ 561 0106 5E01     		.2byte	0x15e
+ 562 0108 17       		.byte	0x17
+ 563 0109 64000000 		.4byte	0x64
+ 564 010d 0B       		.uleb128 0xb
+ 565 010e 04       		.byte	0x4
+ 566 010f 04       		.byte	0x4
+ 567 0110 A6       		.byte	0xa6
+ 568 0111 03       		.byte	0x3
+ 569 0112 2F010000 		.4byte	0x12f
+ 570 0116 0C       		.uleb128 0xc
+ 571 0117 32030000 		.4byte	.LASF21
+ 572 011b 04       		.byte	0x4
+ 573 011c A8       		.byte	0xa8
+ 574 011d 0C       		.byte	0xc
+ 575 011e 00010000 		.4byte	0x100
+ 576 0122 0C       		.uleb128 0xc
+ 577 0123 B2020000 		.4byte	.LASF22
+ 578 0127 04       		.byte	0x4
+ 579 0128 A9       		.byte	0xa9
+ 580 0129 13       		.byte	0x13
+ 581 012a 2F010000 		.4byte	0x12f
+ 582 012e 00       		.byte	0
+ 583 012f 0D       		.uleb128 0xd
+ 584 0130 2C000000 		.4byte	0x2c
+ 585 0134 3F010000 		.4byte	0x13f
+ 586 0138 0E       		.uleb128 0xe
+ 587 0139 64000000 		.4byte	0x64
+ 588 013d 03       		.byte	0x3
+ 589 013e 00       		.byte	0
+ 590 013f 0F       		.uleb128 0xf
+ 591 0140 08       		.byte	0x8
+ 592 0141 04       		.byte	0x4
+ 593 0142 A3       		.byte	0xa3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 18
+
+
+ 594 0143 09       		.byte	0x9
+ 595 0144 63010000 		.4byte	0x163
+ 596 0148 10       		.uleb128 0x10
+ 597 0149 F7050000 		.4byte	.LASF23
+ 598 014d 04       		.byte	0x4
+ 599 014e A5       		.byte	0xa5
+ 600 014f 07       		.byte	0x7
+ 601 0150 5D000000 		.4byte	0x5d
+ 602 0154 00       		.byte	0
+ 603 0155 10       		.uleb128 0x10
+ 604 0156 06060000 		.4byte	.LASF24
+ 605 015a 04       		.byte	0x4
+ 606 015b AA       		.byte	0xaa
+ 607 015c 05       		.byte	0x5
+ 608 015d 0D010000 		.4byte	0x10d
+ 609 0161 04       		.byte	0x4
+ 610 0162 00       		.byte	0
+ 611 0163 09       		.uleb128 0x9
+ 612 0164 6A050000 		.4byte	.LASF25
+ 613 0168 04       		.byte	0x4
+ 614 0169 AB       		.byte	0xab
+ 615 016a 03       		.byte	0x3
+ 616 016b 3F010000 		.4byte	0x13f
+ 617 016f 09       		.uleb128 0x9
+ 618 0170 5C020000 		.4byte	.LASF26
+ 619 0174 04       		.byte	0x4
+ 620 0175 AF       		.byte	0xaf
+ 621 0176 1B       		.byte	0x1b
+ 622 0177 D1000000 		.4byte	0xd1
+ 623 017b 11       		.uleb128 0x11
+ 624 017c 04       		.byte	0x4
+ 625 017d 07       		.uleb128 0x7
+ 626 017e 04       		.byte	0x4
+ 627 017f 9D000000 		.4byte	0x9d
+ 628 0183 09       		.uleb128 0x9
+ 629 0184 AB060000 		.4byte	.LASF27
+ 630 0188 06       		.byte	0x6
+ 631 0189 16       		.byte	0x16
+ 632 018a 19       		.byte	0x19
+ 633 018b 48000000 		.4byte	0x48
+ 634 018f 12       		.uleb128 0x12
+ 635 0190 6D020000 		.4byte	.LASF32
+ 636 0194 18       		.byte	0x18
+ 637 0195 06       		.byte	0x6
+ 638 0196 2F       		.byte	0x2f
+ 639 0197 08       		.byte	0x8
+ 640 0198 E9010000 		.4byte	0x1e9
+ 641 019c 10       		.uleb128 0x10
+ 642 019d 8A060000 		.4byte	.LASF28
+ 643 01a1 06       		.byte	0x6
+ 644 01a2 31       		.byte	0x31
+ 645 01a3 13       		.byte	0x13
+ 646 01a4 E9010000 		.4byte	0x1e9
+ 647 01a8 00       		.byte	0
+ 648 01a9 13       		.uleb128 0x13
+ 649 01aa 5F6B00   		.ascii	"_k\000"
+ 650 01ad 06       		.byte	0x6
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 19
+
+
+ 651 01ae 32       		.byte	0x32
+ 652 01af 07       		.byte	0x7
+ 653 01b0 5D000000 		.4byte	0x5d
+ 654 01b4 04       		.byte	0x4
+ 655 01b5 10       		.uleb128 0x10
+ 656 01b6 D3050000 		.4byte	.LASF29
+ 657 01ba 06       		.byte	0x6
+ 658 01bb 32       		.byte	0x32
+ 659 01bc 0B       		.byte	0xb
+ 660 01bd 5D000000 		.4byte	0x5d
+ 661 01c1 08       		.byte	0x8
+ 662 01c2 10       		.uleb128 0x10
+ 663 01c3 44020000 		.4byte	.LASF30
+ 664 01c7 06       		.byte	0x6
+ 665 01c8 32       		.byte	0x32
+ 666 01c9 14       		.byte	0x14
+ 667 01ca 5D000000 		.4byte	0x5d
+ 668 01ce 0C       		.byte	0xc
+ 669 01cf 10       		.uleb128 0x10
+ 670 01d0 05070000 		.4byte	.LASF31
+ 671 01d4 06       		.byte	0x6
+ 672 01d5 32       		.byte	0x32
+ 673 01d6 1B       		.byte	0x1b
+ 674 01d7 5D000000 		.4byte	0x5d
+ 675 01db 10       		.byte	0x10
+ 676 01dc 13       		.uleb128 0x13
+ 677 01dd 5F7800   		.ascii	"_x\000"
+ 678 01e0 06       		.byte	0x6
+ 679 01e1 33       		.byte	0x33
+ 680 01e2 0B       		.byte	0xb
+ 681 01e3 EF010000 		.4byte	0x1ef
+ 682 01e7 14       		.byte	0x14
+ 683 01e8 00       		.byte	0
+ 684 01e9 07       		.uleb128 0x7
+ 685 01ea 04       		.byte	0x4
+ 686 01eb 8F010000 		.4byte	0x18f
+ 687 01ef 0D       		.uleb128 0xd
+ 688 01f0 83010000 		.4byte	0x183
+ 689 01f4 FF010000 		.4byte	0x1ff
+ 690 01f8 0E       		.uleb128 0xe
+ 691 01f9 64000000 		.4byte	0x64
+ 692 01fd 00       		.byte	0
+ 693 01fe 00       		.byte	0
+ 694 01ff 12       		.uleb128 0x12
+ 695 0200 A0020000 		.4byte	.LASF33
+ 696 0204 24       		.byte	0x24
+ 697 0205 06       		.byte	0x6
+ 698 0206 37       		.byte	0x37
+ 699 0207 08       		.byte	0x8
+ 700 0208 82020000 		.4byte	0x282
+ 701 020c 10       		.uleb128 0x10
+ 702 020d 39010000 		.4byte	.LASF34
+ 703 0211 06       		.byte	0x6
+ 704 0212 39       		.byte	0x39
+ 705 0213 09       		.byte	0x9
+ 706 0214 5D000000 		.4byte	0x5d
+ 707 0218 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 20
+
+
+ 708 0219 10       		.uleb128 0x10
+ 709 021a 59060000 		.4byte	.LASF35
+ 710 021e 06       		.byte	0x6
+ 711 021f 3A       		.byte	0x3a
+ 712 0220 09       		.byte	0x9
+ 713 0221 5D000000 		.4byte	0x5d
+ 714 0225 04       		.byte	0x4
+ 715 0226 10       		.uleb128 0x10
+ 716 0227 68010000 		.4byte	.LASF36
+ 717 022b 06       		.byte	0x6
+ 718 022c 3B       		.byte	0x3b
+ 719 022d 09       		.byte	0x9
+ 720 022e 5D000000 		.4byte	0x5d
+ 721 0232 08       		.byte	0x8
+ 722 0233 10       		.uleb128 0x10
+ 723 0234 FE070000 		.4byte	.LASF37
+ 724 0238 06       		.byte	0x6
+ 725 0239 3C       		.byte	0x3c
+ 726 023a 09       		.byte	0x9
+ 727 023b 5D000000 		.4byte	0x5d
+ 728 023f 0C       		.byte	0xc
+ 729 0240 10       		.uleb128 0x10
+ 730 0241 77040000 		.4byte	.LASF38
+ 731 0245 06       		.byte	0x6
+ 732 0246 3D       		.byte	0x3d
+ 733 0247 09       		.byte	0x9
+ 734 0248 5D000000 		.4byte	0x5d
+ 735 024c 10       		.byte	0x10
+ 736 024d 10       		.uleb128 0x10
+ 737 024e 2D040000 		.4byte	.LASF39
+ 738 0252 06       		.byte	0x6
+ 739 0253 3E       		.byte	0x3e
+ 740 0254 09       		.byte	0x9
+ 741 0255 5D000000 		.4byte	0x5d
+ 742 0259 14       		.byte	0x14
+ 743 025a 10       		.uleb128 0x10
+ 744 025b 0A070000 		.4byte	.LASF40
+ 745 025f 06       		.byte	0x6
+ 746 0260 3F       		.byte	0x3f
+ 747 0261 09       		.byte	0x9
+ 748 0262 5D000000 		.4byte	0x5d
+ 749 0266 18       		.byte	0x18
+ 750 0267 10       		.uleb128 0x10
+ 751 0268 4C050000 		.4byte	.LASF41
+ 752 026c 06       		.byte	0x6
+ 753 026d 40       		.byte	0x40
+ 754 026e 09       		.byte	0x9
+ 755 026f 5D000000 		.4byte	0x5d
+ 756 0273 1C       		.byte	0x1c
+ 757 0274 10       		.uleb128 0x10
+ 758 0275 5D070000 		.4byte	.LASF42
+ 759 0279 06       		.byte	0x6
+ 760 027a 41       		.byte	0x41
+ 761 027b 09       		.byte	0x9
+ 762 027c 5D000000 		.4byte	0x5d
+ 763 0280 20       		.byte	0x20
+ 764 0281 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 21
+
+
+ 765 0282 14       		.uleb128 0x14
+ 766 0283 77010000 		.4byte	.LASF43
+ 767 0287 0801     		.2byte	0x108
+ 768 0289 06       		.byte	0x6
+ 769 028a 4A       		.byte	0x4a
+ 770 028b 08       		.byte	0x8
+ 771 028c C7020000 		.4byte	0x2c7
+ 772 0290 10       		.uleb128 0x10
+ 773 0291 2A000000 		.4byte	.LASF44
+ 774 0295 06       		.byte	0x6
+ 775 0296 4B       		.byte	0x4b
+ 776 0297 0A       		.byte	0xa
+ 777 0298 C7020000 		.4byte	0x2c7
+ 778 029c 00       		.byte	0
+ 779 029d 10       		.uleb128 0x10
+ 780 029e 00000000 		.4byte	.LASF45
+ 781 02a2 06       		.byte	0x6
+ 782 02a3 4C       		.byte	0x4c
+ 783 02a4 09       		.byte	0x9
+ 784 02a5 C7020000 		.4byte	0x2c7
+ 785 02a9 80       		.byte	0x80
+ 786 02aa 15       		.uleb128 0x15
+ 787 02ab 9D060000 		.4byte	.LASF46
+ 788 02af 06       		.byte	0x6
+ 789 02b0 4E       		.byte	0x4e
+ 790 02b1 0A       		.byte	0xa
+ 791 02b2 83010000 		.4byte	0x183
+ 792 02b6 0001     		.2byte	0x100
+ 793 02b8 15       		.uleb128 0x15
+ 794 02b9 B8010000 		.4byte	.LASF47
+ 795 02bd 06       		.byte	0x6
+ 796 02be 51       		.byte	0x51
+ 797 02bf 0A       		.byte	0xa
+ 798 02c0 83010000 		.4byte	0x183
+ 799 02c4 0401     		.2byte	0x104
+ 800 02c6 00       		.byte	0
+ 801 02c7 0D       		.uleb128 0xd
+ 802 02c8 7B010000 		.4byte	0x17b
+ 803 02cc D7020000 		.4byte	0x2d7
+ 804 02d0 0E       		.uleb128 0xe
+ 805 02d1 64000000 		.4byte	0x64
+ 806 02d5 1F       		.byte	0x1f
+ 807 02d6 00       		.byte	0
+ 808 02d7 14       		.uleb128 0x14
+ 809 02d8 8E040000 		.4byte	.LASF48
+ 810 02dc 9001     		.2byte	0x190
+ 811 02de 06       		.byte	0x6
+ 812 02df 5D       		.byte	0x5d
+ 813 02e0 08       		.byte	0x8
+ 814 02e1 1A030000 		.4byte	0x31a
+ 815 02e5 10       		.uleb128 0x10
+ 816 02e6 8A060000 		.4byte	.LASF28
+ 817 02ea 06       		.byte	0x6
+ 818 02eb 5E       		.byte	0x5e
+ 819 02ec 12       		.byte	0x12
+ 820 02ed 1A030000 		.4byte	0x31a
+ 821 02f1 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 22
+
+
+ 822 02f2 10       		.uleb128 0x10
+ 823 02f3 A3050000 		.4byte	.LASF49
+ 824 02f7 06       		.byte	0x6
+ 825 02f8 5F       		.byte	0x5f
+ 826 02f9 06       		.byte	0x6
+ 827 02fa 5D000000 		.4byte	0x5d
+ 828 02fe 04       		.byte	0x4
+ 829 02ff 10       		.uleb128 0x10
+ 830 0300 3F020000 		.4byte	.LASF50
+ 831 0304 06       		.byte	0x6
+ 832 0305 61       		.byte	0x61
+ 833 0306 09       		.byte	0x9
+ 834 0307 20030000 		.4byte	0x320
+ 835 030b 08       		.byte	0x8
+ 836 030c 10       		.uleb128 0x10
+ 837 030d 77010000 		.4byte	.LASF43
+ 838 0311 06       		.byte	0x6
+ 839 0312 62       		.byte	0x62
+ 840 0313 1E       		.byte	0x1e
+ 841 0314 82020000 		.4byte	0x282
+ 842 0318 88       		.byte	0x88
+ 843 0319 00       		.byte	0
+ 844 031a 07       		.uleb128 0x7
+ 845 031b 04       		.byte	0x4
+ 846 031c D7020000 		.4byte	0x2d7
+ 847 0320 0D       		.uleb128 0xd
+ 848 0321 C3000000 		.4byte	0xc3
+ 849 0325 30030000 		.4byte	0x330
+ 850 0329 0E       		.uleb128 0xe
+ 851 032a 64000000 		.4byte	0x64
+ 852 032e 1F       		.byte	0x1f
+ 853 032f 00       		.byte	0
+ 854 0330 12       		.uleb128 0x12
+ 855 0331 56050000 		.4byte	.LASF51
+ 856 0335 08       		.byte	0x8
+ 857 0336 06       		.byte	0x6
+ 858 0337 75       		.byte	0x75
+ 859 0338 08       		.byte	0x8
+ 860 0339 58030000 		.4byte	0x358
+ 861 033d 10       		.uleb128 0x10
+ 862 033e 62010000 		.4byte	.LASF52
+ 863 0342 06       		.byte	0x6
+ 864 0343 76       		.byte	0x76
+ 865 0344 11       		.byte	0x11
+ 866 0345 58030000 		.4byte	0x358
+ 867 0349 00       		.byte	0
+ 868 034a 10       		.uleb128 0x10
+ 869 034b 24000000 		.4byte	.LASF53
+ 870 034f 06       		.byte	0x6
+ 871 0350 77       		.byte	0x77
+ 872 0351 06       		.byte	0x6
+ 873 0352 5D000000 		.4byte	0x5d
+ 874 0356 04       		.byte	0x4
+ 875 0357 00       		.byte	0
+ 876 0358 07       		.uleb128 0x7
+ 877 0359 04       		.byte	0x4
+ 878 035a 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 23
+
+
+ 879 035e 12       		.uleb128 0x12
+ 880 035f 75050000 		.4byte	.LASF54
+ 881 0363 68       		.byte	0x68
+ 882 0364 06       		.byte	0x6
+ 883 0365 B5       		.byte	0xb5
+ 884 0366 08       		.byte	0x8
+ 885 0367 A1040000 		.4byte	0x4a1
+ 886 036b 13       		.uleb128 0x13
+ 887 036c 5F7000   		.ascii	"_p\000"
+ 888 036f 06       		.byte	0x6
+ 889 0370 B6       		.byte	0xb6
+ 890 0371 12       		.byte	0x12
+ 891 0372 58030000 		.4byte	0x358
+ 892 0376 00       		.byte	0
+ 893 0377 13       		.uleb128 0x13
+ 894 0378 5F7200   		.ascii	"_r\000"
+ 895 037b 06       		.byte	0x6
+ 896 037c B7       		.byte	0xb7
+ 897 037d 07       		.byte	0x7
+ 898 037e 5D000000 		.4byte	0x5d
+ 899 0382 04       		.byte	0x4
+ 900 0383 13       		.uleb128 0x13
+ 901 0384 5F7700   		.ascii	"_w\000"
+ 902 0387 06       		.byte	0x6
+ 903 0388 B8       		.byte	0xb8
+ 904 0389 07       		.byte	0x7
+ 905 038a 5D000000 		.4byte	0x5d
+ 906 038e 08       		.byte	0x8
+ 907 038f 10       		.uleb128 0x10
+ 908 0390 B1010000 		.4byte	.LASF55
+ 909 0394 06       		.byte	0x6
+ 910 0395 B9       		.byte	0xb9
+ 911 0396 09       		.byte	0x9
+ 912 0397 33000000 		.4byte	0x33
+ 913 039b 0C       		.byte	0xc
+ 914 039c 10       		.uleb128 0x10
+ 915 039d E3020000 		.4byte	.LASF56
+ 916 03a1 06       		.byte	0x6
+ 917 03a2 BA       		.byte	0xba
+ 918 03a3 09       		.byte	0x9
+ 919 03a4 33000000 		.4byte	0x33
+ 920 03a8 0E       		.byte	0xe
+ 921 03a9 13       		.uleb128 0x13
+ 922 03aa 5F626600 		.ascii	"_bf\000"
+ 923 03ae 06       		.byte	0x6
+ 924 03af BB       		.byte	0xbb
+ 925 03b0 11       		.byte	0x11
+ 926 03b1 30030000 		.4byte	0x330
+ 927 03b5 10       		.byte	0x10
+ 928 03b6 10       		.uleb128 0x10
+ 929 03b7 B1000000 		.4byte	.LASF57
+ 930 03bb 06       		.byte	0x6
+ 931 03bc BC       		.byte	0xbc
+ 932 03bd 07       		.byte	0x7
+ 933 03be 5D000000 		.4byte	0x5d
+ 934 03c2 18       		.byte	0x18
+ 935 03c3 10       		.uleb128 0x10
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 24
+
+
+ 936 03c4 98010000 		.4byte	.LASF58
+ 937 03c8 06       		.byte	0x6
+ 938 03c9 C3       		.byte	0xc3
+ 939 03ca 0A       		.byte	0xa
+ 940 03cb 7B010000 		.4byte	0x17b
+ 941 03cf 1C       		.byte	0x1c
+ 942 03d0 10       		.uleb128 0x10
+ 943 03d1 90020000 		.4byte	.LASF59
+ 944 03d5 06       		.byte	0x6
+ 945 03d6 C5       		.byte	0xc5
+ 946 03d7 1D       		.byte	0x1d
+ 947 03d8 13060000 		.4byte	0x613
+ 948 03dc 20       		.byte	0x20
+ 949 03dd 10       		.uleb128 0x10
+ 950 03de ED040000 		.4byte	.LASF60
+ 951 03e2 06       		.byte	0x6
+ 952 03e3 C7       		.byte	0xc7
+ 953 03e4 1D       		.byte	0x1d
+ 954 03e5 3D060000 		.4byte	0x63d
+ 955 03e9 24       		.byte	0x24
+ 956 03ea 10       		.uleb128 0x10
+ 957 03eb 0E060000 		.4byte	.LASF61
+ 958 03ef 06       		.byte	0x6
+ 959 03f0 CA       		.byte	0xca
+ 960 03f1 0D       		.byte	0xd
+ 961 03f2 61060000 		.4byte	0x661
+ 962 03f6 28       		.byte	0x28
+ 963 03f7 10       		.uleb128 0x10
+ 964 03f8 77070000 		.4byte	.LASF62
+ 965 03fc 06       		.byte	0x6
+ 966 03fd CB       		.byte	0xcb
+ 967 03fe 09       		.byte	0x9
+ 968 03ff 7B060000 		.4byte	0x67b
+ 969 0403 2C       		.byte	0x2c
+ 970 0404 13       		.uleb128 0x13
+ 971 0405 5F756200 		.ascii	"_ub\000"
+ 972 0409 06       		.byte	0x6
+ 973 040a CE       		.byte	0xce
+ 974 040b 11       		.byte	0x11
+ 975 040c 30030000 		.4byte	0x330
+ 976 0410 30       		.byte	0x30
+ 977 0411 13       		.uleb128 0x13
+ 978 0412 5F757000 		.ascii	"_up\000"
+ 979 0416 06       		.byte	0x6
+ 980 0417 CF       		.byte	0xcf
+ 981 0418 12       		.byte	0x12
+ 982 0419 58030000 		.4byte	0x358
+ 983 041d 38       		.byte	0x38
+ 984 041e 13       		.uleb128 0x13
+ 985 041f 5F757200 		.ascii	"_ur\000"
+ 986 0423 06       		.byte	0x6
+ 987 0424 D0       		.byte	0xd0
+ 988 0425 07       		.byte	0x7
+ 989 0426 5D000000 		.4byte	0x5d
+ 990 042a 3C       		.byte	0x3c
+ 991 042b 10       		.uleb128 0x10
+ 992 042c 5C010000 		.4byte	.LASF63
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 25
+
+
+ 993 0430 06       		.byte	0x6
+ 994 0431 D3       		.byte	0xd3
+ 995 0432 11       		.byte	0x11
+ 996 0433 81060000 		.4byte	0x681
+ 997 0437 40       		.byte	0x40
+ 998 0438 10       		.uleb128 0x10
+ 999 0439 4F070000 		.4byte	.LASF64
+ 1000 043d 06       		.byte	0x6
+ 1001 043e D4       		.byte	0xd4
+ 1002 043f 11       		.byte	0x11
+ 1003 0440 91060000 		.4byte	0x691
+ 1004 0444 43       		.byte	0x43
+ 1005 0445 13       		.uleb128 0x13
+ 1006 0446 5F6C6200 		.ascii	"_lb\000"
+ 1007 044a 06       		.byte	0x6
+ 1008 044b D7       		.byte	0xd7
+ 1009 044c 11       		.byte	0x11
+ 1010 044d 30030000 		.4byte	0x330
+ 1011 0451 44       		.byte	0x44
+ 1012 0452 10       		.uleb128 0x10
+ 1013 0453 C7010000 		.4byte	.LASF65
+ 1014 0457 06       		.byte	0x6
+ 1015 0458 DA       		.byte	0xda
+ 1016 0459 07       		.byte	0x7
+ 1017 045a 5D000000 		.4byte	0x5d
+ 1018 045e 4C       		.byte	0x4c
+ 1019 045f 10       		.uleb128 0x10
+ 1020 0460 F6010000 		.4byte	.LASF66
+ 1021 0464 06       		.byte	0x6
+ 1022 0465 DB       		.byte	0xdb
+ 1023 0466 0A       		.byte	0xa
+ 1024 0467 E8000000 		.4byte	0xe8
+ 1025 046b 50       		.byte	0x50
+ 1026 046c 10       		.uleb128 0x10
+ 1027 046d 4B000000 		.4byte	.LASF67
+ 1028 0471 06       		.byte	0x6
+ 1029 0472 DE       		.byte	0xde
+ 1030 0473 12       		.byte	0x12
+ 1031 0474 BF040000 		.4byte	0x4bf
+ 1032 0478 54       		.byte	0x54
+ 1033 0479 10       		.uleb128 0x10
+ 1034 047a 57030000 		.4byte	.LASF68
+ 1035 047e 06       		.byte	0x6
+ 1036 047f E2       		.byte	0xe2
+ 1037 0480 0C       		.byte	0xc
+ 1038 0481 6F010000 		.4byte	0x16f
+ 1039 0485 58       		.byte	0x58
+ 1040 0486 10       		.uleb128 0x10
+ 1041 0487 7D050000 		.4byte	.LASF69
+ 1042 048b 06       		.byte	0x6
+ 1043 048c E4       		.byte	0xe4
+ 1044 048d 0E       		.byte	0xe
+ 1045 048e 63010000 		.4byte	0x163
+ 1046 0492 5C       		.byte	0x5c
+ 1047 0493 10       		.uleb128 0x10
+ 1048 0494 5D030000 		.4byte	.LASF70
+ 1049 0498 06       		.byte	0x6
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 26
+
+
+ 1050 0499 E5       		.byte	0xe5
+ 1051 049a 09       		.byte	0x9
+ 1052 049b 5D000000 		.4byte	0x5d
+ 1053 049f 64       		.byte	0x64
+ 1054 04a0 00       		.byte	0
+ 1055 04a1 16       		.uleb128 0x16
+ 1056 04a2 5D000000 		.4byte	0x5d
+ 1057 04a6 BF040000 		.4byte	0x4bf
+ 1058 04aa 17       		.uleb128 0x17
+ 1059 04ab BF040000 		.4byte	0x4bf
+ 1060 04af 17       		.uleb128 0x17
+ 1061 04b0 7B010000 		.4byte	0x17b
+ 1062 04b4 17       		.uleb128 0x17
+ 1063 04b5 7D010000 		.4byte	0x17d
+ 1064 04b9 17       		.uleb128 0x17
+ 1065 04ba 5D000000 		.4byte	0x5d
+ 1066 04be 00       		.byte	0
+ 1067 04bf 07       		.uleb128 0x7
+ 1068 04c0 04       		.byte	0x4
+ 1069 04c1 CA040000 		.4byte	0x4ca
+ 1070 04c5 06       		.uleb128 0x6
+ 1071 04c6 BF040000 		.4byte	0x4bf
+ 1072 04ca 18       		.uleb128 0x18
+ 1073 04cb DB050000 		.4byte	.LASF71
+ 1074 04cf 2804     		.2byte	0x428
+ 1075 04d1 06       		.byte	0x6
+ 1076 04d2 6002     		.2byte	0x260
+ 1077 04d4 08       		.byte	0x8
+ 1078 04d5 13060000 		.4byte	0x613
+ 1079 04d9 19       		.uleb128 0x19
+ 1080 04da 28060000 		.4byte	.LASF72
+ 1081 04de 06       		.byte	0x6
+ 1082 04df 6202     		.2byte	0x262
+ 1083 04e1 07       		.byte	0x7
+ 1084 04e2 5D000000 		.4byte	0x5d
+ 1085 04e6 00       		.byte	0
+ 1086 04e7 19       		.uleb128 0x19
+ 1087 04e8 C0010000 		.4byte	.LASF73
+ 1088 04ec 06       		.byte	0x6
+ 1089 04ed 6702     		.2byte	0x267
+ 1090 04ef 0B       		.byte	0xb
+ 1091 04f0 ED060000 		.4byte	0x6ed
+ 1092 04f4 04       		.byte	0x4
+ 1093 04f5 19       		.uleb128 0x19
+ 1094 04f6 B9020000 		.4byte	.LASF74
+ 1095 04fa 06       		.byte	0x6
+ 1096 04fb 6702     		.2byte	0x267
+ 1097 04fd 14       		.byte	0x14
+ 1098 04fe ED060000 		.4byte	0x6ed
+ 1099 0502 08       		.byte	0x8
+ 1100 0503 19       		.uleb128 0x19
+ 1101 0504 65020000 		.4byte	.LASF75
+ 1102 0508 06       		.byte	0x6
+ 1103 0509 6702     		.2byte	0x267
+ 1104 050b 1E       		.byte	0x1e
+ 1105 050c ED060000 		.4byte	0x6ed
+ 1106 0510 0C       		.byte	0xc
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 27
+
+
+ 1107 0511 19       		.uleb128 0x19
+ 1108 0512 9E050000 		.4byte	.LASF76
+ 1109 0516 06       		.byte	0x6
+ 1110 0517 6902     		.2byte	0x269
+ 1111 0519 08       		.byte	0x8
+ 1112 051a 5D000000 		.4byte	0x5d
+ 1113 051e 10       		.byte	0x10
+ 1114 051f 19       		.uleb128 0x19
+ 1115 0520 3A000000 		.4byte	.LASF77
+ 1116 0524 06       		.byte	0x6
+ 1117 0525 6A02     		.2byte	0x26a
+ 1118 0527 08       		.byte	0x8
+ 1119 0528 ED080000 		.4byte	0x8ed
+ 1120 052c 14       		.byte	0x14
+ 1121 052d 19       		.uleb128 0x19
+ 1122 052e BA050000 		.4byte	.LASF78
+ 1123 0532 06       		.byte	0x6
+ 1124 0533 6D02     		.2byte	0x26d
+ 1125 0535 07       		.byte	0x7
+ 1126 0536 5D000000 		.4byte	0x5d
+ 1127 053a 30       		.byte	0x30
+ 1128 053b 19       		.uleb128 0x19
+ 1129 053c A8050000 		.4byte	.LASF79
+ 1130 0540 06       		.byte	0x6
+ 1131 0541 6E02     		.2byte	0x26e
+ 1132 0543 16       		.byte	0x16
+ 1133 0544 02090000 		.4byte	0x902
+ 1134 0548 34       		.byte	0x34
+ 1135 0549 19       		.uleb128 0x19
+ 1136 054a 96040000 		.4byte	.LASF80
+ 1137 054e 06       		.byte	0x6
+ 1138 054f 7002     		.2byte	0x270
+ 1139 0551 07       		.byte	0x7
+ 1140 0552 5D000000 		.4byte	0x5d
+ 1141 0556 38       		.byte	0x38
+ 1142 0557 19       		.uleb128 0x19
+ 1143 0558 B0050000 		.4byte	.LASF81
+ 1144 055c 06       		.byte	0x6
+ 1145 055d 7202     		.2byte	0x272
+ 1146 055f 0A       		.byte	0xa
+ 1147 0560 13090000 		.4byte	0x913
+ 1148 0564 3C       		.byte	0x3c
+ 1149 0565 19       		.uleb128 0x19
+ 1150 0566 2A030000 		.4byte	.LASF82
+ 1151 056a 06       		.byte	0x6
+ 1152 056b 7502     		.2byte	0x275
+ 1153 056d 13       		.byte	0x13
+ 1154 056e E9010000 		.4byte	0x1e9
+ 1155 0572 40       		.byte	0x40
+ 1156 0573 19       		.uleb128 0x19
+ 1157 0574 96020000 		.4byte	.LASF83
+ 1158 0578 06       		.byte	0x6
+ 1159 0579 7602     		.2byte	0x276
+ 1160 057b 07       		.byte	0x7
+ 1161 057c 5D000000 		.4byte	0x5d
+ 1162 0580 44       		.byte	0x44
+ 1163 0581 19       		.uleb128 0x19
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 28
+
+
+ 1164 0582 91070000 		.4byte	.LASF84
+ 1165 0586 06       		.byte	0x6
+ 1166 0587 7702     		.2byte	0x277
+ 1167 0589 13       		.byte	0x13
+ 1168 058a E9010000 		.4byte	0x1e9
+ 1169 058e 48       		.byte	0x48
+ 1170 058f 19       		.uleb128 0x19
+ 1171 0590 AE040000 		.4byte	.LASF85
+ 1172 0594 06       		.byte	0x6
+ 1173 0595 7802     		.2byte	0x278
+ 1174 0597 14       		.byte	0x14
+ 1175 0598 19090000 		.4byte	0x919
+ 1176 059c 4C       		.byte	0x4c
+ 1177 059d 19       		.uleb128 0x19
+ 1178 059e C1020000 		.4byte	.LASF86
+ 1179 05a2 06       		.byte	0x6
+ 1180 05a3 7B02     		.2byte	0x27b
+ 1181 05a5 07       		.byte	0x7
+ 1182 05a6 5D000000 		.4byte	0x5d
+ 1183 05aa 50       		.byte	0x50
+ 1184 05ab 19       		.uleb128 0x19
+ 1185 05ac EE010000 		.4byte	.LASF87
+ 1186 05b0 06       		.byte	0x6
+ 1187 05b1 7C02     		.2byte	0x27c
+ 1188 05b3 09       		.byte	0x9
+ 1189 05b4 7D010000 		.4byte	0x17d
+ 1190 05b8 54       		.byte	0x54
+ 1191 05b9 19       		.uleb128 0x19
+ 1192 05ba 21050000 		.4byte	.LASF88
+ 1193 05be 06       		.byte	0x6
+ 1194 05bf 9F02     		.2byte	0x29f
+ 1195 05c1 07       		.byte	0x7
+ 1196 05c2 C8080000 		.4byte	0x8c8
+ 1197 05c6 58       		.byte	0x58
+ 1198 05c7 1A       		.uleb128 0x1a
+ 1199 05c8 8E040000 		.4byte	.LASF48
+ 1200 05cc 06       		.byte	0x6
+ 1201 05cd A302     		.2byte	0x2a3
+ 1202 05cf 13       		.byte	0x13
+ 1203 05d0 1A030000 		.4byte	0x31a
+ 1204 05d4 4801     		.2byte	0x148
+ 1205 05d6 1A       		.uleb128 0x1a
+ 1206 05d7 03030000 		.4byte	.LASF89
+ 1207 05db 06       		.byte	0x6
+ 1208 05dc A402     		.2byte	0x2a4
+ 1209 05de 12       		.byte	0x12
+ 1210 05df D7020000 		.4byte	0x2d7
+ 1211 05e3 4C01     		.2byte	0x14c
+ 1212 05e5 1A       		.uleb128 0x1a
+ 1213 05e6 2D070000 		.4byte	.LASF90
+ 1214 05ea 06       		.byte	0x6
+ 1215 05eb A802     		.2byte	0x2a8
+ 1216 05ed 0C       		.byte	0xc
+ 1217 05ee 2A090000 		.4byte	0x92a
+ 1218 05f2 DC02     		.2byte	0x2dc
+ 1219 05f4 1A       		.uleb128 0x1a
+ 1220 05f5 A0010000 		.4byte	.LASF91
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 29
+
+
+ 1221 05f9 06       		.byte	0x6
+ 1222 05fa AD02     		.2byte	0x2ad
+ 1223 05fc 10       		.byte	0x10
+ 1224 05fd AE060000 		.4byte	0x6ae
+ 1225 0601 E002     		.2byte	0x2e0
+ 1226 0603 1A       		.uleb128 0x1a
+ 1227 0604 72010000 		.4byte	.LASF92
+ 1228 0608 06       		.byte	0x6
+ 1229 0609 AF02     		.2byte	0x2af
+ 1230 060b 0A       		.byte	0xa
+ 1231 060c 36090000 		.4byte	0x936
+ 1232 0610 EC02     		.2byte	0x2ec
+ 1233 0612 00       		.byte	0
+ 1234 0613 07       		.uleb128 0x7
+ 1235 0614 04       		.byte	0x4
+ 1236 0615 A1040000 		.4byte	0x4a1
+ 1237 0619 16       		.uleb128 0x16
+ 1238 061a 5D000000 		.4byte	0x5d
+ 1239 061e 37060000 		.4byte	0x637
+ 1240 0622 17       		.uleb128 0x17
+ 1241 0623 BF040000 		.4byte	0x4bf
+ 1242 0627 17       		.uleb128 0x17
+ 1243 0628 7B010000 		.4byte	0x17b
+ 1244 062c 17       		.uleb128 0x17
+ 1245 062d 37060000 		.4byte	0x637
+ 1246 0631 17       		.uleb128 0x17
+ 1247 0632 5D000000 		.4byte	0x5d
+ 1248 0636 00       		.byte	0
+ 1249 0637 07       		.uleb128 0x7
+ 1250 0638 04       		.byte	0x4
+ 1251 0639 A4000000 		.4byte	0xa4
+ 1252 063d 07       		.uleb128 0x7
+ 1253 063e 04       		.byte	0x4
+ 1254 063f 19060000 		.4byte	0x619
+ 1255 0643 16       		.uleb128 0x16
+ 1256 0644 F4000000 		.4byte	0xf4
+ 1257 0648 61060000 		.4byte	0x661
+ 1258 064c 17       		.uleb128 0x17
+ 1259 064d BF040000 		.4byte	0x4bf
+ 1260 0651 17       		.uleb128 0x17
+ 1261 0652 7B010000 		.4byte	0x17b
+ 1262 0656 17       		.uleb128 0x17
+ 1263 0657 F4000000 		.4byte	0xf4
+ 1264 065b 17       		.uleb128 0x17
+ 1265 065c 5D000000 		.4byte	0x5d
+ 1266 0660 00       		.byte	0
+ 1267 0661 07       		.uleb128 0x7
+ 1268 0662 04       		.byte	0x4
+ 1269 0663 43060000 		.4byte	0x643
+ 1270 0667 16       		.uleb128 0x16
+ 1271 0668 5D000000 		.4byte	0x5d
+ 1272 066c 7B060000 		.4byte	0x67b
+ 1273 0670 17       		.uleb128 0x17
+ 1274 0671 BF040000 		.4byte	0x4bf
+ 1275 0675 17       		.uleb128 0x17
+ 1276 0676 7B010000 		.4byte	0x17b
+ 1277 067a 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 30
+
+
+ 1278 067b 07       		.uleb128 0x7
+ 1279 067c 04       		.byte	0x4
+ 1280 067d 67060000 		.4byte	0x667
+ 1281 0681 0D       		.uleb128 0xd
+ 1282 0682 2C000000 		.4byte	0x2c
+ 1283 0686 91060000 		.4byte	0x691
+ 1284 068a 0E       		.uleb128 0xe
+ 1285 068b 64000000 		.4byte	0x64
+ 1286 068f 02       		.byte	0x2
+ 1287 0690 00       		.byte	0
+ 1288 0691 0D       		.uleb128 0xd
+ 1289 0692 2C000000 		.4byte	0x2c
+ 1290 0696 A1060000 		.4byte	0x6a1
+ 1291 069a 0E       		.uleb128 0xe
+ 1292 069b 64000000 		.4byte	0x64
+ 1293 069f 00       		.byte	0
+ 1294 06a0 00       		.byte	0
+ 1295 06a1 04       		.uleb128 0x4
+ 1296 06a2 63050000 		.4byte	.LASF93
+ 1297 06a6 06       		.byte	0x6
+ 1298 06a7 1F01     		.2byte	0x11f
+ 1299 06a9 1A       		.byte	0x1a
+ 1300 06aa 5E030000 		.4byte	0x35e
+ 1301 06ae 1B       		.uleb128 0x1b
+ 1302 06af 14070000 		.4byte	.LASF94
+ 1303 06b3 0C       		.byte	0xc
+ 1304 06b4 06       		.byte	0x6
+ 1305 06b5 2301     		.2byte	0x123
+ 1306 06b7 08       		.byte	0x8
+ 1307 06b8 E7060000 		.4byte	0x6e7
+ 1308 06bc 19       		.uleb128 0x19
+ 1309 06bd 8A060000 		.4byte	.LASF28
+ 1310 06c1 06       		.byte	0x6
+ 1311 06c2 2501     		.2byte	0x125
+ 1312 06c4 11       		.byte	0x11
+ 1313 06c5 E7060000 		.4byte	0x6e7
+ 1314 06c9 00       		.byte	0
+ 1315 06ca 19       		.uleb128 0x19
+ 1316 06cb E9020000 		.4byte	.LASF95
+ 1317 06cf 06       		.byte	0x6
+ 1318 06d0 2601     		.2byte	0x126
+ 1319 06d2 07       		.byte	0x7
+ 1320 06d3 5D000000 		.4byte	0x5d
+ 1321 06d7 04       		.byte	0x4
+ 1322 06d8 19       		.uleb128 0x19
+ 1323 06d9 5D050000 		.4byte	.LASF96
+ 1324 06dd 06       		.byte	0x6
+ 1325 06de 2701     		.2byte	0x127
+ 1326 06e0 0B       		.byte	0xb
+ 1327 06e1 ED060000 		.4byte	0x6ed
+ 1328 06e5 08       		.byte	0x8
+ 1329 06e6 00       		.byte	0
+ 1330 06e7 07       		.uleb128 0x7
+ 1331 06e8 04       		.byte	0x4
+ 1332 06e9 AE060000 		.4byte	0x6ae
+ 1333 06ed 07       		.uleb128 0x7
+ 1334 06ee 04       		.byte	0x4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 31
+
+
+ 1335 06ef A1060000 		.4byte	0x6a1
+ 1336 06f3 1B       		.uleb128 0x1b
+ 1337 06f4 32000000 		.4byte	.LASF97
+ 1338 06f8 0E       		.byte	0xe
+ 1339 06f9 06       		.byte	0x6
+ 1340 06fa 3F01     		.2byte	0x13f
+ 1341 06fc 08       		.byte	0x8
+ 1342 06fd 2C070000 		.4byte	0x72c
+ 1343 0701 19       		.uleb128 0x19
+ 1344 0702 E2050000 		.4byte	.LASF98
+ 1345 0706 06       		.byte	0x6
+ 1346 0707 4001     		.2byte	0x140
+ 1347 0709 12       		.byte	0x12
+ 1348 070a 2C070000 		.4byte	0x72c
+ 1349 070e 00       		.byte	0
+ 1350 070f 19       		.uleb128 0x19
+ 1351 0710 84060000 		.4byte	.LASF99
+ 1352 0714 06       		.byte	0x6
+ 1353 0715 4101     		.2byte	0x141
+ 1354 0717 12       		.byte	0x12
+ 1355 0718 2C070000 		.4byte	0x72c
+ 1356 071c 06       		.byte	0x6
+ 1357 071d 19       		.uleb128 0x19
+ 1358 071e A6060000 		.4byte	.LASF100
+ 1359 0722 06       		.byte	0x6
+ 1360 0723 4201     		.2byte	0x142
+ 1361 0725 12       		.byte	0x12
+ 1362 0726 3A000000 		.4byte	0x3a
+ 1363 072a 0C       		.byte	0xc
+ 1364 072b 00       		.byte	0
+ 1365 072c 0D       		.uleb128 0xd
+ 1366 072d 3A000000 		.4byte	0x3a
+ 1367 0731 3C070000 		.4byte	0x73c
+ 1368 0735 0E       		.uleb128 0xe
+ 1369 0736 64000000 		.4byte	0x64
+ 1370 073a 02       		.byte	0x2
+ 1371 073b 00       		.byte	0
+ 1372 073c 1C       		.uleb128 0x1c
+ 1373 073d D0       		.byte	0xd0
+ 1374 073e 06       		.byte	0x6
+ 1375 073f 8002     		.2byte	0x280
+ 1376 0741 07       		.byte	0x7
+ 1377 0742 51080000 		.4byte	0x851
+ 1378 0746 19       		.uleb128 0x19
+ 1379 0747 E4060000 		.4byte	.LASF101
+ 1380 074b 06       		.byte	0x6
+ 1381 074c 8202     		.2byte	0x282
+ 1382 074e 18       		.byte	0x18
+ 1383 074f 64000000 		.4byte	0x64
+ 1384 0753 00       		.byte	0
+ 1385 0754 19       		.uleb128 0x19
+ 1386 0755 90060000 		.4byte	.LASF102
+ 1387 0759 06       		.byte	0x6
+ 1388 075a 8302     		.2byte	0x283
+ 1389 075c 12       		.byte	0x12
+ 1390 075d 7D010000 		.4byte	0x17d
+ 1391 0761 04       		.byte	0x4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 32
+
+
+ 1392 0762 19       		.uleb128 0x19
+ 1393 0763 18030000 		.4byte	.LASF103
+ 1394 0767 06       		.byte	0x6
+ 1395 0768 8402     		.2byte	0x284
+ 1396 076a 10       		.byte	0x10
+ 1397 076b 51080000 		.4byte	0x851
+ 1398 076f 08       		.byte	0x8
+ 1399 0770 19       		.uleb128 0x19
+ 1400 0771 68070000 		.4byte	.LASF104
+ 1401 0775 06       		.byte	0x6
+ 1402 0776 8502     		.2byte	0x285
+ 1403 0778 17       		.byte	0x17
+ 1404 0779 FF010000 		.4byte	0x1ff
+ 1405 077d 24       		.byte	0x24
+ 1406 077e 19       		.uleb128 0x19
+ 1407 077f 75020000 		.4byte	.LASF105
+ 1408 0783 06       		.byte	0x6
+ 1409 0784 8602     		.2byte	0x286
+ 1410 0786 0F       		.byte	0xf
+ 1411 0787 5D000000 		.4byte	0x5d
+ 1412 078b 48       		.byte	0x48
+ 1413 078c 19       		.uleb128 0x19
+ 1414 078d 86050000 		.4byte	.LASF106
+ 1415 0791 06       		.byte	0x6
+ 1416 0792 8702     		.2byte	0x287
+ 1417 0794 2C       		.byte	0x2c
+ 1418 0795 56000000 		.4byte	0x56
+ 1419 0799 50       		.byte	0x50
+ 1420 079a 19       		.uleb128 0x19
+ 1421 079b 7E070000 		.4byte	.LASF107
+ 1422 079f 06       		.byte	0x6
+ 1423 07a0 8802     		.2byte	0x288
+ 1424 07a2 1A       		.byte	0x1a
+ 1425 07a3 F3060000 		.4byte	0x6f3
+ 1426 07a7 58       		.byte	0x58
+ 1427 07a8 19       		.uleb128 0x19
+ 1428 07a9 91050000 		.4byte	.LASF108
+ 1429 07ad 06       		.byte	0x6
+ 1430 07ae 8902     		.2byte	0x289
+ 1431 07b0 16       		.byte	0x16
+ 1432 07b1 63010000 		.4byte	0x163
+ 1433 07b5 68       		.byte	0x68
+ 1434 07b6 19       		.uleb128 0x19
+ 1435 07b7 83070000 		.4byte	.LASF109
+ 1436 07bb 06       		.byte	0x6
+ 1437 07bc 8A02     		.2byte	0x28a
+ 1438 07be 16       		.byte	0x16
+ 1439 07bf 63010000 		.4byte	0x163
+ 1440 07c3 70       		.byte	0x70
+ 1441 07c4 19       		.uleb128 0x19
+ 1442 07c5 CF040000 		.4byte	.LASF110
+ 1443 07c9 06       		.byte	0x6
+ 1444 07ca 8B02     		.2byte	0x28b
+ 1445 07cc 16       		.byte	0x16
+ 1446 07cd 63010000 		.4byte	0x163
+ 1447 07d1 78       		.byte	0x78
+ 1448 07d2 19       		.uleb128 0x19
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 33
+
+
+ 1449 07d3 23070000 		.4byte	.LASF111
+ 1450 07d7 06       		.byte	0x6
+ 1451 07d8 8C02     		.2byte	0x28c
+ 1452 07da 10       		.byte	0x10
+ 1453 07db 61080000 		.4byte	0x861
+ 1454 07df 80       		.byte	0x80
+ 1455 07e0 19       		.uleb128 0x19
+ 1456 07e1 0C030000 		.4byte	.LASF112
+ 1457 07e5 06       		.byte	0x6
+ 1458 07e6 8D02     		.2byte	0x28d
+ 1459 07e8 10       		.byte	0x10
+ 1460 07e9 71080000 		.4byte	0x871
+ 1461 07ed 88       		.byte	0x88
+ 1462 07ee 19       		.uleb128 0x19
+ 1463 07ef B3060000 		.4byte	.LASF113
+ 1464 07f3 06       		.byte	0x6
+ 1465 07f4 8E02     		.2byte	0x28e
+ 1466 07f6 0F       		.byte	0xf
+ 1467 07f7 5D000000 		.4byte	0x5d
+ 1468 07fb A0       		.byte	0xa0
+ 1469 07fc 19       		.uleb128 0x19
+ 1470 07fd 0F020000 		.4byte	.LASF114
+ 1471 0801 06       		.byte	0x6
+ 1472 0802 8F02     		.2byte	0x28f
+ 1473 0804 16       		.byte	0x16
+ 1474 0805 63010000 		.4byte	0x163
+ 1475 0809 A4       		.byte	0xa4
+ 1476 080a 19       		.uleb128 0x19
+ 1477 080b FD000000 		.4byte	.LASF115
+ 1478 080f 06       		.byte	0x6
+ 1479 0810 9002     		.2byte	0x290
+ 1480 0812 16       		.byte	0x16
+ 1481 0813 63010000 		.4byte	0x163
+ 1482 0817 AC       		.byte	0xac
+ 1483 0818 19       		.uleb128 0x19
+ 1484 0819 FE010000 		.4byte	.LASF116
+ 1485 081d 06       		.byte	0x6
+ 1486 081e 9102     		.2byte	0x291
+ 1487 0820 16       		.byte	0x16
+ 1488 0821 63010000 		.4byte	0x163
+ 1489 0825 B4       		.byte	0xb4
+ 1490 0826 19       		.uleb128 0x19
+ 1491 0827 64000000 		.4byte	.LASF117
+ 1492 082b 06       		.byte	0x6
+ 1493 082c 9202     		.2byte	0x292
+ 1494 082e 16       		.byte	0x16
+ 1495 082f 63010000 		.4byte	0x163
+ 1496 0833 BC       		.byte	0xbc
+ 1497 0834 19       		.uleb128 0x19
+ 1498 0835 73000000 		.4byte	.LASF118
+ 1499 0839 06       		.byte	0x6
+ 1500 083a 9302     		.2byte	0x293
+ 1501 083c 16       		.byte	0x16
+ 1502 083d 63010000 		.4byte	0x163
+ 1503 0841 C4       		.byte	0xc4
+ 1504 0842 19       		.uleb128 0x19
+ 1505 0843 39050000 		.4byte	.LASF119
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 34
+
+
+ 1506 0847 06       		.byte	0x6
+ 1507 0848 9402     		.2byte	0x294
+ 1508 084a 08       		.byte	0x8
+ 1509 084b 5D000000 		.4byte	0x5d
+ 1510 084f CC       		.byte	0xcc
+ 1511 0850 00       		.byte	0
+ 1512 0851 0D       		.uleb128 0xd
+ 1513 0852 9D000000 		.4byte	0x9d
+ 1514 0856 61080000 		.4byte	0x861
+ 1515 085a 0E       		.uleb128 0xe
+ 1516 085b 64000000 		.4byte	0x64
+ 1517 085f 19       		.byte	0x19
+ 1518 0860 00       		.byte	0
+ 1519 0861 0D       		.uleb128 0xd
+ 1520 0862 9D000000 		.4byte	0x9d
+ 1521 0866 71080000 		.4byte	0x871
+ 1522 086a 0E       		.uleb128 0xe
+ 1523 086b 64000000 		.4byte	0x64
+ 1524 086f 07       		.byte	0x7
+ 1525 0870 00       		.byte	0
+ 1526 0871 0D       		.uleb128 0xd
+ 1527 0872 9D000000 		.4byte	0x9d
+ 1528 0876 81080000 		.4byte	0x881
+ 1529 087a 0E       		.uleb128 0xe
+ 1530 087b 64000000 		.4byte	0x64
+ 1531 087f 17       		.byte	0x17
+ 1532 0880 00       		.byte	0
+ 1533 0881 1C       		.uleb128 0x1c
+ 1534 0882 F0       		.byte	0xf0
+ 1535 0883 06       		.byte	0x6
+ 1536 0884 9902     		.2byte	0x299
+ 1537 0886 07       		.byte	0x7
+ 1538 0887 A8080000 		.4byte	0x8a8
+ 1539 088b 19       		.uleb128 0x19
+ 1540 088c 5C040000 		.4byte	.LASF120
+ 1541 0890 06       		.byte	0x6
+ 1542 0891 9C02     		.2byte	0x29c
+ 1543 0893 1B       		.byte	0x1b
+ 1544 0894 A8080000 		.4byte	0x8a8
+ 1545 0898 00       		.byte	0
+ 1546 0899 19       		.uleb128 0x19
+ 1547 089a 1A070000 		.4byte	.LASF121
+ 1548 089e 06       		.byte	0x6
+ 1549 089f 9D02     		.2byte	0x29d
+ 1550 08a1 18       		.byte	0x18
+ 1551 08a2 B8080000 		.4byte	0x8b8
+ 1552 08a6 78       		.byte	0x78
+ 1553 08a7 00       		.byte	0
+ 1554 08a8 0D       		.uleb128 0xd
+ 1555 08a9 58030000 		.4byte	0x358
+ 1556 08ad B8080000 		.4byte	0x8b8
+ 1557 08b1 0E       		.uleb128 0xe
+ 1558 08b2 64000000 		.4byte	0x64
+ 1559 08b6 1D       		.byte	0x1d
+ 1560 08b7 00       		.byte	0
+ 1561 08b8 0D       		.uleb128 0xd
+ 1562 08b9 64000000 		.4byte	0x64
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 35
+
+
+ 1563 08bd C8080000 		.4byte	0x8c8
+ 1564 08c1 0E       		.uleb128 0xe
+ 1565 08c2 64000000 		.4byte	0x64
+ 1566 08c6 1D       		.byte	0x1d
+ 1567 08c7 00       		.byte	0
+ 1568 08c8 1D       		.uleb128 0x1d
+ 1569 08c9 F0       		.byte	0xf0
+ 1570 08ca 06       		.byte	0x6
+ 1571 08cb 7E02     		.2byte	0x27e
+ 1572 08cd 03       		.byte	0x3
+ 1573 08ce ED080000 		.4byte	0x8ed
+ 1574 08d2 1E       		.uleb128 0x1e
+ 1575 08d3 DB050000 		.4byte	.LASF71
+ 1576 08d7 06       		.byte	0x6
+ 1577 08d8 9502     		.2byte	0x295
+ 1578 08da 0B       		.byte	0xb
+ 1579 08db 3C070000 		.4byte	0x73c
+ 1580 08df 1E       		.uleb128 0x1e
+ 1581 08e0 55070000 		.4byte	.LASF122
+ 1582 08e4 06       		.byte	0x6
+ 1583 08e5 9E02     		.2byte	0x29e
+ 1584 08e7 0B       		.byte	0xb
+ 1585 08e8 81080000 		.4byte	0x881
+ 1586 08ec 00       		.byte	0
+ 1587 08ed 0D       		.uleb128 0xd
+ 1588 08ee 9D000000 		.4byte	0x9d
+ 1589 08f2 FD080000 		.4byte	0x8fd
+ 1590 08f6 0E       		.uleb128 0xe
+ 1591 08f7 64000000 		.4byte	0x64
+ 1592 08fb 18       		.byte	0x18
+ 1593 08fc 00       		.byte	0
+ 1594 08fd 0A       		.uleb128 0xa
+ 1595 08fe D1000000 		.4byte	.LASF124
+ 1596 0902 07       		.uleb128 0x7
+ 1597 0903 04       		.byte	0x4
+ 1598 0904 FD080000 		.4byte	0x8fd
+ 1599 0908 1F       		.uleb128 0x1f
+ 1600 0909 13090000 		.4byte	0x913
+ 1601 090d 17       		.uleb128 0x17
+ 1602 090e BF040000 		.4byte	0x4bf
+ 1603 0912 00       		.byte	0
+ 1604 0913 07       		.uleb128 0x7
+ 1605 0914 04       		.byte	0x4
+ 1606 0915 08090000 		.4byte	0x908
+ 1607 0919 07       		.uleb128 0x7
+ 1608 091a 04       		.byte	0x4
+ 1609 091b E9010000 		.4byte	0x1e9
+ 1610 091f 1F       		.uleb128 0x1f
+ 1611 0920 2A090000 		.4byte	0x92a
+ 1612 0924 17       		.uleb128 0x17
+ 1613 0925 5D000000 		.4byte	0x5d
+ 1614 0929 00       		.byte	0
+ 1615 092a 07       		.uleb128 0x7
+ 1616 092b 04       		.byte	0x4
+ 1617 092c 30090000 		.4byte	0x930
+ 1618 0930 07       		.uleb128 0x7
+ 1619 0931 04       		.byte	0x4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 36
+
+
+ 1620 0932 1F090000 		.4byte	0x91f
+ 1621 0936 0D       		.uleb128 0xd
+ 1622 0937 A1060000 		.4byte	0x6a1
+ 1623 093b 46090000 		.4byte	0x946
+ 1624 093f 0E       		.uleb128 0xe
+ 1625 0940 64000000 		.4byte	0x64
+ 1626 0944 02       		.byte	0x2
+ 1627 0945 00       		.byte	0
+ 1628 0946 20       		.uleb128 0x20
+ 1629 0947 14060000 		.4byte	.LASF125
+ 1630 094b 06       		.byte	0x6
+ 1631 094c 2E03     		.2byte	0x32e
+ 1632 094e 17       		.byte	0x17
+ 1633 094f BF040000 		.4byte	0x4bf
+ 1634 0953 20       		.uleb128 0x20
+ 1635 0954 D1060000 		.4byte	.LASF126
+ 1636 0958 06       		.byte	0x6
+ 1637 0959 2F03     		.2byte	0x32f
+ 1638 095b 1D       		.byte	0x1d
+ 1639 095c C5040000 		.4byte	0x4c5
+ 1640 0960 0D       		.uleb128 0xd
+ 1641 0961 A4000000 		.4byte	0xa4
+ 1642 0965 6B090000 		.4byte	0x96b
+ 1643 0969 21       		.uleb128 0x21
+ 1644 096a 00       		.byte	0
+ 1645 096b 06       		.uleb128 0x6
+ 1646 096c 60090000 		.4byte	0x960
+ 1647 0970 22       		.uleb128 0x22
+ 1648 0971 7C060000 		.4byte	.LASF127
+ 1649 0975 07       		.byte	0x7
+ 1650 0976 AE       		.byte	0xae
+ 1651 0977 1C       		.byte	0x1c
+ 1652 0978 6B090000 		.4byte	0x96b
+ 1653 097c 22       		.uleb128 0x22
+ 1654 097d 26050000 		.4byte	.LASF128
+ 1655 0981 08       		.byte	0x8
+ 1656 0982 1C       		.byte	0x1c
+ 1657 0983 0E       		.byte	0xe
+ 1658 0984 6B000000 		.4byte	0x6b
+ 1659 0988 0D       		.uleb128 0xd
+ 1660 0989 6B000000 		.4byte	0x6b
+ 1661 098d 98090000 		.4byte	0x998
+ 1662 0991 0E       		.uleb128 0xe
+ 1663 0992 64000000 		.4byte	0x64
+ 1664 0996 01       		.byte	0x1
+ 1665 0997 00       		.byte	0
+ 1666 0998 22       		.uleb128 0x22
+ 1667 0999 DC000000 		.4byte	.LASF129
+ 1668 099d 09       		.byte	0x9
+ 1669 099e 1C       		.byte	0x1c
+ 1670 099f 0E       		.byte	0xe
+ 1671 09a0 88090000 		.4byte	0x988
+ 1672 09a4 22       		.uleb128 0x22
+ 1673 09a5 80040000 		.4byte	.LASF130
+ 1674 09a9 0A       		.byte	0xa
+ 1675 09aa 2C       		.byte	0x2c
+ 1676 09ab 16       		.byte	0x16
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 37
+
+
+ 1677 09ac 6B000000 		.4byte	0x6b
+ 1678 09b0 22       		.uleb128 0x22
+ 1679 09b1 DD040000 		.4byte	.LASF131
+ 1680 09b5 0A       		.byte	0xa
+ 1681 09b6 38       		.byte	0x38
+ 1682 09b7 0F       		.byte	0xf
+ 1683 09b8 7D000000 		.4byte	0x7d
+ 1684 09bc 22       		.uleb128 0x22
+ 1685 09bd 37040000 		.4byte	.LASF132
+ 1686 09c1 0A       		.byte	0xa
+ 1687 09c2 39       		.byte	0x39
+ 1688 09c3 0F       		.byte	0xf
+ 1689 09c4 7D000000 		.4byte	0x7d
+ 1690 09c8 22       		.uleb128 0x22
+ 1691 09c9 0C010000 		.4byte	.LASF133
+ 1692 09cd 0A       		.byte	0xa
+ 1693 09ce 3A       		.byte	0x3a
+ 1694 09cf 0F       		.byte	0xf
+ 1695 09d0 6B000000 		.4byte	0x6b
+ 1696 09d4 22       		.uleb128 0x22
+ 1697 09d5 E8050000 		.4byte	.LASF134
+ 1698 09d9 0A       		.byte	0xa
+ 1699 09da 3B       		.byte	0x3b
+ 1700 09db 0F       		.byte	0xf
+ 1701 09dc 7D000000 		.4byte	0x7d
+ 1702 09e0 0F       		.uleb128 0xf
+ 1703 09e1 06       		.byte	0x6
+ 1704 09e2 0B       		.byte	0xb
+ 1705 09e3 76       		.byte	0x76
+ 1706 09e4 09       		.byte	0x9
+ 1707 09e5 380A0000 		.4byte	0xa38
+ 1708 09e9 10       		.uleb128 0x10
+ 1709 09ea 62060000 		.4byte	.LASF135
+ 1710 09ee 0B       		.byte	0xb
+ 1711 09ef 78       		.byte	0x78
+ 1712 09f0 0B       		.byte	0xb
+ 1713 09f1 6B000000 		.4byte	0x6b
+ 1714 09f5 00       		.byte	0
+ 1715 09f6 10       		.uleb128 0x10
+ 1716 09f7 25030000 		.4byte	.LASF136
+ 1717 09fb 0B       		.byte	0xb
+ 1718 09fc 7B       		.byte	0x7b
+ 1719 09fd 0B       		.byte	0xb
+ 1720 09fe 6B000000 		.4byte	0x6b
+ 1721 0a02 01       		.byte	0x1
+ 1722 0a03 13       		.uleb128 0x13
+ 1723 0a04 63666700 		.ascii	"cfg\000"
+ 1724 0a08 0B       		.byte	0xb
+ 1725 0a09 7C       		.byte	0x7c
+ 1726 0a0a 0B       		.byte	0xb
+ 1727 0a0b 6B000000 		.4byte	0x6b
+ 1728 0a0f 02       		.byte	0x2
+ 1729 0a10 10       		.uleb128 0x10
+ 1730 0a11 BA000000 		.4byte	.LASF137
+ 1731 0a15 0B       		.byte	0xb
+ 1732 0a16 7D       		.byte	0x7d
+ 1733 0a17 0B       		.byte	0xb
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 38
+
+
+ 1734 0a18 6B000000 		.4byte	0x6b
+ 1735 0a1c 03       		.byte	0x3
+ 1736 0a1d 10       		.uleb128 0x10
+ 1737 0a1e 47030000 		.4byte	.LASF138
+ 1738 0a22 0B       		.byte	0xb
+ 1739 0a23 7E       		.byte	0x7e
+ 1740 0a24 0B       		.byte	0xb
+ 1741 0a25 6B000000 		.4byte	0x6b
+ 1742 0a29 04       		.byte	0x4
+ 1743 0a2a 10       		.uleb128 0x10
+ 1744 0a2b 4F030000 		.4byte	.LASF139
+ 1745 0a2f 0B       		.byte	0xb
+ 1746 0a30 7F       		.byte	0x7f
+ 1747 0a31 0B       		.byte	0xb
+ 1748 0a32 6B000000 		.4byte	0x6b
+ 1749 0a36 05       		.byte	0x5
+ 1750 0a37 00       		.byte	0
+ 1751 0a38 09       		.uleb128 0x9
+ 1752 0a39 63040000 		.4byte	.LASF140
+ 1753 0a3d 0B       		.byte	0xb
+ 1754 0a3e 89       		.byte	0x89
+ 1755 0a3f 03       		.byte	0x3
+ 1756 0a40 E0090000 		.4byte	0x9e0
+ 1757 0a44 22       		.uleb128 0x22
+ 1758 0a45 6E060000 		.4byte	.LASF141
+ 1759 0a49 0B       		.byte	0xb
+ 1760 0a4a F9       		.byte	0xf9
+ 1761 0a4b 0E       		.byte	0xe
+ 1762 0a4c 6B000000 		.4byte	0x6b
+ 1763 0a50 22       		.uleb128 0x22
+ 1764 0a51 F8060000 		.4byte	.LASF142
+ 1765 0a55 0C       		.byte	0xc
+ 1766 0a56 21       		.byte	0x21
+ 1767 0a57 1C       		.byte	0x1c
+ 1768 0a58 380A0000 		.4byte	0xa38
+ 1769 0a5c 22       		.uleb128 0x22
+ 1770 0a5d 84020000 		.4byte	.LASF143
+ 1771 0a61 0C       		.byte	0xc
+ 1772 0a62 23       		.byte	0x23
+ 1773 0a63 17       		.byte	0x17
+ 1774 0a64 78000000 		.4byte	0x78
+ 1775 0a68 22       		.uleb128 0x22
+ 1776 0a69 EF070000 		.4byte	.LASF144
+ 1777 0a6d 0C       		.byte	0xc
+ 1778 0a6e 38       		.byte	0x38
+ 1779 0a6f 1B       		.byte	0x1b
+ 1780 0a70 78000000 		.4byte	0x78
+ 1781 0a74 22       		.uleb128 0x22
+ 1782 0a75 C0060000 		.4byte	.LASF145
+ 1783 0a79 0C       		.byte	0xc
+ 1784 0a7a 3B       		.byte	0x3b
+ 1785 0a7b 1D       		.byte	0x1d
+ 1786 0a7c 800A0000 		.4byte	0xa80
+ 1787 0a80 07       		.uleb128 0x7
+ 1788 0a81 04       		.byte	0x4
+ 1789 0a82 78000000 		.4byte	0x78
+ 1790 0a86 22       		.uleb128 0x22
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 39
+
+
+ 1791 0a87 4A020000 		.4byte	.LASF146
+ 1792 0a8b 0C       		.byte	0xc
+ 1793 0a8c 3C       		.byte	0x3c
+ 1794 0a8d 1D       		.byte	0x1d
+ 1795 0a8e 78000000 		.4byte	0x78
+ 1796 0a92 22       		.uleb128 0x22
+ 1797 0a93 51000000 		.4byte	.LASF147
+ 1798 0a97 0C       		.byte	0xc
+ 1799 0a98 3D       		.byte	0x3d
+ 1800 0a99 1D       		.byte	0x1d
+ 1801 0a9a 78000000 		.4byte	0x78
+ 1802 0a9e 22       		.uleb128 0x22
+ 1803 0a9f DD010000 		.4byte	.LASF148
+ 1804 0aa3 0C       		.byte	0xc
+ 1805 0aa4 40       		.byte	0x40
+ 1806 0aa5 1D       		.byte	0x1d
+ 1807 0aa6 800A0000 		.4byte	0xa80
+ 1808 0aaa 22       		.uleb128 0x22
+ 1809 0aab BF000000 		.4byte	.LASF149
+ 1810 0aaf 0C       		.byte	0xc
+ 1811 0ab0 41       		.byte	0x41
+ 1812 0ab1 1D       		.byte	0x1d
+ 1813 0ab2 78000000 		.4byte	0x78
+ 1814 0ab6 22       		.uleb128 0x22
+ 1815 0ab7 85010000 		.4byte	.LASF150
+ 1816 0abb 0C       		.byte	0xc
+ 1817 0abc 42       		.byte	0x42
+ 1818 0abd 1D       		.byte	0x1d
+ 1819 0abe 78000000 		.4byte	0x78
+ 1820 0ac2 23       		.uleb128 0x23
+ 1821 0ac3 680A0000 		.4byte	0xa68
+ 1822 0ac7 01       		.byte	0x1
+ 1823 0ac8 19       		.byte	0x19
+ 1824 0ac9 10       		.byte	0x10
+ 1825 0aca 05       		.uleb128 0x5
+ 1826 0acb 03       		.byte	0x3
+ 1827 0acc 00000000 		.4byte	I2C_1_slStatus
+ 1828 0ad0 23       		.uleb128 0x23
+ 1829 0ad1 740A0000 		.4byte	0xa74
+ 1830 0ad5 01       		.byte	0x1
+ 1831 0ad6 1C       		.byte	0x1c
+ 1832 0ad7 12       		.byte	0x12
+ 1833 0ad8 05       		.uleb128 0x5
+ 1834 0ad9 03       		.byte	0x3
+ 1835 0ada 00000000 		.4byte	I2C_1_slRdBufPtr
+ 1836 0ade 23       		.uleb128 0x23
+ 1837 0adf 860A0000 		.4byte	0xa86
+ 1838 0ae3 01       		.byte	0x1
+ 1839 0ae4 1D       		.byte	0x1d
+ 1840 0ae5 12       		.byte	0x12
+ 1841 0ae6 05       		.uleb128 0x5
+ 1842 0ae7 03       		.byte	0x3
+ 1843 0ae8 00000000 		.4byte	I2C_1_slRdBufSize
+ 1844 0aec 23       		.uleb128 0x23
+ 1845 0aed 920A0000 		.4byte	0xa92
+ 1846 0af1 01       		.byte	0x1
+ 1847 0af2 1E       		.byte	0x1e
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 40
+
+
+ 1848 0af3 12       		.byte	0x12
+ 1849 0af4 05       		.uleb128 0x5
+ 1850 0af5 03       		.byte	0x3
+ 1851 0af6 00000000 		.4byte	I2C_1_slRdBufIndex
+ 1852 0afa 23       		.uleb128 0x23
+ 1853 0afb 9E0A0000 		.4byte	0xa9e
+ 1854 0aff 01       		.byte	0x1
+ 1855 0b00 21       		.byte	0x21
+ 1856 0b01 12       		.byte	0x12
+ 1857 0b02 05       		.uleb128 0x5
+ 1858 0b03 03       		.byte	0x3
+ 1859 0b04 00000000 		.4byte	I2C_1_slWrBufPtr
+ 1860 0b08 23       		.uleb128 0x23
+ 1861 0b09 AA0A0000 		.4byte	0xaaa
+ 1862 0b0d 01       		.byte	0x1
+ 1863 0b0e 22       		.byte	0x22
+ 1864 0b0f 12       		.byte	0x12
+ 1865 0b10 05       		.uleb128 0x5
+ 1866 0b11 03       		.byte	0x3
+ 1867 0b12 00000000 		.4byte	I2C_1_slWrBufSize
+ 1868 0b16 23       		.uleb128 0x23
+ 1869 0b17 B60A0000 		.4byte	0xab6
+ 1870 0b1b 01       		.byte	0x1
+ 1871 0b1c 23       		.byte	0x23
+ 1872 0b1d 12       		.byte	0x12
+ 1873 0b1e 05       		.uleb128 0x5
+ 1874 0b1f 03       		.byte	0x3
+ 1875 0b20 00000000 		.4byte	I2C_1_slWrBufIndex
+ 1876 0b24 24       		.uleb128 0x24
+ 1877 0b25 65030000 		.4byte	.LASF151
+ 1878 0b29 01       		.byte	0x1
+ 1879 0b2a 7501     		.2byte	0x175
+ 1880 0b2c 06       		.byte	0x6
+ 1881 0b2d 00000000 		.4byte	.LFB9
+ 1882 0b31 0C000000 		.4byte	.LFE9-.LFB9
+ 1883 0b35 01       		.uleb128 0x1
+ 1884 0b36 9C       		.byte	0x9c
+ 1885 0b37 24       		.uleb128 0x24
+ 1886 0b38 0C000000 		.4byte	.LASF152
+ 1887 0b3c 01       		.byte	0x1
+ 1888 0b3d 5901     		.2byte	0x159
+ 1889 0b3f 06       		.byte	0x6
+ 1890 0b40 00000000 		.4byte	.LFB8
+ 1891 0b44 0C000000 		.4byte	.LFE8-.LFB8
+ 1892 0b48 01       		.uleb128 0x1
+ 1893 0b49 9C       		.byte	0x9c
+ 1894 0b4a 25       		.uleb128 0x25
+ 1895 0b4b 96070000 		.4byte	.LASF153
+ 1896 0b4f 01       		.byte	0x1
+ 1897 0b50 3D01     		.2byte	0x13d
+ 1898 0b52 07       		.byte	0x7
+ 1899 0b53 6B000000 		.4byte	0x6b
+ 1900 0b57 00000000 		.4byte	.LFB7
+ 1901 0b5b 0C000000 		.4byte	.LFE7-.LFB7
+ 1902 0b5f 01       		.uleb128 0x1
+ 1903 0b60 9C       		.byte	0x9c
+ 1904 0b61 25       		.uleb128 0x25
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 41
+
+
+ 1905 0b62 07050000 		.4byte	.LASF154
+ 1906 0b66 01       		.byte	0x1
+ 1907 0b67 2301     		.2byte	0x123
+ 1908 0b69 07       		.byte	0x7
+ 1909 0b6a 6B000000 		.4byte	0x6b
+ 1910 0b6e 00000000 		.4byte	.LFB6
+ 1911 0b72 0C000000 		.4byte	.LFE6-.LFB6
+ 1912 0b76 01       		.uleb128 0x1
+ 1913 0b77 9C       		.byte	0x9c
+ 1914 0b78 26       		.uleb128 0x26
+ 1915 0b79 37070000 		.4byte	.LASF157
+ 1916 0b7d 01       		.byte	0x1
+ 1917 0b7e FE       		.byte	0xfe
+ 1918 0b7f 06       		.byte	0x6
+ 1919 0b80 00000000 		.4byte	.LFB5
+ 1920 0b84 34000000 		.4byte	.LFE5-.LFB5
+ 1921 0b88 01       		.uleb128 0x1
+ 1922 0b89 9C       		.byte	0x9c
+ 1923 0b8a B70B0000 		.4byte	0xbb7
+ 1924 0b8e 27       		.uleb128 0x27
+ 1925 0b8f 33050000 		.4byte	.LASF155
+ 1926 0b93 01       		.byte	0x1
+ 1927 0b94 FE       		.byte	0xfe
+ 1928 0b95 26       		.byte	0x26
+ 1929 0b96 B70B0000 		.4byte	0xbb7
+ 1930 0b9a 08000000 		.4byte	.LLST5
+ 1931 0b9e 00000000 		.4byte	.LVUS5
+ 1932 0ba2 27       		.uleb128 0x27
+ 1933 0ba3 C9020000 		.4byte	.LASF156
+ 1934 0ba7 01       		.byte	0x1
+ 1935 0ba8 FE       		.byte	0xfe
+ 1936 0ba9 33       		.byte	0x33
+ 1937 0baa 6B000000 		.4byte	0x6b
+ 1938 0bae 49000000 		.4byte	.LLST6
+ 1939 0bb2 43000000 		.4byte	.LVUS6
+ 1940 0bb6 00       		.byte	0
+ 1941 0bb7 07       		.uleb128 0x7
+ 1942 0bb8 04       		.byte	0x4
+ 1943 0bb9 6B000000 		.4byte	0x6b
+ 1944 0bbd 26       		.uleb128 0x26
+ 1945 0bbe B8040000 		.4byte	.LASF158
+ 1946 0bc2 01       		.byte	0x1
+ 1947 0bc3 CE       		.byte	0xce
+ 1948 0bc4 06       		.byte	0x6
+ 1949 0bc5 00000000 		.4byte	.LFB4
+ 1950 0bc9 34000000 		.4byte	.LFE4-.LFB4
+ 1951 0bcd 01       		.uleb128 0x1
+ 1952 0bce 9C       		.byte	0x9c
+ 1953 0bcf FC0B0000 		.4byte	0xbfc
+ 1954 0bd3 27       		.uleb128 0x27
+ 1955 0bd4 45000000 		.4byte	.LASF159
+ 1956 0bd8 01       		.byte	0x1
+ 1957 0bd9 CE       		.byte	0xce
+ 1958 0bda 25       		.byte	0x25
+ 1959 0bdb B70B0000 		.4byte	0xbb7
+ 1960 0bdf 81000000 		.4byte	.LLST3
+ 1961 0be3 79000000 		.4byte	.LVUS3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 42
+
+
+ 1962 0be7 27       		.uleb128 0x27
+ 1963 0be8 C9020000 		.4byte	.LASF156
+ 1964 0bec 01       		.byte	0x1
+ 1965 0bed CE       		.byte	0xce
+ 1966 0bee 32       		.byte	0x32
+ 1967 0bef 6B000000 		.4byte	0x6b
+ 1968 0bf3 C2000000 		.4byte	.LLST4
+ 1969 0bf7 BC000000 		.4byte	.LVUS4
+ 1970 0bfb 00       		.byte	0
+ 1971 0bfc 26       		.uleb128 0x26
+ 1972 0bfd 84000000 		.4byte	.LASF160
+ 1973 0c01 01       		.byte	0x1
+ 1974 0c02 A5       		.byte	0xa5
+ 1975 0c03 06       		.byte	0x6
+ 1976 0c04 00000000 		.4byte	.LFB3
+ 1977 0c08 10000000 		.4byte	.LFE3-.LFB3
+ 1978 0c0c 01       		.uleb128 0x1
+ 1979 0c0d 9C       		.byte	0x9c
+ 1980 0c0e 270C0000 		.4byte	0xc27
+ 1981 0c12 27       		.uleb128 0x27
+ 1982 0c13 54040000 		.4byte	.LASF161
+ 1983 0c17 01       		.byte	0x1
+ 1984 0c18 A5       		.byte	0xa5
+ 1985 0c19 22       		.byte	0x22
+ 1986 0c1a 6B000000 		.4byte	0x6b
+ 1987 0c1e F6000000 		.4byte	.LLST2
+ 1988 0c22 F2000000 		.4byte	.LVUS2
+ 1989 0c26 00       		.byte	0
+ 1990 0c27 28       		.uleb128 0x28
+ 1991 0c28 1D010000 		.4byte	.LASF163
+ 1992 0c2c 01       		.byte	0x1
+ 1993 0c2d 7E       		.byte	0x7e
+ 1994 0c2e 07       		.byte	0x7
+ 1995 0c2f 6B000000 		.4byte	0x6b
+ 1996 0c33 00000000 		.4byte	.LFB2
+ 1997 0c37 2C000000 		.4byte	.LFE2-.LFB2
+ 1998 0c3b 01       		.uleb128 0x1
+ 1999 0c3c 9C       		.byte	0x9c
+ 2000 0c3d 560C0000 		.4byte	0xc56
+ 2001 0c41 29       		.uleb128 0x29
+ 2002 0c42 F1060000 		.4byte	.LASF162
+ 2003 0c46 01       		.byte	0x1
+ 2004 0c47 80       		.byte	0x80
+ 2005 0c48 0B       		.byte	0xb
+ 2006 0c49 6B000000 		.4byte	0x6b
+ 2007 0c4d 19010000 		.4byte	.LLST1
+ 2008 0c51 17010000 		.4byte	.LVUS1
+ 2009 0c55 00       		.byte	0
+ 2010 0c56 28       		.uleb128 0x28
+ 2011 0c57 1D020000 		.4byte	.LASF164
+ 2012 0c5b 01       		.byte	0x1
+ 2013 0c5c 58       		.byte	0x58
+ 2014 0c5d 07       		.byte	0x7
+ 2015 0c5e 6B000000 		.4byte	0x6b
+ 2016 0c62 00000000 		.4byte	.LFB1
+ 2017 0c66 2C000000 		.4byte	.LFE1-.LFB1
+ 2018 0c6a 01       		.uleb128 0x1
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 43
+
+
+ 2019 0c6b 9C       		.byte	0x9c
+ 2020 0c6c 850C0000 		.4byte	0xc85
+ 2021 0c70 29       		.uleb128 0x29
+ 2022 0c71 F1060000 		.4byte	.LASF162
+ 2023 0c75 01       		.byte	0x1
+ 2024 0c76 5A       		.byte	0x5a
+ 2025 0c77 0B       		.byte	0xb
+ 2026 0c78 6B000000 		.4byte	0x6b
+ 2027 0c7c 33010000 		.4byte	.LLST0
+ 2028 0c80 31010000 		.4byte	.LVUS0
+ 2029 0c84 00       		.byte	0
+ 2030 0c85 2A       		.uleb128 0x2a
+ 2031 0c86 EB000000 		.4byte	.LASF165
+ 2032 0c8a 01       		.byte	0x1
+ 2033 0c8b 3C       		.byte	0x3c
+ 2034 0c8c 07       		.byte	0x7
+ 2035 0c8d 6B000000 		.4byte	0x6b
+ 2036 0c91 00000000 		.4byte	.LFB0
+ 2037 0c95 0C000000 		.4byte	.LFE0-.LFB0
+ 2038 0c99 01       		.uleb128 0x1
+ 2039 0c9a 9C       		.byte	0x9c
+ 2040 0c9b 00       		.byte	0
+ 2041              		.section	.debug_abbrev,"",%progbits
+ 2042              	.Ldebug_abbrev0:
+ 2043 0000 01       		.uleb128 0x1
+ 2044 0001 11       		.uleb128 0x11
+ 2045 0002 01       		.byte	0x1
+ 2046 0003 25       		.uleb128 0x25
+ 2047 0004 0E       		.uleb128 0xe
+ 2048 0005 13       		.uleb128 0x13
+ 2049 0006 0B       		.uleb128 0xb
+ 2050 0007 03       		.uleb128 0x3
+ 2051 0008 0E       		.uleb128 0xe
+ 2052 0009 1B       		.uleb128 0x1b
+ 2053 000a 0E       		.uleb128 0xe
+ 2054 000b 55       		.uleb128 0x55
+ 2055 000c 17       		.uleb128 0x17
+ 2056 000d 11       		.uleb128 0x11
+ 2057 000e 01       		.uleb128 0x1
+ 2058 000f 10       		.uleb128 0x10
+ 2059 0010 17       		.uleb128 0x17
+ 2060 0011 00       		.byte	0
+ 2061 0012 00       		.byte	0
+ 2062 0013 02       		.uleb128 0x2
+ 2063 0014 24       		.uleb128 0x24
+ 2064 0015 00       		.byte	0
+ 2065 0016 0B       		.uleb128 0xb
+ 2066 0017 0B       		.uleb128 0xb
+ 2067 0018 3E       		.uleb128 0x3e
+ 2068 0019 0B       		.uleb128 0xb
+ 2069 001a 03       		.uleb128 0x3
+ 2070 001b 0E       		.uleb128 0xe
+ 2071 001c 00       		.byte	0
+ 2072 001d 00       		.byte	0
+ 2073 001e 03       		.uleb128 0x3
+ 2074 001f 24       		.uleb128 0x24
+ 2075 0020 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 44
+
+
+ 2076 0021 0B       		.uleb128 0xb
+ 2077 0022 0B       		.uleb128 0xb
+ 2078 0023 3E       		.uleb128 0x3e
+ 2079 0024 0B       		.uleb128 0xb
+ 2080 0025 03       		.uleb128 0x3
+ 2081 0026 08       		.uleb128 0x8
+ 2082 0027 00       		.byte	0
+ 2083 0028 00       		.byte	0
+ 2084 0029 04       		.uleb128 0x4
+ 2085 002a 16       		.uleb128 0x16
+ 2086 002b 00       		.byte	0
+ 2087 002c 03       		.uleb128 0x3
+ 2088 002d 0E       		.uleb128 0xe
+ 2089 002e 3A       		.uleb128 0x3a
+ 2090 002f 0B       		.uleb128 0xb
+ 2091 0030 3B       		.uleb128 0x3b
+ 2092 0031 05       		.uleb128 0x5
+ 2093 0032 39       		.uleb128 0x39
+ 2094 0033 0B       		.uleb128 0xb
+ 2095 0034 49       		.uleb128 0x49
+ 2096 0035 13       		.uleb128 0x13
+ 2097 0036 00       		.byte	0
+ 2098 0037 00       		.byte	0
+ 2099 0038 05       		.uleb128 0x5
+ 2100 0039 35       		.uleb128 0x35
+ 2101 003a 00       		.byte	0
+ 2102 003b 49       		.uleb128 0x49
+ 2103 003c 13       		.uleb128 0x13
+ 2104 003d 00       		.byte	0
+ 2105 003e 00       		.byte	0
+ 2106 003f 06       		.uleb128 0x6
+ 2107 0040 26       		.uleb128 0x26
+ 2108 0041 00       		.byte	0
+ 2109 0042 49       		.uleb128 0x49
+ 2110 0043 13       		.uleb128 0x13
+ 2111 0044 00       		.byte	0
+ 2112 0045 00       		.byte	0
+ 2113 0046 07       		.uleb128 0x7
+ 2114 0047 0F       		.uleb128 0xf
+ 2115 0048 00       		.byte	0
+ 2116 0049 0B       		.uleb128 0xb
+ 2117 004a 0B       		.uleb128 0xb
+ 2118 004b 49       		.uleb128 0x49
+ 2119 004c 13       		.uleb128 0x13
+ 2120 004d 00       		.byte	0
+ 2121 004e 00       		.byte	0
+ 2122 004f 08       		.uleb128 0x8
+ 2123 0050 15       		.uleb128 0x15
+ 2124 0051 00       		.byte	0
+ 2125 0052 27       		.uleb128 0x27
+ 2126 0053 19       		.uleb128 0x19
+ 2127 0054 00       		.byte	0
+ 2128 0055 00       		.byte	0
+ 2129 0056 09       		.uleb128 0x9
+ 2130 0057 16       		.uleb128 0x16
+ 2131 0058 00       		.byte	0
+ 2132 0059 03       		.uleb128 0x3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 45
+
+
+ 2133 005a 0E       		.uleb128 0xe
+ 2134 005b 3A       		.uleb128 0x3a
+ 2135 005c 0B       		.uleb128 0xb
+ 2136 005d 3B       		.uleb128 0x3b
+ 2137 005e 0B       		.uleb128 0xb
+ 2138 005f 39       		.uleb128 0x39
+ 2139 0060 0B       		.uleb128 0xb
+ 2140 0061 49       		.uleb128 0x49
+ 2141 0062 13       		.uleb128 0x13
+ 2142 0063 00       		.byte	0
+ 2143 0064 00       		.byte	0
+ 2144 0065 0A       		.uleb128 0xa
+ 2145 0066 13       		.uleb128 0x13
+ 2146 0067 00       		.byte	0
+ 2147 0068 03       		.uleb128 0x3
+ 2148 0069 0E       		.uleb128 0xe
+ 2149 006a 3C       		.uleb128 0x3c
+ 2150 006b 19       		.uleb128 0x19
+ 2151 006c 00       		.byte	0
+ 2152 006d 00       		.byte	0
+ 2153 006e 0B       		.uleb128 0xb
+ 2154 006f 17       		.uleb128 0x17
+ 2155 0070 01       		.byte	0x1
+ 2156 0071 0B       		.uleb128 0xb
+ 2157 0072 0B       		.uleb128 0xb
+ 2158 0073 3A       		.uleb128 0x3a
+ 2159 0074 0B       		.uleb128 0xb
+ 2160 0075 3B       		.uleb128 0x3b
+ 2161 0076 0B       		.uleb128 0xb
+ 2162 0077 39       		.uleb128 0x39
+ 2163 0078 0B       		.uleb128 0xb
+ 2164 0079 01       		.uleb128 0x1
+ 2165 007a 13       		.uleb128 0x13
+ 2166 007b 00       		.byte	0
+ 2167 007c 00       		.byte	0
+ 2168 007d 0C       		.uleb128 0xc
+ 2169 007e 0D       		.uleb128 0xd
+ 2170 007f 00       		.byte	0
+ 2171 0080 03       		.uleb128 0x3
+ 2172 0081 0E       		.uleb128 0xe
+ 2173 0082 3A       		.uleb128 0x3a
+ 2174 0083 0B       		.uleb128 0xb
+ 2175 0084 3B       		.uleb128 0x3b
+ 2176 0085 0B       		.uleb128 0xb
+ 2177 0086 39       		.uleb128 0x39
+ 2178 0087 0B       		.uleb128 0xb
+ 2179 0088 49       		.uleb128 0x49
+ 2180 0089 13       		.uleb128 0x13
+ 2181 008a 00       		.byte	0
+ 2182 008b 00       		.byte	0
+ 2183 008c 0D       		.uleb128 0xd
+ 2184 008d 01       		.uleb128 0x1
+ 2185 008e 01       		.byte	0x1
+ 2186 008f 49       		.uleb128 0x49
+ 2187 0090 13       		.uleb128 0x13
+ 2188 0091 01       		.uleb128 0x1
+ 2189 0092 13       		.uleb128 0x13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 46
+
+
+ 2190 0093 00       		.byte	0
+ 2191 0094 00       		.byte	0
+ 2192 0095 0E       		.uleb128 0xe
+ 2193 0096 21       		.uleb128 0x21
+ 2194 0097 00       		.byte	0
+ 2195 0098 49       		.uleb128 0x49
+ 2196 0099 13       		.uleb128 0x13
+ 2197 009a 2F       		.uleb128 0x2f
+ 2198 009b 0B       		.uleb128 0xb
+ 2199 009c 00       		.byte	0
+ 2200 009d 00       		.byte	0
+ 2201 009e 0F       		.uleb128 0xf
+ 2202 009f 13       		.uleb128 0x13
+ 2203 00a0 01       		.byte	0x1
+ 2204 00a1 0B       		.uleb128 0xb
+ 2205 00a2 0B       		.uleb128 0xb
+ 2206 00a3 3A       		.uleb128 0x3a
+ 2207 00a4 0B       		.uleb128 0xb
+ 2208 00a5 3B       		.uleb128 0x3b
+ 2209 00a6 0B       		.uleb128 0xb
+ 2210 00a7 39       		.uleb128 0x39
+ 2211 00a8 0B       		.uleb128 0xb
+ 2212 00a9 01       		.uleb128 0x1
+ 2213 00aa 13       		.uleb128 0x13
+ 2214 00ab 00       		.byte	0
+ 2215 00ac 00       		.byte	0
+ 2216 00ad 10       		.uleb128 0x10
+ 2217 00ae 0D       		.uleb128 0xd
+ 2218 00af 00       		.byte	0
+ 2219 00b0 03       		.uleb128 0x3
+ 2220 00b1 0E       		.uleb128 0xe
+ 2221 00b2 3A       		.uleb128 0x3a
+ 2222 00b3 0B       		.uleb128 0xb
+ 2223 00b4 3B       		.uleb128 0x3b
+ 2224 00b5 0B       		.uleb128 0xb
+ 2225 00b6 39       		.uleb128 0x39
+ 2226 00b7 0B       		.uleb128 0xb
+ 2227 00b8 49       		.uleb128 0x49
+ 2228 00b9 13       		.uleb128 0x13
+ 2229 00ba 38       		.uleb128 0x38
+ 2230 00bb 0B       		.uleb128 0xb
+ 2231 00bc 00       		.byte	0
+ 2232 00bd 00       		.byte	0
+ 2233 00be 11       		.uleb128 0x11
+ 2234 00bf 0F       		.uleb128 0xf
+ 2235 00c0 00       		.byte	0
+ 2236 00c1 0B       		.uleb128 0xb
+ 2237 00c2 0B       		.uleb128 0xb
+ 2238 00c3 00       		.byte	0
+ 2239 00c4 00       		.byte	0
+ 2240 00c5 12       		.uleb128 0x12
+ 2241 00c6 13       		.uleb128 0x13
+ 2242 00c7 01       		.byte	0x1
+ 2243 00c8 03       		.uleb128 0x3
+ 2244 00c9 0E       		.uleb128 0xe
+ 2245 00ca 0B       		.uleb128 0xb
+ 2246 00cb 0B       		.uleb128 0xb
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 47
+
+
+ 2247 00cc 3A       		.uleb128 0x3a
+ 2248 00cd 0B       		.uleb128 0xb
+ 2249 00ce 3B       		.uleb128 0x3b
+ 2250 00cf 0B       		.uleb128 0xb
+ 2251 00d0 39       		.uleb128 0x39
+ 2252 00d1 0B       		.uleb128 0xb
+ 2253 00d2 01       		.uleb128 0x1
+ 2254 00d3 13       		.uleb128 0x13
+ 2255 00d4 00       		.byte	0
+ 2256 00d5 00       		.byte	0
+ 2257 00d6 13       		.uleb128 0x13
+ 2258 00d7 0D       		.uleb128 0xd
+ 2259 00d8 00       		.byte	0
+ 2260 00d9 03       		.uleb128 0x3
+ 2261 00da 08       		.uleb128 0x8
+ 2262 00db 3A       		.uleb128 0x3a
+ 2263 00dc 0B       		.uleb128 0xb
+ 2264 00dd 3B       		.uleb128 0x3b
+ 2265 00de 0B       		.uleb128 0xb
+ 2266 00df 39       		.uleb128 0x39
+ 2267 00e0 0B       		.uleb128 0xb
+ 2268 00e1 49       		.uleb128 0x49
+ 2269 00e2 13       		.uleb128 0x13
+ 2270 00e3 38       		.uleb128 0x38
+ 2271 00e4 0B       		.uleb128 0xb
+ 2272 00e5 00       		.byte	0
+ 2273 00e6 00       		.byte	0
+ 2274 00e7 14       		.uleb128 0x14
+ 2275 00e8 13       		.uleb128 0x13
+ 2276 00e9 01       		.byte	0x1
+ 2277 00ea 03       		.uleb128 0x3
+ 2278 00eb 0E       		.uleb128 0xe
+ 2279 00ec 0B       		.uleb128 0xb
+ 2280 00ed 05       		.uleb128 0x5
+ 2281 00ee 3A       		.uleb128 0x3a
+ 2282 00ef 0B       		.uleb128 0xb
+ 2283 00f0 3B       		.uleb128 0x3b
+ 2284 00f1 0B       		.uleb128 0xb
+ 2285 00f2 39       		.uleb128 0x39
+ 2286 00f3 0B       		.uleb128 0xb
+ 2287 00f4 01       		.uleb128 0x1
+ 2288 00f5 13       		.uleb128 0x13
+ 2289 00f6 00       		.byte	0
+ 2290 00f7 00       		.byte	0
+ 2291 00f8 15       		.uleb128 0x15
+ 2292 00f9 0D       		.uleb128 0xd
+ 2293 00fa 00       		.byte	0
+ 2294 00fb 03       		.uleb128 0x3
+ 2295 00fc 0E       		.uleb128 0xe
+ 2296 00fd 3A       		.uleb128 0x3a
+ 2297 00fe 0B       		.uleb128 0xb
+ 2298 00ff 3B       		.uleb128 0x3b
+ 2299 0100 0B       		.uleb128 0xb
+ 2300 0101 39       		.uleb128 0x39
+ 2301 0102 0B       		.uleb128 0xb
+ 2302 0103 49       		.uleb128 0x49
+ 2303 0104 13       		.uleb128 0x13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 48
+
+
+ 2304 0105 38       		.uleb128 0x38
+ 2305 0106 05       		.uleb128 0x5
+ 2306 0107 00       		.byte	0
+ 2307 0108 00       		.byte	0
+ 2308 0109 16       		.uleb128 0x16
+ 2309 010a 15       		.uleb128 0x15
+ 2310 010b 01       		.byte	0x1
+ 2311 010c 27       		.uleb128 0x27
+ 2312 010d 19       		.uleb128 0x19
+ 2313 010e 49       		.uleb128 0x49
+ 2314 010f 13       		.uleb128 0x13
+ 2315 0110 01       		.uleb128 0x1
+ 2316 0111 13       		.uleb128 0x13
+ 2317 0112 00       		.byte	0
+ 2318 0113 00       		.byte	0
+ 2319 0114 17       		.uleb128 0x17
+ 2320 0115 05       		.uleb128 0x5
+ 2321 0116 00       		.byte	0
+ 2322 0117 49       		.uleb128 0x49
+ 2323 0118 13       		.uleb128 0x13
+ 2324 0119 00       		.byte	0
+ 2325 011a 00       		.byte	0
+ 2326 011b 18       		.uleb128 0x18
+ 2327 011c 13       		.uleb128 0x13
+ 2328 011d 01       		.byte	0x1
+ 2329 011e 03       		.uleb128 0x3
+ 2330 011f 0E       		.uleb128 0xe
+ 2331 0120 0B       		.uleb128 0xb
+ 2332 0121 05       		.uleb128 0x5
+ 2333 0122 3A       		.uleb128 0x3a
+ 2334 0123 0B       		.uleb128 0xb
+ 2335 0124 3B       		.uleb128 0x3b
+ 2336 0125 05       		.uleb128 0x5
+ 2337 0126 39       		.uleb128 0x39
+ 2338 0127 0B       		.uleb128 0xb
+ 2339 0128 01       		.uleb128 0x1
+ 2340 0129 13       		.uleb128 0x13
+ 2341 012a 00       		.byte	0
+ 2342 012b 00       		.byte	0
+ 2343 012c 19       		.uleb128 0x19
+ 2344 012d 0D       		.uleb128 0xd
+ 2345 012e 00       		.byte	0
+ 2346 012f 03       		.uleb128 0x3
+ 2347 0130 0E       		.uleb128 0xe
+ 2348 0131 3A       		.uleb128 0x3a
+ 2349 0132 0B       		.uleb128 0xb
+ 2350 0133 3B       		.uleb128 0x3b
+ 2351 0134 05       		.uleb128 0x5
+ 2352 0135 39       		.uleb128 0x39
+ 2353 0136 0B       		.uleb128 0xb
+ 2354 0137 49       		.uleb128 0x49
+ 2355 0138 13       		.uleb128 0x13
+ 2356 0139 38       		.uleb128 0x38
+ 2357 013a 0B       		.uleb128 0xb
+ 2358 013b 00       		.byte	0
+ 2359 013c 00       		.byte	0
+ 2360 013d 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 49
+
+
+ 2361 013e 0D       		.uleb128 0xd
+ 2362 013f 00       		.byte	0
+ 2363 0140 03       		.uleb128 0x3
+ 2364 0141 0E       		.uleb128 0xe
+ 2365 0142 3A       		.uleb128 0x3a
+ 2366 0143 0B       		.uleb128 0xb
+ 2367 0144 3B       		.uleb128 0x3b
+ 2368 0145 05       		.uleb128 0x5
+ 2369 0146 39       		.uleb128 0x39
+ 2370 0147 0B       		.uleb128 0xb
+ 2371 0148 49       		.uleb128 0x49
+ 2372 0149 13       		.uleb128 0x13
+ 2373 014a 38       		.uleb128 0x38
+ 2374 014b 05       		.uleb128 0x5
+ 2375 014c 00       		.byte	0
+ 2376 014d 00       		.byte	0
+ 2377 014e 1B       		.uleb128 0x1b
+ 2378 014f 13       		.uleb128 0x13
+ 2379 0150 01       		.byte	0x1
+ 2380 0151 03       		.uleb128 0x3
+ 2381 0152 0E       		.uleb128 0xe
+ 2382 0153 0B       		.uleb128 0xb
+ 2383 0154 0B       		.uleb128 0xb
+ 2384 0155 3A       		.uleb128 0x3a
+ 2385 0156 0B       		.uleb128 0xb
+ 2386 0157 3B       		.uleb128 0x3b
+ 2387 0158 05       		.uleb128 0x5
+ 2388 0159 39       		.uleb128 0x39
+ 2389 015a 0B       		.uleb128 0xb
+ 2390 015b 01       		.uleb128 0x1
+ 2391 015c 13       		.uleb128 0x13
+ 2392 015d 00       		.byte	0
+ 2393 015e 00       		.byte	0
+ 2394 015f 1C       		.uleb128 0x1c
+ 2395 0160 13       		.uleb128 0x13
+ 2396 0161 01       		.byte	0x1
+ 2397 0162 0B       		.uleb128 0xb
+ 2398 0163 0B       		.uleb128 0xb
+ 2399 0164 3A       		.uleb128 0x3a
+ 2400 0165 0B       		.uleb128 0xb
+ 2401 0166 3B       		.uleb128 0x3b
+ 2402 0167 05       		.uleb128 0x5
+ 2403 0168 39       		.uleb128 0x39
+ 2404 0169 0B       		.uleb128 0xb
+ 2405 016a 01       		.uleb128 0x1
+ 2406 016b 13       		.uleb128 0x13
+ 2407 016c 00       		.byte	0
+ 2408 016d 00       		.byte	0
+ 2409 016e 1D       		.uleb128 0x1d
+ 2410 016f 17       		.uleb128 0x17
+ 2411 0170 01       		.byte	0x1
+ 2412 0171 0B       		.uleb128 0xb
+ 2413 0172 0B       		.uleb128 0xb
+ 2414 0173 3A       		.uleb128 0x3a
+ 2415 0174 0B       		.uleb128 0xb
+ 2416 0175 3B       		.uleb128 0x3b
+ 2417 0176 05       		.uleb128 0x5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 50
+
+
+ 2418 0177 39       		.uleb128 0x39
+ 2419 0178 0B       		.uleb128 0xb
+ 2420 0179 01       		.uleb128 0x1
+ 2421 017a 13       		.uleb128 0x13
+ 2422 017b 00       		.byte	0
+ 2423 017c 00       		.byte	0
+ 2424 017d 1E       		.uleb128 0x1e
+ 2425 017e 0D       		.uleb128 0xd
+ 2426 017f 00       		.byte	0
+ 2427 0180 03       		.uleb128 0x3
+ 2428 0181 0E       		.uleb128 0xe
+ 2429 0182 3A       		.uleb128 0x3a
+ 2430 0183 0B       		.uleb128 0xb
+ 2431 0184 3B       		.uleb128 0x3b
+ 2432 0185 05       		.uleb128 0x5
+ 2433 0186 39       		.uleb128 0x39
+ 2434 0187 0B       		.uleb128 0xb
+ 2435 0188 49       		.uleb128 0x49
+ 2436 0189 13       		.uleb128 0x13
+ 2437 018a 00       		.byte	0
+ 2438 018b 00       		.byte	0
+ 2439 018c 1F       		.uleb128 0x1f
+ 2440 018d 15       		.uleb128 0x15
+ 2441 018e 01       		.byte	0x1
+ 2442 018f 27       		.uleb128 0x27
+ 2443 0190 19       		.uleb128 0x19
+ 2444 0191 01       		.uleb128 0x1
+ 2445 0192 13       		.uleb128 0x13
+ 2446 0193 00       		.byte	0
+ 2447 0194 00       		.byte	0
+ 2448 0195 20       		.uleb128 0x20
+ 2449 0196 34       		.uleb128 0x34
+ 2450 0197 00       		.byte	0
+ 2451 0198 03       		.uleb128 0x3
+ 2452 0199 0E       		.uleb128 0xe
+ 2453 019a 3A       		.uleb128 0x3a
+ 2454 019b 0B       		.uleb128 0xb
+ 2455 019c 3B       		.uleb128 0x3b
+ 2456 019d 05       		.uleb128 0x5
+ 2457 019e 39       		.uleb128 0x39
+ 2458 019f 0B       		.uleb128 0xb
+ 2459 01a0 49       		.uleb128 0x49
+ 2460 01a1 13       		.uleb128 0x13
+ 2461 01a2 3F       		.uleb128 0x3f
+ 2462 01a3 19       		.uleb128 0x19
+ 2463 01a4 3C       		.uleb128 0x3c
+ 2464 01a5 19       		.uleb128 0x19
+ 2465 01a6 00       		.byte	0
+ 2466 01a7 00       		.byte	0
+ 2467 01a8 21       		.uleb128 0x21
+ 2468 01a9 21       		.uleb128 0x21
+ 2469 01aa 00       		.byte	0
+ 2470 01ab 00       		.byte	0
+ 2471 01ac 00       		.byte	0
+ 2472 01ad 22       		.uleb128 0x22
+ 2473 01ae 34       		.uleb128 0x34
+ 2474 01af 00       		.byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 51
+
+
+ 2475 01b0 03       		.uleb128 0x3
+ 2476 01b1 0E       		.uleb128 0xe
+ 2477 01b2 3A       		.uleb128 0x3a
+ 2478 01b3 0B       		.uleb128 0xb
+ 2479 01b4 3B       		.uleb128 0x3b
+ 2480 01b5 0B       		.uleb128 0xb
+ 2481 01b6 39       		.uleb128 0x39
+ 2482 01b7 0B       		.uleb128 0xb
+ 2483 01b8 49       		.uleb128 0x49
+ 2484 01b9 13       		.uleb128 0x13
+ 2485 01ba 3F       		.uleb128 0x3f
+ 2486 01bb 19       		.uleb128 0x19
+ 2487 01bc 3C       		.uleb128 0x3c
+ 2488 01bd 19       		.uleb128 0x19
+ 2489 01be 00       		.byte	0
+ 2490 01bf 00       		.byte	0
+ 2491 01c0 23       		.uleb128 0x23
+ 2492 01c1 34       		.uleb128 0x34
+ 2493 01c2 00       		.byte	0
+ 2494 01c3 47       		.uleb128 0x47
+ 2495 01c4 13       		.uleb128 0x13
+ 2496 01c5 3A       		.uleb128 0x3a
+ 2497 01c6 0B       		.uleb128 0xb
+ 2498 01c7 3B       		.uleb128 0x3b
+ 2499 01c8 0B       		.uleb128 0xb
+ 2500 01c9 39       		.uleb128 0x39
+ 2501 01ca 0B       		.uleb128 0xb
+ 2502 01cb 02       		.uleb128 0x2
+ 2503 01cc 18       		.uleb128 0x18
+ 2504 01cd 00       		.byte	0
+ 2505 01ce 00       		.byte	0
+ 2506 01cf 24       		.uleb128 0x24
+ 2507 01d0 2E       		.uleb128 0x2e
+ 2508 01d1 00       		.byte	0
+ 2509 01d2 3F       		.uleb128 0x3f
+ 2510 01d3 19       		.uleb128 0x19
+ 2511 01d4 03       		.uleb128 0x3
+ 2512 01d5 0E       		.uleb128 0xe
+ 2513 01d6 3A       		.uleb128 0x3a
+ 2514 01d7 0B       		.uleb128 0xb
+ 2515 01d8 3B       		.uleb128 0x3b
+ 2516 01d9 05       		.uleb128 0x5
+ 2517 01da 39       		.uleb128 0x39
+ 2518 01db 0B       		.uleb128 0xb
+ 2519 01dc 27       		.uleb128 0x27
+ 2520 01dd 19       		.uleb128 0x19
+ 2521 01de 11       		.uleb128 0x11
+ 2522 01df 01       		.uleb128 0x1
+ 2523 01e0 12       		.uleb128 0x12
+ 2524 01e1 06       		.uleb128 0x6
+ 2525 01e2 40       		.uleb128 0x40
+ 2526 01e3 18       		.uleb128 0x18
+ 2527 01e4 9742     		.uleb128 0x2117
+ 2528 01e6 19       		.uleb128 0x19
+ 2529 01e7 00       		.byte	0
+ 2530 01e8 00       		.byte	0
+ 2531 01e9 25       		.uleb128 0x25
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 52
+
+
+ 2532 01ea 2E       		.uleb128 0x2e
+ 2533 01eb 00       		.byte	0
+ 2534 01ec 3F       		.uleb128 0x3f
+ 2535 01ed 19       		.uleb128 0x19
+ 2536 01ee 03       		.uleb128 0x3
+ 2537 01ef 0E       		.uleb128 0xe
+ 2538 01f0 3A       		.uleb128 0x3a
+ 2539 01f1 0B       		.uleb128 0xb
+ 2540 01f2 3B       		.uleb128 0x3b
+ 2541 01f3 05       		.uleb128 0x5
+ 2542 01f4 39       		.uleb128 0x39
+ 2543 01f5 0B       		.uleb128 0xb
+ 2544 01f6 27       		.uleb128 0x27
+ 2545 01f7 19       		.uleb128 0x19
+ 2546 01f8 49       		.uleb128 0x49
+ 2547 01f9 13       		.uleb128 0x13
+ 2548 01fa 11       		.uleb128 0x11
+ 2549 01fb 01       		.uleb128 0x1
+ 2550 01fc 12       		.uleb128 0x12
+ 2551 01fd 06       		.uleb128 0x6
+ 2552 01fe 40       		.uleb128 0x40
+ 2553 01ff 18       		.uleb128 0x18
+ 2554 0200 9742     		.uleb128 0x2117
+ 2555 0202 19       		.uleb128 0x19
+ 2556 0203 00       		.byte	0
+ 2557 0204 00       		.byte	0
+ 2558 0205 26       		.uleb128 0x26
+ 2559 0206 2E       		.uleb128 0x2e
+ 2560 0207 01       		.byte	0x1
+ 2561 0208 3F       		.uleb128 0x3f
+ 2562 0209 19       		.uleb128 0x19
+ 2563 020a 03       		.uleb128 0x3
+ 2564 020b 0E       		.uleb128 0xe
+ 2565 020c 3A       		.uleb128 0x3a
+ 2566 020d 0B       		.uleb128 0xb
+ 2567 020e 3B       		.uleb128 0x3b
+ 2568 020f 0B       		.uleb128 0xb
+ 2569 0210 39       		.uleb128 0x39
+ 2570 0211 0B       		.uleb128 0xb
+ 2571 0212 27       		.uleb128 0x27
+ 2572 0213 19       		.uleb128 0x19
+ 2573 0214 11       		.uleb128 0x11
+ 2574 0215 01       		.uleb128 0x1
+ 2575 0216 12       		.uleb128 0x12
+ 2576 0217 06       		.uleb128 0x6
+ 2577 0218 40       		.uleb128 0x40
+ 2578 0219 18       		.uleb128 0x18
+ 2579 021a 9742     		.uleb128 0x2117
+ 2580 021c 19       		.uleb128 0x19
+ 2581 021d 01       		.uleb128 0x1
+ 2582 021e 13       		.uleb128 0x13
+ 2583 021f 00       		.byte	0
+ 2584 0220 00       		.byte	0
+ 2585 0221 27       		.uleb128 0x27
+ 2586 0222 05       		.uleb128 0x5
+ 2587 0223 00       		.byte	0
+ 2588 0224 03       		.uleb128 0x3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 53
+
+
+ 2589 0225 0E       		.uleb128 0xe
+ 2590 0226 3A       		.uleb128 0x3a
+ 2591 0227 0B       		.uleb128 0xb
+ 2592 0228 3B       		.uleb128 0x3b
+ 2593 0229 0B       		.uleb128 0xb
+ 2594 022a 39       		.uleb128 0x39
+ 2595 022b 0B       		.uleb128 0xb
+ 2596 022c 49       		.uleb128 0x49
+ 2597 022d 13       		.uleb128 0x13
+ 2598 022e 02       		.uleb128 0x2
+ 2599 022f 17       		.uleb128 0x17
+ 2600 0230 B742     		.uleb128 0x2137
+ 2601 0232 17       		.uleb128 0x17
+ 2602 0233 00       		.byte	0
+ 2603 0234 00       		.byte	0
+ 2604 0235 28       		.uleb128 0x28
+ 2605 0236 2E       		.uleb128 0x2e
+ 2606 0237 01       		.byte	0x1
+ 2607 0238 3F       		.uleb128 0x3f
+ 2608 0239 19       		.uleb128 0x19
+ 2609 023a 03       		.uleb128 0x3
+ 2610 023b 0E       		.uleb128 0xe
+ 2611 023c 3A       		.uleb128 0x3a
+ 2612 023d 0B       		.uleb128 0xb
+ 2613 023e 3B       		.uleb128 0x3b
+ 2614 023f 0B       		.uleb128 0xb
+ 2615 0240 39       		.uleb128 0x39
+ 2616 0241 0B       		.uleb128 0xb
+ 2617 0242 27       		.uleb128 0x27
+ 2618 0243 19       		.uleb128 0x19
+ 2619 0244 49       		.uleb128 0x49
+ 2620 0245 13       		.uleb128 0x13
+ 2621 0246 11       		.uleb128 0x11
+ 2622 0247 01       		.uleb128 0x1
+ 2623 0248 12       		.uleb128 0x12
+ 2624 0249 06       		.uleb128 0x6
+ 2625 024a 40       		.uleb128 0x40
+ 2626 024b 18       		.uleb128 0x18
+ 2627 024c 9742     		.uleb128 0x2117
+ 2628 024e 19       		.uleb128 0x19
+ 2629 024f 01       		.uleb128 0x1
+ 2630 0250 13       		.uleb128 0x13
+ 2631 0251 00       		.byte	0
+ 2632 0252 00       		.byte	0
+ 2633 0253 29       		.uleb128 0x29
+ 2634 0254 34       		.uleb128 0x34
+ 2635 0255 00       		.byte	0
+ 2636 0256 03       		.uleb128 0x3
+ 2637 0257 0E       		.uleb128 0xe
+ 2638 0258 3A       		.uleb128 0x3a
+ 2639 0259 0B       		.uleb128 0xb
+ 2640 025a 3B       		.uleb128 0x3b
+ 2641 025b 0B       		.uleb128 0xb
+ 2642 025c 39       		.uleb128 0x39
+ 2643 025d 0B       		.uleb128 0xb
+ 2644 025e 49       		.uleb128 0x49
+ 2645 025f 13       		.uleb128 0x13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 54
+
+
+ 2646 0260 02       		.uleb128 0x2
+ 2647 0261 17       		.uleb128 0x17
+ 2648 0262 B742     		.uleb128 0x2137
+ 2649 0264 17       		.uleb128 0x17
+ 2650 0265 00       		.byte	0
+ 2651 0266 00       		.byte	0
+ 2652 0267 2A       		.uleb128 0x2a
+ 2653 0268 2E       		.uleb128 0x2e
+ 2654 0269 00       		.byte	0
+ 2655 026a 3F       		.uleb128 0x3f
+ 2656 026b 19       		.uleb128 0x19
+ 2657 026c 03       		.uleb128 0x3
+ 2658 026d 0E       		.uleb128 0xe
+ 2659 026e 3A       		.uleb128 0x3a
+ 2660 026f 0B       		.uleb128 0xb
+ 2661 0270 3B       		.uleb128 0x3b
+ 2662 0271 0B       		.uleb128 0xb
+ 2663 0272 39       		.uleb128 0x39
+ 2664 0273 0B       		.uleb128 0xb
+ 2665 0274 27       		.uleb128 0x27
+ 2666 0275 19       		.uleb128 0x19
+ 2667 0276 49       		.uleb128 0x49
+ 2668 0277 13       		.uleb128 0x13
+ 2669 0278 11       		.uleb128 0x11
+ 2670 0279 01       		.uleb128 0x1
+ 2671 027a 12       		.uleb128 0x12
+ 2672 027b 06       		.uleb128 0x6
+ 2673 027c 40       		.uleb128 0x40
+ 2674 027d 18       		.uleb128 0x18
+ 2675 027e 9742     		.uleb128 0x2117
+ 2676 0280 19       		.uleb128 0x19
+ 2677 0281 00       		.byte	0
+ 2678 0282 00       		.byte	0
+ 2679 0283 00       		.byte	0
+ 2680              		.section	.debug_loc,"",%progbits
+ 2681              	.Ldebug_loc0:
+ 2682              	.LVUS5:
+ 2683 0000 00       		.uleb128 0
+ 2684 0001 00       		.uleb128 .LVU50
+ 2685 0002 00       		.uleb128 .LVU50
+ 2686 0003 00       		.uleb128 .LVU55
+ 2687 0004 00       		.uleb128 .LVU55
+ 2688 0005 00       		.uleb128 .LVU60
+ 2689 0006 00       		.uleb128 .LVU60
+ 2690 0007 00       		.uleb128 0
+ 2691              	.LLST5:
+ 2692 0008 00000000 		.4byte	.LVL12
+ 2693 000c 0A000000 		.4byte	.LVL13
+ 2694 0010 0100     		.2byte	0x1
+ 2695 0012 50       		.byte	0x50
+ 2696 0013 0A000000 		.4byte	.LVL13
+ 2697 0017 12000000 		.4byte	.LVL14
+ 2698 001b 0100     		.2byte	0x1
+ 2699 001d 52       		.byte	0x52
+ 2700 001e 12000000 		.4byte	.LVL14
+ 2701 0022 1E000000 		.4byte	.LVL17
+ 2702 0026 0500     		.2byte	0x5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 55
+
+
+ 2703 0028 03       		.byte	0x3
+ 2704 0029 00000000 		.4byte	I2C_1_slWrBufPtr
+ 2705 002d 1E000000 		.4byte	.LVL17
+ 2706 0031 34000000 		.4byte	.LFE5
+ 2707 0035 0400     		.2byte	0x4
+ 2708 0037 F3       		.byte	0xf3
+ 2709 0038 01       		.uleb128 0x1
+ 2710 0039 50       		.byte	0x50
+ 2711 003a 9F       		.byte	0x9f
+ 2712 003b 00000000 		.4byte	0
+ 2713 003f 00000000 		.4byte	0
+ 2714              	.LVUS6:
+ 2715 0043 00       		.uleb128 0
+ 2716 0044 00       		.uleb128 .LVU58
+ 2717 0045 00       		.uleb128 .LVU58
+ 2718 0046 00       		.uleb128 .LVU59
+ 2719 0047 00       		.uleb128 .LVU59
+ 2720 0048 00       		.uleb128 0
+ 2721              	.LLST6:
+ 2722 0049 00000000 		.4byte	.LVL12
+ 2723 004d 18000000 		.4byte	.LVL15
+ 2724 0051 0100     		.2byte	0x1
+ 2725 0053 51       		.byte	0x51
+ 2726 0054 18000000 		.4byte	.LVL15
+ 2727 0058 1A000000 		.4byte	.LVL16
+ 2728 005c 0500     		.2byte	0x5
+ 2729 005e 03       		.byte	0x3
+ 2730 005f 00000000 		.4byte	I2C_1_slWrBufSize
+ 2731 0063 1A000000 		.4byte	.LVL16
+ 2732 0067 34000000 		.4byte	.LFE5
+ 2733 006b 0400     		.2byte	0x4
+ 2734 006d F3       		.byte	0xf3
+ 2735 006e 01       		.uleb128 0x1
+ 2736 006f 51       		.byte	0x51
+ 2737 0070 9F       		.byte	0x9f
+ 2738 0071 00000000 		.4byte	0
+ 2739 0075 00000000 		.4byte	0
+ 2740              	.LVUS3:
+ 2741 0079 00       		.uleb128 0
+ 2742 007a 00       		.uleb128 .LVU35
+ 2743 007b 00       		.uleb128 .LVU35
+ 2744 007c 00       		.uleb128 .LVU40
+ 2745 007d 00       		.uleb128 .LVU40
+ 2746 007e 00       		.uleb128 .LVU45
+ 2747 007f 00       		.uleb128 .LVU45
+ 2748 0080 00       		.uleb128 0
+ 2749              	.LLST3:
+ 2750 0081 00000000 		.4byte	.LVL6
+ 2751 0085 0A000000 		.4byte	.LVL7
+ 2752 0089 0100     		.2byte	0x1
+ 2753 008b 50       		.byte	0x50
+ 2754 008c 0A000000 		.4byte	.LVL7
+ 2755 0090 12000000 		.4byte	.LVL8
+ 2756 0094 0100     		.2byte	0x1
+ 2757 0096 52       		.byte	0x52
+ 2758 0097 12000000 		.4byte	.LVL8
+ 2759 009b 1E000000 		.4byte	.LVL11
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 56
+
+
+ 2760 009f 0500     		.2byte	0x5
+ 2761 00a1 03       		.byte	0x3
+ 2762 00a2 00000000 		.4byte	I2C_1_slRdBufPtr
+ 2763 00a6 1E000000 		.4byte	.LVL11
+ 2764 00aa 34000000 		.4byte	.LFE4
+ 2765 00ae 0400     		.2byte	0x4
+ 2766 00b0 F3       		.byte	0xf3
+ 2767 00b1 01       		.uleb128 0x1
+ 2768 00b2 50       		.byte	0x50
+ 2769 00b3 9F       		.byte	0x9f
+ 2770 00b4 00000000 		.4byte	0
+ 2771 00b8 00000000 		.4byte	0
+ 2772              	.LVUS4:
+ 2773 00bc 00       		.uleb128 0
+ 2774 00bd 00       		.uleb128 .LVU43
+ 2775 00be 00       		.uleb128 .LVU43
+ 2776 00bf 00       		.uleb128 .LVU44
+ 2777 00c0 00       		.uleb128 .LVU44
+ 2778 00c1 00       		.uleb128 0
+ 2779              	.LLST4:
+ 2780 00c2 00000000 		.4byte	.LVL6
+ 2781 00c6 18000000 		.4byte	.LVL9
+ 2782 00ca 0100     		.2byte	0x1
+ 2783 00cc 51       		.byte	0x51
+ 2784 00cd 18000000 		.4byte	.LVL9
+ 2785 00d1 1A000000 		.4byte	.LVL10
+ 2786 00d5 0500     		.2byte	0x5
+ 2787 00d7 03       		.byte	0x3
+ 2788 00d8 00000000 		.4byte	I2C_1_slRdBufSize
+ 2789 00dc 1A000000 		.4byte	.LVL10
+ 2790 00e0 34000000 		.4byte	.LFE4
+ 2791 00e4 0400     		.2byte	0x4
+ 2792 00e6 F3       		.byte	0xf3
+ 2793 00e7 01       		.uleb128 0x1
+ 2794 00e8 51       		.byte	0x51
+ 2795 00e9 9F       		.byte	0x9f
+ 2796 00ea 00000000 		.4byte	0
+ 2797 00ee 00000000 		.4byte	0
+ 2798              	.LVUS2:
+ 2799 00f2 00       		.uleb128 0
+ 2800 00f3 00       		.uleb128 .LVU29
+ 2801 00f4 00       		.uleb128 .LVU29
+ 2802 00f5 00       		.uleb128 0
+ 2803              	.LLST2:
+ 2804 00f6 00000000 		.4byte	.LVL4
+ 2805 00fa 04000000 		.4byte	.LVL5
+ 2806 00fe 0100     		.2byte	0x1
+ 2807 0100 50       		.byte	0x50
+ 2808 0101 04000000 		.4byte	.LVL5
+ 2809 0105 10000000 		.4byte	.LFE3
+ 2810 0109 0400     		.2byte	0x4
+ 2811 010b F3       		.byte	0xf3
+ 2812 010c 01       		.uleb128 0x1
+ 2813 010d 50       		.byte	0x50
+ 2814 010e 9F       		.byte	0x9f
+ 2815 010f 00000000 		.4byte	0
+ 2816 0113 00000000 		.4byte	0
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 57
+
+
+ 2817              	.LVUS1:
+ 2818 0117 00       		.uleb128 .LVU20
+ 2819 0118 00       		.uleb128 .LVU25
+ 2820              	.LLST1:
+ 2821 0119 0C000000 		.4byte	.LVL2
+ 2822 011d 1C000000 		.4byte	.LVL3
+ 2823 0121 0600     		.2byte	0x6
+ 2824 0123 70       		.byte	0x70
+ 2825 0124 00       		.sleb128 0
+ 2826 0125 08       		.byte	0x8
+ 2827 0126 F0       		.byte	0xf0
+ 2828 0127 1A       		.byte	0x1a
+ 2829 0128 9F       		.byte	0x9f
+ 2830 0129 00000000 		.4byte	0
+ 2831 012d 00000000 		.4byte	0
+ 2832              	.LVUS0:
+ 2833 0131 00       		.uleb128 .LVU9
+ 2834 0132 00       		.uleb128 .LVU14
+ 2835              	.LLST0:
+ 2836 0133 0C000000 		.4byte	.LVL0
+ 2837 0137 1C000000 		.4byte	.LVL1
+ 2838 013b 0500     		.2byte	0x5
+ 2839 013d 70       		.byte	0x70
+ 2840 013e 00       		.sleb128 0
+ 2841 013f 3F       		.byte	0x3f
+ 2842 0140 1A       		.byte	0x1a
+ 2843 0141 9F       		.byte	0x9f
+ 2844 0142 00000000 		.4byte	0
+ 2845 0146 00000000 		.4byte	0
+ 2846              		.section	.debug_aranges,"",%progbits
+ 2847 0000 64000000 		.4byte	0x64
+ 2848 0004 0200     		.2byte	0x2
+ 2849 0006 00000000 		.4byte	.Ldebug_info0
+ 2850 000a 04       		.byte	0x4
+ 2851 000b 00       		.byte	0
+ 2852 000c 0000     		.2byte	0
+ 2853 000e 0000     		.2byte	0
+ 2854 0010 00000000 		.4byte	.LFB0
+ 2855 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 2856 0018 00000000 		.4byte	.LFB1
+ 2857 001c 2C000000 		.4byte	.LFE1-.LFB1
+ 2858 0020 00000000 		.4byte	.LFB2
+ 2859 0024 2C000000 		.4byte	.LFE2-.LFB2
+ 2860 0028 00000000 		.4byte	.LFB3
+ 2861 002c 10000000 		.4byte	.LFE3-.LFB3
+ 2862 0030 00000000 		.4byte	.LFB4
+ 2863 0034 34000000 		.4byte	.LFE4-.LFB4
+ 2864 0038 00000000 		.4byte	.LFB5
+ 2865 003c 34000000 		.4byte	.LFE5-.LFB5
+ 2866 0040 00000000 		.4byte	.LFB6
+ 2867 0044 0C000000 		.4byte	.LFE6-.LFB6
+ 2868 0048 00000000 		.4byte	.LFB7
+ 2869 004c 0C000000 		.4byte	.LFE7-.LFB7
+ 2870 0050 00000000 		.4byte	.LFB8
+ 2871 0054 0C000000 		.4byte	.LFE8-.LFB8
+ 2872 0058 00000000 		.4byte	.LFB9
+ 2873 005c 0C000000 		.4byte	.LFE9-.LFB9
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 58
+
+
+ 2874 0060 00000000 		.4byte	0
+ 2875 0064 00000000 		.4byte	0
+ 2876              		.section	.debug_ranges,"",%progbits
+ 2877              	.Ldebug_ranges0:
+ 2878 0000 00000000 		.4byte	.LFB0
+ 2879 0004 0C000000 		.4byte	.LFE0
+ 2880 0008 00000000 		.4byte	.LFB1
+ 2881 000c 2C000000 		.4byte	.LFE1
+ 2882 0010 00000000 		.4byte	.LFB2
+ 2883 0014 2C000000 		.4byte	.LFE2
+ 2884 0018 00000000 		.4byte	.LFB3
+ 2885 001c 10000000 		.4byte	.LFE3
+ 2886 0020 00000000 		.4byte	.LFB4
+ 2887 0024 34000000 		.4byte	.LFE4
+ 2888 0028 00000000 		.4byte	.LFB5
+ 2889 002c 34000000 		.4byte	.LFE5
+ 2890 0030 00000000 		.4byte	.LFB6
+ 2891 0034 0C000000 		.4byte	.LFE6
+ 2892 0038 00000000 		.4byte	.LFB7
+ 2893 003c 0C000000 		.4byte	.LFE7
+ 2894 0040 00000000 		.4byte	.LFB8
+ 2895 0044 0C000000 		.4byte	.LFE8
+ 2896 0048 00000000 		.4byte	.LFB9
+ 2897 004c 0C000000 		.4byte	.LFE9
+ 2898 0050 00000000 		.4byte	0
+ 2899 0054 00000000 		.4byte	0
+ 2900              		.section	.debug_line,"",%progbits
+ 2901              	.Ldebug_line0:
+ 2902 0000 8F030000 		.section	.debug_str,"MS",%progbits,1
+ 2902      03000702 
+ 2902      00000201 
+ 2902      FB0E0D00 
+ 2902      01010101 
+ 2903              	.LASF45:
+ 2904 0000 5F64736F 		.ascii	"_dso_handle\000"
+ 2904      5F68616E 
+ 2904      646C6500 
+ 2905              	.LASF152:
+ 2906 000c 4932435F 		.ascii	"I2C_1_SlaveClearReadBuf\000"
+ 2906      315F536C 
+ 2906      61766543 
+ 2906      6C656172 
+ 2906      52656164 
+ 2907              	.LASF53:
+ 2908 0024 5F73697A 		.ascii	"_size\000"
+ 2908      6500
+ 2909              	.LASF44:
+ 2910 002a 5F666E61 		.ascii	"_fnargs\000"
+ 2910      72677300 
+ 2911              	.LASF97:
+ 2912 0032 5F72616E 		.ascii	"_rand48\000"
+ 2912      64343800 
+ 2913              	.LASF77:
+ 2914 003a 5F656D65 		.ascii	"_emergency\000"
+ 2914      7267656E 
+ 2914      637900
+ 2915              	.LASF159:
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 59
+
+
+ 2916 0045 72644275 		.ascii	"rdBuf\000"
+ 2916      6600
+ 2917              	.LASF67:
+ 2918 004b 5F646174 		.ascii	"_data\000"
+ 2918      6100
+ 2919              	.LASF147:
+ 2920 0051 4932435F 		.ascii	"I2C_1_slRdBufIndex\000"
+ 2920      315F736C 
+ 2920      52644275 
+ 2920      66496E64 
+ 2920      657800
+ 2921              	.LASF117:
+ 2922 0064 5F776372 		.ascii	"_wcrtomb_state\000"
+ 2922      746F6D62 
+ 2922      5F737461 
+ 2922      746500
+ 2923              	.LASF118:
+ 2924 0073 5F776373 		.ascii	"_wcsrtombs_state\000"
+ 2924      72746F6D 
+ 2924      62735F73 
+ 2924      74617465 
+ 2924      00
+ 2925              	.LASF160:
+ 2926 0084 4932435F 		.ascii	"I2C_1_SlaveSetAddress\000"
+ 2926      315F536C 
+ 2926      61766553 
+ 2926      65744164 
+ 2926      64726573 
+ 2927              	.LASF7:
+ 2928 009a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2928      206C6F6E 
+ 2928      6720756E 
+ 2928      7369676E 
+ 2928      65642069 
+ 2929              	.LASF57:
+ 2930 00b1 5F6C6266 		.ascii	"_lbfsize\000"
+ 2930      73697A65 
+ 2930      00
+ 2931              	.LASF137:
+ 2932 00ba 61646472 		.ascii	"addr\000"
+ 2932      00
+ 2933              	.LASF149:
+ 2934 00bf 4932435F 		.ascii	"I2C_1_slWrBufSize\000"
+ 2934      315F736C 
+ 2934      57724275 
+ 2934      6653697A 
+ 2934      6500
+ 2935              	.LASF124:
+ 2936 00d1 5F5F6C6F 		.ascii	"__locale_t\000"
+ 2936      63616C65 
+ 2936      5F7400
+ 2937              	.LASF129:
+ 2938 00dc 64696554 		.ascii	"dieTemperature\000"
+ 2938      656D7065 
+ 2938      72617475 
+ 2938      726500
+ 2939              	.LASF165:
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 60
+
+
+ 2940 00eb 4932435F 		.ascii	"I2C_1_SlaveStatus\000"
+ 2940      315F536C 
+ 2940      61766553 
+ 2940      74617475 
+ 2940      7300
+ 2941              	.LASF115:
+ 2942 00fd 5F6D6272 		.ascii	"_mbrtowc_state\000"
+ 2942      746F7763 
+ 2942      5F737461 
+ 2942      746500
+ 2943              	.LASF133:
+ 2944 010c 63796465 		.ascii	"cydelay_freq_mhz\000"
+ 2944      6C61795F 
+ 2944      66726571 
+ 2944      5F6D687A 
+ 2944      00
+ 2945              	.LASF163:
+ 2946 011d 4932435F 		.ascii	"I2C_1_SlaveClearWriteStatus\000"
+ 2946      315F536C 
+ 2946      61766543 
+ 2946      6C656172 
+ 2946      57726974 
+ 2947              	.LASF34:
+ 2948 0139 5F5F746D 		.ascii	"__tm_sec\000"
+ 2948      5F736563 
+ 2948      00
+ 2949              	.LASF6:
+ 2950 0142 6C6F6E67 		.ascii	"long long int\000"
+ 2950      206C6F6E 
+ 2950      6720696E 
+ 2950      7400
+ 2951              	.LASF0:
+ 2952 0150 7369676E 		.ascii	"signed char\000"
+ 2952      65642063 
+ 2952      68617200 
+ 2953              	.LASF63:
+ 2954 015c 5F756275 		.ascii	"_ubuf\000"
+ 2954      6600
+ 2955              	.LASF52:
+ 2956 0162 5F626173 		.ascii	"_base\000"
+ 2956      6500
+ 2957              	.LASF36:
+ 2958 0168 5F5F746D 		.ascii	"__tm_hour\000"
+ 2958      5F686F75 
+ 2958      7200
+ 2959              	.LASF92:
+ 2960 0172 5F5F7366 		.ascii	"__sf\000"
+ 2960      00
+ 2961              	.LASF43:
+ 2962 0177 5F6F6E5F 		.ascii	"_on_exit_args\000"
+ 2962      65786974 
+ 2962      5F617267 
+ 2962      7300
+ 2963              	.LASF150:
+ 2964 0185 4932435F 		.ascii	"I2C_1_slWrBufIndex\000"
+ 2964      315F736C 
+ 2964      57724275 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 61
+
+
+ 2964      66496E64 
+ 2964      657800
+ 2965              	.LASF58:
+ 2966 0198 5F636F6F 		.ascii	"_cookie\000"
+ 2966      6B696500 
+ 2967              	.LASF91:
+ 2968 01a0 5F5F7367 		.ascii	"__sglue\000"
+ 2968      6C756500 
+ 2969              	.LASF4:
+ 2970 01a8 6C6F6E67 		.ascii	"long int\000"
+ 2970      20696E74 
+ 2970      00
+ 2971              	.LASF55:
+ 2972 01b1 5F666C61 		.ascii	"_flags\000"
+ 2972      677300
+ 2973              	.LASF47:
+ 2974 01b8 5F69735F 		.ascii	"_is_cxa\000"
+ 2974      63786100 
+ 2975              	.LASF73:
+ 2976 01c0 5F737464 		.ascii	"_stdin\000"
+ 2976      696E00
+ 2977              	.LASF65:
+ 2978 01c7 5F626C6B 		.ascii	"_blksize\000"
+ 2978      73697A65 
+ 2978      00
+ 2979              	.LASF9:
+ 2980 01d0 75696E74 		.ascii	"uint8\000"
+ 2980      3800
+ 2981              	.LASF12:
+ 2982 01d6 646F7562 		.ascii	"double\000"
+ 2982      6C6500
+ 2983              	.LASF148:
+ 2984 01dd 4932435F 		.ascii	"I2C_1_slWrBufPtr\000"
+ 2984      315F736C 
+ 2984      57724275 
+ 2984      66507472 
+ 2984      00
+ 2985              	.LASF87:
+ 2986 01ee 5F637674 		.ascii	"_cvtbuf\000"
+ 2986      62756600 
+ 2987              	.LASF66:
+ 2988 01f6 5F6F6666 		.ascii	"_offset\000"
+ 2988      73657400 
+ 2989              	.LASF116:
+ 2990 01fe 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
+ 2990      72746F77 
+ 2990      63735F73 
+ 2990      74617465 
+ 2990      00
+ 2991              	.LASF114:
+ 2992 020f 5F6D6272 		.ascii	"_mbrlen_state\000"
+ 2992      6C656E5F 
+ 2992      73746174 
+ 2992      6500
+ 2993              	.LASF164:
+ 2994 021d 4932435F 		.ascii	"I2C_1_SlaveClearReadStatus\000"
+ 2994      315F536C 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 62
+
+
+ 2994      61766543 
+ 2994      6C656172 
+ 2994      52656164 
+ 2995              	.LASF10:
+ 2996 0238 75696E74 		.ascii	"uint32\000"
+ 2996      333200
+ 2997              	.LASF50:
+ 2998 023f 5F666E73 		.ascii	"_fns\000"
+ 2998      00
+ 2999              	.LASF30:
+ 3000 0244 5F736967 		.ascii	"_sign\000"
+ 3000      6E00
+ 3001              	.LASF146:
+ 3002 024a 4932435F 		.ascii	"I2C_1_slRdBufSize\000"
+ 3002      315F736C 
+ 3002      52644275 
+ 3002      6653697A 
+ 3002      6500
+ 3003              	.LASF26:
+ 3004 025c 5F666C6F 		.ascii	"_flock_t\000"
+ 3004      636B5F74 
+ 3004      00
+ 3005              	.LASF75:
+ 3006 0265 5F737464 		.ascii	"_stderr\000"
+ 3006      65727200 
+ 3007              	.LASF32:
+ 3008 026d 5F426967 		.ascii	"_Bigint\000"
+ 3008      696E7400 
+ 3009              	.LASF105:
+ 3010 0275 5F67616D 		.ascii	"_gamma_signgam\000"
+ 3010      6D615F73 
+ 3010      69676E67 
+ 3010      616D00
+ 3011              	.LASF143:
+ 3012 0284 4932435F 		.ascii	"I2C_1_state\000"
+ 3012      315F7374 
+ 3012      61746500 
+ 3013              	.LASF59:
+ 3014 0290 5F726561 		.ascii	"_read\000"
+ 3014      6400
+ 3015              	.LASF83:
+ 3016 0296 5F726573 		.ascii	"_result_k\000"
+ 3016      756C745F 
+ 3016      6B00
+ 3017              	.LASF33:
+ 3018 02a0 5F5F746D 		.ascii	"__tm\000"
+ 3018      00
+ 3019              	.LASF8:
+ 3020 02a5 756E7369 		.ascii	"unsigned int\000"
+ 3020      676E6564 
+ 3020      20696E74 
+ 3020      00
+ 3021              	.LASF22:
+ 3022 02b2 5F5F7763 		.ascii	"__wchb\000"
+ 3022      686200
+ 3023              	.LASF74:
+ 3024 02b9 5F737464 		.ascii	"_stdout\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 63
+
+
+ 3024      6F757400 
+ 3025              	.LASF86:
+ 3026 02c1 5F637674 		.ascii	"_cvtlen\000"
+ 3026      6C656E00 
+ 3027              	.LASF156:
+ 3028 02c9 62756653 		.ascii	"bufSize\000"
+ 3028      697A6500 
+ 3029              	.LASF5:
+ 3030 02d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3030      20756E73 
+ 3030      69676E65 
+ 3030      6420696E 
+ 3030      7400
+ 3031              	.LASF56:
+ 3032 02e3 5F66696C 		.ascii	"_file\000"
+ 3032      6500
+ 3033              	.LASF95:
+ 3034 02e9 5F6E696F 		.ascii	"_niobs\000"
+ 3034      627300
+ 3035              	.LASF3:
+ 3036 02f0 73686F72 		.ascii	"short unsigned int\000"
+ 3036      7420756E 
+ 3036      7369676E 
+ 3036      65642069 
+ 3036      6E7400
+ 3037              	.LASF89:
+ 3038 0303 5F617465 		.ascii	"_atexit0\000"
+ 3038      78697430 
+ 3038      00
+ 3039              	.LASF112:
+ 3040 030c 5F736967 		.ascii	"_signal_buf\000"
+ 3040      6E616C5F 
+ 3040      62756600 
+ 3041              	.LASF103:
+ 3042 0318 5F617363 		.ascii	"_asctime_buf\000"
+ 3042      74696D65 
+ 3042      5F627566 
+ 3042      00
+ 3043              	.LASF136:
+ 3044 0325 78636667 		.ascii	"xcfg\000"
+ 3044      00
+ 3045              	.LASF82:
+ 3046 032a 5F726573 		.ascii	"_result\000"
+ 3046      756C7400 
+ 3047              	.LASF21:
+ 3048 0332 5F5F7763 		.ascii	"__wch\000"
+ 3048      6800
+ 3049              	.LASF17:
+ 3050 0338 5F4C4F43 		.ascii	"_LOCK_T\000"
+ 3050      4B5F5400 
+ 3051              	.LASF20:
+ 3052 0340 77696E74 		.ascii	"wint_t\000"
+ 3052      5F7400
+ 3053              	.LASF138:
+ 3054 0347 636C6B44 		.ascii	"clkDiv1\000"
+ 3054      69763100 
+ 3055              	.LASF139:
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 64
+
+
+ 3056 034f 636C6B44 		.ascii	"clkDiv2\000"
+ 3056      69763200 
+ 3057              	.LASF68:
+ 3058 0357 5F6C6F63 		.ascii	"_lock\000"
+ 3058      6B00
+ 3059              	.LASF70:
+ 3060 035d 5F666C61 		.ascii	"_flags2\000"
+ 3060      67733200 
+ 3061              	.LASF151:
+ 3062 0365 4932435F 		.ascii	"I2C_1_SlaveClearWriteBuf\000"
+ 3062      315F536C 
+ 3062      61766543 
+ 3062      6C656172 
+ 3062      57726974 
+ 3063              	.LASF166:
+ 3064 037e 474E5520 		.ascii	"GNU C17 9.2.1 20191025 (release) [ARM/arm-9-branch "
+ 3064      43313720 
+ 3064      392E322E 
+ 3064      31203230 
+ 3064      31393130 
+ 3065 03b1 72657669 		.ascii	"revision 277599] -mcpu=cortex-m3 -mthumb -mfloat-ab"
+ 3065      73696F6E 
+ 3065      20323737 
+ 3065      3539395D 
+ 3065      202D6D63 
+ 3066 03e4 693D736F 		.ascii	"i=soft -march=armv7-m -g -Og -ffunction-sections -f"
+ 3066      6674202D 
+ 3066      6D617263 
+ 3066      683D6172 
+ 3066      6D76372D 
+ 3067 0417 6661742D 		.ascii	"fat-lto-objects\000"
+ 3067      6C746F2D 
+ 3067      6F626A65 
+ 3067      63747300 
+ 3068              	.LASF15:
+ 3069 0427 72656733 		.ascii	"reg32\000"
+ 3069      3200
+ 3070              	.LASF39:
+ 3071 042d 5F5F746D 		.ascii	"__tm_year\000"
+ 3071      5F796561 
+ 3071      7200
+ 3072              	.LASF132:
+ 3073 0437 63796465 		.ascii	"cydelay_freq_khz\000"
+ 3073      6C61795F 
+ 3073      66726571 
+ 3073      5F6B687A 
+ 3073      00
+ 3074              	.LASF16:
+ 3075 0448 6C6F6E67 		.ascii	"long double\000"
+ 3075      20646F75 
+ 3075      626C6500 
+ 3076              	.LASF161:
+ 3077 0454 61646472 		.ascii	"address\000"
+ 3077      65737300 
+ 3078              	.LASF120:
+ 3079 045c 5F6E6578 		.ascii	"_nextf\000"
+ 3079      746600
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 65
+
+
+ 3080              	.LASF140:
+ 3081 0463 4932435F 		.ascii	"I2C_1_BACKUP_STRUCT\000"
+ 3081      315F4241 
+ 3081      434B5550 
+ 3081      5F535452 
+ 3081      55435400 
+ 3082              	.LASF38:
+ 3083 0477 5F5F746D 		.ascii	"__tm_mon\000"
+ 3083      5F6D6F6E 
+ 3083      00
+ 3084              	.LASF130:
+ 3085 0480 43795265 		.ascii	"CyResetStatus\000"
+ 3085      73657453 
+ 3085      74617475 
+ 3085      7300
+ 3086              	.LASF48:
+ 3087 048e 5F617465 		.ascii	"_atexit\000"
+ 3087      78697400 
+ 3088              	.LASF80:
+ 3089 0496 5F5F7364 		.ascii	"__sdidinit\000"
+ 3089      6964696E 
+ 3089      697400
+ 3090              	.LASF18:
+ 3091 04a1 5F6F6666 		.ascii	"_off_t\000"
+ 3091      5F7400
+ 3092              	.LASF11:
+ 3093 04a8 666C6F61 		.ascii	"float\000"
+ 3093      7400
+ 3094              	.LASF85:
+ 3095 04ae 5F667265 		.ascii	"_freelist\000"
+ 3095      656C6973 
+ 3095      7400
+ 3096              	.LASF158:
+ 3097 04b8 4932435F 		.ascii	"I2C_1_SlaveInitReadBuf\000"
+ 3097      315F536C 
+ 3097      61766549 
+ 3097      6E697452 
+ 3097      65616442 
+ 3098              	.LASF110:
+ 3099 04cf 5F776374 		.ascii	"_wctomb_state\000"
+ 3099      6F6D625F 
+ 3099      73746174 
+ 3099      6500
+ 3100              	.LASF131:
+ 3101 04dd 63796465 		.ascii	"cydelay_freq_hz\000"
+ 3101      6C61795F 
+ 3101      66726571 
+ 3101      5F687A00 
+ 3102              	.LASF60:
+ 3103 04ed 5F777269 		.ascii	"_write\000"
+ 3103      746500
+ 3104              	.LASF14:
+ 3105 04f4 72656738 		.ascii	"reg8\000"
+ 3105      00
+ 3106              	.LASF1:
+ 3107 04f9 756E7369 		.ascii	"unsigned char\000"
+ 3107      676E6564 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 66
+
+
+ 3107      20636861 
+ 3107      7200
+ 3108              	.LASF154:
+ 3109 0507 4932435F 		.ascii	"I2C_1_SlaveGetReadBufSize\000"
+ 3109      315F536C 
+ 3109      61766547 
+ 3109      65745265 
+ 3109      61644275 
+ 3110              	.LASF88:
+ 3111 0521 5F6E6577 		.ascii	"_new\000"
+ 3111      00
+ 3112              	.LASF128:
+ 3113 0526 5370634C 		.ascii	"SpcLockState\000"
+ 3113      6F636B53 
+ 3113      74617465 
+ 3113      00
+ 3114              	.LASF155:
+ 3115 0533 77724275 		.ascii	"wrBuf\000"
+ 3115      6600
+ 3116              	.LASF119:
+ 3117 0539 5F685F65 		.ascii	"_h_errno\000"
+ 3117      72726E6F 
+ 3117      00
+ 3118              	.LASF2:
+ 3119 0542 73686F72 		.ascii	"short int\000"
+ 3119      7420696E 
+ 3119      7400
+ 3120              	.LASF41:
+ 3121 054c 5F5F746D 		.ascii	"__tm_yday\000"
+ 3121      5F796461 
+ 3121      7900
+ 3122              	.LASF51:
+ 3123 0556 5F5F7362 		.ascii	"__sbuf\000"
+ 3123      756600
+ 3124              	.LASF96:
+ 3125 055d 5F696F62 		.ascii	"_iobs\000"
+ 3125      7300
+ 3126              	.LASF93:
+ 3127 0563 5F5F4649 		.ascii	"__FILE\000"
+ 3127      4C4500
+ 3128              	.LASF25:
+ 3129 056a 5F6D6273 		.ascii	"_mbstate_t\000"
+ 3129      74617465 
+ 3129      5F7400
+ 3130              	.LASF54:
+ 3131 0575 5F5F7346 		.ascii	"__sFILE\000"
+ 3131      494C4500 
+ 3132              	.LASF69:
+ 3133 057d 5F6D6273 		.ascii	"_mbstate\000"
+ 3133      74617465 
+ 3133      00
+ 3134              	.LASF106:
+ 3135 0586 5F72616E 		.ascii	"_rand_next\000"
+ 3135      645F6E65 
+ 3135      787400
+ 3136              	.LASF108:
+ 3137 0591 5F6D626C 		.ascii	"_mblen_state\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 67
+
+
+ 3137      656E5F73 
+ 3137      74617465 
+ 3137      00
+ 3138              	.LASF76:
+ 3139 059e 5F696E63 		.ascii	"_inc\000"
+ 3139      00
+ 3140              	.LASF49:
+ 3141 05a3 5F696E64 		.ascii	"_ind\000"
+ 3141      00
+ 3142              	.LASF79:
+ 3143 05a8 5F6C6F63 		.ascii	"_locale\000"
+ 3143      616C6500 
+ 3144              	.LASF81:
+ 3145 05b0 5F5F636C 		.ascii	"__cleanup\000"
+ 3145      65616E75 
+ 3145      7000
+ 3146              	.LASF78:
+ 3147 05ba 5F756E73 		.ascii	"_unspecified_locale_info\000"
+ 3147      70656369 
+ 3147      66696564 
+ 3147      5F6C6F63 
+ 3147      616C655F 
+ 3148              	.LASF29:
+ 3149 05d3 5F6D6178 		.ascii	"_maxwds\000"
+ 3149      77647300 
+ 3150              	.LASF71:
+ 3151 05db 5F726565 		.ascii	"_reent\000"
+ 3151      6E7400
+ 3152              	.LASF98:
+ 3153 05e2 5F736565 		.ascii	"_seed\000"
+ 3153      6400
+ 3154              	.LASF134:
+ 3155 05e8 63796465 		.ascii	"cydelay_32k_ms\000"
+ 3155      6C61795F 
+ 3155      33326B5F 
+ 3155      6D7300
+ 3156              	.LASF23:
+ 3157 05f7 5F5F636F 		.ascii	"__count\000"
+ 3157      756E7400 
+ 3158              	.LASF123:
+ 3159 05ff 5F5F6C6F 		.ascii	"__lock\000"
+ 3159      636B00
+ 3160              	.LASF24:
+ 3161 0606 5F5F7661 		.ascii	"__value\000"
+ 3161      6C756500 
+ 3162              	.LASF61:
+ 3163 060e 5F736565 		.ascii	"_seek\000"
+ 3163      6B00
+ 3164              	.LASF125:
+ 3165 0614 5F696D70 		.ascii	"_impure_ptr\000"
+ 3165      7572655F 
+ 3165      70747200 
+ 3166              	.LASF19:
+ 3167 0620 5F66706F 		.ascii	"_fpos_t\000"
+ 3167      735F7400 
+ 3168              	.LASF72:
+ 3169 0628 5F657272 		.ascii	"_errno\000"
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 68
+
+
+ 3169      6E6F00
+ 3170              	.LASF13:
+ 3171 062f 63686172 		.ascii	"char\000"
+ 3171      00
+ 3172              	.LASF167:
+ 3173 0634 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2C_1_SLAVE.c\000"
+ 3173      72617465 
+ 3173      645F536F 
+ 3173      75726365 
+ 3173      5C50536F 
+ 3174              	.LASF35:
+ 3175 0659 5F5F746D 		.ascii	"__tm_min\000"
+ 3175      5F6D696E 
+ 3175      00
+ 3176              	.LASF135:
+ 3177 0662 656E6162 		.ascii	"enableState\000"
+ 3177      6C655374 
+ 3177      61746500 
+ 3178              	.LASF141:
+ 3179 066e 4932435F 		.ascii	"I2C_1_initVar\000"
+ 3179      315F696E 
+ 3179      69745661 
+ 3179      7200
+ 3180              	.LASF127:
+ 3181 067c 5F637479 		.ascii	"_ctype_\000"
+ 3181      70655F00 
+ 3182              	.LASF99:
+ 3183 0684 5F6D756C 		.ascii	"_mult\000"
+ 3183      7400
+ 3184              	.LASF28:
+ 3185 068a 5F6E6578 		.ascii	"_next\000"
+ 3185      7400
+ 3186              	.LASF102:
+ 3187 0690 5F737472 		.ascii	"_strtok_last\000"
+ 3187      746F6B5F 
+ 3187      6C617374 
+ 3187      00
+ 3188              	.LASF46:
+ 3189 069d 5F666E74 		.ascii	"_fntypes\000"
+ 3189      79706573 
+ 3189      00
+ 3190              	.LASF100:
+ 3191 06a6 5F616464 		.ascii	"_add\000"
+ 3191      00
+ 3192              	.LASF27:
+ 3193 06ab 5F5F554C 		.ascii	"__ULong\000"
+ 3193      6F6E6700 
+ 3194              	.LASF113:
+ 3195 06b3 5F676574 		.ascii	"_getdate_err\000"
+ 3195      64617465 
+ 3195      5F657272 
+ 3195      00
+ 3196              	.LASF145:
+ 3197 06c0 4932435F 		.ascii	"I2C_1_slRdBufPtr\000"
+ 3197      315F736C 
+ 3197      52644275 
+ 3197      66507472 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 69
+
+
+ 3197      00
+ 3198              	.LASF126:
+ 3199 06d1 5F676C6F 		.ascii	"_global_impure_ptr\000"
+ 3199      62616C5F 
+ 3199      696D7075 
+ 3199      72655F70 
+ 3199      747200
+ 3200              	.LASF101:
+ 3201 06e4 5F756E75 		.ascii	"_unused_rand\000"
+ 3201      7365645F 
+ 3201      72616E64 
+ 3201      00
+ 3202              	.LASF162:
+ 3203 06f1 73746174 		.ascii	"status\000"
+ 3203      757300
+ 3204              	.LASF142:
+ 3205 06f8 4932435F 		.ascii	"I2C_1_backup\000"
+ 3205      315F6261 
+ 3205      636B7570 
+ 3205      00
+ 3206              	.LASF31:
+ 3207 0705 5F776473 		.ascii	"_wds\000"
+ 3207      00
+ 3208              	.LASF40:
+ 3209 070a 5F5F746D 		.ascii	"__tm_wday\000"
+ 3209      5F776461 
+ 3209      7900
+ 3210              	.LASF94:
+ 3211 0714 5F676C75 		.ascii	"_glue\000"
+ 3211      6500
+ 3212              	.LASF121:
+ 3213 071a 5F6E6D61 		.ascii	"_nmalloc\000"
+ 3213      6C6C6F63 
+ 3213      00
+ 3214              	.LASF111:
+ 3215 0723 5F6C3634 		.ascii	"_l64a_buf\000"
+ 3215      615F6275 
+ 3215      6600
+ 3216              	.LASF90:
+ 3217 072d 5F736967 		.ascii	"_sig_func\000"
+ 3217      5F66756E 
+ 3217      6300
+ 3218              	.LASF157:
+ 3219 0737 4932435F 		.ascii	"I2C_1_SlaveInitWriteBuf\000"
+ 3219      315F536C 
+ 3219      61766549 
+ 3219      6E697457 
+ 3219      72697465 
+ 3220              	.LASF64:
+ 3221 074f 5F6E6275 		.ascii	"_nbuf\000"
+ 3221      6600
+ 3222              	.LASF122:
+ 3223 0755 5F756E75 		.ascii	"_unused\000"
+ 3223      73656400 
+ 3224              	.LASF42:
+ 3225 075d 5F5F746D 		.ascii	"__tm_isdst\000"
+ 3225      5F697364 
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccXos67h.s 			page 70
+
+
+ 3225      737400
+ 3226              	.LASF104:
+ 3227 0768 5F6C6F63 		.ascii	"_localtime_buf\000"
+ 3227      616C7469 
+ 3227      6D655F62 
+ 3227      756600
+ 3228              	.LASF62:
+ 3229 0777 5F636C6F 		.ascii	"_close\000"
+ 3229      736500
+ 3230              	.LASF107:
+ 3231 077e 5F723438 		.ascii	"_r48\000"
+ 3231      00
+ 3232              	.LASF109:
+ 3233 0783 5F6D6274 		.ascii	"_mbtowc_state\000"
+ 3233      6F77635F 
+ 3233      73746174 
+ 3233      6500
+ 3234              	.LASF84:
+ 3235 0791 5F703573 		.ascii	"_p5s\000"
+ 3235      00
+ 3236              	.LASF153:
+ 3237 0796 4932435F 		.ascii	"I2C_1_SlaveGetWriteBufSize\000"
+ 3237      315F536C 
+ 3237      61766547 
+ 3237      65745772 
+ 3237      69746542 
+ 3238              	.LASF168:
+ 3239 07b1 433A5C55 		.ascii	"C:\\Users\\jens-\\3.Projekt\\Projekt3\\Proj3_PSOC_C"
+ 3239      73657273 
+ 3239      5C6A656E 
+ 3239      732D5C33 
+ 3239      2E50726F 
+ 3240 07df 5C446573 		.ascii	"\\Design01.cydsn\000"
+ 3240      69676E30 
+ 3240      312E6379 
+ 3240      64736E00 
+ 3241              	.LASF144:
+ 3242 07ef 4932435F 		.ascii	"I2C_1_slStatus\000"
+ 3242      315F736C 
+ 3242      53746174 
+ 3242      757300
+ 3243              	.LASF37:
+ 3244 07fe 5F5F746D 		.ascii	"__tm_mday\000"
+ 3244      5F6D6461 
+ 3244      7900
+ 3245              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM

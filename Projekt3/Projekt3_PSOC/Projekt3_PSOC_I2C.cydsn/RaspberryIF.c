@@ -23,9 +23,11 @@ extern "C" {
 #endif
 #include <cstddef>
 #include "RaspberryIF.h"
-
+#include "PSOC_controller.h"
     RaspberryIF::RaspberryIF()
     {
+        RaspberryPtr=this;
+        
         I2C_1_SlaveInitReadBuf(readBuf,8);
         I2C_1_SlaveInitWriteBuf(writeBuf,8);
         I2C_1_Start();
@@ -50,17 +52,23 @@ extern "C" {
         
         if(I2C_1_SlaveGetWriteBufSize()>=3)
         {
-            
-            //dispensdosis med de tre bytes fra writebufsize.
+            RaspberryPtr->I2C_DosisReceived();
+           
+        }
+        
+        
+    }
+    
+    void RaspberryIF::I2C_DosisReceived()
+    {
+         //dispensdosis med de tre bytes fra writebufsize.
             uint8_t PillA=writeBuf[0];
             uint8_t PillB=writeBuf[1];
             uint8_t PillC=writeBuf[2];
             I2C_1_SlaveClearWriteBuf();
             PSOC_controller_Ptr->dispensPiller(PillA,PillB,PillC);
-        }
-        
-        
     }
+    
    
 
 /* [] END OF FILE */

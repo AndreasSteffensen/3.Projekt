@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Proj3_PSOC_C\Design01\Header Files\DispenserIF.h">
+<ExpandedNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\TopDesign</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Pins</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Analog</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Clocks</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Interrupts</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\DMA</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\System</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Directives</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Flash Security</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\EEPROM</v>
+<v>Proj3_PSOC_C\Design01\Header Files</v>
+<v>Proj3_PSOC_C\Design01\Header Files\cyapicallbacks.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\DispenserIF.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\PSOC_controller.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\RaspberryIF.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\Tester.h</v>
+<v>Proj3_PSOC_C\Design01\Source Files</v>
+<v>Proj3_PSOC_C\Design01\Source Files\DispenserIF.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\main.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\PSOC_controller.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\RaspberryIF.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\Tester.c</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\TopDesign</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Pins</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Analog</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Clocks</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Interrupts</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\DMA</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\System</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Directives</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\Flash Security</v>
+<v>Proj3_PSOC_C\Design01\Design01.cydwr\EEPROM</v>
+<v>Proj3_PSOC_C\Design01\Header Files</v>
+<v>Proj3_PSOC_C\Design01\Header Files\cyapicallbacks.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\DispenserIF.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\PSOC_controller.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\RaspberryIF.h</v>
+<v>Proj3_PSOC_C\Design01\Header Files\Tester.h</v>
+<v>Proj3_PSOC_C\Design01\Source Files</v>
+<v>Proj3_PSOC_C\Design01\Source Files\DispenserIF.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\main.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\PSOC_controller.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\RaspberryIF.c</v>
+<v>Proj3_PSOC_C\Design01\Source Files\Tester.c</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cy_boot</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\I2C_1</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\LED</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\scl</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\sda</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\UART_tester</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\UART_tester_IntClock</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevice.h</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Proj3_PSOC_C\Design01\Generated_Source\PSoC5\cyfitter.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\TopDesign</v>
+<v>Proj3_PSOC_C\Design01\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\TopDesign</v>
+<v>Proj3_PSOC_C\Design01\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\CortexM3</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PSOC_controller.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\RaspberryIF.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\scl.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\sda.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Tester.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_BOOT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_INT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_IntClock.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_PM.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
+<v>Proj3_PSOC_C\Design01\Design01.gpdsc</v>
+<v>Proj3_PSOC_C\Design01\Design01.rpt</v>
+<v>Proj3_PSOC_C\Design01\Design01_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\CortexM3</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PSOC_controller.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\RaspberryIF.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\scl.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\sda.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Tester.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_BOOT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_INT.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_IntClock.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_tester_PM.lst</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>Proj3_PSOC_C\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
+<v>Proj3_PSOC_C\Design01\Design01.gpdsc</v>
+<v>Proj3_PSOC_C\Design01\Design01.rpt</v>
+<v>Proj3_PSOC_C\Design01\Design01_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\PSoC 5LP Architecture TRM</v>
+<v>Proj3_PSOC_C\Design01\CY8C58LP Family Datasheet</v>
+<v>Proj3_PSOC_C\Design01\System Reference Guides</v>
+<v>Proj3_PSOC_C\Design01\System Reference Guides\cy_boot_v5_70</v>
+<v>Proj3_PSOC_C\Design01\cy_pins_v2_20</v>
+<v>Proj3_PSOC_C\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Proj3_PSOC_C\Design01\I2C_v3_50.pdf</v>
+<v>Proj3_PSOC_C\Design01\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Proj3_PSOC_C</v>
+<v>Proj3_PSOC_C\Design01</v>
+<v>Proj3_PSOC_C\Design01\PSoC 5LP Architecture TRM</v>
+<v>Proj3_PSOC_C\Design01\CY8C58LP Family Datasheet</v>
+<v>Proj3_PSOC_C\Design01\System Reference Guides</v>
+<v>Proj3_PSOC_C\Design01\System Reference Guides\cy_boot_v5_70</v>
+<v>Proj3_PSOC_C\Design01\cy_pins_v2_20</v>
+<v>Proj3_PSOC_C\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Proj3_PSOC_C\Design01\I2C_v3_50.pdf</v>
+<v>Proj3_PSOC_C\Design01\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

@@ -40,10 +40,12 @@
           <File BuildType="BUILD" Toolchain="">RaspberryIF.c</File>
           <File BuildType="BUILD" Toolchain="">PSOC_controller.c</File>
           <File BuildType="BUILD" Toolchain="">Tester.c</File>
+          <File BuildType="BUILD" Toolchain="">DispenserIF.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">RaspberryIF.h</File>
           <File BuildType="BUILD" Toolchain="">PSOC_controller.h</File>
           <File BuildType="BUILD" Toolchain="">Tester.h</File>
+          <File BuildType="BUILD" Toolchain="">DispenserIF.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Generated_Source\PSoC5">
@@ -97,30 +99,71 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_SLAVE.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_MASTER.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester_INT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\scl_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\scl.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\scl.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sda_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sda.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\sda.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_tester_IntClock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_IntClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_1_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_B2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Motor_Calibration_Sensor_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Motor_Calibration_Sensor.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Motor_Calibration_Sensor.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_A2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pill_Container_Sensor_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pill_Container_Sensor.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pill_Container_Sensor.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RPI_INT_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RPI_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RPI_INT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_C2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_D2.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\Export\ARM_GCC_Generic">

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
   29:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_CFG_CTRL_PTR        ((reg32 *) CYREG_NVIC_CFG_CONTROL)
   30:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_APINT_PRIGROUP_3_5  (0x00000400u)  /* Priority group 3.5 split */
   31:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_APINT_VECTKEY       (0x05FA0000u)  /* This key is required in order to write the NV
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 2
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 2
 
 
   32:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_CFG_STACKALIGN      (0x00000200u)  /* This specifies that the exception stack must 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
   86:Generated_Source\PSoC5/Cm3Start.c **** * Theory:
   87:Generated_Source\PSoC5/Cm3Start.c **** *  Any value other than zero is acceptable.
   88:Generated_Source\PSoC5/Cm3Start.c **** *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 3
 
 
   89:Generated_Source\PSoC5/Cm3Start.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
   47              		.loc 1 118 18 discriminator 2 view .LVU6
   48 000c FEE7     		b	.L2
   49              	.L3:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 4
 
 
  104:Generated_Source\PSoC5/Cm3Start.c ****             {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  155:Generated_Source\PSoC5/Cm3Start.c ****             *(reg32 *)(CYDEV_DEBUG_ENABLE_REGISTER) |= CYDEV_DEBUG_ENABLE_MASK;
  156:Generated_Source\PSoC5/Cm3Start.c ****         #endif /* (CYDEV_DEBUGGING_ENABLE) */
  157:Generated_Source\PSoC5/Cm3Start.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 5
 
 
  158:Generated_Source\PSoC5/Cm3Start.c ****         /* Reset Status Register has Read-to-clear SW access mode.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  212:Generated_Source\PSoC5/Cm3Start.c ****     size_t init_size;       /* Size of initial data.  */
  213:Generated_Source\PSoC5/Cm3Start.c ****     size_t zero_size;       /* Additional size to be zeroed.  */
  214:Generated_Source\PSoC5/Cm3Start.c **** };
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 6
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 6
 
 
  215:Generated_Source\PSoC5/Cm3Start.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
   91              		.size	_exit, .-_exit
   92              		.section	.text._sbrk,"ax",%progbits
   93              		.align	1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 7
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 7
 
 
   94              		.weak	_sbrk
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  121              		.loc 1 271 23 view .LVU24
  122 0008 0344     		add	r3, r3, r0
  123              	.LVL6:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 8
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 8
 
 
  124              		.loc 1 271 33 view .LVU25
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  160              	.LFE2:
  161              		.size	_sbrk, .-_sbrk
  162              		.section	.text.Start_c,"ax",%progbits
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 9
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 9
 
 
  163              		.align	1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  329:Generated_Source\PSoC5/Cm3Start.c **** {
  172              		.loc 1 329 1 is_stmt 1 view -0
  173              		.cfi_startproc
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 10
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 10
 
 
  174              		@ Volatile: function does not return.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  208              		.loc 1 341 26 is_stmt 1 discriminator 1 view .LVU51
  341:Generated_Source\PSoC5/Cm3Start.c ****         {
  209              		.loc 1 341 9 is_stmt 0 discriminator 1 view .LVU52
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 11
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 11
 
 
  210 0012 A242     		cmp	r2, r4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  334:Generated_Source\PSoC5/Cm3Start.c ****     {
  249              		.loc 1 334 37 is_stmt 1 discriminator 1 view .LVU70
  334:Generated_Source\PSoC5/Cm3Start.c ****     {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 12
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 12
 
 
  250              		.loc 1 334 5 is_stmt 0 discriminator 1 view .LVU71
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  364:Generated_Source\PSoC5/Cm3Start.c ****     }
  284              		.loc 1 364 5 discriminator 1 view .LVU87
  361:Generated_Source\PSoC5/Cm3Start.c ****     {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 13
 
 
  285              		.loc 1 361 11 discriminator 1 view .LVU88
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  334              		.global	initialize_psoc
  335              		.syntax unified
  336              		.thumb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 14
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 14
 
 
  337              		.thumb_func
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  414:Generated_Source\PSoC5/Cm3Start.c **** 
  415:Generated_Source\PSoC5/Cm3Start.c **** 
  416:Generated_Source\PSoC5/Cm3Start.c **** /*******************************************************************************
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 15
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 15
 
 
  417:Generated_Source\PSoC5/Cm3Start.c **** *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  462:Generated_Source\PSoC5/Cm3Start.c **** 
  463:Generated_Source\PSoC5/Cm3Start.c ****     /* Set Priority group 5. */
  464:Generated_Source\PSoC5/Cm3Start.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 16
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 16
 
 
  465:Generated_Source\PSoC5/Cm3Start.c ****     /* Writes to NVIC_APINT register require the VECTKEY in the upper half */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  390 002c 0A49     		ldr	r1, .L38+20
  391 002e F5E7     		b	.L32
  392              	.L36:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 17
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 17
 
 
  476:Generated_Source\PSoC5/Cm3Start.c ****         #endif  /* defined (__ICCARM__) */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  423 0060 00000000 		.word	CyResetStatus
  424 0064 08ED00E0 		.word	-536810232
  425              		.cfi_endproc
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 18
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 18
 
 
  426              	.LFE5:
@@ -1031,9 +1031,9 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  433              		.data
  434              		.align	2
  435              		.set	.LANCHOR0,. + 0
- 436              		.type	heapPointer.5203, %object
- 437              		.size	heapPointer.5203, 4
- 438              	heapPointer.5203:
+ 436              		.type	heapPointer.5157, %object
+ 437              		.size	heapPointer.5157, 4
+ 438              	heapPointer.5157:
  439 0000 00000000 		.word	end
  440              		.section	.ramvectors,"aw"
  441              		.align	8
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  476 000a 04       		.byte	0x4
  477 000b 01       		.uleb128 0x1
  478 000c 21030000 		.4byte	.LASF165
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 19
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 19
 
 
  479 0010 0C       		.byte	0xc
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  533 0079 04       		.byte	0x4
  534 007a 00040000 		.4byte	.LASF9
  535 007e 05       		.uleb128 0x5
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 20
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 20
 
 
  536 007f 90010000 		.4byte	.LASF11
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  590 00f0 F7020000 		.4byte	.LASF19
  591 00f4 04       		.byte	0x4
  592 00f5 22       		.byte	0x22
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 21
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 21
 
 
  593 00f6 19       		.byte	0x19
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  647 0160 A3       		.byte	0xa3
  648 0161 09       		.byte	0x9
  649 0162 81010000 		.4byte	0x181
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 22
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 22
 
 
  650 0166 10       		.uleb128 0x10
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  704 01c8 5D000000 		.4byte	0x5d
  705 01cc 04       		.byte	0x4
  706 01cd 10       		.uleb128 0x10
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 23
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 23
 
 
  707 01ce 7E050000 		.4byte	.LASF31
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  761 0236 06       		.byte	0x6
  762 0237 3A       		.byte	0x3a
  763 0238 09       		.byte	0x9
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 24
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 24
 
 
  764 0239 5D000000 		.4byte	0x5d
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  818 029f 0801     		.2byte	0x108
  819 02a1 06       		.byte	0x6
  820 02a2 4A       		.byte	0x4a
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 25
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 25
 
 
  821 02a3 08       		.byte	0x8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  875 030f 06       		.byte	0x6
  876 0310 5F       		.byte	0x5f
  877 0311 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 26
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 26
 
 
  878 0312 5D000000 		.4byte	0x5d
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  932 037b 68       		.byte	0x68
  933 037c 06       		.byte	0x6
  934 037d B5       		.byte	0xb5
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 27
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 27
 
 
  935 037e 08       		.byte	0x8
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  989 03e1 C3       		.byte	0xc3
  990 03e2 0A       		.byte	0xa
  991 03e3 99010000 		.4byte	0x199
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 28
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 28
 
 
  992 03e7 1C       		.byte	0x1c
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1046 044a 11       		.byte	0x11
  1047 044b A4060000 		.4byte	0x6a4
  1048 044f 40       		.byte	0x40
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 29
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 29
 
 
  1049 0450 10       		.uleb128 0x10
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1103 04b3 5D000000 		.4byte	0x5d
  1104 04b7 64       		.byte	0x64
  1105 04b8 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 30
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 30
 
 
  1106 04b9 16       		.uleb128 0x16
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1160 052e 06       		.byte	0x6
  1161 052f 6902     		.2byte	0x269
  1162 0531 08       		.byte	0x8
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 31
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 31
 
 
  1163 0532 5D000000 		.4byte	0x5d
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1217 059f 7702     		.2byte	0x277
  1218 05a1 13       		.byte	0x13
  1219 05a2 01020000 		.4byte	0x201
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 32
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 32
 
 
  1220 05a6 48       		.byte	0x48
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1274 0614 10       		.byte	0x10
  1275 0615 D1060000 		.4byte	0x6d1
  1276 0619 E002     		.2byte	0x2e0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 33
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 33
 
 
  1277 061b 1A       		.uleb128 0x1a
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1331 0698 17       		.uleb128 0x17
  1332 0699 99010000 		.4byte	0x199
  1333 069d 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 34
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 34
 
 
  1334 069e 08       		.uleb128 0x8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1388 070c D1060000 		.4byte	0x6d1
  1389 0710 08       		.uleb128 0x8
  1390 0711 04       		.byte	0x4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 35
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 35
 
 
  1391 0712 C4060000 		.4byte	0x6c4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1445 077f 12       		.byte	0x12
  1446 0780 2B060000 		.4byte	0x62b
  1447 0784 04       		.byte	0x4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 36
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 36
 
 
  1448 0785 19       		.uleb128 0x19
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1502 07f0 81010000 		.4byte	0x181
  1503 07f4 78       		.byte	0x78
  1504 07f5 19       		.uleb128 0x19
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 37
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 37
 
 
  1505 07f6 A4060000 		.4byte	.LASF113
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1559 0864 C4       		.byte	0xc4
  1560 0865 19       		.uleb128 0x19
  1561 0866 C7040000 		.4byte	.LASF121
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 38
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 38
 
 
  1562 086a 06       		.byte	0x6
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1616 08da 00       		.byte	0
  1617 08db 0D       		.uleb128 0xd
  1618 08dc 64000000 		.4byte	0x64
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 39
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 39
 
 
  1619 08e0 EB080000 		.4byte	0x8eb
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1673 094f 53090000 		.4byte	0x953
  1674 0953 08       		.uleb128 0x8
  1675 0954 04       		.byte	0x4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 40
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 40
 
 
  1676 0955 42090000 		.4byte	0x942
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1730 09cc 0A       		.byte	0xa
  1731 09cd 2C       		.byte	0x2c
  1732 09ce 16       		.byte	0x16
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 41
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 41
 
 
  1733 09cf 7E000000 		.4byte	0x7e
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1787 0a3e 1D       		.byte	0x1d
  1788 0a3f 90000000 		.4byte	0x90
  1789 0a43 0D       		.uleb128 0xd
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 42
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 42
 
 
  1790 0a44 D6000000 		.4byte	0xd6
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1844 0aae D5       		.byte	0xd5
  1845 0aaf 0C       		.byte	0xc
  1846 0ab0 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 43
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 43
 
 
  1847 0ab4 0C       		.byte	0xc
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1901 0b28 29       		.uleb128 0x29
  1902 0b29 6900     		.ascii	"i\000"
  1903 0b2b 01       		.byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 44
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 44
 
 
  1904 0b2c CD01     		.2byte	0x1cd
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  1958 0bb9 2C       		.uleb128 0x2c
  1959 0bba A7000000 		.4byte	.LASF149
  1960 0bbe 01       		.byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 45
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 45
 
 
  1961 0bbf 5201     		.2byte	0x152
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2015 0c44 01       		.byte	0x1
  2016 0c45 0701     		.2byte	0x107
  2017 0c47 13       		.byte	0x13
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 46
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 46
 
 
  2018 0c48 5D000000 		.4byte	0x5d
@@ -2726,7 +2726,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2040 0c7f 930C0000 		.4byte	0xc93
  2041 0c83 05       		.uleb128 0x5
  2042 0c84 03       		.byte	0x3
- 2043 0c85 00000000 		.4byte	heapPointer.5203
+ 2043 0c85 00000000 		.4byte	heapPointer.5157
  2044 0c89 2A       		.uleb128 0x2a
  2045 0c8a 1C000000 		.4byte	.LVL9
  2046 0c8e 190D0000 		.4byte	0xd19
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2072 0ccc 35       		.uleb128 0x35
  2073 0ccd 01       		.uleb128 0x1
  2074 0cce 50       		.byte	0x50
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 47
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 47
 
 
  2075 0ccf 03       		.uleb128 0x3
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2129 0001 11       		.uleb128 0x11
  2130 0002 01       		.byte	0x1
  2131 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 48
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 48
 
 
  2132 0004 0E       		.uleb128 0xe
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2186 003a 00       		.byte	0
  2187 003b 03       		.uleb128 0x3
  2188 003c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 49
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 49
 
 
  2189 003d 3A       		.uleb128 0x3a
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2243 0073 3A       		.uleb128 0x3a
  2244 0074 0B       		.uleb128 0xb
  2245 0075 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 50
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 50
 
 
  2246 0076 0B       		.uleb128 0xb
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2300 00ac 00       		.byte	0
  2301 00ad 10       		.uleb128 0x10
  2302 00ae 0D       		.uleb128 0xd
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 51
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 51
 
 
  2303 00af 00       		.byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2357 00e5 00       		.byte	0
  2358 00e6 00       		.byte	0
  2359 00e7 14       		.uleb128 0x14
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 52
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 52
 
 
  2360 00e8 13       		.uleb128 0x13
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2414 011e 03       		.uleb128 0x3
  2415 011f 0E       		.uleb128 0xe
  2416 0120 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 53
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 53
 
 
  2417 0121 05       		.uleb128 0x5
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2471 0157 3B       		.uleb128 0x3b
  2472 0158 05       		.uleb128 0x5
  2473 0159 39       		.uleb128 0x39
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 54
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 54
 
 
  2474 015a 0B       		.uleb128 0xb
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2528 0190 19       		.uleb128 0x19
  2529 0191 01       		.uleb128 0x1
  2530 0192 13       		.uleb128 0x13
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 55
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 55
 
 
  2531 0193 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2585 01c9 39       		.uleb128 0x39
  2586 01ca 0B       		.uleb128 0xb
  2587 01cb 49       		.uleb128 0x49
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 56
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 56
 
 
  2588 01cc 13       		.uleb128 0x13
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2642 0203 49       		.uleb128 0x49
  2643 0204 13       		.uleb128 0x13
  2644 0205 8801     		.uleb128 0x88
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 57
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 57
 
 
  2645 0207 0B       		.uleb128 0xb
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2699 023e 3A       		.uleb128 0x3a
  2700 023f 0B       		.uleb128 0xb
  2701 0240 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 58
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 58
 
 
  2702 0241 05       		.uleb128 0x5
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2756 027c 3A       		.uleb128 0x3a
  2757 027d 0B       		.uleb128 0xb
  2758 027e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 59
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 59
 
 
  2759 027f 05       		.uleb128 0x5
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2813 02b7 3A       		.uleb128 0x3a
  2814 02b8 0B       		.uleb128 0xb
  2815 02b9 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 60
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 60
 
 
  2816 02ba 05       		.uleb128 0x5
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2870 02f1 3A       		.uleb128 0x3a
  2871 02f2 0B       		.uleb128 0xb
  2872 02f3 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 61
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 61
 
 
  2873 02f4 0B       		.uleb128 0xb
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2927 0332 00       		.byte	0
  2928 0333 00       		.byte	0
  2929 0334 36       		.uleb128 0x36
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 62
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 62
 
 
  2930 0335 2E       		.uleb128 0x2e
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  2984 0004 12000000 		.4byte	.LVL29
  2985 0008 16000000 		.4byte	.LVL30
  2986 000c 0200     		.2byte	0x2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 63
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 63
 
 
  2987 000e 30       		.byte	0x30
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3041 0080 0100     		.2byte	0x1
  3042 0082 51       		.byte	0x51
  3043 0083 00000000 		.4byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 64
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 64
 
 
  3044 0087 00000000 		.4byte	0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3098 00ef 18000000 		.4byte	.LVL16
  3099 00f3 0100     		.2byte	0x1
  3100 00f5 54       		.byte	0x54
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 65
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 65
 
 
  3101 00f6 18000000 		.4byte	.LVL16
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3155 016b 0100     		.2byte	0x1
  3156 016d 53       		.byte	0x53
  3157 016e 0A000000 		.4byte	.LVL6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 66
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 66
 
 
  3158 0172 30000000 		.4byte	.LFE2
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3212 0014 10000000 		.4byte	.LFE0-.LFB0
  3213 0018 00000000 		.4byte	.LFB1
  3214 001c 0A000000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 67
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 67
 
 
  3215 0020 00000000 		.4byte	.LFB2
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3258              	.LASF46:
  3259 0025 5F666E61 		.ascii	"_fnargs\000"
  3259      72677300 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 68
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 68
 
 
  3260              	.LASF10:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3286              	.LASF131:
  3287 00c2 64696554 		.ascii	"dieTemperature\000"
  3287      656D7065 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 69
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 69
 
 
  3287      72617475 
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3313      6B696500 
  3314              	.LASF93:
  3315 0158 5F5F7367 		.ascii	"__sglue\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 70
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 70
 
 
  3315      6C756500 
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3346              	.LASF170:
  3347 01e4 5F5F6379 		.ascii	"__cy_byte_align8\000"
  3347      5F627974 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 71
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 71
 
 
  3347      655F616C 
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3376              	.LASF97:
  3377 0274 5F6E696F 		.ascii	"_niobs\000"
  3377      627300
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 72
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 72
 
 
  3378              	.LASF141:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3405      00
  3406              	.LASF72:
  3407 0319 5F666C61 		.ascii	"_flags2\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 73
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 73
 
 
  3407      67733200 
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3430 041c 43795265 		.ascii	"CyResetStatus\000"
  3430      73657453 
  3430      74617475 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 74
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 74
 
 
  3430      7300
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3459              	.LASF90:
  3460 04b5 5F6E6577 		.ascii	"_new\000"
  3460      00
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 75
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 75
 
 
  3461              	.LASF130:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3490 053c 5F6D626C 		.ascii	"_mblen_state\000"
  3490      656E5F73 
  3490      74617465 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 76
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 76
 
 
  3490      00
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3522 05d3 5F657272 		.ascii	"_errno\000"
  3522      6E6F00
  3523              	.LASF15:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 77
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 77
 
 
  3524 05da 63686172 		.ascii	"char\000"
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3552 0660 5F756E75 		.ascii	"_unused_rand\000"
  3552      7365645F 
  3552      72616E64 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 78
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 78
 
 
  3552      00
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 1
  3580 06f2 5F636C6F 		.ascii	"_close\000"
  3580      736500
  3581              	.LASF109:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc7CfhgU.s 			page 79
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cclYPifc.s 			page 79
 
 
  3582 06f9 5F723438 		.ascii	"_r48\000"

@@ -9,11 +9,14 @@
  *
  * ========================================
 */
-#include "project.h"
+
 #include "RaspberryIF.h"
 #include "PSOC_controller.h"
-//Static pointer to RaspberryIF obj. used in Cy Api callback
+#include "project.h"
+#include <stdlib.h>
+//Static pointer to RaspberryIF obj. used in interrupts
 static RaspberryIF *callbackPtr;
+CY_ISR_PROTO(SPI_rx_handler);
 /**********************private(static)***********************/
 
 
@@ -23,21 +26,22 @@ static RaspberryIF *callbackPtr;
 void RaspberryIF_init(RaspberryIF* const this)
 {
         callbackPtr=this;
+        SPIS_1_Start();
+        this->PSOC_controllerPtr=_NULL;
+        this->readBuf=(uint8_t *)calloc(sizeof(uint8_t)*8,sizeof(uint8_t));
+        this->readBufLen=0;
+        this->spi_status=NONE;
+        isr_1_StartEx(&SPI_rx_handler);
         
-        I2C_1_SlaveInitReadBuf(this->readBuf,8);
-        I2C_1_SlaveInitWriteBuf(this->writeBuf,8);
-        I2C_1_SlaveSetAddress(0x42);
-        I2C_1_Start();
-        this->PSOC_controllerPtr=_NULL; 
 }
 
-void I2C_DosisReceived(RaspberryIF* const this)
+void SPI_DosisReceived(RaspberryIF* const this)
 {
     //dispensdosis med de tre bytes fra writebufsize.
-            uint8_t PillA=this->writeBuf[0];
-            uint8_t PillB=this->writeBuf[1];
-            uint8_t PillC=this->writeBuf[2];
-            I2C_1_SlaveClearWriteBuf();
+            uint8_t PillA=this->readBuf[0];
+            uint8_t PillB=this->readBuf[1];
+            uint8_t PillC=this->readBuf[2];
+            
             dispensPiller(this->PSOC_controllerPtr,PillA,PillB,PillC);
             
 }
@@ -48,14 +52,59 @@ void setControllerPtr(RaspberryIF* const this,PSOC_controller *ptr)
 }
 /**********************Free-functions***********************/
 
-//Cy Api callback function:
-void I2C_1_ISR_ExitCallback()
+//Cy
+
+CY_ISR(SPI_rx_handler)
 {
-        
-        if(I2C_1_SlaveGetWriteBufSize()>=3)
+    
+    callbackPtr->readBuf[callbackPtr->readBufLen++]=SPIS_1_ReadRxData();
+    if(callbackPtr->spi_status==NONE)
+    {
+          
+        if(callbackPtr->readBufLen==1)
         {
-            I2C_DosisReceived(callbackPtr);           
+            switch(callbackPtr->readBuf[0])
+            {
+                case 0xAA:
+                    callbackPtr->spi_status=RECEIVING;
+                    callbackPtr->readBufLen=0;
+                break;
+                
+                case 0xA0:
+                    callbackPtr->spi_status=STATUSREQ;
+                    callbackPtr->readBufLen=0;
+                    SPIS_1_WriteTxData(callbackPtr->PSOC_controllerPtr->status);
+                    if(callbackPtr->PSOC_controllerPtr->status==PillsRemoved)
+                    {
+                        callbackPtr->PSOC_controllerPtr->status=Idle;
+                    }
+                default:
+                break;
+            }
         }
-       
+        else
+        {
+            callbackPtr->readBufLen=0;
+            
+        }
+            
+    
+    }
+    else if(callbackPtr->spi_status==STATUSREQ)
+    {
+        callbackPtr->readBufLen=0;
+        callbackPtr->spi_status=NONE;
+        
+    }
+    
+    else if((callbackPtr->spi_status==RECEIVING)&&(callbackPtr->readBufLen==3))
+    {
+        SPI_DosisReceived(callbackPtr);
+        callbackPtr->readBufLen=0;
+        callbackPtr->spi_status=NONE;
+        
+    }
+    
 }
+
 /* [] END OF FILE */

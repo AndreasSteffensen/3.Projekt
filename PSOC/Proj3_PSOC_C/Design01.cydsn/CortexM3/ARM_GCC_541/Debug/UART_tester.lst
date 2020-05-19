@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
   29:Generated_Source\PSoC5/UART_tester.c **** #if (UART_tester_TX_INTERRUPT_ENABLED && UART_tester_TX_ENABLED)
   30:Generated_Source\PSoC5/UART_tester.c ****     volatile uint8 UART_tester_txBuffer[UART_tester_TX_BUFFER_SIZE];
   31:Generated_Source\PSoC5/UART_tester.c ****     volatile uint8 UART_tester_txBufferRead = 0u;
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 2
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 2
 
 
   32:Generated_Source\PSoC5/UART_tester.c ****     uint8 UART_tester_txBufferWrite = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
   86:Generated_Source\PSoC5/UART_tester.c **** }
   87:Generated_Source\PSoC5/UART_tester.c **** 
   88:Generated_Source\PSoC5/UART_tester.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 3
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 3
 
 
   89:Generated_Source\PSoC5/UART_tester.c **** /*******************************************************************************
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  124:Generated_Source\PSoC5/UART_tester.c ****         UART_tester_RXBITCTR_PERIOD_REG = UART_tester_RXBITCTR_INIT;
   32              		.loc 1 124 9 view .LVU1
   33              		.loc 1 124 41 is_stmt 0 view .LVU2
-  34 0000 074B     		ldr	r3, .L2
+  34 0000 084B     		ldr	r3, .L2
   35 0002 7222     		movs	r2, #114
   36 0004 1A70     		strb	r2, [r3]
  125:Generated_Source\PSoC5/UART_tester.c ****         /* Configure the Initial RX interrupt mask */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  128:Generated_Source\PSoC5/UART_tester.c **** 
  129:Generated_Source\PSoC5/UART_tester.c ****     #if(UART_tester_TX_ENABLED)
  130:Generated_Source\PSoC5/UART_tester.c ****         #if (UART_tester_TX_INTERRUPT_ENABLED)
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 4
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 4
 
 
  131:Generated_Source\PSoC5/UART_tester.c ****             /* Set TX interrupt vector and priority */
@@ -191,15 +191,15 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  138:Generated_Source\PSoC5/UART_tester.c ****             UART_tester_TXBITCLKGEN_CTR_REG = UART_tester_BIT_CENTER;
   42              		.loc 1 138 13 is_stmt 1 view .LVU5
   43              		.loc 1 138 45 is_stmt 0 view .LVU6
-  44 000c 5F3B     		subs	r3, r3, #95
-  45 000e 0622     		movs	r2, #6
-  46 0010 1A70     		strb	r2, [r3]
+  44 000c A3F26313 		subw	r3, r3, #355
+  45 0010 0622     		movs	r2, #6
+  46 0012 1A70     		strb	r2, [r3]
  139:Generated_Source\PSoC5/UART_tester.c ****             UART_tester_TXBITCLKTX_COMPLETE_REG = ((UART_tester_NUMBER_OF_DATA_BITS +
   47              		.loc 1 139 13 is_stmt 1 view .LVU7
   48              		.loc 1 139 49 is_stmt 0 view .LVU8
-  49 0012 1033     		adds	r3, r3, #16
-  50 0014 4722     		movs	r2, #71
-  51 0016 1A70     		strb	r2, [r3]
+  49 0014 1033     		adds	r3, r3, #16
+  50 0016 4722     		movs	r2, #71
+  51 0018 1A70     		strb	r2, [r3]
  140:Generated_Source\PSoC5/UART_tester.c ****                         UART_tester_NUMBER_OF_START_BIT) * UART_tester_OVER_SAMPLE_COUNT) - 1u;
  141:Generated_Source\PSoC5/UART_tester.c ****         #else
  142:Generated_Source\PSoC5/UART_tester.c ****             UART_tester_TXBITCTR_PERIOD_REG = ((UART_tester_NUMBER_OF_DATA_BITS +
@@ -213,9 +213,9 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  150:Generated_Source\PSoC5/UART_tester.c ****             UART_tester_TXSTATUS_MASK_REG = UART_tester_INIT_TX_INTERRUPTS_MASK;
   52              		.loc 1 150 13 is_stmt 1 view .LVU9
   53              		.loc 1 150 43 is_stmt 0 view .LVU10
-  54 0018 5133     		adds	r3, r3, #81
-  55 001a 0022     		movs	r2, #0
-  56 001c 1A70     		strb	r2, [r3]
+  54 001a 03F5A873 		add	r3, r3, #336
+  55 001e 0022     		movs	r2, #0
+  56 0020 1A70     		strb	r2, [r3]
  151:Generated_Source\PSoC5/UART_tester.c ****         #endif /*End UART_tester_TX_INTERRUPT_ENABLED*/
  152:Generated_Source\PSoC5/UART_tester.c **** 
  153:Generated_Source\PSoC5/UART_tester.c ****     #endif /* End UART_tester_TX_ENABLED */
@@ -227,18 +227,18 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  159:Generated_Source\PSoC5/UART_tester.c ****     #endif /* End UART_tester_PARITY_TYPE_SW */
  160:Generated_Source\PSoC5/UART_tester.c **** }
   57              		.loc 1 160 1 view .LVU11
-  58 001e 7047     		bx	lr
+  58 0022 7047     		bx	lr
   59              	.L3:
   60              		.align	2
   61              	.L2:
-  62 0020 88650040 		.word	1073767816
+  62 0024 8A650040 		.word	1073767818
   63              		.cfi_endproc
   64              	.LFE1:
   65              		.size	UART_tester_Init, .-UART_tester_Init
   66              		.section	.text.UART_tester_Enable,"ax",%progbits
   67              		.align	1
   68              		.global	UART_tester_Enable
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 5
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 5
 
 
   69              		.syntax unified
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
   93 0008 0A4A     		ldr	r2, .L6
   94 000a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   95 000c 43F02003 		orr	r3, r3, #32
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 6
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 6
 
 
   96 0010 1370     		strb	r3, [r2]
@@ -331,7 +331,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  211:Generated_Source\PSoC5/UART_tester.c ****         UART_tester_TXSTATUS_ACTL_REG |= UART_tester_INT_ENABLE;
  103              		.loc 1 211 9 is_stmt 1 view .LVU20
  104              		.loc 1 211 39 is_stmt 0 view .LVU21
- 105 001c 0232     		adds	r2, r2, #2
+ 105 001c 033A     		subs	r2, r2, #3
  106 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  107 0020 43F01003 		orr	r3, r3, #16
  108 0024 1370     		strb	r3, [r2]
@@ -358,13 +358,13 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  117 0030 10BD     		pop	{r4, pc}
  118              	.LVL4:
  119              	.L7:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 7
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 7
 
 
  120              		.loc 1 223 1 view .LVU25
  121 0032 00BF     		.align	2
  122              	.L6:
- 123 0034 98650040 		.word	1073767832
+ 123 0034 9A650040 		.word	1073767834
  124              		.cfi_endproc
  125              	.LFE2:
  126              		.size	UART_tester_Enable, .-UART_tester_Enable
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  165 0016 1A70     		strb	r2, [r3]
  166 0018 F6E7     		b	.L9
  167              	.L13:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 8
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 8
 
 
  168 001a 00BF     		.align	2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  247:Generated_Source\PSoC5/UART_tester.c ****         UART_tester_RXBITCTR_CONTROL_REG &= (uint8) ~UART_tester_CNTR_ENABLE;
  199              		.loc 1 247 9 is_stmt 1 view .LVU39
  200              		.loc 1 247 42 is_stmt 0 view .LVU40
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 9
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 9
 
 
  201 0008 0A4A     		ldr	r2, .L16
@@ -519,7 +519,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  270:Generated_Source\PSoC5/UART_tester.c ****         UART_tester_TXSTATUS_ACTL_REG &= (uint8) ~UART_tester_INT_ENABLE;
  214              		.loc 1 270 9 is_stmt 1 view .LVU44
  215              		.loc 1 270 39 is_stmt 0 view .LVU45
- 216 0020 0232     		adds	r2, r2, #2
+ 216 0020 033A     		subs	r2, r2, #3
  217 0022 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  218 0024 03F0EF03 		and	r3, r3, #239
  219 0028 1370     		strb	r3, [r2]
@@ -538,15 +538,15 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  224              		.loc 1 278 1 is_stmt 0 view .LVU47
  225 0030 10BD     		pop	{r4, pc}
  226              	.LVL11:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 10
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 10
 
 
  227              	.L17:
  228              		.loc 1 278 1 view .LVU48
  229 0032 00BF     		.align	2
  230              	.L16:
- 231 0034 98650040 		.word	1073767832
- 232 0038 99650040 		.word	1073767833
+ 231 0034 9A650040 		.word	1073767834
+ 232 0038 9B650040 		.word	1073767835
  233              		.cfi_endproc
  234              	.LFE3:
  235              		.size	UART_tester_Stop, .-UART_tester_Stop
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  257              		.size	UART_tester_ReadControlRegister, .-UART_tester_ReadControlRegister
  258              		.section	.text.UART_tester_WriteControlRegister,"ax",%progbits
  259              		.align	1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 11
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 11
 
 
  260              		.global	UART_tester_WriteControlRegister
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  287              		.fpu softvfp
  288              		.type	UART_tester_SetRxInterruptMode, %function
  289              	UART_tester_SetRxInterruptMode:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 12
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 12
 
 
  290              	.LVL13:
@@ -710,7 +710,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  303              	.L22:
  304 0006 00BF     		.align	2
  305              	.L21:
- 306 0008 89650040 		.word	1073767817
+ 306 0008 8B650040 		.word	1073767819
  307              		.cfi_endproc
  308              	.LFE6:
  309              		.size	UART_tester_SetRxInterruptMode, .-UART_tester_SetRxInterruptMode
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  311              		.align	1
  312              		.global	UART_tester_ReadRxData
  313              		.syntax unified
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 13
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 13
 
 
  314              		.thumb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  405:Generated_Source\PSoC5/UART_tester.c ****         locRxBufferWrite = UART_tester_rxBufferWrite;
  406:Generated_Source\PSoC5/UART_tester.c **** 
  407:Generated_Source\PSoC5/UART_tester.c ****         if( (UART_tester_rxBufferLoopDetect != 0u) || (locRxBufferRead != locRxBufferWrite) )
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 14
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 14
 
 
  408:Generated_Source\PSoC5/UART_tester.c ****         {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  334              	.L25:
  335 0006 00BF     		.align	2
  336              	.L24:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 15
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 15
 
 
  337 0008 48650040 		.word	1073767752
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  488:Generated_Source\PSoC5/UART_tester.c **** 
  489:Generated_Source\PSoC5/UART_tester.c ****         status = UART_tester_RXSTATUS_REG & UART_tester_RX_HW_MASK;
  357              		.loc 1 489 9 view .LVU68
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 16
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 16
 
 
  358              		.loc 1 489 18 is_stmt 0 view .LVU69
@@ -925,7 +925,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  368              	.L28:
  369 000a 00BF     		.align	2
  370              	.L27:
- 371 000c 69650040 		.word	1073767785
+ 371 000c 6B650040 		.word	1073767787
  372              		.cfi_endproc
  373              	.LFE8:
  374              		.size	UART_tester_ReadRxStatus, .-UART_tester_ReadRxStatus
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  517:Generated_Source\PSoC5/UART_tester.c ****     *  A returned zero signifies an error condition or no data available.
  518:Generated_Source\PSoC5/UART_tester.c ****     *
  519:Generated_Source\PSoC5/UART_tester.c ****     * Global Variables:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 17
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 17
 
 
  520:Generated_Source\PSoC5/UART_tester.c ****     *  UART_tester_rxBuffer - RAM buffer pointer for save received data.
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  566:Generated_Source\PSoC5/UART_tester.c ****                             *  RX configuration set, otherwise
  567:Generated_Source\PSoC5/UART_tester.c ****                             *  mask will be returned in LoadRxConfig() API.
  568:Generated_Source\PSoC5/UART_tester.c ****                             */
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 18
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 18
 
 
  569:Generated_Source\PSoC5/UART_tester.c ****                             UART_tester_RXSTATUS_MASK_REG |= UART_tester_RX_STS_FIFO_NOTEMPTY;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  412 0016 00D0     		beq	.L30
  604:Generated_Source\PSoC5/UART_tester.c ****                             UART_tester_RX_STS_STOP_ERROR | UART_tester_RX_STS_OVERRUN)) != 0u)
  605:Generated_Source\PSoC5/UART_tester.c ****             {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 19
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 19
 
 
  606:Generated_Source\PSoC5/UART_tester.c ****                 rxData = 0u;
@@ -1098,7 +1098,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  420              	.L33:
  421              		.align	2
  422              	.L32:
- 423 001c 69650040 		.word	1073767785
+ 423 001c 6B650040 		.word	1073767787
  424 0020 48650040 		.word	1073767752
  425              		.cfi_endproc
  426              	.LFE9:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  635:Generated_Source\PSoC5/UART_tester.c ****     {
  438              		.loc 1 635 5 is_stmt 1 view -0
  439              		.cfi_startproc
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 20
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 20
 
 
  440              		@ args = 0, pretend = 0, frame = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  656:Generated_Source\PSoC5/UART_tester.c ****     * Summary:
  657:Generated_Source\PSoC5/UART_tester.c ****     *  Returns the number of received bytes available in the RX buffer.
  658:Generated_Source\PSoC5/UART_tester.c ****     *  * RX software buffer is disabled (RX Buffer Size parameter is equal to 4): 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 21
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 21
 
 
  659:Generated_Source\PSoC5/UART_tester.c ****     *    returns 0 for empty RX FIFO or 1 for not empty RX FIFO.
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  707:Generated_Source\PSoC5/UART_tester.c ****         }
  708:Generated_Source\PSoC5/UART_tester.c ****         else
  709:Generated_Source\PSoC5/UART_tester.c ****         {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 22
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 22
 
 
  710:Generated_Source\PSoC5/UART_tester.c ****             size = (UART_tester_RX_BUFFER_SIZE - UART_tester_rxBufferRead) + UART_tester_rxBufferWr
@@ -1291,7 +1291,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  493              	.L39:
  494 000e 00BF     		.align	2
  495              	.L38:
- 496 0010 69650040 		.word	1073767785
+ 496 0010 6B650040 		.word	1073767787
  497              		.cfi_endproc
  498              	.LFE11:
  499              		.size	UART_tester_GetRxBufferSize, .-UART_tester_GetRxBufferSize
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  734:Generated_Source\PSoC5/UART_tester.c ****     *  None.
  735:Generated_Source\PSoC5/UART_tester.c ****     *
  736:Generated_Source\PSoC5/UART_tester.c ****     * Return:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 23
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 23
 
 
  737:Generated_Source\PSoC5/UART_tester.c ****     *  None.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  535 0018 FFF7FEFF 		bl	CyExitCriticalSection
  536              	.LVL25:
  766:Generated_Source\PSoC5/UART_tester.c **** 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 24
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 24
 
 
  767:Generated_Source\PSoC5/UART_tester.c ****     #if (UART_tester_RX_INTERRUPT_ENABLED)
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  801:Generated_Source\PSoC5/UART_tester.c ****     *                                               address detection
  802:Generated_Source\PSoC5/UART_tester.c ****     *  UART_tester__B_UART__AM_NONE - No address detection
  803:Generated_Source\PSoC5/UART_tester.c ****     *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 25
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 25
 
 
  804:Generated_Source\PSoC5/UART_tester.c ****     * Return:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  574              		.thumb_func
  575              		.fpu softvfp
  576              		.type	UART_tester_SetRxAddress1, %function
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 26
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 26
 
 
  577              	UART_tester_SetRxAddress1:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  863:Generated_Source\PSoC5/UART_tester.c ****     /*******************************************************************************
  864:Generated_Source\PSoC5/UART_tester.c ****     * Function Name: UART_tester_SetRxAddress2
  865:Generated_Source\PSoC5/UART_tester.c ****     ********************************************************************************
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 27
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 27
 
 
  866:Generated_Source\PSoC5/UART_tester.c ****     *
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  891:Generated_Source\PSoC5/UART_tester.c ****     *  Configures the TX interrupt sources to be enabled, but does not enable the
  892:Generated_Source\PSoC5/UART_tester.c ****     *  interrupt.
  893:Generated_Source\PSoC5/UART_tester.c ****     *
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 28
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 28
 
 
  894:Generated_Source\PSoC5/UART_tester.c ****     * Parameters:
@@ -1653,7 +1653,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  649              	.L53:
  650 0006 00BF     		.align	2
  651              	.L52:
- 652 0008 8B650040 		.word	1073767819
+ 652 0008 88650040 		.word	1073767816
  653              		.cfi_endproc
  654              	.LFE16:
  655              		.size	UART_tester_SetTxInterruptMode, .-UART_tester_SetTxInterruptMode
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  919:Generated_Source\PSoC5/UART_tester.c ****     *  Places a byte of data into the transmit buffer to be sent when the bus is
  920:Generated_Source\PSoC5/UART_tester.c ****     *  available without checking the TX status register. You must check status
  921:Generated_Source\PSoC5/UART_tester.c ****     *  separately.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 29
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 29
 
 
  922:Generated_Source\PSoC5/UART_tester.c ****     *
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  965:Generated_Source\PSoC5/UART_tester.c ****                 UART_tester_txBuffer[UART_tester_txBufferWrite] = txDataByte;
  966:Generated_Source\PSoC5/UART_tester.c **** 
  967:Generated_Source\PSoC5/UART_tester.c ****                 /* Add to the software buffer. */
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 30
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 30
 
 
  968:Generated_Source\PSoC5/UART_tester.c ****                 UART_tester_txBufferWrite++;
@@ -1765,7 +1765,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  686              		.align	2
  687              	.L56:
  688 000c 00000000 		.word	.LANCHOR0
- 689 0010 4B650040 		.word	1073767755
+ 689 0010 49640040 		.word	1073767497
  690              		.cfi_endproc
  691              	.LFE17:
  692              		.size	UART_tester_WriteTxData, .-UART_tester_WriteTxData
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  997:Generated_Source\PSoC5/UART_tester.c ****     *  This function reads the TX status register, which is cleared on read.
  998:Generated_Source\PSoC5/UART_tester.c ****     *  It is up to the user to handle all bits in this return value accordingly,
  999:Generated_Source\PSoC5/UART_tester.c ****     *  even if the bit was not enabled as an interrupt source the event happened
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 31
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 31
 
 
 1000:Generated_Source\PSoC5/UART_tester.c ****     *  and must be handled accordingly.
@@ -1822,7 +1822,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  714              	.L60:
  715 0006 00BF     		.align	2
  716              	.L59:
- 717 0008 6B650040 		.word	1073767787
+ 717 0008 68650040 		.word	1073767784
  718              		.cfi_endproc
  719              	.LFE18:
  720              		.size	UART_tester_ReadTxStatus, .-UART_tester_ReadTxStatus
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1026:Generated_Source\PSoC5/UART_tester.c ****     *  UART_tester_txBufferWrite - cyclic index for write to txBuffer,
 1027:Generated_Source\PSoC5/UART_tester.c ****     *     checked to identify free space in txBuffer and incremented after each byte
 1028:Generated_Source\PSoC5/UART_tester.c ****     *     saved to buffer.
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 32
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 32
 
 
 1029:Generated_Source\PSoC5/UART_tester.c ****     *  UART_tester_txBufferRead - cyclic index for read from txBuffer,
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1076:Generated_Source\PSoC5/UART_tester.c ****         }
 1077:Generated_Source\PSoC5/UART_tester.c ****         else
 1078:Generated_Source\PSoC5/UART_tester.c ****         {
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 33
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 33
 
 
 1079:Generated_Source\PSoC5/UART_tester.c ****             if(locTxBufferWrite >= UART_tester_TX_BUFFER_SIZE)
@@ -1978,12 +1978,12 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  751 000e 7047     		bx	lr
  752              	.L64:
  753              		.align	2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 34
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 34
 
 
  754              	.L63:
- 755 0010 6B650040 		.word	1073767787
- 756 0014 4B650040 		.word	1073767755
+ 755 0010 68650040 		.word	1073767784
+ 756 0014 49640040 		.word	1073767497
  757              		.cfi_endproc
  758              	.LFE19:
  759              		.size	UART_tester_PutChar, .-UART_tester_PutChar
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  778              		.cfi_offset 3, -16
  779              		.cfi_offset 4, -12
  780              		.cfi_offset 5, -8
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 35
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 35
 
 
  781              		.cfi_offset 14, -4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1156:Generated_Source\PSoC5/UART_tester.c ****             }
  815              		.loc 1 1156 25 view .LVU161
  816 001a A4B2     		uxth	r4, r4
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 36
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 36
 
 
  817              	.LVL39:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1192:Generated_Source\PSoC5/UART_tester.c ****                                                                     
 1193:Generated_Source\PSoC5/UART_tester.c ****     {
  838              		.loc 1 1193 5 is_stmt 1 view -0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 37
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 37
 
 
  839              		.cfi_startproc
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1204:Generated_Source\PSoC5/UART_tester.c ****         }
 1205:Generated_Source\PSoC5/UART_tester.c ****     }
  881              		.loc 1 1205 5 view .LVU176
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 38
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 38
 
 
  882 0020 70BD     		pop	{r4, r5, r6, pc}
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  910              		.cfi_offset 3, -8
  911              		.cfi_offset 14, -4
 1232:Generated_Source\PSoC5/UART_tester.c ****         /* If not Initialized then skip this function */
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 39
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 39
 
 
 1233:Generated_Source\PSoC5/UART_tester.c ****         if(UART_tester_initVar != 0u)
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1242:Generated_Source\PSoC5/UART_tester.c ****     /*******************************************************************************
 1243:Generated_Source\PSoC5/UART_tester.c ****     * Function Name: UART_tester_GetTxBufferSize
 1244:Generated_Source\PSoC5/UART_tester.c ****     ********************************************************************************
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 40
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 40
 
 
 1245:Generated_Source\PSoC5/UART_tester.c ****     *
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1293:Generated_Source\PSoC5/UART_tester.c ****             size = (UART_tester_TX_BUFFER_SIZE - UART_tester_txBufferRead) +
 1294:Generated_Source\PSoC5/UART_tester.c ****                     UART_tester_txBufferWrite;
 1295:Generated_Source\PSoC5/UART_tester.c ****         }
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 41
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 41
 
 
 1296:Generated_Source\PSoC5/UART_tester.c **** 
@@ -2457,8 +2457,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  986              	.L95:
  987              		.align	2
  988              	.L94:
- 989 001c 6B650040 		.word	1073767787
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 42
+ 989 001c 68650040 		.word	1073767784
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 42
 
 
  990              		.cfi_endproc
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1010              		.cfi_offset 14, -4
 1356:Generated_Source\PSoC5/UART_tester.c ****         uint8 enableInterrupts;
  1011              		.loc 1 1356 9 view .LVU201
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 43
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 43
 
 
 1357:Generated_Source\PSoC5/UART_tester.c **** 
@@ -2564,7 +2564,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1032              	.L99:
  1033 001e 00BF     		.align	2
  1034              	.L98:
- 1035 0020 9B650040 		.word	1073767835
+ 1035 0020 99640040 		.word	1073767577
  1036              		.cfi_endproc
  1037              	.LFE24:
  1038              		.size	UART_tester_ClearTxBuffer, .-UART_tester_ClearTxBuffer
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1046              		.type	UART_tester_SendBreak, %function
  1047              	UART_tester_SendBreak:
  1048              	.LVL56:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 44
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 44
 
 
  1049              	.LFB25:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1430:Generated_Source\PSoC5/UART_tester.c ****     *     SendBreak(2);     - complete Break operation
 1431:Generated_Source\PSoC5/UART_tester.c ****     *
 1432:Generated_Source\PSoC5/UART_tester.c ****     * Side Effects:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 45
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 45
 
 
 1433:Generated_Source\PSoC5/UART_tester.c ****     *  The UART_tester_SendBreak() function initializes registers to send a
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1474:Generated_Source\PSoC5/UART_tester.c ****                 }
 1475:Generated_Source\PSoC5/UART_tester.c ****                 while(((uint8)~tmpStat & UART_tester_TX_STS_COMPLETE) != 0u);
 1476:Generated_Source\PSoC5/UART_tester.c ****             }
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 46
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 46
 
 
 1477:Generated_Source\PSoC5/UART_tester.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1084 0018 1133     		adds	r3, r3, #17
  1085 001a 0022     		movs	r2, #0
  1086 001c 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 47
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 47
 
 
  1087              	.L104:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1121              		.loc 1 1529 49 is_stmt 0 view .LVU240
  1122 003a 0138     		subs	r0, r0, #1
  1123              	.LVL61:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 48
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 48
 
 
  1124              		.loc 1 1529 49 view .LVU241
@@ -2859,8 +2859,8 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1140              		.align	2
  1141              	.L107:
  1142 004c 00000000 		.word	.LANCHOR0
- 1143 0050 3A650040 		.word	1073767738
- 1144 0054 6B650040 		.word	1073767787
+ 1143 0050 38640040 		.word	1073767480
+ 1144 0054 68650040 		.word	1073767784
  1145              		.cfi_endproc
  1146              	.LFE25:
  1147              		.size	UART_tester_SendBreak, .-UART_tester_SendBreak
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
 1548:Generated_Source\PSoC5/UART_tester.c **** 
 1549:Generated_Source\PSoC5/UART_tester.c **** 
 1550:Generated_Source\PSoC5/UART_tester.c ****     /*******************************************************************************
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 49
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 49
 
 
 1551:Generated_Source\PSoC5/UART_tester.c ****     * Function Name: UART_tester_SetTxAddressMode
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1174              		.type	UART_tester_initVar, %object
  1175              		.size	UART_tester_initVar, 1
  1176              	UART_tester_initVar:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 50
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 50
 
 
  1177 0000 00       		.space	1
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1231 004a 07       		.byte	0x7
  1232 004b 30030000 		.4byte	.LASF5
  1233 004f 02       		.uleb128 0x2
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 51
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 51
 
 
  1234 0050 08       		.byte	0x8
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1288 00bd 01       		.byte	0x1
  1289 00be 08       		.byte	0x8
  1290 00bf 97070000 		.4byte	.LASF15
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 52
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 52
 
 
  1291 00c3 06       		.uleb128 0x6
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1345 012e A8       		.byte	0xa8
  1346 012f 0C       		.byte	0xc
  1347 0130 12010000 		.4byte	0x112
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 53
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 53
 
 
  1348 0134 0C       		.uleb128 0xc
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1402 019a 06       		.byte	0x6
  1403 019b 16       		.byte	0x16
  1404 019c 19       		.byte	0x19
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 54
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 54
 
 
  1405 019d 48000000 		.4byte	0x48
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1459 0201 0D       		.uleb128 0xd
  1460 0202 95010000 		.4byte	0x195
  1461 0206 11020000 		.4byte	0x211
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 55
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 55
 
 
  1462 020a 0E       		.uleb128 0xe
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1516 026d 98080000 		.4byte	.LASF41
  1517 0271 06       		.byte	0x6
  1518 0272 3F       		.byte	0x3f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 56
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 56
 
 
  1519 0273 09       		.byte	0x9
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1573 02d9 0D       		.uleb128 0xd
  1574 02da 8D010000 		.4byte	0x18d
  1575 02de E9020000 		.4byte	0x2e9
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 57
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 57
 
 
  1576 02e2 0E       		.uleb128 0xe
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1630 0349 75       		.byte	0x75
  1631 034a 08       		.byte	0x8
  1632 034b 6A030000 		.4byte	0x36a
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 58
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 58
 
 
  1633 034f 10       		.uleb128 0x10
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1687 03af 8D080000 		.4byte	.LASF57
  1688 03b3 06       		.byte	0x6
  1689 03b4 BA       		.byte	0xba
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 59
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 59
 
 
  1690 03b5 09       		.byte	0x9
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1744 041b 06       		.byte	0x6
  1745 041c CE       		.byte	0xce
  1746 041d 11       		.byte	0x11
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 60
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 60
 
 
  1747 041e 42030000 		.4byte	0x342
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1801 0484 DE       		.byte	0xde
  1802 0485 12       		.byte	0x12
  1803 0486 D1040000 		.4byte	0x4d1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 61
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 61
 
 
  1804 048a 54       		.byte	0x54
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1858 04f9 19       		.uleb128 0x19
  1859 04fa 32020000 		.4byte	.LASF74
  1860 04fe 06       		.byte	0x6
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 62
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 62
 
 
  1861 04ff 6702     		.2byte	0x267
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1915 056a F1060000 		.4byte	.LASF82
  1916 056e 06       		.byte	0x6
  1917 056f 7202     		.2byte	0x272
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 63
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 63
 
 
  1918 0571 0A       		.byte	0xa
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  1972 05de 06       		.byte	0x6
  1973 05df A302     		.2byte	0x2a3
  1974 05e1 13       		.byte	0x13
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 64
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 64
 
 
  1975 05e2 2C030000 		.4byte	0x32c
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2029 065a 73060000 		.4byte	0x673
  2030 065e 17       		.uleb128 0x17
  2031 065f D1040000 		.4byte	0x4d1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 65
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 65
 
 
  2032 0663 17       		.uleb128 0x17
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2086 06db 00       		.byte	0
  2087 06dc 19       		.uleb128 0x19
  2088 06dd 71030000 		.4byte	.LASF96
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 66
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 66
 
 
  2089 06e1 06       		.byte	0x6
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2143 074d 00       		.byte	0
  2144 074e 1C       		.uleb128 0x1c
  2145 074f D0       		.byte	0xd0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 67
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 67
 
 
  2146 0750 06       		.byte	0x6
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2200 07bb D2060000 		.4byte	.LASF109
  2201 07bf 06       		.byte	0x6
  2202 07c0 8902     		.2byte	0x289
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 68
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 68
 
 
  2203 07c2 16       		.byte	0x16
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2257 082f 06       		.byte	0x6
  2258 0830 9102     		.2byte	0x291
  2259 0832 16       		.byte	0x16
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 69
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 69
 
 
  2260 0833 75010000 		.4byte	0x175
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2314 08a3 9C02     		.2byte	0x29c
  2315 08a5 1B       		.byte	0x1b
  2316 08a6 BA080000 		.4byte	0x8ba
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 70
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 70
 
 
  2317 08aa 00       		.byte	0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2371 091a 1F       		.uleb128 0x1f
  2372 091b 25090000 		.4byte	0x925
  2373 091f 17       		.uleb128 0x17
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 71
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 71
 
 
  2374 0920 D1040000 		.4byte	0x4d1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2428 0994 1C       		.byte	0x1c
  2429 0995 0E       		.byte	0xe
  2430 0996 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 72
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 72
 
 
  2431 099a 0D       		.uleb128 0xd
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2485 0a07 05       		.uleb128 0x5
  2486 0a08 03       		.byte	0x3
  2487 0a09 00000000 		.4byte	UART_tester_initVar
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 73
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 73
 
 
  2488 0a0d 24       		.uleb128 0x24
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2542 0a8b 05       		.uleb128 0x5
  2543 0a8c 03       		.byte	0x3
  2544 0a8d 01000000 		.4byte	txPeriod.5206
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 74
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 74
 
 
  2545 0a91 00       		.byte	0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2599 0b14 01       		.uleb128 0x1
  2600 0b15 9C       		.byte	0x9c
  2601 0b16 5B0B0000 		.4byte	0xb5b
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 75
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 75
 
 
  2602 0b1a 26       		.uleb128 0x26
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2656 0b90 6B000000 		.4byte	0x6b
  2657 0b94 F6000000 		.4byte	.LLST12
  2658 0b98 F2000000 		.4byte	.LVUS12
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 76
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 76
 
 
  2659 0b9c 28       		.uleb128 0x28
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2713 0c1f 18000000 		.4byte	.LFE19-.LFB19
  2714 0c23 01       		.uleb128 0x1
  2715 0c24 9C       		.byte	0x9c
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 77
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 77
 
 
  2716 0c25 3F0C0000 		.4byte	0xc3f
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2770 0c9d 6B000000 		.4byte	0x6b
  2771 0ca1 01       		.uleb128 0x1
  2772 0ca2 50       		.byte	0x50
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 78
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 78
 
 
  2773 0ca3 00       		.byte	0
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2827 0d12 6B000000 		.4byte	0x6b
  2828 0d16 01       		.uleb128 0x1
  2829 0d17 50       		.byte	0x50
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 79
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 79
 
 
  2830 0d18 00       		.byte	0
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2884 0d9e 01       		.uleb128 0x1
  2885 0d9f 9C       		.byte	0x9c
  2886 0da0 B70D0000 		.4byte	0xdb7
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 80
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 80
 
 
  2887 0da4 2A       		.uleb128 0x2a
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2941 0e2d 00       		.byte	0
  2942 0e2e 2B       		.uleb128 0x2b
  2943 0e2f 0C090000 		.4byte	.LASF169
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 81
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 81
 
 
  2944 0e33 01       		.byte	0x1
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  2998 0eab 50       		.byte	0x50
  2999 0eac 00       		.byte	0
  3000 0ead 2F       		.uleb128 0x2f
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 82
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 82
 
 
  3001 0eae 70070000 		.4byte	.LASF174
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3055 0f27 31       		.uleb128 0x31
  3056 0f28 3C080000 		.4byte	.LASF141
  3057 0f2c 01       		.byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 83
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 83
 
 
  3058 0f2d B9       		.byte	0xb9
@@ -4949,7 +4949,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3083 0f64 6A       		.byte	0x6a
  3084 0f65 06       		.byte	0x6
  3085 0f66 00000000 		.4byte	.LFB1
- 3086 0f6a 24000000 		.4byte	.LFE1-.LFB1
+ 3086 0f6a 28000000 		.4byte	.LFE1-.LFB1
  3087 0f6e 01       		.uleb128 0x1
  3088 0f6f 9C       		.byte	0x9c
  3089 0f70 30       		.uleb128 0x30
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3112 0fa5 33       		.uleb128 0x33
  3113 0fa6 C9050000 		.4byte	.LASF179
  3114 0faa C9050000 		.4byte	.LASF179
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 84
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 84
 
 
  3115 0fae 0A       		.byte	0xa
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3169 0024 0B       		.uleb128 0xb
  3170 0025 03       		.uleb128 0x3
  3171 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 85
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 85
 
 
  3172 0027 00       		.byte	0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3226 005d 3B       		.uleb128 0x3b
  3227 005e 0B       		.uleb128 0xb
  3228 005f 39       		.uleb128 0x39
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 86
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 86
 
 
  3229 0060 0B       		.uleb128 0xb
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3283 0096 21       		.uleb128 0x21
  3284 0097 00       		.byte	0
  3285 0098 49       		.uleb128 0x49
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 87
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 87
 
 
  3286 0099 13       		.uleb128 0x13
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3340 00cf 0B       		.uleb128 0xb
  3341 00d0 39       		.uleb128 0x39
  3342 00d1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 88
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 88
 
 
  3343 00d2 01       		.uleb128 0x1
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3397 0108 00       		.byte	0
  3398 0109 16       		.uleb128 0x16
  3399 010a 15       		.uleb128 0x15
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 89
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 89
 
 
  3400 010b 01       		.byte	0x1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3454 0141 0E       		.uleb128 0xe
  3455 0142 3A       		.uleb128 0x3a
  3456 0143 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 90
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 90
 
 
  3457 0144 3B       		.uleb128 0x3b
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3511 017a 13       		.uleb128 0x13
  3512 017b 00       		.byte	0
  3513 017c 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 91
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 91
 
 
  3514 017d 1E       		.uleb128 0x1e
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3568 01b3 0B       		.uleb128 0xb
  3569 01b4 3B       		.uleb128 0x3b
  3570 01b5 0B       		.uleb128 0xb
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 92
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 92
 
 
  3571 01b6 39       		.uleb128 0x39
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3625 01ed 00       		.byte	0
  3626 01ee 03       		.uleb128 0x3
  3627 01ef 0E       		.uleb128 0xe
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 93
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 93
 
 
  3628 01f0 3A       		.uleb128 0x3a
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3682 0227 17       		.uleb128 0x17
  3683 0228 B742     		.uleb128 0x2137
  3684 022a 17       		.uleb128 0x17
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 94
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 94
 
 
  3685 022b 00       		.byte	0
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3739 0264 13       		.uleb128 0x13
  3740 0265 00       		.byte	0
  3741 0266 00       		.byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 95
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 95
 
 
  3742 0267 2C       		.uleb128 0x2c
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3796 02a5 00       		.byte	0
  3797 02a6 00       		.byte	0
  3798 02a7 30       		.uleb128 0x30
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 96
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 96
 
 
  3799 02a8 2E       		.uleb128 0x2e
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3853 02e0 3B       		.uleb128 0x3b
  3854 02e1 0B       		.uleb128 0xb
  3855 02e2 39       		.uleb128 0x39
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 97
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 97
 
 
  3856 02e3 0B       		.uleb128 0xb
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3910              	.LVUS18:
  3911 0025 00       		.uleb128 .LVU229
  3912 0026 00       		.uleb128 .LVU231
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 98
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 98
 
 
  3913 0027 00       		.uleb128 .LVU237
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  3967 0095 0A000000 		.4byte	.LVL48
  3968 0099 0400     		.2byte	0x4
  3969 009b F3       		.byte	0xf3
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 99
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 99
 
 
  3970 009c 01       		.uleb128 0x1
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4024 010b F3       		.byte	0xf3
  4025 010c 01       		.uleb128 0x1
  4026 010d 51       		.byte	0x51
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 100
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 100
 
 
  4027 010e 9F       		.byte	0x9f
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4081 017d 55       		.byte	0x55
  4082 017e 00000000 		.4byte	0
  4083 0182 00000000 		.4byte	0
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 101
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 101
 
 
  4084              	.LVUS10:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4138 01f0 0C000000 		.4byte	.LVL23
  4139 01f4 14000000 		.4byte	.LFE11
  4140 01f8 0100     		.2byte	0x1
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 102
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 102
 
 
  4141 01fa 50       		.byte	0x50
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4195 0266 00000000 		.4byte	0
  4196              	.LVUS1:
  4197 026a 00       		.uleb128 .LVU39
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 103
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 103
 
 
  4198 026b 00       		.uleb128 .LVU48
@@ -6148,7 +6148,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4222 000c 0000     		.2byte	0
  4223 000e 0000     		.2byte	0
  4224 0010 00000000 		.4byte	.LFB1
- 4225 0014 24000000 		.4byte	.LFE1-.LFB1
+ 4225 0014 28000000 		.4byte	.LFE1-.LFB1
  4226 0018 00000000 		.4byte	.LFB2
  4227 001c 38000000 		.4byte	.LFE2-.LFB2
  4228 0020 00000000 		.4byte	.LFB0
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4252 0080 00000000 		.4byte	.LFB14
  4253 0084 0C000000 		.4byte	.LFE14-.LFB14
  4254 0088 00000000 		.4byte	.LFB15
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 104
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 104
 
 
  4255 008c 0C000000 		.4byte	.LFE15-.LFB15
@@ -6209,7 +6209,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4280              		.section	.debug_ranges,"",%progbits
  4281              	.Ldebug_ranges0:
  4282 0000 00000000 		.4byte	.LFB1
- 4283 0004 24000000 		.4byte	.LFE1
+ 4283 0004 28000000 		.4byte	.LFE1
  4284 0008 00000000 		.4byte	.LFB2
  4285 000c 38000000 		.4byte	.LFE2
  4286 0010 00000000 		.4byte	.LFB0
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4309 006c 02000000 		.4byte	.LFE13
  4310 0070 00000000 		.4byte	.LFB14
  4311 0074 0C000000 		.4byte	.LFE14
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 105
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 105
 
 
  4312 0078 00000000 		.4byte	.LFB15
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4354 0034 55415254 		.ascii	"UART_tester_GetTxBufferSize\000"
  4354      5F746573 
  4354      7465725F 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 106
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 106
 
 
  4354      47657454 
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4377              	.LASF143:
  4378 00f1 55415254 		.ascii	"UART_tester_PutCRLF\000"
  4378      5F746573 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 107
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 107
 
 
  4378      7465725F 
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4400      7465725F 
  4400      57726974 
  4400      65436F6E 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 108
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 108
 
 
  4401              	.LASF185:
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4431              	.LASF9:
  4432 0242 75696E74 		.ascii	"uint8\000"
  4432      3800
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 109
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 109
 
 
  4433              	.LASF13:
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4461              	.LASF160:
  4462 02dd 55415254 		.ascii	"UART_tester_ClearRxBuffer\000"
  4462      5F746573 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 110
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 110
 
 
  4462      7465725F 
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4488      6E7400
  4489              	.LASF163:
  4490 0390 55415254 		.ascii	"UART_tester_GetByte\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 111
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 111
 
 
  4490      5F746573 
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4515      3539395D 
  4515      202D6D63 
  4516 047a 693D736F 		.ascii	"i=soft -march=armv7-m -g -Og -ffunction-sections -f"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 112
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 112
 
 
  4516      6674202D 
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4539      5F6D6F6E 
  4539      00
  4540              	.LASF131:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 113
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 113
 
 
  4541 0545 43795265 		.ascii	"CyResetStatus\000"
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4563      73746174 
  4563      6500
  4564              	.LASF132:
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 114
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 114
 
 
  4565 0613 63796465 		.ascii	"cydelay_freq_hz\000"
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4591 06ab 5F6D6273 		.ascii	"_mbstate_t\000"
  4591      74617465 
  4591      5F7400
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 115
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 115
 
 
  4592              	.LASF55:
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4621      756E7400 
  4622              	.LASF124:
  4623 0747 5F5F6C6F 		.ascii	"__lock\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 116
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 116
 
 
  4623      636B00
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4654              	.LASF167:
  4655 07dc 55415254 		.ascii	"UART_tester_ReadRxStatus\000"
  4655      5F746573 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 117
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 117
 
 
  4655      7465725F 
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4677      00
  4678              	.LASF41:
  4679 0898 5F5F746D 		.ascii	"__tm_wday\000"
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 118
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 118
 
 
  4679      5F776461 
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 1
  4706              	.LASF110:
  4707 092f 5F6D6274 		.ascii	"_mbtowc_state\000"
  4707      6F77635F 
-ARM GAS  C:\Users\jens-\AppData\Local\Temp\ccP7oHVf.s 			page 119
+ARM GAS  C:\Users\jens-\AppData\Local\Temp\cc9aL7hN.s 			page 119
 
 
  4707      73746174 

@@ -18,30 +18,73 @@
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1.h" value="HEADER;;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_BOOT.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_INT.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_PM.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_SLAVE.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_MASTER.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\I2C_1_PVT.h" value="HEADER;;;;;I2C_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SS_aliases.h" value="HEADER;;;;;SS" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SS.c" value="SOURCE_C;CortexM3;;;;SS" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SS.h" value="HEADER;;;;;SS" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester.c" value="SOURCE_C;CortexM3;;;;UART_tester" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester.h" value="HEADER;;;;;UART_tester" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester_PM.c" value="SOURCE_C;CortexM3;;;;UART_tester" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester_INT.c" value="SOURCE_C;CortexM3;;;;UART_tester" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester_BOOT.c" value="SOURCE_C;CortexM3;;;;UART_tester" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\scl_aliases.h" value="HEADER;;;;;scl" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\scl.c" value="SOURCE_C;CortexM3;;;;scl" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\scl.h" value="HEADER;;;;;scl" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\sda_aliases.h" value="HEADER;;;;;sda" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\sda.c" value="SOURCE_C;CortexM3;;;;sda" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\sda.h" value="HEADER;;;;;sda" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MISO_aliases.h" value="HEADER;;;;;MISO" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MISO.c" value="SOURCE_C;CortexM3;;;;MISO" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MISO.h" value="HEADER;;;;;MISO" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1.c" value="SOURCE_C;CortexM3;;;;SPIS_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1.h" value="HEADER;;;;;SPIS_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_PM.c" value="SOURCE_C;CortexM3;;;;SPIS_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_INT.c" value="SOURCE_C;CortexM3;;;;SPIS_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_BOOT.c" value="SOURCE_C;CortexM3;;;;SPIS_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_PVT.h" value="HEADER;;;;;SPIS_1" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\LED_aliases.h" value="HEADER;;;;;LED" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\LED.c" value="SOURCE_C;CortexM3;;;;LED" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\LED.h" value="HEADER;;;;;LED" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MOSI_aliases.h" value="HEADER;;;;;MOSI" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MOSI.c" value="SOURCE_C;CortexM3;;;;MOSI" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\MOSI.h" value="HEADER;;;;;MOSI" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SCLK_aliases.h" value="HEADER;;;;;SCLK" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SCLK.c" value="SOURCE_C;CortexM3;;;;SCLK" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SCLK.h" value="HEADER;;;;;SCLK" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\isr_1.c" value="SOURCE_C;CortexM3;;;;isr_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A1_aliases.h" value="HEADER;;;;;Pin_A1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A1.c" value="SOURCE_C;CortexM3;;;;Pin_A1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A1.h" value="HEADER;;;;;Pin_A1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A2_aliases.h" value="HEADER;;;;;Pin_A2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A2.c" value="SOURCE_C;CortexM3;;;;Pin_A2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_A2.h" value="HEADER;;;;;Pin_A2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B1_aliases.h" value="HEADER;;;;;Pin_B1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B1.c" value="SOURCE_C;CortexM3;;;;Pin_B1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B1.h" value="HEADER;;;;;Pin_B1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B2_aliases.h" value="HEADER;;;;;Pin_B2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B2.c" value="SOURCE_C;CortexM3;;;;Pin_B2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_B2.h" value="HEADER;;;;;Pin_B2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Motor_Calibration_Sensor_aliases.h" value="HEADER;;;;;Motor_Calibration_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Motor_Calibration_Sensor.c" value="SOURCE_C;CortexM3;;;;Motor_Calibration_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Motor_Calibration_Sensor.h" value="HEADER;;;;;Motor_Calibration_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pill_Container_Sensor_aliases.h" value="HEADER;;;;;Pill_Container_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pill_Container_Sensor.c" value="SOURCE_C;CortexM3;;;;Pill_Container_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pill_Container_Sensor.h" value="HEADER;;;;;Pill_Container_Sensor" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\RPI_INT_aliases.h" value="HEADER;;;;;RPI_INT" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\RPI_INT.c" value="SOURCE_C;CortexM3;;;;RPI_INT" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\RPI_INT.h" value="HEADER;;;;;RPI_INT" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C1_aliases.h" value="HEADER;;;;;Pin_C1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C1.c" value="SOURCE_C;CortexM3;;;;Pin_C1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C1.h" value="HEADER;;;;;Pin_C1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C2_aliases.h" value="HEADER;;;;;Pin_C2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C2.c" value="SOURCE_C;CortexM3;;;;Pin_C2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_C2.h" value="HEADER;;;;;Pin_C2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D1_aliases.h" value="HEADER;;;;;Pin_D1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D1.c" value="SOURCE_C;CortexM3;;;;Pin_D1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D1.h" value="HEADER;;;;;Pin_D1" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D2_aliases.h" value="HEADER;;;;;Pin_D2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D2.c" value="SOURCE_C;CortexM3;;;;Pin_D2" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Pin_D2.h" value="HEADER;;;;;Pin_D2" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_tester_IntClock" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\UART_tester_IntClock.h" value="HEADER;;;;;UART_tester_IntClock" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_IntClock.c" value="SOURCE_C;CortexM3;;;;SPIS_1_IntClock" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\SPIS_1_IntClock.h" value="HEADER;;;;;SPIS_1_IntClock" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
+  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
@@ -69,8 +112,6 @@
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cmsis_armcc.h" value="HEADER;;;;;cy_boot" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cmsis_gcc.h" value="HEADER;;;;;cy_boot" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cmsis_compiler.h" value="HEADER;;;;;cy_boot" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
-  <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\jens-\3.Projekt\Projekt3\Proj3_PSOC_C\Design01.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />

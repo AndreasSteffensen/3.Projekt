@@ -1,3 +1,3 @@
-/home/stud/PRJ3/spi_driver/spi_drv.ko
-/home/stud/PRJ3/spi_driver/spi_drv.o
+/home/stud/Desktop/3.Projekt/spi_driver/spi_drv.ko
+/home/stud/Desktop/3.Projekt/spi_driver/spi_drv.o
 

@@ -85,8 +85,8 @@ void PSoCIF::dispenseResten(char A)
 void* read(void *arg)
 {
     int fd_spi;
-    char buffer[1];
-    int readlength = 1;     //<-- number of bytes to read
+    char buffer[4];
+    int readlength = 4;     //<-- number of bytes to read
 
     const char* filename = "/dev/spi_drv0";
 
@@ -100,17 +100,22 @@ void* read(void *arg)
     }
 
     //----- READ BYTES -----
-    if (read(fd_spi, buffer, readlength) != readlength)
-    {
+    int n=read(fd_spi, buffer, readlength);
+    
+    if ( n>readlength)
+    {   
+        
         //ERROR HANDLING
         err(errno, "Failed to read from spi bus");
     }
     else
     {
-        printf("Data read: %d\n", buffer[0]);
+
+        printf("Data read: %s\n", buffer);
     }
 
-    switch((unsigned int)buffer[0])
+
+    switch(atoi(buffer))
     {
         case 255:
             printf("Korrekt vægt af dispenserede piller\n");
@@ -124,8 +129,14 @@ void* read(void *arg)
             printf("Dispenserede piller er fjernet fra vægten\n");
             break;
 
-        case 129:
-            printf("Ikke flere piller af typen: %d\n", buffer[1]);
+        case 65:
+            printf("Ikke flere piller af typen: A\n");
+            break;
+        case 66:
+            printf("Ikke flere piller af typen: B\n");
+            break;
+        case 67:
+            printf("Ikke flere piller af typen: C\n");
             break;
 
         case 33:

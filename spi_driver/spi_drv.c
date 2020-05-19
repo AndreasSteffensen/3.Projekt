@@ -215,10 +215,10 @@ ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
            spi_devs[minor].spi->modalias, minor, result);
   /* Convert integer to string limited to "count" size. Returns
    * length excluding NULL termination */
-  len = snprintf(resultBuf, count, "%d\n", result);
+  len = snprintf(resultBuf, count, "%u\n", result);
   resultBuf[len] = '\0';
   /* Append Length of NULL termination */
-  len++;
+  
   /* Copy data to user space */
   if(copy_to_user(ubuf, resultBuf, len))
     return -EFAULT;

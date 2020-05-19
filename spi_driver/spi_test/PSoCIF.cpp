@@ -110,29 +110,29 @@ void* read(void *arg)
         printf("Data read: %d\n", buffer[0]);
     }
 
-    switch(buffer[0])
+    switch((unsigned int)buffer[0])
     {
-        case '255':
+        case 255:
             printf("Korrekt vægt af dispenserede piller\n");
             break;
 
-        case '0':
+        case 0:
             printf("Forkert vægt af dispenserede piller\n");
             break;
 
-        case '204':
+        case 204:
             printf("Dispenserede piller er fjernet fra vægten\n");
             break;
 
-        case '129':
+        case 129:
             printf("Ikke flere piller af typen: %d\n", buffer[1]);
             break;
 
-        case '33':
+        case 33:
             printf("Dispensering afsluttet\n");
             break;
 
-        case '63':
+        case 63:
             printf("Dispenserede piller ikke taget inden for 4 timer\n");
             break;
 

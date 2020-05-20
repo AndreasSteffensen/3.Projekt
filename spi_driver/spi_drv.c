@@ -140,11 +140,20 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     divider *= 10;
   }
   }
+  else
+  {
+    for(unsigned int i=len;i>0;i--)
+    {
+      values[i]=value;
+    }
+  }
+  
+
 
   if(MODULE_DEBUG)
     printk("value %i\n", value);
 
-  struct spi_transfer t[4];
+  struct spi_transfer t[len+1];
   struct spi_message m;
   memset(t,0,sizeof(t));
   spi_message_init(&m);

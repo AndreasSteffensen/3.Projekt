@@ -6,10 +6,8 @@ class PSoCIF
     public:
         PSoCIF();
         void dispensPille(char A, char B, char C);
-        void dispensResten();
         void laasBeholderOp(char A);
-        void dispenseResten(char A);
-        void startRead();
+        int startRead();
 
     private:
 

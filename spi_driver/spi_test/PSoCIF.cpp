@@ -59,29 +59,6 @@ void PSoCIF::laasBeholderOp(char A)
     close(fd_spi);
 }
 
-void PSoCIF::dispenseResten(char A)
-{
-    char buffer[1] = {A};
-    int length = 1;
-    int fd_spi;
-
-    const char *filename = "/dev/spi_drv2";
-    if ((fd_spi = open(filename, O_RDWR)) < 0)
-    {
-        //ERROR HANDLING
-        err(errno, "Failed to open '%s'", filename);
-        return;
-    }
-
-    if (write(fd_spi, buffer, length) != length)
-    {
-        //ERROR HANDLING
-        err(errno, "Failed to write to spi bus");
-    }
-
-    close(fd_spi);
-}
-
 void* read(void *arg)
 {
     int fd_spi;
@@ -100,9 +77,7 @@ void* read(void *arg)
     }
 
     //----- READ BYTES -----
-    int n=read(fd_spi, buffer, readlength);
-    
-    if ( n>readlength)
+    if (read(fd_spi, buffer, readlength) > readlength)
     {   
         
         //ERROR HANDLING
@@ -119,33 +94,31 @@ void* read(void *arg)
     {
         case 255:
             printf("Korrekt vægt af dispenserede piller\n");
-            break;
+            return (void*) 1;
 
         case 0:
             printf("Forkert vægt af dispenserede piller\n");
-            break;
+            return (void*) 0;
 
         case 204:
             printf("Dispenserede piller er fjernet fra vægten\n");
-            break;
+            return (void*) 2;
 
         case 65:
             printf("Ikke flere piller af typen: A\n");
-            break;
+            return (void*) 3;
+
         case 66:
             printf("Ikke flere piller af typen: B\n");
-            break;
+            return (void*) 4;
+
         case 67:
             printf("Ikke flere piller af typen: C\n");
-            break;
+            return (void*) 5;
 
         case 33:
             printf("Dispensering afsluttet\n");
-            break;
-
-        case 63:
-            printf("Dispenserede piller ikke taget inden for 4 timer\n");
-            break;
+            return (void*) 6;
 
         default:
             break;
@@ -154,9 +127,20 @@ void* read(void *arg)
     return NULL;
 }
 
-void PSoCIF::startRead()
+/*Returnerer:
+0 - Forkert vægt af dispenserede piller
+1 - Korrekt vægt af dispenserede piller
+2 - Dispenserede piller er fjernet fra vægten
+3 - Ikke flere piller af typen: A
+4 - Ikke flere piller af typen: B
+5 - Ikke flere piller af typen: C
+6 - Dispensering afsluttet */
+int PSoCIF::startRead()
 {
+    void* status;
     pthread_t spiRead;
     pthread_create(&spiRead, NULL, read, NULL);
-    pthread_join(spiRead, NULL);
+    pthread_join(spiRead, &status);
+
+    return *(int*)status;
 }

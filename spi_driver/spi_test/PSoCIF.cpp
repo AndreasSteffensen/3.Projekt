@@ -39,6 +39,7 @@ void PSoCIF::dispensPille(char A, char B, char C)
 void PSoCIF::laasBeholderOp(char A)
 {
     char buffer[1] = {A};
+    
     int length = 1;
     int fd_spi;
 
@@ -50,6 +51,7 @@ void PSoCIF::laasBeholderOp(char A)
         return;
     }
 
+    printf("writing to PSOC\n");
     if (write(fd_spi, buffer, length) != length)
     {
         //ERROR HANDLING
@@ -89,36 +91,42 @@ void* read(void *arg)
         printf("Data read: %s\n", buffer);
     }
 
-
+    
     switch(atoi(buffer))
     {
         case 255:
             printf("Korrekt vægt af dispenserede piller\n");
-            return (void*) 1;
+            
+            return (void*)1 ;
 
         case 0:
             printf("Forkert vægt af dispenserede piller\n");
-            return (void*) 0;
+            
+            return (void*)0 ;
 
         case 204:
             printf("Dispenserede piller er fjernet fra vægten\n");
-            return (void*) 2;
+            
+            return (void*)2;
 
         case 65:
             printf("Ikke flere piller af typen: A\n");
-            return (void*) 3;
+            
+            return (void*)3;
 
         case 66:
             printf("Ikke flere piller af typen: B\n");
-            return (void*) 4;
-
+            
+            return (void*)4;
         case 67:
             printf("Ikke flere piller af typen: C\n");
-            return (void*) 5;
+            
+            return (void*)5 ;
 
         case 33:
             printf("Dispensering afsluttet\n");
-            return (void*) 6;
+            
+            return (void*)6;
 
         default:
             break;
@@ -142,5 +150,5 @@ int PSoCIF::startRead()
     pthread_create(&spiRead, NULL, read, NULL);
     pthread_join(spiRead, &status);
 
-    return *(int*)status;
+    return (int)status;
 }

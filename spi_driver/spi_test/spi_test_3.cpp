@@ -16,22 +16,26 @@ int main(int argc, char *argv[])
 
     p1.dispensPille(*argv[1],*argv[2],*argv[3]);
     int status = p1.startRead();
-
+    printf("status: %d\n",status);
+   
     switch(status)
     {
-        case 65:
-            p1.laasBeholderOp('65');
+        case 3:
+            p1.laasBeholderOp(1);
+            
         break;
 
-        case 66:
-            p1.laasBeholderOp('66');
+        case 4:
+            p1.laasBeholderOp(2);
+            
         break;
 
-        case 67:
-            p1.laasBeholderOp('67');
+        case 5:
+            p1.laasBeholderOp(3);
         break;
 
         default:
+            return 0;
         break;
     }
    

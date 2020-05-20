@@ -132,10 +132,13 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
   values[0] = 0xAA+minor;
   unsigned int divider = 1;
   
+  if(minor!=1)
+  {
   for(unsigned int i = len; i > 0; i--)
   {
     values[i] = (value/divider)%10;
     divider *= 10;
+  }
   }
 
   if(MODULE_DEBUG)

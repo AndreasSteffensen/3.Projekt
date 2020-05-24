@@ -46,7 +46,7 @@ static int irq_flag = 0;
 static irqreturn_t irq_handler(int irq, void *dev_id)
 {
   irq_flag = 1;
-  wake_up_interruptible(&wq);
+  wake_up_interruptible(&wq);   // Herefter eksekveres spi_drv_read
   return IRQ_HANDLED;
 }  
 
@@ -109,30 +109,28 @@ static void __exit spi_drv_exit(void)
 ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
                       size_t count, loff_t *f_pos)
 {
-  int minor, len;
+  /* Lokale variabler */
+  int minor, len, err;
   char kbuf[MAXLEN];
   int value;
 
+  /* Aflæs device minor nr. */
   minor = iminor(filep->f_inode);
-  printk(KERN_ALERT "Writing to spi_drv [Minor] %i \n", minor);
-
-  /* Limit copy length to MAXLEN allocated andCopy from user */
   len = count < MAXLEN ? count : MAXLEN-1;
+
+  /* Kopier data fra userspace til kernelspace */
   if(copy_from_user(kbuf, ubuf, len))
     return -EFAULT;
 
-  /* Pad null termination to string */
   kbuf[len] = '\0';
-  if(MODULE_DEBUG)
-    printk("string from user: %s\n", kbuf);
-
   sscanf(kbuf,"%i\n",&value);
 
+  /* Initialisering af besked i overenstemmelse med Dr. pill protokol */
   u8 values[len];
-  values[0] = 0xAA+minor;
+  values[0] = 0xAA + minor;
   unsigned int divider = 1;
   
-  if(minor!=1)
+  if(minor !=1 )
   {
   for(unsigned int i = len; i > 0; i--)
   {
@@ -142,17 +140,13 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
   }
   else
   {
-    for(unsigned int i=len;i>0;i--)
+    for(unsigned int i = len; i > 0; i--)
     {
       values[i]=value;
     }
   }
-  
 
-
-  if(MODULE_DEBUG)
-    printk("value %i\n", value);
-
+  /* Initialisering af spi besked */
   struct spi_transfer t[len+1];
   struct spi_message m;
   memset(t,0,sizeof(t));
@@ -167,14 +161,14 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
     spi_message_add_tail(&t[i],&m);
   }
     
-  int err = spi_sync(m.spi,&m);
+  /* Afsend spi besked over spi bus */
+  err = spi_sync(m.spi,&m);
+  if( err < 0 )
+  {
+    printk(KERN_ALERT "Failed to read message from device spi@0 [minor] %i",minor);
+  }
 
-  if(err<0)
-    printk(KERN_ALERT "Failed to send message from device spi@0 [minor] %i",minor);
-  
   *f_pos += len;
-
-  /* return length actually written */
   return len;
 }
 
@@ -184,57 +178,55 @@ ssize_t spi_drv_write(struct file *filep, const char __user *ubuf,
 ssize_t spi_drv_read(struct file *filep, char __user *ubuf,
                      size_t count, loff_t *f_pos)
 {
-  /*fops read is blocking*/
+  /* spi_drv_read er blokerende */
   wait_event_interruptible(wq, irq_flag!=0);
   irq_flag = 0;
 
+  /* Lokale variabler */
   int minor, len;
   unsigned char result = 1;
   char resultBuf[MAXLEN];
   
+  /* Aflæs device minor nr. */
   minor = iminor(filep->f_inode);
 
+  /* Initialisering af besked i overenstemmelse med Dr. pill protokol */
+  u8 cmd = 0xA0 + minor;
+
+  /* Initialisering af spi besked */
   struct spi_transfer t[2];
   struct spi_message m;
-
   memset(t,0,sizeof(t));
   spi_message_init(&m);
-
   m.spi=spi_devs[minor].spi;
-  u8 cmd = 0xA0+minor;
 
-  /* Send kommando som efterspørger PSoC status */
+  /* Spørg efter PSoC status */
   t[0].tx_buf = &cmd;
   t[0].rx_buf = NULL;
   t[0].len = 1;
   t[0].delay_usecs = 20;
   spi_message_add_tail(&t[0],&m);
 
-  /* Modtag status på PSoC */
+  /* Modtag PSoC status */
   t[1].tx_buf = NULL;
   t[1].rx_buf = &result;
   t[1].len = 1;
   spi_message_add_tail(&t[1],&m);
   
+  /* Afsend spi besked over spi bus */
   int err = spi_sync(m.spi,&m);
-  if(err<0)
+  if( err < 0 )
   {
     printk(KERN_ALERT "Failed to read message from device spi@0 [minor] %i",minor);
   }
   
-  if(MODULE_DEBUG)
-    printk(KERN_ALERT "%s-%i read: %i\n",
-           spi_devs[minor].spi->modalias, minor, result);
-  /* Convert integer to string limited to "count" size. Returns
-   * length excluding NULL termination */
   len = snprintf(resultBuf, count, "%u\n", result);
   resultBuf[len] = '\0';
-  /* Append Length of NULL termination */
   
-  /* Copy data to user space */
+  /* Kopier PSoC status til userspace */
   if(copy_to_user(ubuf, resultBuf, len))
     return -EFAULT;
-  /* Move fileptr */
+  
   *f_pos += len;
   return len;
 }

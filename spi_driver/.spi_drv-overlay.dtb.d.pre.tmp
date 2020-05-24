@@ -1,2 +1,0 @@
-spi_drv-overlay.o: \
- /home/stud/Desktop/3.Projekt/spi_driver/spi_drv-overlay.dts
